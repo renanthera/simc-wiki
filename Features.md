@@ -1,7 +1,7 @@
 
 
 # What is it?
-> Simulationcraft is a free and open-source simulation (see [FormulationVsSimulation](FormulationVsSimulation.md)) of WoW combat mechanics: it can simulate a fight with one or many players fighting one or many targets and produce detailed informations. It is usable either from a graphical user interface or from a command-line client (typically through configuration files).
+> Simulationcraft is a free and open-source simulation (see [FormulationVsSimulation](FormulationVsSimulation)) of WoW combat mechanics: it can simulate a fight with one or many players fighting one or many targets and produce detailed informations. It is usable either from a graphical user interface or from a command-line client (typically through configuration files).
 
 > Since Simulationcraft is a simulation, it will never give you the same numbers (the rng matters!): they will always vary but should remain close to the exact values you can observe in game (precision can be controlled and increased at the expense of computations times). You may also face intensive computations times and memory needs in some circumstances. Finally, at its core it was a command-line tool based on configurations files and the GUI was added lately and, while efficient, it is still rudimentary and dry.
 
@@ -38,7 +38,7 @@
 > Finally, the [Elitist Jerks forums](http://elitistjerks.com/forums.php) and others theorycrafters' lairs are frequently monitored to grab the latest bis lists and discoveries, and their feedback about Simulationcraft.
 
 # Have your simulated avatar play the way you want
-> Do you want to test out another dps rotation? Check whether you should pop your cooldowns as soon as possible or try to synchronize them with bloodlust/heroism or a certain phase of the combat? You can do it, check out the documentation (see [ActionLists](ActionLists.md)). Here is a sample actions list:
+> Do you want to test out another dps rotation? Check whether you should pop your cooldowns as soon as possible or try to synchronize them with bloodlust/heroism or a certain phase of the combat? You can do it, check out the documentation (see [ActionLists](ActionLists)). Here is a sample actions list:
 ```
  actions+=/slice_and_dice,if=buff.slice_and_dice.down&time<4
  actions+=/slice_and_dice,if=buff.slice_and_dice.remains<2&combo_points>=3
@@ -60,7 +60,7 @@
 > Besides, Simulationcraft offers you tools to simulate human behaviours: your players may have a high latency, they may have brain lag and take time to notice a spell miss or a new buff/debuff, they may do mistakes and hit the wrong button.
 
 # Internationalization
-> Simulationcraft is only available in English. However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding.md).
+> Simulationcraft is only available in English. However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding).
 
 # Limitations
 > At first, Simulationcraft was made for damage dealers, with just a dummy target. It evolved since then but there are still some limitations although we hope to see some of them be removed.

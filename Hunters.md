@@ -3,13 +3,13 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Pets
-> Pets can be declared and edited as any character with the **pet** setting (see [Characters#Pets](Characters#Pets.md)). A couple of notes:
-  * Supported pets are not listed here, there are many of them though. Their names follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). In doubt, you can check the `sc_hunter.cpp` source file and search for `hunter_t::create_pet` to get the list of pets.
+> Pets can be declared and edited as any character with the **pet** setting (see [Characters#Pets](Characters#Pets)). A couple of notes:
+  * Supported pets are not listed here, there are many of them though. Their names follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting). In doubt, you can check the `sc_hunter.cpp` source file and search for `hunter_t::create_pet` to get the list of pets.
 
   * You do not have to specify talents for pets: you can but, if you don't, they will be automatically set with the relevant default template.
 
@@ -59,7 +59,7 @@ The new special value "lnl\_procs" returns the number of lock and load procs fro
 ```
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
   * killing\_streak\_crits (player): the number of stacks represents the number of consecutive crits with the "kill command" ability.
   * master\_marksman\_fire (player): it is the buff named "ready, set, aim..." in game. It is the buff that occurs once you reach five stacks of master\_marksman.

@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
@@ -31,11 +31,11 @@ actions+=/raging_blow,if=target.health_pct>=20
 A couple pieces of advice for writing actions lists:
   1. Do not forget, it is priority-based, it's as simple as that!
   1. Do not try to optimize your actions lists for computations performances. Just focus on correctly modeling the gameplay you want.
-  1. Have doubts ? Make Simulationcraft write a combat log for you, with the **log** option, see [Output](Output.md).
+  1. Have doubts ? Make Simulationcraft write a combat log for you, with the **log** option, see [Output](Output).
 
 # Syntax
 
-  * **actions** (scope: current character; default: _depends on class and spec_) is the list of actions your character will follow. It is a multi-line string and a sequence of commands using the "/" separator, see [scripting basics> long strings](ScriptingBasics#Long_strings.md) and [scripting basics> sequences](ScriptingBasics#Sequences.md).
+  * **actions** (scope: current character; default: _depends on class and spec_) is the list of actions your character will follow. It is a multi-line string and a sequence of commands using the "/" separator, see [scripting basics> long strings](ScriptingBasics#Long_strings.md) and [scripting basics> sequences](ScriptingBasics#Sequences).
 ```
  # Note how we use the "/" separator and the "+=" appending operator.
  actions=dosomething
@@ -210,7 +210,7 @@ Strict Sequences are a breed of sequence, except for they do not need to be rese
 
 ## Waits
   * _wait_ orders the application to stop processing the actions list for a given time. Auto-attacks and such will still be performed.
-    1. _sec_ (default: 1) is the number of seconds to wait. It can be a constant or an expression (see the [conditional expressions](#Conditional_Expressions.md) section).
+    1. _sec_ (default: 1) is the number of seconds to wait. It can be a constant or an expression (see the [conditional expressions](#Conditional_Expressions) section).
 ```
  # This orders Simulationcraft to stop processing the actions list for 5s
  actions+=/wait,sec=5
@@ -376,7 +376,7 @@ All actions have additional options, we're listing them here.
 ```
 
 ## Sequences behaviour
-  * _wait\_on\_ready_ (default: -1), when equal to 1, will force the the application to restart at the beginning of the actions list processing if this spell is not ready. Practically, actions below this one will never be executed. You can use it to quickly make the end of the list inactive but the main purpose of this option is for sequences, see the [related section](#Sequences.md).
+  * _wait\_on\_ready_ (default: -1), when equal to 1, will force the the application to restart at the beginning of the actions list processing if this spell is not ready. Practically, actions below this one will never be executed. You can use it to quickly make the end of the list inactive but the main purpose of this option is for sequences, see the [related section](#Sequences).
 ```
  # Let's put wait_on_ready=1 on this line near the end of the balance druid's actions list.
  actions+=/wrath,wait_on_ready=1,if=eclipse_dir=-1
@@ -390,7 +390,7 @@ All actions have additional options, we're listing them here.
 
 ## Enemy-Specific Modifiers
 
-  * See the article on [enemies](Enemies#Action_Lists.md).
+  * See the article on [enemies](Enemies#Action_Lists).
 
 # Conditional expressions
 
@@ -741,16 +741,16 @@ Finally, within a pet's actions list, you can always use its owner's properties 
 ```
 
 ### Raid Events
-You can check for upcoming [Raid Events](RaidEvents.md) with the syntax `raid_event.event_type.filter`. This will return a value depending on the particular `event_type` and `filter` you choose.
+You can check for upcoming [Raid Events](RaidEvents) with the syntax `raid_event.event_type.filter`. This will return a value depending on the particular `event_type` and `filter` you choose.
 
-The `event_type` should be the name of the raid event as described in the [Raid Events](RaidEvents#Classic_syntax.md) documentation. The `filter` is the property of the raid event that you're interested in.
+The `event_type` should be the name of the raid event as described in the [Raid Events](RaidEvents#Classic_syntax) documentation. The `filter` is the property of the raid event that you're interested in.
 ```
  # This will cast ice_floes if there's a movement raid event happening within the next second
  /actions+=ice_floes,if=raid_event.movement.in<1
  # This will only use ice_floes if the duration of that event is greater than 5 seconds
  /actions+=ice_floes,if=raid_event.movement.in<1&raid_event.movement.duration>5
 ```
-The list of event types and filters are given below. Event types are described in more detail on the [Raid Events](RaidEvents.md) documentation page.
+The list of event types and filters are given below. Event types are described in more detail on the [Raid Events](RaidEvents) documentation page.
 
 **Event Types**
   * adds
@@ -804,7 +804,7 @@ For Tier 17 and beyond:
  actions+=/some_spell,if=set_bonus.tier17_4pc
 ```
 
-See also [equipment - set bonuses](Equipment#Set_Bonuses.md).
+See also [equipment - set bonuses](Equipment#Set_Bonuses).
 
 ### Spell flights
 You can check whether a casted spell is still flying towards its target (a fireball for example) with the following syntax: `action.<spell_name>.in_flight`. It will return 1 if the spell if flying, 0 otherwise.
@@ -830,7 +830,7 @@ The available properties are:
   * _adds\_never_ is 0 if the target will never have adds (no initial adds and no "adds" raid event), 1 otherwise.
   * _time\_to\_die_ is the estimated remaining time, in seconds, before the target dies.
   * _distance_ is the distance to the target. Handy for checking spells who have damage based on the distance from the target, such as the Priest Level 90 talents (Divine Star, Cascade, and Halo)
-  * _current\_target_ (**Simulationcraft 6.0.1 release 1 and later**) is the target's target, usually the tank that currently has "aggro." This can be useful for making conditional tank swaps (see [Simulationcraft For Tanks](SimcForTanks.md)).
+  * _current\_target_ (**Simulationcraft 6.0.1 release 1 and later**) is the target's target, usually the tank that currently has "aggro." This can be useful for making conditional tank swaps (see [Simulationcraft For Tanks](SimcForTanks)).
   * _name_ is the target's unique identifier (actor\_index). The sim attempts to match unknown operands to the names of each actor, and returns the actor\_index if it finds a match, so this can be used to test against the target's name:
 ```
  # Only cast Smite on Fluffy_Pillow

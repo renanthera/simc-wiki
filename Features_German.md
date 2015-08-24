@@ -1,7 +1,7 @@
 
 
 # Was ist es?
-> Simulationcraft ist ein freies open-source Simulationsprogramm ( siehe [FormulationVsSimulation](FormulationVsSimulation.md)) von World of Warcraft Kampfmechaniken: Es kann Kämpfe mit einem oder mehreren Spielern und mit einem oder vielen Zielen simulieren und erzeugt dafür detailierte Informationen. Es gibt sowohl ein Graphisches Benutzer-Interface wie auch einen Command-Line Klient.
+> Simulationcraft ist ein freies open-source Simulationsprogramm ( siehe [FormulationVsSimulation](FormulationVsSimulation)) von World of Warcraft Kampfmechaniken: Es kann Kämpfe mit einem oder mehreren Spielern und mit einem oder vielen Zielen simulieren und erzeugt dafür detailierte Informationen. Es gibt sowohl ein Graphisches Benutzer-Interface wie auch einen Command-Line Klient.
 
 > Da Simulationcraft eine Simulation ist, wird es nie zweimal das selbe Ergebnis liefern (Der Zufall zählt!): Das Ergebnis wird immer variieren, bleibt aber immer sehr nah am exakten Resultat, welches man im Spiel beobachten kann. Die Präzision lässt kontrollieren und erhöhen auf Kosten der Berechnungszeit. Dies kann unter Umständen zu sehr rechenzeit- und speicherintesiven Simulationen führen. Zum Schluss ist es noch wichtig, dass Simulationcraft in seinem Kern ein Kommandozeilen Programm ist, basierend auf Konfigurationsdateien, und das Graphische Benutzer-Interface wurde erst später hinzugefügt - obwohl sehr effizient, ist es im Moment noch immer rudimentär und steif.
 
@@ -42,7 +42,7 @@ Simulationcraft hat es in der Vergangenheit immer wieder geschafft auf dem neues
 > ![http://www.simulationcraft.org/images/wiki/chardev_top.jpg](http://www.simulationcraft.org/images/wiki/chardev_top.jpg)
 
 # Have your simulated avatar play the way you want
-> Do you want to test out another dps rotation? Check whether you should pop your cooldowns as soon as possible or try to synchronize them with bloodlust/heroism or a certain phase of the combat? You can do it, check out the documentation (see [ActionLists](ActionLists.md)). Here is a sample actions list:
+> Do you want to test out another dps rotation? Check whether you should pop your cooldowns as soon as possible or try to synchronize them with bloodlust/heroism or a certain phase of the combat? You can do it, check out the documentation (see [ActionLists](ActionLists)). Here is a sample actions list:
 ```
  actions+=/slice_and_dice,if=buff.slice_and_dice.down&time<4
  actions+=/slice_and_dice,if=buff.slice_and_dice.remains<2&combo_points>=3
@@ -64,13 +64,13 @@ Simulationcraft hat es in der Vergangenheit immer wieder geschafft auf dem neues
 > Besides, Simulationcraft offers you tools to simulate human behaviours: your players may have a high latency, they may have brain lag and take time to notice a spell miss or a new buff/debuff, they may do mistakes and hit the wrong button.
 
 # Internationalization
-> Simulationcraft is only available in English. However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding.md).
+> Simulationcraft is only available in English. However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding).
 
 # Limitations
 > At first, Simulationcraft was made for damage dealers, with just a dummy target. It evolved since then but there are still some limitations although we hope to see some of them be removed throughout the course of 2011.
 
   * **Tanking:** currently, you can be put in the front of the target and have it hit you and do damages to you but, aside from rage generation and damage-based procs, it's pretty useless. Simulationcraft will only display your dps, not your tps (threat per second) and there is absolutely no data regarding mitigation. There is no aggro support also.
 
-  * **Healing:** it has been recently introduced but is only available for priests (discipline or holy) so far. It is also rudimentary yet: you will only heal the tank or yourself. Finally, the hps will be displayed as "dps", you can't have stats for both at the same time. See [Priest\_Healing\_Module](Priest_Healing_Module.md).
+  * **Healing:** it has been recently introduced but is only available for priests (discipline or holy) so far. It is also rudimentary yet: you will only heal the tank or yourself. Finally, the hps will be displayed as "dps", you can't have stats for both at the same time. See [Priest\_Healing\_Module](Priest_Healing_Module).
 
   * **Many targets:** currently, you can have adds (either periodically spawning adds who will despawn after some time, or adds remaining for the whole fight, as long as the main target is alive). Those adds are mere dummy targets: their health pools do not matter, they do not hit anyone, etc... Besides, actions lists only have a limited support: you can choose spells based on the numbers of available target but there is no support for multi-dotting classes. Finally, only cleave-like spells work, not genuine aoe.

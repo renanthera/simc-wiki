@@ -3288,7 +3288,7 @@ _(Note: Vial of Shadows hasn't yet been updated as we're waiting to find out the
 
   * Features
     * The "casting" raid event now also interrupts players to simulate use of /stopcasting with interrupts.
-    * An initial implementation of a local item database has also been added along with an option to specify a search path for items. See [data importation](EquipmentOptions#Items.md)
+    * An initial implementation of a local item database has also been added along with an option to specify a search path for items. See [data importation](EquipmentOptions#Items)
 
 ## Simc 406-2
   * Bug fixes

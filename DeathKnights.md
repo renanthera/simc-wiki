@@ -3,9 +3,9 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Rune expression system
 
@@ -118,7 +118,7 @@ All actions have specific properties you can use in the conditional expressions 
 '></a>
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
   * ebon\_plaguebringer\_track. The ebon plague disease is split into two components: a target debuff (ebon\_plague), which increases magic damages for all dk in the raid and a fake, not reported, player buff (ebon\_plaguebringer\_track) which allow us to count the number of active diseases you have on the target, for scourge strike for example.
 

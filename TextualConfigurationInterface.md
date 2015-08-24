@@ -16,7 +16,7 @@ Options can have different kind of scopes. The most common are:
   * _current character:_ the option affects the current character (the last declared one). Example: **level**.
   * _ulterior characters:_ the option affects the characters declared later in the file, excluding the current character. Example: **ptr**.
 
-> Characters declaration can be manual (through **warlock**, **warrior**, ...) or automatic (through **armory**, **wowhead**, ...). See [Characters declaration](Characters#Declaration.md).
+> Characters declaration can be manual (through **warlock**, **warrior**, ...) or automatic (through **armory**, **wowhead**, ...). See [Characters declaration](Characters#Declaration).
 
 # Characters encoding
 Simulationcraft work with an UTF-8 encoding (basically, a text file is just a sequence of numbers, the encoding is the convention used to translate numbers to characters; a convention has to be chosen to know which character is represented by a given number). Latin1 works also since the common characters are encoded in the same way they are in UTF-8. UTF-8 is universal and the modern standard but older, region-specific, encodings are still very common.
@@ -129,7 +129,7 @@ You can easily include external TCI files (usually named with the .simc extensio
  c:\global-config.simc
 ```
 
-  * **path** (scope: global; default: ".|profiles|profiles\_heal|../profiles|../profiles\_heal") specifies the directories where the application should search for the files to include. The list of directories have to separated with "|", "," or ";". This option can be written on many lines, see the [long strings](#Long_strings.md) section.
+  * **path** (scope: global; default: ".|profiles|profiles\_heal|../profiles|../profiles\_heal") specifies the directories where the application should search for the files to include. The list of directories have to separated with "|", "," or ";". This option can be written on many lines, see the [long strings](#Long_strings) section.
 ```
  # The following will make the application look for includes in c:\includes, .\profiles and ..\simc_scripts
  path="c:\includes|.\profiles|..\simc_scripts"

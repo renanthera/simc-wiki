@@ -1,11 +1,11 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
 
 
 # Public test realms
-  * **ptr** (scope: ulterior characters; default: 0) allows you to target the ptr version. By default, Simulationcraft targets the live WoW version. Beware:  Simulationcraft may not be fully updated for the ptr version, you're advised to check the version changes on [ReleaseNotes](ReleaseNotes.md).
+  * **ptr** (scope: ulterior characters; default: 0) allows you to target the ptr version. By default, Simulationcraft targets the live WoW version. Beware:  Simulationcraft may not be fully updated for the ptr version, you're advised to check the version changes on [ReleaseNotes](ReleaseNotes).
 ```
  #This allows you to compare the live version of a character with his evil twin on the ptr. 
  # We first create the live character with ptr=0, then we set ptr to 1 and copy the current character to a new one named "EvilTwin".
@@ -120,7 +120,7 @@ There are two time-based combat length models:
  travel_variance=0.150
 ```
 
-  1. You may want to use **gcd\_lag** and **channel\_lag** to simulate brain\_lag. It is a valid option, along with the use of **skill** (see the [skill](#skill.md) section for more information) and **reaction\_time** (see [ActionLists](ActionLists.md)).
+  1. You may want to use **gcd\_lag** and **channel\_lag** to simulate brain\_lag. It is a valid option, along with the use of **skill** (see the [skill](#skill.md) section for more information) and **reaction\_time** (see [ActionLists](ActionLists)).
   1. Warning! Making the lag values too small or setting them to zero can result in discontinuities in the haste plots and jumps in haste scale factors.... Latency helps smooth out the behavior.
 
 # Multithreading
@@ -172,13 +172,13 @@ There are two time-based combat length models:
 ```
 
 ## Items importation sources
-> See [Equipment#Items\_data\_importation](Equipment#Items_data_importation.md).
+> See [Equipment#Items\_data\_importation](Equipment#Items_data_importation).
 
 # Advanced options
 **Options you should probably not mess up with.**
 
 ## Aura delay
-  * **aura\_delay** (scope: global; default: 0.15) is the delay, in seconds, the Blizzard servers need to process aura applications: it is the timespan between the action triggering an aura application and the actual application. It has nothing to do with latency, it is only related to the intricacies of Blizzard's code and their servers' performances. It is used through a normal distribution with a 25% standard deviation (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). This setting affects the following spells: druids' eclipse procs, mages' ignites and warrior's deep wounds. For ignite and deep wounds, see also [MunchingAndRolling](MunchingAndRolling.md).
+  * **aura\_delay** (scope: global; default: 0.15) is the delay, in seconds, the Blizzard servers need to process aura applications: it is the timespan between the action triggering an aura application and the actual application. It has nothing to do with latency, it is only related to the intricacies of Blizzard's code and their servers' performances. It is used through a normal distribution with a 25% standard deviation (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). This setting affects the following spells: druids' eclipse procs, mages' ignites and warrior's deep wounds. For ignite and deep wounds, see also [MunchingAndRolling](MunchingAndRolling).
 ```
  aura_delay=0.25
 ```

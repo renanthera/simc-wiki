@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
@@ -7,7 +7,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface.md) ref
 # Introduction
 Simulationcraft can evaluate scale factors for stats, as shown in our sample reports (see [simulationcraft.org](http://www.simulationcraft.org/)). Scale factors are computed by adding a given number of points (deltas) to a character's stat, and then comparing the resulting dps/heal/deaths count with the reference one : the scale factor is equal to the dps/heal/deaths count difference, divided by the delta.
 
-Note that, because of the fighting variance, in order to have accurate enough results, you need to use large enough deltas or reduce the fighting variance through the statistical settings (see the [statistical behaviour](#Statistical_behaviour.md) section but be warned that **seed** won't help: the compared runs will always both start with the same seed) or through **smooth\_scale\_factors**. A good way to check your results are stable enough is to run Simulationcraft twice (with **deterministic\_rng** and **seed** being disabled, their default values) and ensure you get similar scale factors.
+Note that, because of the fighting variance, in order to have accurate enough results, you need to use large enough deltas or reduce the fighting variance through the statistical settings (see the [statistical behaviour](#Statistical_behaviour) section but be warned that **seed** won't help: the compared runs will always both start with the same seed) or through **smooth\_scale\_factors**. A good way to check your results are stable enough is to run Simulationcraft twice (with **deterministic\_rng** and **seed** being disabled, their default values) and ensure you get similar scale factors.
 
 # Basics
   * **calculate\_scale\_factors** (scope: global; default: 0), when different from zero, forces the application to evaluate scale factors. The application will automatically decide which scale factors are worth to evaluate for every class.
@@ -175,7 +175,7 @@ Simulationcraft can produce plots showing the dps versus the stats of your choic
 
 > ![http://www.simulationcraft.org/images/wiki/reforge3d.png](http://www.simulationcraft.org/images/wiki/reforge3d.png)
 
-  * **reforge\_plot\_stat** (scope: global; default: "") allows you to enumerate the stats you want to reforge between. The stats must be separated with commas ",". There must be at least 2 stats. You can add more but, beyond 3 stats, the generated data are harder to analyze. For a list of available stats, see [Equipment#Stats\_abbreviations](Equipment#Appendix:_Stats_abbreviations.md).
+  * **reforge\_plot\_stat** (scope: global; default: "") allows you to enumerate the stats you want to reforge between. The stats must be separated with commas ",". There must be at least 2 stats. You can add more but, beyond 3 stats, the generated data are harder to analyze. For a list of available stats, see [Equipment#Stats\_abbreviations](Equipment#Appendix:_Stats_abbreviations).
 ```
  # This example will produce a 2D plot that show how the dps evolve between (+200 crit ; -200 haste) on
  # the left side and (-200 crit ; +200 haste) on the right side.

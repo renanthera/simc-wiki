@@ -1,18 +1,18 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
 
 
 # Introduction
-Because of the very nature of simulations (see [FormulationVsSimulation](FormulationVsSimulation.md)), Simulationcraft produces slightly different results on every run. This is why multiple iterations of the same fight are performed, to produce average and more stable results, and smoothen out the randomness. The following options can help you to tweak out those problems.
+Because of the very nature of simulations (see [FormulationVsSimulation](FormulationVsSimulation)), Simulationcraft produces slightly different results on every run. This is why multiple iterations of the same fight are performed, to produce average and more stable results, and smoothen out the randomness. The following options can help you to tweak out those problems.
 
 # Iterations
   * **iterations** (scope: global; default: 1000 or 100000) is the number of simulated fights per run. Increasing this setting is the most obvious way to improve the accuracy and stability of the simulations but it also increases computations times.  The normal default is 1000.  When target\_error is used to control simulation iteration, the default is increased to 100000.
 ```
  iterations=10000
 ```
-> You can give a look at [FightingVariance](FightingVariance.md) if you want more information on the relationship between the number of iterations and the variance of the results.
+> You can give a look at [FightingVariance](FightingVariance) if you want more information on the relationship between the number of iterations and the variance of the results.
 
 
 # Constant seed

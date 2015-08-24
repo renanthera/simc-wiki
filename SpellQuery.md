@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 Spell data searches can now be done by using the "spell\_query" option in
 simc. This does not do any simulation, but rather reads the expression given as

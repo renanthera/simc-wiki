@@ -3,9 +3,9 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Targeting
 

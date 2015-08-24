@@ -3,9 +3,9 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Synchronizing weapons
 > The _sync\_weapons_ (default: 0) option on the _auto\_attack_ action can be used to force the synchronization of weapons at the beginning of the fight. When zero, the offhand will be desynchronized by half of its swing time. In game, you always start with your weapons synchronized but target switching and parry rushes often lead you to go unsynchronized.
@@ -15,7 +15,7 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 ```
 
 ## Combo points
-> Combo points can be used in conditional expressions for actions (see [ActionLists](ActionLists.md)) through the _combo\_points_ character property.
+> Combo points can be used in conditional expressions for actions (see [ActionLists](ActionLists)) through the _combo\_points_ character property.
 ```
  # Use eviscerate when you have 5 combo points
  actions+=/eviscerate,if=combo_points=5
@@ -82,7 +82,7 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 ```
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
   * deadly\_proc: when this buff is up, your deadly poison is applied on the target.
   * poison\_doses: the number of stacks is the number of doses currently applied.

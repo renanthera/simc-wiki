@@ -12,7 +12,7 @@
 > To use healing features in Simulationcraft, import or declare a discipline or holy priest and ensure his role is set to "heal" (should be the default for those specs). We also suggest you add other players, even dummy ones (add single lines such as "warrior=john"). And maybe a tank (use "role=tank").
 
 ## Targets
-> Regarding the targets, by default it is always the caster himself. Although the default target cannot be changed, you can explicitly specify on every action the target of your choice. You can also add a condition to check the target's health, see [ActionLists](ActionLists.md).
+> Regarding the targets, by default it is always the caster himself. Although the default target cannot be changed, you can explicitly specify on every action the target of your choice. You can also add a condition to check the target's health, see [ActionLists](ActionLists).
 ```
  # Cast flash heal on John when he has less than 50% health.
  actions+=/flash_heal,target=John,if=target.health_pct<50
@@ -28,9 +28,9 @@
   * Prayer of Mending will first land on its initial target, then jump on the first four different and eligible targets in the raid.
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Atonement target
 It is possible to override the smart targeting of Atonement heals with the **atonement\_target** Priest option. This makes it possible to simulate, for example, all Atonement heals going to a target with Grace.
@@ -61,7 +61,7 @@ It is possible to override the smart targeting of Atonement heals with the **ato
 ```
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
   * chakra\_serenity, chakra\_chastise and chakra\_sanctuary can be used to check for chakras.
   * chakra\_pre is triggered when you activate the "chakra" spell and remains until you use any spell that will determine the type of chakra to gain.

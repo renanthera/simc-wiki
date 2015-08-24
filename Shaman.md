@@ -3,9 +3,9 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Synchronizing weapons
 > The _sync\_weaapons_ (default: 0) option on the _auto\_attack_ action can be used to force the synchronization of weapons at the beginning of the fight. When zero, the offhand will be desynchronized by half of its swing time. In game, you always start with your weapons synchronized but target switching and parry rushes often lead you to go unsynchronized.
@@ -43,7 +43,7 @@ Note that if totem actions are not using expressions, totems will be cast indefi
 ```
 
 ## Fire elemental
-> The fire elemental is a pet. To summon it and learn more about pets, see [Characters#Pets](Characters#Pets.md). It is automatically created when you import an elemental shaman and comes with its own actions list. To summon it, use:
+> The fire elemental is a pet. To summon it and learn more about pets, see [Characters#Pets](Characters#Pets). It is automatically created when you import an elemental shaman and comes with its own actions list. To summon it, use:
 ```
 actions+=/fire_elemental_totem
 ```
@@ -76,7 +76,7 @@ uf_expiration_delay_stddev=0.1
 ```
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
 
 # Reports

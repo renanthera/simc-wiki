@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
@@ -36,7 +36,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface.md) ref
 ```
 
 # Classic syntax
-  * **raid\_events** (scope: global; default: "") is a string sequence specifying the events affecting the whole raid. See [TextualConfigurationInterface](TextualConfigurationInterface.md).
+  * **raid\_events** (scope: global; default: "") is a string sequence specifying the events affecting the whole raid. See [TextualConfigurationInterface](TextualConfigurationInterface).
 ```
  raid_events+=/damage,amount=20000,cooldown=10
  raid_events+=/movement,cooldown=30,distance=40
@@ -97,9 +97,9 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface.md) ref
 ```
 
 # Adds
-See also **target\_adds** in the [target properties](#Target.md) section if you rather want to spawn adds who will live through the whole fight.
+See also **target\_adds** in the [target properties](#Target) section if you rather want to spawn adds who will live through the whole fight.
 
-The _adds_ keyword allows you to make adds periodically spawn. Default actions list may not include aoe actions but you can mention some of them, using conditions based on the number of targets, see [ActionLists](ActionLists.md). The _duration_ parameter will be the adds' lifespan.
+The _adds_ keyword allows you to make adds periodically spawn. Default actions list may not include aoe actions but you can mention some of them, using conditions based on the number of targets, see [ActionLists](ActionLists). The _duration_ parameter will be the adds' lifespan.
   1. _count_ (default: 1) is the only specific option, it specifies how many adds will spawn.
 ```
  #This will make a fury warrior rotation use "cleave" as soon as there is at least one add.
@@ -189,7 +189,7 @@ Here are the specific options:
 ```
 
 # Invulnerability
-The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots on it (debuffs will remain though, because of a bug). There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not; see [ActionLists](ActionLists.md).
+The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots on it (debuffs will remain though, because of a bug). There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not; see [ActionLists](ActionLists).
 
 There is no specific option for this keyword.
 ```
@@ -262,7 +262,7 @@ There is no specific option for this keyword.
 ```
 
 # Vulnerability
-The _vulnerable_ keyword can be used to make the target periodically vulnerable, causing you to do twice more damages to the target. It is possible to change your actions list to keep your best cooldowns for those moments, see [ActionLists](ActionLists.md).
+The _vulnerable_ keyword can be used to make the target periodically vulnerable, causing you to do twice more damages to the target. It is possible to change your actions list to keep your best cooldowns for those moments, see [ActionLists](ActionLists).
 
 There is no specific option for this keyword.
 ```

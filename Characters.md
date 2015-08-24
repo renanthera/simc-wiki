@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
@@ -115,7 +115,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface.md) ref
 ```
 
 ## Importation: Caching
-By default, Simulationcraft will import a fresh copy of your character profile on every simulation run incurring delay due to network latency. This behavior is controllable, see [Cache Control](CacheControl.md).
+By default, Simulationcraft will import a fresh copy of your character profile on every simulation run incurring delay due to network latency. This behavior is controllable, see [Cache Control](CacheControl).
 
 ## Pets
   * **pet** (scope: new character) allows you to create a pet that owned by the current character. The pet will then become the new current character, see **active** to switch back to the owner. The syntax is either: `pet=<name>,<type>` OR `pet=<type>`. When the second syntax is used, the name will be the same as the type. Note that you do not have to specify talents for pets: if you don't, they will be automatically set with the relevant default template.

@@ -4,7 +4,7 @@
 
 # Introduction
 
-Just as with [characters](Characters.md), you can use the TCI to define enemies. This is most useful to tanks, since DPS and healing classes usually don't care what the boss does.
+Just as with [characters](Characters), you can use the TCI to define enemies. This is most useful to tanks, since DPS and healing classes usually don't care what the boss does.
 
 # Built-in Enemies
 
@@ -12,11 +12,11 @@ Simulationcraft has some built-in enemies ready-made for you to use.
 
 > ## Fluffy Pillow
 
-> If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists.md).
+> If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists).
 
 > ## Healing Enemies
 
-> If you run a simulation with healers and don't specify a target for them to heal (see [Character Basics](Characters#Basics.md)), the simulation will spawn a "healing enemy" for your healer to heal. It will also spawn a Fluffy\_Pillow that attacks the healing target so that you won't overheal.
+> If you run a simulation with healers and don't specify a target for them to heal (see [Character Basics](Characters#Basics)), the simulation will spawn a "healing enemy" for your healer to heal. It will also spawn a Fluffy\_Pillow that attacks the healing target so that you won't overheal.
 
 > ## Tank Raid Dummies
 
@@ -74,7 +74,7 @@ Simulationcraft has some built-in enemies ready-made for you to use.
 
 # Custom Enemies
 
-Simulationcraft supports defining custom enemies so that you can try to model specific boss encounters. Several properties of the enemy may be set, and you can define custom [action lists](Enemies#Action_Lists.md) for the enemy. You can also code custom raid events (like a periodic raid-wide AoE) that function independently of enemies - see the [Raid Events](RaidEvents.md) page for more details.
+Simulationcraft supports defining custom enemies so that you can try to model specific boss encounters. Several properties of the enemy may be set, and you can define custom [action lists](Enemies#Action_Lists.md) for the enemy. You can also code custom raid events (like a periodic raid-wide AoE) that function independently of enemies - see the [Raid Events](RaidEvents) page for more details.
 
 Note that all enemy options should only be specified after you declare an enemy.
 ```
@@ -82,7 +82,7 @@ Note that all enemy options should only be specified after you declare an enemy.
  _additional options_
 ```
 
-All of the options in this section are "current enemy" scoped - in other words, they only apply to the enemy currently being defined. If you are defining [multiple enemies](Enemies#Multiple_Targets_(AoE).md), these options need to be set for each enemy (see `enemy_tank` example below).
+All of the options in this section are "current enemy" scoped - in other words, they only apply to the enemy currently being defined. If you are defining [multiple enemies](Enemies#Multiple_Targets_(AoE)), these options need to be set for each enemy (see `enemy_tank` example below).
 
 > ## Assigning a target to enemy
 
@@ -121,7 +121,7 @@ All of the options in this section are "current enemy" scoped - in other words, 
 
 > ## Other Enemy Options
 
-  * **apply\_debuff** (**Simulationcraft 6.0.1 release 1 and later**) (default: 0) allows you to specify the integer number of stacks of the `damage_taken` debuff the boss applies with every successful attack. Each stack causes the target to take 1% increased damage from all sources. This is extremely useful for setting up tank swaps (see [Simulationcraft for Tanks](SimcForTanks.md)). Note that you can also specify this option for each attack individually on the enemy's [action list](Enemies#Action_Lists.md), and the action list option takes precedence.
+  * **apply\_debuff** (**Simulationcraft 6.0.1 release 1 and later**) (default: 0) allows you to specify the integer number of stacks of the `damage_taken` debuff the boss applies with every successful attack. Each stack causes the target to take 1% increased damage from all sources. This is extremely useful for setting up tank swaps (see [Simulationcraft for Tanks](SimcForTanks.md)). Note that you can also specify this option for each attack individually on the enemy's [action list](Enemies#Action_Lists), and the action list option takes precedence.
 ```
    enemy=Sammy_Stacker
    #Sammy applies two stacks with every attack

@@ -21,7 +21,7 @@
   * Click Check out as a project in the workspace and specify project name and you're done.
 
 ### Configuring Eclipse with MinGW
-  * Get MinGW, install it and add it to your PATH environment. See [HowToBuild#Command\_Line\_Interface\_using\_MinGW](HowToBuild#Command_Line_Interface_using_MinGW.md)
+  * Get MinGW, install it and add it to your PATH environment. See [HowToBuild#Command\_Line\_Interface\_using\_MinGW](HowToBuild#Command_Line_Interface_using_MinGW)
   * Right-click on your created project -> New -> Convert to a C/C++ Project.
     * Convert to C++ Project, Project Type 'Makefile project' and use the  MinGW GCC toolchains
     * Go to Project -> Properties -> C/C++ Build and change the Builder settings, build location to /engine workspace path. You can append OPTS=-g to the build command if you want to build with debug symbols, and -jN if you want to compile with N threads.

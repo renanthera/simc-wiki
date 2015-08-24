@@ -19,7 +19,7 @@ If you simulate a tank, the default boss "Fluffy Pillow" will not only take hits
  enemy=Not_A_Fluffy_Pillow
  tmi_boss=T15H25
 ```
-> The [Enemies](Enemies.md) page goes into more detail about the syntax for these bosses.
+> The [Enemies](Enemies) page goes into more detail about the syntax for these bosses.
 
 > ## Custom Bosses
 
@@ -30,9 +30,9 @@ If you simulate a tank, the default boss "Fluffy Pillow" will not only take hits
  actions+=/spell_nuke,damage=300000,cooldown=30,attack_speed=0.1,target=Warrior_Protection_T14H
  actions+=/spell_aoe,damage=10000,cooldown=2,cast_time=0.1
 ```
-> This will make the boss cleave any tank for 200k (before mitigation), will hit only your tank every 30secs for 300k with a spell, and hit the whole raid every 2 seconds for 10k. You can also add other [raid events](RaidEvents.md) to the fight, such as stuns or movement phases.
+> This will make the boss cleave any tank for 200k (before mitigation), will hit only your tank every 30secs for 300k with a spell, and hit the whole raid every 2 seconds for 10k. You can also add other [raid events](RaidEvents) to the fight, such as stuns or movement phases.
 
-> See the [Enemies](Enemies.md) page for more details about the actions and options available for defining custom enemies.
+> See the [Enemies](Enemies) page for more details about the actions and options available for defining custom enemies.
 
 # Healers
 
@@ -84,7 +84,7 @@ Simulationcraft provides a number of ways for you to analyze your tank's perform
 
 > ![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_options.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_options.png)
 
-> By default TMI uses a six-second window to calculate spike damage. This can also be customized via the GUI (shown above), or using the `tmi_window` [character option](Characters#Optional.md). The window size is reported in the table of tank metrics, and a TMI generated using a window that it not 6 seconds will have the window size specified in the name (e.g. TMI-5.0 in the summary line of the report shown in the [Player Stats](SimcForTanks#Player_Stats.md) section).
+> By default TMI uses a six-second window to calculate spike damage. This can also be customized via the GUI (shown above), or using the `tmi_window` [character option](Characters#Optional.md). The window size is reported in the table of tank metrics, and a TMI generated using a window that it not 6 seconds will have the window size specified in the name (e.g. TMI-5.0 in the summary line of the report shown in the [Player Stats](SimcForTanks#Player_Stats) section).
 ```
   # Define a paladin and use a 5-second TMI window
   paladin=Paul
@@ -104,7 +104,7 @@ Simulationcraft provides a number of ways for you to analyze your tank's perform
 
 > ![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_over.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_over.png)
 
-> You can also change the scaling metric with the `scale_over` [option](StatsScaling#Basics.md):
+> You can also change the scaling metric with the `scale_over` [option](StatsScaling#Basics):
 ```
  paladin=Paul
  calculate_scale_factors=1

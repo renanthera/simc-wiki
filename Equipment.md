@@ -1,4 +1,4 @@
-_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This documentation is a part of the [TCI](TextualConfigurationInterface) reference._
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
@@ -44,13 +44,13 @@ Acceptable slots are:
 ## Options
 <a />
 ### Importing stats through ID
-  * _id_ (default: 0) can be used to specify the item's id and force the application to query the stats, the quality and armory type from the items importation sources (see the [Item Data Importation](#Item_Data_Importation.md) section). The returned parameters will replace those you may have specified.
+  * _id_ (default: 0) can be used to specify the item's id and force the application to query the stats, the quality and armory type from the items importation sources (see the [Item Data Importation](#Item_Data_Importation) section). The returned parameters will replace those you may have specified.
 ```
  # Let's import our helm's stats
  head=earthen_helmet,id=60325
 ```
 
-  * _source_ (default: "") can be used to override the **item\_db\_source** global setting for this item (see the [Item Data Importation](#Item_Data_Importation.md) section). It uses the same syntax.
+  * _source_ (default: "") can be used to override the **item\_db\_source** global setting for this item (see the [Item Data Importation](#Item_Data_Importation) section). It uses the same syntax.
 ```
  # Let's import our helm's stats from mmo-champion, or local if mmo-champion doesn't work.
  head=earthen_helmet,id=60325,source=mmoc|local
@@ -226,7 +226,7 @@ Set bonuses have to be manually added, even if you have enough set pieces equipp
 ```
 
 # Item Data Importation
-When automatically importing items data (see the [importing stats through ID](#Importing_stats_through_ID.md) section), the application will sequentially query multiple sources until one of them successfully returns the stats. (For more information on how item import interacts with caching, see [Cache Control](CacheControl.md).)
+When automatically importing items data (see the [importing stats through ID](#Importing_stats_through_ID.md) section), the application will sequentially query multiple sources until one of them successfully returns the stats. (For more information on how item import interacts with caching, see [Cache Control](CacheControl).)
 
   * **item\_db\_source** (scope: global; default: "wowhead,mmoc,bcpapi,ptrhead,local") is a sequence of sources, separated by ":", "/" or "|". Simulationcraft will try to retrieve items from each source in turn. Acceptable values are:
     1. "wowhead" is [Wowhead](http://www.wowhead.com/)

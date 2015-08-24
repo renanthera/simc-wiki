@@ -3,19 +3,19 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
 > ### Sacred Shield
 > Sacred Shield is coded as a Heal over Time spell that generates an absorb bubble every time it ticks. Thus, you can check its status using the `dot.sacred_shield.<property>` conditional:
 ```
   actions+=/sacred_shield,if=dot.sacred_shield.remains<3
 ```
-> See the [Dots](ActionLists#Dots.md) section of the [Action Lists](ActionLists.md) page for the full list of DoT properties you can query.
+> See the [Dots](ActionLists#Dots.md) section of the [Action Lists](ActionLists) page for the full list of DoT properties you can query.
 > For another example, here's how you would tell the sim you want to keep Sacred Shield active on another player:
 ```
   actions+=/sacred_shield,target=Player_Name,if=target.dot.sacred_shield.remains<3

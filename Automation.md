@@ -18,9 +18,9 @@ The left column starts with a Comparison Type drop-down box that allows you to c
 
 There is a help text section at the top of the screen above the center and right columns that provides basic instructions on how to use the tool. These instructions will change based on the chosen comparison type.
 
-The center column contains the Configurations text box, which allows you to specify different configurations, and the Footer text box. The Configurations text box will save whatever text you put in it per comparison type, so you can change comparison types without losing your entry for the other comparison types. More detail on the input syntax can be found below in the sections for each comparison type, or at the end in the [Appendix: Syntax](Automation#Appendix:_Syntax.md) section. The Footer text box is used to add options to the end of the generated profile.
+The center column contains the Configurations text box, which allows you to specify different configurations, and the Footer text box. The Configurations text box will save whatever text you put in it per comparison type, so you can change comparison types without losing your entry for the other comparison types. More detail on the input syntax can be found below in the sections for each comparison type, or at the end in the [Appendix: Syntax](Automation#Appendix:_Syntax) section. The Footer text box is used to add options to the end of the generated profile.
 
-The right column contains shorthand abbreviations that may be used in [Rotation Comparisons](Automation#Rotation_Comparisons.md); see that section for more details.
+The right column contains shorthand abbreviations that may be used in [Rotation Comparisons](Automation#Rotation_Comparisons); see that section for more details.
 
 # Getting Started & Defaults
 
@@ -42,13 +42,13 @@ The Default Gear and Rotation text boxes accept usual simc gear and action speci
  gear_filename.simc
 ```
 
-The Default Rotation box works much the same way. However, the Default Rotation box may be left empty or used to define additional options that apply to every player. The sim will automatically use the default APL that corresponds to your spec if it sees that no action list has been defined.  The final box in the left column is only used for the Rotation configuration type, so it is disabled and labeled "Unused" by default. This box will be described in more detail in the [Rotation Comparisons](Automation#Rotation_Comparisons.md) section.
+The Default Rotation box works much the same way. However, the Default Rotation box may be left empty or used to define additional options that apply to every player. The sim will automatically use the default APL that corresponds to your spec if it sees that no action list has been defined.  The final box in the left column is only used for the Rotation configuration type, so it is disabled and labeled "Unused" by default. This box will be described in more detail in the [Rotation Comparisons](Automation#Rotation_Comparisons) section.
 
 Finally, the Footer text box allows you to add custom commands to the generated profile. This is placed at the end of the profile, after all actors have been defined, so this is an appropriate place to define special boss configurations or global simc options (like `optimal_raid=0`).
 
-Note that when the automation script generates a simulation, it's basically just bolting together your defaults and adding some lines based on what you enter in the center column. As such, you can use almost any tricks you want in these text boxes that work in a standard simc file. In other words, you have the entire [Textual Configuration Interface](TextualConfigurationInterface.md) syntax at your disposal.
+Note that when the automation script generates a simulation, it's basically just bolting together your defaults and adding some lines based on what you enter in the center column. As such, you can use almost any tricks you want in these text boxes that work in a standard simc file. In other words, you have the entire [Textual Configuration Interface](TextualConfigurationInterface) syntax at your disposal.
 
-For example, you could enter `1231231 name=Bob` in the Default Talents box, and it would happily work - but all of your actors would be named Bob. For more detail on this, see [Appendix: Syntax.](Automation#Appendix:_Syntax.md)
+For example, you could enter `1231231 name=Bob` in the Default Talents box, and it would happily work - but all of your actors would be named Bob. For more detail on this, see [Appendix: Syntax.](Automation#Appendix:_Syntax)
 
 # Talent Comparisons
 
@@ -64,7 +64,7 @@ When you select the "Talents" comparison type, the "Default Talents" text box be
 
 When you hit the "Import!" button, the script will generate a new actor for each line of text, setting the talents of that actor appropriately. Each actor will use the default glyphs, gear, and rotation specified in the left column, but the first will have `talents=0000000`, the second will have `talents=1111111`, and so on. Each actor will be named appropriately as well (ex: T\_0000000, T\_1111111, etc.).
 
-Since the script is just pasting together bits of text, you can use standard SimC [TCI](TextualConfigurationInterface.md) tricks here to specify additional options. For example, with the input
+Since the script is just pasting together bits of text, you can use standard SimC [TCI](TextualConfigurationInterface) tricks here to specify additional options. For example, with the input
 
 ```
   1111111 name=Alice
@@ -86,7 +86,7 @@ If you look at the Simulate tab after pressing "Import!", you'll see that the sc
 
 Note, however, that the very first thing specified for each configuration **has** to be the talents. `name=Alice 11111111` will **not** work (and will probably generate an error, or at least undesired results!).
 
-The tool expects each new configuration to be a new line - in other words, separated by a single carriage return, with no blank lines in-between. If you leave a blank line (two carriage returns), it will assume that you want a blank line to separate configurations instead, and act accordingly. This is explained in more detail in [Appendix: Syntax](Automation#Appendix:_Syntax.md).
+The tool expects each new configuration to be a new line - in other words, separated by a single carriage return, with no blank lines in-between. If you leave a blank line (two carriage returns), it will assume that you want a blank line to separate configurations instead, and act accordingly. This is explained in more detail in [Appendix: Syntax](Automation#Appendix:_Syntax).
 
 # Glyph Comparisons
 
@@ -106,7 +106,7 @@ Since glyph names can be rather long, the automation tool will assign a simple n
   alabaster_shield/focused_shield/final_wrath name=Alfalfa
 ```
 
-As with talents, the glyph configuration needs to be the first thing on each line (so `name=Albert glyphs=alabaster_shield` will not work). Also as with talents, the tool expects each configuration to be one long string followed by a new line character (carriage return). Do not use blank lines unless you've already read [Appendix: Syntax](Automation#Appendix:_Syntax.md) and know what you're doing.
+As with talents, the glyph configuration needs to be the first thing on each line (so `name=Albert glyphs=alabaster_shield` will not work). Also as with talents, the tool expects each configuration to be one long string followed by a new line character (carriage return). Do not use blank lines unless you've already read [Appendix: Syntax](Automation#Appendix:_Syntax) and know what you're doing.
 
 # Gear Comparisons
 
@@ -198,11 +198,11 @@ Rotation comparisons are more flexible with regards to input because there are t
   name=Bob
   actions+=/avengers_shield
 ```
-> See the [Actions Header and Footer](Automation#Actions_Header_and_Footer.md) section for information about specifying actions or settings that apply to all configurations.
+> See the [Actions Header and Footer](Automation#Actions_Header_and_Footer) section for information about specifying actions or settings that apply to all configurations.
 
 > ## Shorthand Mode
 
-> In shorthand mode, you supply a set of abbreviations (or "shorthands") that specify the rotations you want to test. For example, the three configurations defined in the [Longhand section](Automation#Longhand_Mode.md) could be specified as follows:
+> In shorthand mode, you supply a set of abbreviations (or "shorthands") that specify the rotations you want to test. For example, the three configurations defined in the [Longhand section](Automation#Longhand_Mode) could be specified as follows:
 ```
   CS>J>AS name=Alice
   J>CS>AS name=Bob
@@ -219,7 +219,7 @@ Rotation comparisons are more flexible with regards to input because there are t
 
 > `shield_of_the_righteous,if=buff.divine_purpose.react`
 
-> The shorthand abbreviations are defined in the third column's Rotation Abbreviations edit box, which becomes enabled when switching the comparison type to Rotation. Ability, Option, and Operator shorthands are defined similarly, as described below. The [Options Shorthands](Automation#Options_Shorthands.md) section fully describes the syntax for options and the [Operator Shorthands](Automation#Operator_Shorthands.md) section fully describes operator syntax.
+> The shorthand abbreviations are defined in the third column's Rotation Abbreviations edit box, which becomes enabled when switching the comparison type to Rotation. Ability, Option, and Operator shorthands are defined similarly, as described below. The [Options Shorthands](Automation#Options_Shorthands.md) section fully describes the syntax for options and the [Operator Shorthands](Automation#Operator_Shorthands) section fully describes operator syntax.
 
 > ### Ability Shorthands
 > Shorthands for abilities, buffs, talents, and glyphs must be defined in the first section of the sidebar under the ":::Abilities, Buffs, Talents, Glyphs:::" section. They use the very simple syntax `Shorthand=longhand_ability_name`, separated by carriage returns, as such:

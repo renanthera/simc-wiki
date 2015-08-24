@@ -6,7 +6,7 @@
     * OSX and most Linux installs should already include **git**, if not, try to install it through your package manager or  go [here](http://www.tigris.org).
       * Use the git command found on the [source page](http://code.google.com/p/simulationcraft/source/checkout)
     * Git client integrated with Windows Explorer: [TortoiseGit](http://code.google.com/p/tortoisegit/)
-      * See [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft.md) for help on installing/using TortoiseGit.
+      * See [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft) for help on installing/using TortoiseGit.
     * Git client for Windows (cmd line interface): [Git for Windows](http://code.google.com/p/msysgit/)
       * Use the git command found on the [source page](http://code.google.com/p/simulationcraft/source/checkout)
 
@@ -31,7 +31,7 @@
   * Download and install  [Microsoft Visual Studio Express 2013 for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop)
   * If using Visual Studio 2013, please ensure that you have the [4th major update installed.](http://support.microsoft.com/kb/2994375) The 32-bit version of simc will not function properly without it.
   * Download and install [Qt 5.5.0 for Windows 64-bit (VS 2013 )](http://www.qt.io/download-open-source/#section-2). The file you want will look similar to qt-opensource-windows-x86-msvc2013\_64-5.5.0.exe. Note that if you are running on a 32-bit machine, please install that version instead.
-  * Add C:\Qt\Qt5.5.0\5.5\msvc2013\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH.md).
+  * Add C:\Qt\Qt5.5.0\5.5\msvc2013\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2013.props`
   * Open `your_simc_source_dir\simc_vs2013.sln` project file
   * Build SimcGUI\_qt5.5.0 solution on x64 architecture
@@ -54,7 +54,7 @@
     * You can run from inside QtCreator with the green triangle icon (Control-R).
 
   * If you want to be able to run your `SimulationCraft.exe` from _outside_ QtCreator, you need to move it from the `debug` or `release` folder into the top-level source folder and make the Qt libraries available through one of two options:
-    * Add Qt and MinGW to your  [PATH](HowToBuild#Adding_directory_to_PATH.md).
+    * Add Qt and MinGW to your  [PATH](HowToBuild#Adding_directory_to_PATH).
     * Run the batch script `GUI_dll_setup_mingw.bat` to copy DLLs from Qt and MinGW into `your_simc_source_dir`
 
 ## Command Line Interface using Microsoft Visual Studio
@@ -66,9 +66,9 @@
 
 ## Command Line Interface using MinGW
 
-  * Download a MinGW compiler and add it to your  [PATH](HowToBuild#Adding_directory_to_PATH.md).
+  * Download a MinGW compiler and add it to your  [PATH](HowToBuild#Adding_directory_to_PATH).
     * Recommended: Install [Qt 5.4.0 for Windows 32-bit (MinGW 4.9.1, OpenGL, 852 MB)](http://download.qt-project.org/archive/qt/5.4/5.4.0/) which comes with a modern MinGW, and is required to build the GUI anyway.
-      * Add C:\Qt\Qt5.3.0\Tools\mingw49\_32\bin to your  [PATH](HowToBuild#Adding_directory_to_PATH.md).
+      * Add C:\Qt\Qt5.3.0\Tools\mingw49\_32\bin to your  [PATH](HowToBuild#Adding_directory_to_PATH).
   * Open command prompt window and run
     * `cd your_simc_source_dir\engine`
     * `mingw32-make`

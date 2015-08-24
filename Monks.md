@@ -3,7 +3,7 @@
 
 
 # Textual configuration interface
-_This section is a part of the [TCI](TextualConfigurationInterface.md) reference._
+_This section is a part of the [TCI](TextualConfigurationInterface) reference._
 > ## Storm, Earth, and Fire
 
 > Storm, Earth, and Fire is fully supported in the sim. The action `storm_earth_and_fire` will spawn an enemy on the current target of the action (typically, the primary target of the simulator). There is a single buff and a single debuff involved in determining how many pets the actor has out at any given time, and whether a target has a pet on it. The buff `storm_earth_and_fire` has a maximum stack of two, where the stack count indicates the number of pets out. The debuff `storm_earth_and_fire_target` indicates whether the target has a pet on it.
@@ -36,7 +36,7 @@ eh_reset_throttle=33.3
 ```
 > ## Spells implementation notes
 
-> Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+> Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
 > ### _Stance_
 > The _stance_ action has one setting available.
@@ -55,7 +55,7 @@ eh_reset_throttle=33.3
 ```
 
 > ## Buffs
-> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs.md).
+> Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
 > ### _Tigereye Brew_
 > Split into _buff\_tigereye\_brew_ and _buff\_tigereye\_brew\_use_ because they share the same name in game.
@@ -64,7 +64,7 @@ eh_reset_throttle=33.3
 > Split into _elusive\_brew\_stacks_ and _elusive\_brew\_activated_ because they share the same name in game.
 
 > ## Debuffs
-> Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md).
+> Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 > > ### _Rising Sun Kick_
 > > > The _debuff.rising\_sun\_kick_ is used to increase Yellow damage attacks for Windwalkers and Mistweavers
 ```
