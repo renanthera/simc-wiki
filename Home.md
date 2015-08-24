@@ -25,13 +25,13 @@ There is also an excellent [starters guide](StartersGuide) on our wiki.
 
 ## How Can I Get Help?
 
-For a simple overview, thoroughly read the Welcome page that is presented upon launching SimulationCraft. In addition, detailed documentation material can be found on our [wiki pages](/). Here you will find a list of features, a starters guide, as well as answers to frequently asked questions.
+For a simple overview, thoroughly read the Welcome page that is presented upon launching SimulationCraft. In addition, detailed documentation material can be found on our [wiki pages](). Here you will find a list of features, a starters guide, as well as answers to frequently asked questions.
 
 If your question is not answered there, then see the [Community](#community) section below on how to reach other users via IRC. We periodically scan the WoW, MMO, and Wowhead forums as well, but we cannot promise swift responses in those arenas.
 
 If you have detailed questions that need to be answered in real time then I recommend you visit the IRC channel detailed in the [Community](#community) section below. There are active SimulationCraft developers on that channel 24hrs a day.
 
-If you believe that the reported analysis is incorrect please open an [issue](../../issues). If you are unable to download your character, please open an [issue](../../issues). If you feel that the tool is missing features/directives necessary for analysis, please open an [issue](../../issues). Opening an [issue](../../issues) (as opposed to an email, forum post, chat msg, etc) is by far the most effective method of getting a swift resolution to your problem.
+If you believe that the reported analysis is incorrect please open an [issue](../issues). If you are unable to download your character, please open an [issue](../issues). If you feel that the tool is missing features/directives necessary for analysis, please open an [issue](../issues). Opening an [issue](../issues) (as opposed to an email, forum post, chat msg, etc) is by far the most effective method of getting a swift resolution to your problem.
 
 Also make sure to check our [common issues wiki](CommonIssues).
 
