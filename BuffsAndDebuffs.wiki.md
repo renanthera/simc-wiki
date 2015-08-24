@@ -1,0 +1,96 @@
+_This documentation is a part of the [TCI](TextualConfigurationInterface.md) reference._
+
+**Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
+
+
+
+# Introduction
+
+By default, Simulationcraft adds every buff you're supposed to have in an optimal 20-man raid, including a permanent replenishment effect and bloodlust at the end of the fight.
+
+# Optimal raid
+  * **optimal\_raid** (scope: global; default: 1), when different from zero, will make your characters benefit from every helpful buffs you're supposed to have in a 20-man raid. It does includ a bloodlust at the start of the fight. Of course, it does not include weird buffs such as the icecrown citadel one. If you simulate a whole raid, it may be a good idea to disable this setting to have buffs and debuffs being dynamically applied throughout the course of the simulation and your players' actions lists.
+```
+ # This will leave you with absolutely no buff, unless the self buffs you cast on your actions list.
+ optimal_raid=0
+```
+
+# Overrides
+You can override the helpful buffs and target debuffs you benefit from the **optimal\_raid** setting and explicitly disable or enable them, one by one. All those settings have a global scope and their default value is the last specified **optimal\_raid** setting, or 1 if not specified.
+
+Beware! You need to declare the overrides **`***`after`***`** you declared **optimal\_raid**!
+
+  * +10% AP
+    * **override.attack\_power\_multiplier**
+
+  * +10% Spell Power
+    * **override.spell\_power\_multiplier**
+
+  * +5% critical chance
+    * **override.critical\_strike**
+
+  * +5% melee, ranged and caster haste
+    * **override.haste**
+
+  * +5% multistrike
+    * **override.multistrike**
+
+  * +5% strength, agility, and intelligence
+    * **override.str\_agi\_int**
+
+  * +10% stamina
+    * **override.stamina**
+
+  * +3% Versatility
+    * **override.versatility**
+
+  * +Mastery
+    * **override.mastery**
+
+  * Unique buffs and debuffs
+    * **override.bloodlust** and **override.bloodlust\_early** (see the relevant section below)
+
+  * Specials
+    * **override.bleeding** will flag your target as permanently bleeding
+
+# Heroism/bloodlust
+
+The default settings will lead Simulationcraft to cast the bloodlust 6 seconds into the duration of the fight, or when the target is below 25% health (although this is not relevant under most normal simulations).
+
+  * **override.bloodlust** (scope: global; default: equal to **optimal\_raid**, or 1 if never specified) will force the application to automatically cast bloodlust (or not, when zero) at the end of the fight (or the beginning, see the next option).
+```
+ #This line enables optimal_raid but then disables the automatic use of bloodlust.
+ optimal_raid=1
+ override.bloodlust=0
+```
+
+> There are two possible triggers for bloodlust, one based on the elapsed or the remaining time, another one based on the target's health. As soon as one of the triggers is satisfied, bloodlust will be used. Both triggers can be disabled. Note that those settings won't affect the manually casted bloodlusts (used through the actions list), only the bloodlusts casted through **optimal\_raid** or **override.bloodlust**.
+
+  * **bloodlust\_percent** (scope: global; default: 25), when greater than zero, is the percent of the target health below which bloodlust will be triggered. When zero, this trigger is disabled.
+  * **bloodlust\_time** (scope: global; default: 5), when greater than zero, is the elapsed time threshold, in seconds, since the beginning of the fight. When lesser than zero, it is the estimated remaining time threshold, in seconds, before the target dies. Anytime this threshold is reached, bloodlust will be triggered. When zero, this trigger is disabled.
+```
+ # This example enables optimal_raid. Bloodlust will be used as soon as one of there are less than 100s before the end of the fight, or when the target falls below 20% health.
+ optimal_raid=1
+ bloodlust_time=-100
+ bloodlust_percent=20
+```
+
+# Targeted buffs
+
+When both **optimal\_raid** and the relevant **override.xxx** are disabled and you're performing a simulation with many characters, targeted buffs such as "tricks of the trade" have features to let you specify their targets.
+
+There are two ways to do so:
+```
+ # Let's make John the rogue use tricks of the trade on Bill
+ armory=us,illidan,John
+ tricks_of_the_trade_target=Bill
+
+ # Or we can specify it in John's actions list:
+ armory=us,illidan,John
+ actions+=/tricks_of_the_trade,target=Bill
+```
+
+The following buffs support those two mechanics (**xxx\_target** and a _target_ for the corresponding action):
+  1. tricks of the trade
+
+  * The relevant key words (**tricks\_of\_the\_trade\_target**) have the "current character" scope and are empty by default (no target). The corresponding actions are not included in the default actions lists (unless they can be casted on self).
