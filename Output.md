@@ -37,7 +37,7 @@ Note: the standard output mentioned on this page is the console output, not your
  html=c:\report.html
  xml=c:\report.xml
 ```
-  * **json** (scope: global; default: "", ONLY IN BRANCH wod-highchart) can be used to specify a file to write a json report to.
+  * **json** (scope: global; default: "") can be used to specify a file to write a json report to.
   * **report\_details** (scope: global; default: 1), when different from zero, will change the abilities list in the html report so that abilities can be expanded to display the static data extracted from the DBC game files, and modified by your glyphs, talents and such.
 ```
  # I don't care and I want my html reports to be smaller.
