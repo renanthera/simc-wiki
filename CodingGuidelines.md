@@ -17,5 +17,13 @@ Avoid hard coded numbers if possible. If they are absolutely necessary, document
 ---
 
 ## C++11 support
-As of this writing, the Constraints of GCC 4.6, Clang 3.1 and Microsoft Visual Studio 11 ( 2012 ) allows for `auto`, `static_assert`, `range based for loops`, `override/final`, `default/deleleted functions`, `lambdas`, Right Angle Brackets`.
+As of this writing, the Constraints of GCC 4.6, Clang 3.1 and Microsoft Visual Studio 11 ( 2012 ) allows for:
+* auto
+* static_assert
+* range based for loops
+* override/final
+* default/deleleted functions
+* lambdas
+* Right Angle Brackets
+
 A complete list of compiler support for various features can be found [here](http://wiki.apache.org/stdcxx/C%2B%2B0xCompilerSupport)
