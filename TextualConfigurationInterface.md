@@ -16,7 +16,7 @@ Options can have different kind of scopes. The most common are:
   * _current character:_ the option affects the current character (the last declared one). Example: **level**.
   * _ulterior characters:_ the option affects the characters declared later in the file, excluding the current character. Example: **ptr**.
 
-> Characters declaration can be manual (through **warlock**, **warrior**, ...) or automatic (through **armory**, **wowhead**, ...). See [Characters declaration](Characters#Declaration).
+Characters declaration can be manual (through **warlock**, **warrior**, ...) or automatic (through **armory**, **wowhead**, ...). See [Characters declaration](Characters#Declaration).
 
 # Characters encoding
 Simulationcraft work with an UTF-8 encoding (basically, a text file is just a sequence of numbers, the encoding is the convention used to translate numbers to characters; a convention has to be chosen to know which character is represented by a given number). Latin1 works also since the common characters are encoded in the same way they are in UTF-8. UTF-8 is universal and the modern standard but older, region-specific, encodings are still very common.
@@ -36,8 +36,9 @@ Comments can be made through the # symbol, as shown below:
 
 ## Long strings
 Some options, such as **path** or **raid\_events**, are very long strings which can be written on a single line or on many lines. Here is the rule to follow:
-> _The "=" operator replaces the string with the new content you provided. The "+=" operator appends the new content at the end of the existing string. You can use the "+=" operator at the very beginning but it will append your content to the default string, make sure it is empty by default. For example:_
 ```
+> The "=" operator replaces the string with the new content you provided. The "+=" operator appends the new content at the end of the existing string. You can use the "+=" operator at the very beginning but it will append your content to the default string, make sure it is empty by default. For example:
+
  # Of course, you can write it on a single line or on many lines.
  path="c:|profiles"
 
@@ -49,7 +50,8 @@ Some options, such as **path** or **raid\_events**, are very long strings which 
 ## Sequences
 
 Some options, such as **actions** or **raid\_events**, are very long strings containing sequences of commands. By default, those string are empty. You can either write them on a single line or on multiple lines (see the previous section). There is one additional rule regarding the chaining of commands:
-> _All commands need to be separated with an operator, typically it will be "/". You can use it at the very beginning but it is optional._
+> All commands need to be separated with an operator, typically it will be "/". You can use it at the very beginning but it is optional.
+
 ```
  #This is licit
  raid_events+=/event1,option1,option2
@@ -95,7 +97,7 @@ Simulationcraft provides a templating mechanism to declare and reuse pieces of t
   1. Templates are declared with the syntax: `$(variable)=content`
   1. Templates are referred and used with the syntax: `$(variable)`
 
-> For example, the following file:
+For example, the following file:
 ```
  # Declare a new template named light_the_fire
  $(light_the_fire)=!ticking&buff.t11_4pc_caster.down
@@ -106,13 +108,14 @@ Simulationcraft provides a templating mechanism to declare and reuse pieces of t
  actions+=/moonfire,if=$(light_the_fire)&!dot.sunfire.remains>0
 
 ```
-> Is equivalent to:
+
+Is equivalent to:
 ```
  armory=us,illidan,some_balance_druid
  actions+=/sunfire,if=!ticking&buff.t11_4pc_caster.down&!dot.moonfire.remains>0
  actions+=/moonfire,if=!ticking&buff.t11_4pc_caster.down&!dot.sunfire.remains>0
 ```
-> As you can see the `$(light_the_fire)` reference has been replaced with the content assigned to it.
+As you can see the `$(light_the_fire)` reference has been replaced with the content assigned to it.
 
 
 # Includes
@@ -127,8 +130,8 @@ You can easily include external TCI files (usually named with the .simc extensio
 
  # We can also specify a path (remember, through: white spaces are not allowed)
  c:\global-config.simc
-```
 
+```
   * **path** (scope: global; default: ".|profiles|profiles\_heal|../profiles|../profiles\_heal") specifies the directories where the application should search for the files to include. The list of directories have to separated with "|", "," or ";". This option can be written on many lines, see the [long strings](#Long_strings) section.
 ```
  # The following will make the application look for includes in c:\includes, .\profiles and ..\simc_scripts
