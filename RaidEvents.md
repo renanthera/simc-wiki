@@ -9,18 +9,17 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 ```
  fight_style=HelterSkelter
 ```
-
-> Acceptable values are:
-    1. _Patchwerk_ will set up an empty raid events list. This is a perfect stand still and DPS fight.
-    1. _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
+Acceptable values are:
+  1. _Patchwerk_ will set up an empty raid events list. This is a perfect stand still and DPS fight.
+  1. _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
 ```
  raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
 ```
-    1. _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
+  1. _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
 ```
  raid_events+=/movement,players_only=1,first=10,distance=25,duration=4
 ```
-    1. _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). For a 450second fight it is the same as
+  1. _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). For a 450second fight it is the same as
 ```
  raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
  raid_events+=/movement,players_only=1,first=22,cooldown=33,distance=20,last=337
