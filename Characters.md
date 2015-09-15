@@ -135,15 +135,15 @@ By default, Simulationcraft will import a fresh copy of your character profile o
  talents=200000030300003010122000000000000000000000000000000000000000000
 ```
 
-> Here is the list of supported types:
-    * Death knight: army\_of\_the\_dead\_ghoul\_8, bloodworms, dancing\_rune\_weapon, gargoyle, ghoul
-    * Druid: treants
-    * Mage: mirror\_image\_3, water\_elemental
-    * Hunters: the list is too long, just use underscores instead of spaces. in doubt, search for the _create\_pet_ function's definition in the _sc\_hunter.cpp_ file
-    * Paladin: guardian\_of\_ancient\_kings\_ret
-    * Priest: shadow\_fiend
-    * Shaman: spirit\_wolf, fire\_elemental
-    * Warlock: felguard, felhunter, imp, succubus, voidwalker, infernal, doomguard, ebon\_imp
+Here is the list of supported types:
+ * Death knight: army\_of\_the\_dead\_ghoul\_8, bloodworms, dancing\_rune\_weapon, gargoyle, ghoul
+ * Druid: treants
+ * Mage: mirror\_image\_3, water\_elemental
+ * Hunters: the list is too long, just use underscores instead of spaces. in doubt, search for the _create\_pet_ function's definition in the _sc\_hunter.cpp_ file
+ * Paladin: guardian\_of\_ancient\_kings\_ret
+ * Priest: shadow\_fiend
+ * Shaman: spirit\_wolf, fire\_elemental
+ * Warlock: felguard, felhunter, imp, succubus, voidwalker, infernal, doomguard, ebon\_imp
 
 ## Changing the current character
 
@@ -362,11 +362,11 @@ enable_2_set=18
  gear_strength=1
 ```
 
-> The available keywords are:
-    1. Resources: gear\_health, gear\_mana, gear\_rage, gear\_energy, gear\_focus, gear\_runic
-    1. Primary: gear\_strength, gear\_agility, gear\_intellect, gear\_stamina, gear\_spirit
-    1. Secondary: gear\_mastery\_rating, gear\_haste\_rating, gear\_multistrike\_rating, gear\_versatility\_rating, gear\_crit\_rating, gear\_spell\_power, gear\_attack\_power, gear\_mp5
-    1. Defensive: gear\_armor
+The available keywords are:
+ 1. Resources: gear\_health, gear\_mana, gear\_rage, gear\_energy, gear\_focus, gear\_runic
+ 1. Primary: gear\_strength, gear\_agility, gear\_intellect, gear\_stamina, gear\_spirit
+ 1. Secondary: gear\_mastery\_rating, gear\_haste\_rating, gear\_multistrike\_rating, gear\_versatility\_rating, gear\_crit\_rating, gear\_spell\_power, gear\_attack\_power, gear\_mp5
+ 1. Defensive: gear\_armor
 
 ## Bonuses and maluses
 
