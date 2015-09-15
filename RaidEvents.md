@@ -13,7 +13,7 @@ Acceptable values are:
   1. _Patchwerk_ will set up an empty raid events list. This is a perfect stand still and DPS fight.
   1. _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
 ```
- raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
+raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
 ```
   1. _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
 ```
