@@ -19,7 +19,7 @@ Options can have different kind of scopes. The most common are:
 Characters declaration can be manual (through **warlock**, **warrior**, ...) or automatic (through **armory**, **wowhead**, ...). See [Characters declaration](Characters#Declaration).
 
 # Characters encoding
-Simulationcraft work with an UTF-8 encoding (basically, a text file is just a sequence of numbers, the encoding is the convention used to translate numbers to characters; a convention has to be chosen to know which character is represented by a given number). Latin1 works also since the common characters are encoded in the same way they are in UTF-8. UTF-8 is universal and the modern standard but older, region-specific, encodings are still very common.
+Simulationcraft works with an UTF-8 encoding (basically, a text file is just a sequence of numbers, the encoding is the convention used to translate numbers to characters; a convention has to be chosen to know which character is represented by a given number). Latin1 works also since the common characters are encoded in the same way they are in UTF-8. UTF-8 is universal and the modern standard but older, region-specific, encodings are still very common.
 
 Simple text editors such as Microsoft Notepad typically encode your files with your operating system's default encoding, which depends on your regional settings. With western regional settings (US, Canada, Australia, Western Europe, etc) it will be latin1 and you will have no problem. With different regional settings, the file will have an encoding incompatible with Simulationcraft.
 
@@ -31,14 +31,15 @@ There are many good, free and open-source, text editors such as [Notepad++](http
 
 Comments can be made through the # symbol, as shown below:
 ```
- #This is a comment
+ # This is a comment
 ```
 
 ## Long strings
 Some options, such as **path** or **raid\_events**, are very long strings which can be written on a single line or on many lines. Here is the rule to follow:
-```
+
 > The "=" operator replaces the string with the new content you provided. The "+=" operator appends the new content at the end of the existing string. You can use the "+=" operator at the very beginning but it will append your content to the default string, make sure it is empty by default. For example:
 
+```
  # Of course, you can write it on a single line or on many lines.
  path="c:|profiles"
 
