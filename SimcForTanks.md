@@ -117,7 +117,8 @@ The scale factors and bar plot will be produced as usual, though the values will
 This section will discuss advanced topics in tank simulation.
 
 ## Taunting
-(**Simulationcraft 6.0.1 release 1 and later**)
+>(**Simulationcraft 6.0.1 release 1 and later**)
+
 Simulating tank swaps is possible in newer versions of SimC. If there are two or more tanks in the simulation, the enemy will have one action list for each tank, and its default action list will look something like this:
 ```
  actions=/run_action_list,name=Alice,if=current_target=Alice
