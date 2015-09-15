@@ -16,14 +16,14 @@ Because of the very nature of simulations (see [FormulationVsSimulation](Formula
 
 
 # Constant seed
-> Pseudo-random number generators (rng) can be seen as pseudo-random numbers sequences. By default, Simulationcraft will use a different sequence on every run, which is why two consecutive runs using the same inputs still produce different outputs. A constant seed forces Simulationcraft to always use the same sequence : if Simulationcraft was only using rolls between 1 and 6, a constant seed would ensure the sequence would always be, for example, 1-5-4-4-3-6-..., whatever those numbers would be used for.
+Pseudo-random number generators (rng) can be seen as pseudo-random numbers sequences. By default, Simulationcraft will use a different sequence on every run, which is why two consecutive runs using the same inputs still produce different outputs. A constant seed forces Simulationcraft to always use the same sequence : if Simulationcraft was only using rolls between 1 and 6, a constant seed would ensure the sequence would always be, for example, 1-5-4-4-3-6-..., whatever those numbers would be used for.
 
   * **seed** (scope: global; default:0) is the seed of the pseudo-random sequence. When set to 0, Simulationcraft will use a different seed on every run, based on the execution time. When different from zero, the given seed will be used to generate the same pseudo-random sequence across all runs. Incremented by 1 for every thread.
 ```
  seed=1247695
 ```
 
-> Note: there are some misconceptions about constant seeds. You may think it is useful to compare slightly different inputs but it is probably not : just switching one piece of gear and increasing haste means the actions order will change : if your highest dpet action was previously favored by good rolls on the first run, those good rolls can now have been consumed by something else. Really, what constant seeds just achieve is to ensure that two different runs with two identical inputs yield identical outputs.
+Note: there are some misconceptions about constant seeds. You may think it is useful to compare slightly different inputs but it is probably not : just switching one piece of gear and increasing haste means the actions order will change : if your highest dpet action was previously favored by good rolls on the first run, those good rolls can now have been consumed by something else. Really, what constant seeds just achieve is to ensure that two different runs with two identical inputs yield identical outputs.
 
 ## Deterministic
   * **deterministic** (scope:global, default:0), when different from zero, will seed our rng packages with an arbitrary, hard-coded, value (31459, incremented for every thread). Equal to the option seed=31459.
