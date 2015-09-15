@@ -20,7 +20,7 @@ Note that, because of the fighting variance, in order to have accurate enough re
  calculate_scale_factors=1
  scale_strength=200
 ```
-Increasing this setting does not directly change the resulting scale factor since those factors are proportional to the benefit _per point_. However, since many ratings suffer diminishing returns, you may actually observe a lowered scale factor as you increase this setting.
+  Increasing this setting does not directly change the resulting scale factor since those factors are proportional to the benefit _per point_. However, since many ratings suffer diminishing returns, you may actually observe a lowered scale factor as you increase this setting.
 
   * **positive\_scale\_delta** (scope: global; default: 0), when different from zero, will force the default deltas shown in the next version to always be positive.
 > If you explicitly set a non-default delta, **positive\_scale\_delta** will not affect those deltas.
@@ -47,7 +47,7 @@ Increasing this setting does not directly change the resulting scale factor sinc
  # Scale factors over the total raid dps rather than the player dps alone.
  scale_over=raid_dps
 ```
-Please note that _deaths_, _avg\_death\_time_, _min\_death\_time_ and _dmg\_taken_ can be used to rate a stat over a player's survivability, rather than its dps. They're primarily aimed at tanks.
+  Please note that _deaths_, _avg\_death\_time_, _min\_death\_time_ and _dmg\_taken_ can be used to rate a stat over a player's survivability, rather than its dps. They're primarily aimed at tanks.
 
 # Default deltas
 
