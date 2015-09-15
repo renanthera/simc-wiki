@@ -7,8 +7,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 # Public test realms
   * **ptr** (scope: ulterior characters; default: 0) allows you to target the ptr version. By default, Simulationcraft targets the live WoW version. Beware:  Simulationcraft may not be fully updated for the ptr version, you're advised to check the version changes on [ReleaseNotes](ReleaseNotes).
 ```
- #This allows you to compare the live version of a character with his evil twin on the ptr. 
- # We first create the live character with ptr=0, then we set ptr to 1 and copy the current character to a new one named "EvilTwin".
+ # This allows you to compare the live version of a character
+ # with his evil twin on the ptr. 
+ # We first create the live character with ptr=0, then we set ptr
+ # to 1 and copy the current character to a new one named "EvilTwin".
 
  ptr=0
  #<Insert other options here>
@@ -23,28 +25,30 @@ There are various combat length settings and modes in SimC, both allowing variou
 ## Time-based models
 There are two time-based combat length models:
   * **Enemy Health Estimation** _(default)_:
-> > The enemies health gets adjusted so that the resulting combat length based on the enemies demise corresponds to the configured time-based combat length parameters. The reason for this is to allow a realistic enemy health flow depending on the simulated characters dps variation, especially execute effects.
-> > This is the default setting in SimulationCraft.
+ The enemies health gets adjusted so that the resulting combat length based on the enemies demise corresponds to the configured time-based combat length parameters. The reason for this is to allow a realistic enemy health flow depending on the simulated characters dps variation, especially execute effects.
+ This is the default setting in SimulationCraft.
   * **Fixed Time**:
-> > The combat length is purely based on the configured time-based combat length parameters. Enemy health percentage is uniformly distributed over the combat length.
+ The combat length is purely based on the configured time-based combat length parameters. Enemy health percentage is uniformly distributed over the combat length.
 
 ### Configuration
 
-> Both Time-based models have the following parameters:
-    * **max\_time** (scope: global; default: 450) is the duration, in seconds, you desire for the average fight duration.
+Both Time-based models have the following parameters:
+ * **max\_time** (scope: global; default: 450) is the duration, in seconds, you desire for the average fight duration.
+
 ```
  // This example will make the fights durations converge to 400s.
  max_time=400
 ```
-    * **vary\_combat\_length** (scope: global; default: 0.2) will make the combat length artifically vary linearly across the iterations. It is expressed as a fraction of the **max\_time** setting, between 0 and 1.
+* **vary\_combat\_length** (scope: global; default: 0.2) will make the combat length artifically vary linearly across the iterations. It is expressed as a fraction of the **max\_time** setting, between 0 and 1.
+
 ```
  #This example will make the combat length's targeted value vary between 180s and 220s.
  max_time=200
  vary_combat_length=0.1
 ```
 
-> To enable the Fixed Time model use:
-    * **fixed\_time** (scope: global; default: 0), when different from zero, will enable the Fixed Time model. Enabling this setting will ignore the **override.target\_health** setting.
+To enable the Fixed Time model use:
+ * **fixed\_time** (scope: global; default: 0), when different from zero, will enable the Fixed Time model. Enabling this setting will ignore the **override.target\_health** setting.
 ```
  #This example will make the combat length being exactly 300s on all iterations.
  max_time=300
@@ -53,30 +57,29 @@ There are two time-based combat length models:
 ```
 
 ## Fixed Enemy Health model
-> Specifying the initial health pool of the target: Simulationcraft will use this value as an initial health for the target and just end the simulation once the target reaches 0 hp.
-> The **max\_time** setting is ignored, except for the Safeguard settings. ( See section below )
-    * **override.target\_health** (scope: global; default: 0), when different from zero, is the initial target health pool and triggers the second mode. Sets vary\_combat\_length to 0.
+Specifying the initial health pool of the target: Simulationcraft will use this value as an initial health for the target and just end the simulation once the target reaches 0 hp.
+The **max\_time** setting is ignored, except for the Safeguard settings. ( See section below )
+ * **override.target\_health** (scope: global; default: 0), when different from zero, is the initial target health pool and triggers the second mode. Sets vary\_combat\_length to 0.
 ```
- // This example will ignore the max_time duration and just have an initial health pool of 100M HP.
+ # This example will ignore the max_time duration and just have an initial health pool of 100M HP.
  override.target_health=100000000
 ```
 
 ## Safeguards
-> All configurations have a safeguard to end combat eventually, to avoid endless simulations and various problems like going out of memory. The safeguard is set to twice the expected combat time.
+All configurations have a safeguard to end combat eventually, to avoid endless simulations and various problems like going out of memory. The safeguard is set to twice the expected combat time.
 ```
  simulation_end = 2 * max_time * ( 1 + vary_combat_length )
 ```
 # Infinite resources
 
-  * **infinite\_rage, energy, mana, focus, runic, health** (scope: global; default: 0), when different from zero, provide infinite resources of the corresponding type to all concerned characters.
+* **infinite\_rage, energy, mana, focus, runic, health** (scope: global; default: 0), when different from zero, provide infinite resources of the corresponding type to all concerned characters.
 ```
  infinite_mana=1
 ```
 
 
 # Latency
-
-  * **strict\_gcd\_queue** (scope: global; default: 0), when different from zero, forces the application to properly model the in-game gcd queue. In the future, this setting should be defaulted to 1. When this setting is left to zero, a player can still change his queued gcd action after the time his previously queued action should have been executed by the server. TOCHECK.
+ * **strict\_gcd\_queue** (scope: global; default: 0), when different from zero, forces the application to properly model the in-game gcd queue. In the future, this setting should be defaulted to 1. When this setting is left to zero, a player can still change his queued gcd action after the time his previously queued action should have been executed by the server. TOCHECK.
 ```
  strict_gcd_queue=1
 ```
