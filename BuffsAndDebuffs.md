@@ -64,7 +64,7 @@ The default settings will lead Simulationcraft to cast the bloodlust 6 seconds i
  override.bloodlust=0
 ```
 
-> There are two possible triggers for bloodlust, one based on the elapsed or the remaining time, another one based on the target's health. As soon as one of the triggers is satisfied, bloodlust will be used. Both triggers can be disabled. Note that those settings won't affect the manually casted bloodlusts (used through the actions list), only the bloodlusts casted through **optimal\_raid** or **override.bloodlust**.
+    There are two possible triggers for bloodlust, one based on the elapsed or the remaining time, another one based on the target's health. As soon as one of the triggers is satisfied, bloodlust will be used. Both triggers can be disabled. Note that those settings won't affect the manually casted bloodlusts (used through the actions list), only the bloodlusts casted through **optimal\_raid** or **override.bloodlust**.
 
   * **bloodlust\_percent** (scope: global; default: 25), when greater than zero, is the percent of the target health below which bloodlust will be triggered. When zero, this trigger is disabled.
   * **bloodlust\_time** (scope: global; default: 5), when greater than zero, is the elapsed time threshold, in seconds, since the beginning of the fight. When lesser than zero, it is the estimated remaining time threshold, in seconds, before the target dies. Anytime this threshold is reached, bloodlust will be triggered. When zero, this trigger is disabled.
