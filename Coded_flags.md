@@ -25,8 +25,6 @@ These flags determine what an ability does during a simulation.
    aoe = 2; // Ability deals damage to 2 targets.
 ```
 
-  * **pre\_combat** - bool - Not used anymore?
-
   * **may\_multistrike** - int - If the ability can proc multistrikes. 0 disables multistrikes, 1 enables, and -1 enables/disables multistrikes based on if the ability can crit or not.
 ```cpp
    may_multistrike = 1;
