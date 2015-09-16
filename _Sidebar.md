@@ -47,6 +47,4 @@
     * [Visual\_Studio](Visual_Studio)
     * [Localization](Localization)
     * [TODO](TODO)
-  * [ReleaseNotes](ReleaseNotes)
   * [Screenshots](Screenshots)
-  * [Feedback](Feedback)
