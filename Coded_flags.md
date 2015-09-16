@@ -11,24 +11,24 @@ Eventually someone will organize this. =P
 These flags determine what an ability does during a simulation.
 
   * **school** - enum - default: SCHOOL\_NONE - What type of damage this spell does.
-```
+```cpp
    school = SCHOOL_PHYSICAL;
 ```
 
   * **resource\_current** - enum - What resource does this ability use.
-```
+```cpp
    resource_current = RESOURCE_RAGE;
 ```
 
   * **aoe** - int - The amount of targets that an ability impacts on. -1 will hit all targets.
-```
+```cpp
    aoe = 2; // Ability deals damage to 2 targets.
 ```
 
   * **pre\_combat** - bool - Not used anymore?
 
   * **may\_multistrike** - int - If the ability can proc multistrikes. 0 disables multistrikes, 1 enables, and -1 enables/disables multistrikes based on if the ability can crit or not.
-```
+```cpp
    may_multistrike = 1;
 ```
 
@@ -91,31 +91,31 @@ These flags determine what an ability does during a simulation.
   * **dot\_duration** - timespan\_t - Default duration of dot.
 
   * **base\_costs** - double - Cost of using the ability
-```
+```cpp
    base_costs[RESOURCE_RAGE] = 20; // Uses 20 rage on execute.
 ```
 
   * **costs\_per\_second** - double - Cost of using ability per second
-```
+```cpp
    costs_per_second[RESOURCE_RUNIC_POWER] = 10; // Uses 10 runic power per second.
 ```
 
   * **weapon\_multiplier** - double - Weapon damage for the ability.
 
   * **cooldown** - Used to manipulate cooldown duration and charges.
-```
+```cpp
    cooldown -> duration = timespan_t::from_seconds( 20 ); //Ability has a cooldown of 20 seconds.
    cooldown -> charges = 3; // Ability has 3 charges.
 ```
 
   * **movement\_directionality**
-```
+```cpp
    movement_directionality = MOVEMENT_OMNI; // Can move in any direction, ex: Heroic Leap, Blink. Generally set movement skills to this.
    movement_directionality = MOVEMENT_TOWARDS; // Can only be used towards enemy target. ex: Charge
    movement_directionality = MOVEMENT_AWAY; // Can only be used away from target. Ex: ????
 ```
 
   * **base\_teleport\_distance** - double - Maximum distance that the ability can travel. Used on abilities that instantly move you, or nearly instantly move you to a location.
-```
+```cpp
    base_teleport_distance = 40;
 ```
