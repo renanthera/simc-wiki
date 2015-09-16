@@ -6,6 +6,8 @@ This is not (currently) an exhaustive list, but with time we will try and make s
 
 Eventually someone will organize this. =P
 
+Work in Progress: Unify all this with in-code documentation and creating doxygen docs. See http://simulationcraft.org/doc/structaction__t.html#pub-attribs
+
 # Action Flags
 
 These flags determine what an ability does during a simulation.
