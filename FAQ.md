@@ -3,12 +3,12 @@
 Simulationcraft is licensed under the [GPL v3](http://www.gnu.org/licenses/gpl.html). It is free and open-source. Anyone can contribute (help with the development, check the code, report issues, provide feedback, etc), including you.
 
 ## Where are the changelogs / version notes?
-See [ReleaseNotes](ReleaseNotes) or the the [list of commits](http://code.google.com/p/simulationcraft/source/list?num=25).
+See the [Download Page](http://www.simulationcraft.org/download.html) for Release Notes, or the the [list of commits](https://github.com/simulationcraft/simc/commits/master).
 
 ## Where are the sample outputs?
 On [simulationcraft.org](http://www.simulationcraft.org/).
 
-## How did you setup those bis profiles and default actions lists?
+## How did you setup those Best-in-Slot profiles and default actions lists?
 We monitor the usual theorycrafters' lairs such as the [Elitist Jerks forums](http://elitistjerks.com/forums.php) and use the informations and profiles found there.
 
 ## I cannot import my Russian/Korean/Chinese/... character
@@ -20,7 +20,7 @@ The GPU is good at iterating small pieces of code millions of times, in a parall
 # Graphical user interface
 
 ## Where are my files saved?
- * On windows, it is the application's directory, or the working directory if you specified one (through the shortcut's settings).
+ * On Windows, it is the application's directory, or the working directory if you specified one (through the shortcut's settings).
  * On OSX, when you use the GUI, it is `$HOME/Library/Application Support/simcqt`
 
 ## How can I change the region and language for the armory page?
@@ -29,9 +29,6 @@ Under the **options** tab and the **globals** sub-tab, there is an "Armory regio
 You can also directly change the url. For example, replace the "en" by "fr" if you want to have the armory in French.
 
 ![http://www.simulationcraft.org/images/wiki/url_structure.jpg](http://www.simulationcraft.org/images/wiki/url_structure.jpg)
-
-## Can I prevent the GUI to erase the generated profile anytime I perform a simulation?
-No but you can easily retrieve previous profiles with the "<" and ">" buttons.
 
 # Results and reports
 ## My results change across runs!
