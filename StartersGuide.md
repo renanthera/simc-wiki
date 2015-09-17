@@ -165,6 +165,9 @@ Next, the example.
 
 > ![http://www.simulationcraft.org/images/wiki/guide_cli1.png](http://www.simulationcraft.org/images/wiki/guide_cli1.png)
 
-  * Finally, just type: `simc import.simc`
+  * Finally, just type:
+```sh
+simc import.simc
+```
 
 > ![http://www.simulationcraft.org/images/wiki/guide_cli2.png](http://www.simulationcraft.org/images/wiki/guide_cli2.png)
