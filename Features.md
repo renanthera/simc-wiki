@@ -66,7 +66,12 @@ Besides, Simulationcraft offers you tools to simulate human behaviours: your pla
 
 Internationalization
 ========================
-> Simulationcraft is only available in English. However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding).
+Simulationcraft is only fully available in English.
+
+However, it can work with all versions of the wow armory and battle.net websites (notably: Russian, Chinese, Korean and Taiwanese characters and guilds can be imported). If you use the command-line client, your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding).
+
+
+There are German and Chinese translations available for the Graphical User Interface, but not for Input Configuration and Output reports. If you want to contribute in translating the GUI, have a look at [Developers Corner/Localization](Localization)
 
 Limitations
 =====================
