@@ -96,7 +96,7 @@ Stats scaling allows you to calculate the weight of every stat, reflecting its i
 Here are some nice tips and tricks you can try out.
 
 ## Unleash the full power of Simulationcraft
-> The existing options in the **options** tab allow you to use 80% of Simulationcraft's power. However, if you want to use advanced features, like multi-players simulations or custom fights, you need to use the [Textual Configuration Interface](TextualConfigurationInterface) (TCI). Basically, it's a set of textual options and commands you can write in the **overrides** tab or provide to the command-line client.
+The existing options in the **options** tab allow you to use 80% of Simulationcraft's power. However, if you want to use advanced features, like multi-players simulations or custom fights, you need to use the [Textual Configuration Interface](TextualConfigurationInterface) (TCI). Basically, it's a set of textual options and commands you can write in the **overrides** tab or provide to the command-line client.
 
 > For example, the options in the GUI only allow you to choose between a "Patchwerk" fight (tank'n spank) or a "Helter Skelter" (a crazy fight will every possible raid event). Now, if you just want tank'n spank fight with some 10s movement phases every one minute, select a "Patchwerk" fight and write the following line in the **overrides** tab:
 ```
@@ -110,8 +110,8 @@ With the release of MoP, we started adding support for tanks. See the [Simulatio
 At first, Simulationcraft was a command-line tool and people had to use the [TCI](TextualConfigurationInterface) through configuration files passed as arguments to the command line. Nowadays, although the GUI cover the needs of most of our users, the command-line client remains and many people still prefer to use it. Actually, once you're used to it (and it's really not that hard!), it's far more convenient to use than the GUI.
 
 ## Basics
-> The command-line client is the "simc.exe" file ("simc" under unix). Remember that the [TCI](TextualConfigurationInterface) is fully supported by the command line: you do not have to create any external file and you can directly use all options from the command line, for example:
-```
+The command-line client is the "simc.exe" file ("simc" under unix). Remember that the [TCI](TextualConfigurationInterface) is fully supported by the command line: you do not have to create any external file and you can directly use all options from the command line, for example:
+```sh
  # Let's import John, compute the scale factors and print out a html report
  simc.exe armory=us,illidan,john calculate_scale_factors=1 html=john.html
 
@@ -119,8 +119,8 @@ At first, Simulationcraft was a command-line tool and people had to use the [TCI
 simc.exe armory=us,illidan,john,spec=inactive calculate_scale_factors=1 html=john.html
 ```
 
-> However, most of the time you will prefer to use independent and reusable configuration files, usually named with the ".simc" extension.
-```
+However, most of the time you will prefer to use independent and reusable configuration files, usually named with the ".simc" extension.
+```sh
  # Here is a file named john.simc 
  # The following line is for unix systems only (it associates this file with the simc binary)
  #!./simc 
@@ -128,6 +128,7 @@ simc.exe armory=us,illidan,john,spec=inactive calculate_scale_factors=1 html=joh
  calculate_scale_factors=1
  html=john.html
 ```
+
 ```
  # Now, let's make simc.exe use john.simc 
  simc john.simc
@@ -143,16 +144,16 @@ simc.exe armory=us,illidan,john,spec=inactive calculate_scale_factors=1 html=joh
 > Note: your files must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding) if you encounter problems.
 
 ## Working with simc files on Windows
-> You have many ways to work with .simc files on Windows: creating batch files, drag'n dropping the files to Simulationcraft.exe, directly associating them (not simc.exe!
+You have many ways to work with .simc files on Windows: creating batch files, drag'n dropping the files to Simulationcraft.exe, directly associating them (not simc.exe)!
 
-> As a result, we recommend you to directly use command-line prompts. See the instructions below.
+As a result, we recommend you to directly use command-line prompts. See the instructions below.
 
-<br /><br />First, the setup.
-  * Run the **windows\_env\_path.vbs** script (bundled with Simulationcraft, double-click it in the windows explorer). It will add the script's directory to your user path environment variable. You only need to do it once. If you had command line windows opened, you will need to open new ones.
+First, the setup.
+* Run the **windows\_env\_path.vbs** script (bundled with Simulationcraft, double-click it in the windows explorer). It will add the script's directory to your user path environment variable. You only need to do it once. If you had command line windows opened, you will need to open new ones.
 
-  * You need an **open command window here** on your folders' context menu. On Vista and later versions, you only need to hold shift while you right-click a folder to open the context menu.
+* You need an **open command window here** on your folders' context menu. On Vista and later versions, you only need to hold shift while you right-click a folder to open the context menu.
 
-<br /><br />Next, the example.
+Next, the example.
   * Create a "Simc script" folder anywhere you want.
   * Add two sub-directories: "John" and "profiles".
   * In "John", create an "import.simc" file (create a text file and rename it) containing the following lines:
