@@ -48,9 +48,9 @@ actions+=/frostbolt,if=current_target=default_target
 
 ## Ability Tracking and Custom Flags
 
-> In order to facilitate simpler APL conditions for certain abilities, custom expressions have been implemented.
+In order to facilitate simpler APL conditions for certain abilities, custom expressions have been implemented.
 
-> Due to the complexity of controlling when to pyro camp vs. build ignite for combustion, the _pyro\_chain_ flag exists. Together with actions _stop\_pyro\_chain_ and _start\_pyro\_chain_ they allow for more simple entering / exiting periods where spell priorities shift significantly. Effectively, this allows us to force the mage to have the option of occupying different states - see Mage Fire APL, circa SoO MoP / WoD era, for examples of how this is taken advantage of.
+Due to the complexity of controlling when to pyro camp vs. build ignite for combustion, the _pyro\_chain_ flag exists. Together with actions _stop\_pyro\_chain_ and _start\_pyro\_chain_ they allow for more simple entering / exiting periods where spell priorities shift significantly. Effectively, this allows us to force the mage to have the option of occupying different states - see Mage Fire APL, circa SoO MoP / WoD era, for examples of how this is taken advantage of.
 
 ```
    # start_pyro_chain toggles pyro_chain to 1 (true)
