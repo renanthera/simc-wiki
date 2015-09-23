@@ -6,7 +6,7 @@
 ## Limitations
 Healing has been recently introduced in Simulationcraft, with the priest being the first healer supported so far. It is still young, do not expect the same maturity level as you can be used to in Simulationcraft. For example, fights in Simulationcraft are unidimensional: all players, pets and targets are on the same axis, only the distance from the main target changes. besides, although players can lose health (because they're tanking or suffering from damages on the whole raid), they will continue to perform actions after their death (and there may be some fancy bugs here). As a result, some spells exhibit a behaviour slightly different from their in-game counterparts.
 
-Regarding the reports, all healing stats will still be labeled as "damages" ("dps" rather than "hps" for example). Besides, only the total healing done will be reported, not the actual healing done or the overhealing.
+Regarding the reports, only the total healing done will be reported, not the actual healing done or the overhealing.
 
 ## Setting up a simulation
 To use healing features in Simulationcraft, import or declare a discipline or holy priest and ensure his role is set to "heal" (should be the default for those specs). We also suggest you add other players, even dummy ones (add single lines such as "warrior=john"). And maybe a tank (use "role=tank").
