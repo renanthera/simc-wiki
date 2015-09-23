@@ -7,17 +7,17 @@
 # Actions
   * stance (choose)
 
-> Options:
+    Options:
 
-> The following 2 options are intended to be used with berserker stance, simulating stance swapping for increased rage income that is seen on many bosses. Other stances will work, though.
+    The following 2 options are intended to be used with berserker stance, simulating stance swapping for increased rage income that is seen on many bosses. Other stances will work, though.
 
-  1. swap -- The amount of time between events.
-Examples:
-```
+     1. swap -- The amount of time between events.
+     Examples:
+     ```
 ## Swaps to battle stance every time battle stance is down.
  /actions+=/stance,choose=battle,if=buff.battle_stance.down
 
 ## Swaps to defensive stance every 20 seconds for 1.5 seconds
 ## then swaps back to the characters starting stance.
  /actions+=/stance,choose=defensive,swap=20
-```
+     ```
