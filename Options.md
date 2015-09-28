@@ -134,7 +134,7 @@ All configurations have a safeguard to end combat eventually, to avoid endless s
  threads=7
 ```
 
-  * **process\_priority** (scope: global; default: normal; choices: `[` low, below\_normal, normal, above\_normal, highest `]` ) defines the scheduling priority of SimC engine process.
+  * **process\_priority** (scope: global; default: below\_normal; choices: `[` low, below\_normal, normal, above\_normal, highest `]` ) defines the scheduling priority of SimC engine process.
 ```
  # You do not want a SimulationCraft simulation to degrade your WoW raid performance. You use eg. 
  process_priority=low
