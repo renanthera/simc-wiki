@@ -199,6 +199,11 @@ Acceptable slots are:
  # Gloves with pyro-rockets (id=54998) on it.
  hands=some_gloves,addon=pyrorocket
 ```
+  * _initial_cd_ allows the user to specify the minimum amount of time that must elapse before any procs the item provides occur. The proc effect must have a cooldown, and the initial cooldown is limited to a maximum of the normal duration of the item's cooldown. This allows the user to emulate equipping an item at certain time prior to the beginning of combat.
+```
+ # This emulates equipping the trinket (which has an 11s ICD) at 7.5s prior to the pull.
+ trinket1=soul_capacitor,id=124225,bonus_id=567,initial_cd=3.5
+```
 
 ### Random stats
 
