@@ -182,11 +182,11 @@ Building SimulationCraft on OS X requires you to install the XCode development e
   * `make`
   * This builds an optimized executable named `simc`
 
-> You can also use qmake to build the GUI on OS X.
-
+## Graphical User Interface / Qmake builds
   * Install Qt 5
     * If you use Qt 5.1, you should fix the install names for Qt frameworks by pointing the `qt/fix_qt51_osx_paths.sh` to your qt install directory (the `clang_64` directory). This is only relevant if you are building a release, though, or intend to use the `macdeployqt` binary to create a framework independent bundle of `SimulationCraft.app`.
   * In terminal, issue "qmake simcqt.pro". This will create a `Makefile` in your simc source directory.
+  * If you receive an error from Qmake such as `Project ERROR: Could not resolve SDK path for 'macosx10.9'`, you will need to explicitly tell make what OS X SDK to use, for example `qmake QMAKE_MAC_SDK=macosx<version> simcqt.pro`, where <version> is your OS X version (e.g., 10.10, 10.11). Note that the "OS X" version here is at least partly determined by your Xcode version, and may not match 1:1 with your operating system version.
   * Then, issuing "make" in the terminal will build SimulationCraft.app to your source directory.
 
 ## Graphical User Interface / XCode builds
@@ -195,7 +195,7 @@ XCode builds no longer supported
 
 ## Release package
 
-> The easiest way to build a release package for OS X is to use the qmake system. Open a terminal and issue "qmake simcqt.pro" in the simc source directory, followed by "make create\_release" will build an optimized GUI and command line clients, and package them in a disk image file. You can also build the release package through the XCode project, by building the `Create Release` target. Note that in this case, you will need to specify the `release` configuration to get optimized versions of the command line and the GUI client.
+The easiest way to build a release package for OS X is to use the qmake system. Open a terminal and issue "qmake simcqt.pro" in the simc source directory, followed by "make create\_release" will build an optimized GUI and command line clients, and package them in a disk image file. You can also build the release package through the XCode project, by building the `Create Release` target. Note that in this case, you will need to specify the `release` configuration to get optimized versions of the command line and the GUI client.
 
 # Tips and Tricks
 ## Adding directory to PATH
