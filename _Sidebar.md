@@ -46,4 +46,3 @@
     * [Visual\_Studio](Visual_Studio)
     * [Localization](Localization)
     * [TODO](TODO)
-  * [Screenshots](Screenshots)
