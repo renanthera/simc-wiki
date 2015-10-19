@@ -1,8 +1,6 @@
   * [Features](Features)
   * [Starters guide](StartersGuide)
   * [Frequently asked questions](FAQ)
-  * [Contrasting formulation and simulation](FormulationVsSimulation)
-  * [Why we publish spec rankings](PremedititatedProvocation)
   * Textual configuration interface
     * [Basics](TextualConfigurationInterface)
     * [Examples](Examples)
@@ -34,15 +32,16 @@
   * Appendixes
     * [Fighting variance](FightingVariance)
     * [Simulationcraft For Tanks](SimcForTanks)
+    * [Contrasting formulation and simulation](FormulationVsSimulation)
+    * [Why we publish spec rankings](PremedititatedProvocation)
   * [Automation Tool](Automation)
   * Developers Corner
     * [Participate](Participate)
     * [How to build](HowToBuild)
-    * [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft)
-    * [Configure IDE](Configure_IDE)
+    * [TortoiseGit](UsingTortoiseGitWithSimcraft)
     * [Coding Guidelines](CodingGuidelines)
     * [Documentation](DevelopersDocumentation)
-    * [Use of WoW client data](GameClientData)
+    * [WoW game client data](GameClientData)
     * [Coded\_flags](Coded_flags)
     * [Visual\_Studio](Visual_Studio)
     * [Localization](Localization)
