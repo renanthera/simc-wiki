@@ -29,12 +29,13 @@
     * [Shamans](Shaman)
     * [Warlocks](Warlocks)
     * [Warriors](Warriors)
+  * Graphical User Interface
+    * [Automation Tool](Automation)
   * Appendixes
     * [Fighting variance](FightingVariance)
     * [Simulationcraft For Tanks](SimcForTanks)
     * [Contrasting formulation and simulation](FormulationVsSimulation)
     * [Why we publish spec rankings](PremedititatedProvocation)
-  * [Automation Tool](Automation)
   * Developers Corner
     * [Participate](Participate)
     * [How to build](HowToBuild)
