@@ -68,6 +68,7 @@ data source), operand\_type and a brief description:
   * scaling\_level, spell, NUMBER (level threshold for m\_scaling)
   * desc, spell, STRING (spell description)
   * tooltip, spell, STRING (spell tooltip)
+  * stance\_mask, spell, NUMBER (stance mask of the spell, **Since Simulationcraft 7.0.1 release 1**)
   * tab, talent, NUMBER (talent tab number, 0..2)
   * dependence, talent, NUMBER (talent id this talent depends on)
   * depend\_rank, talent, NUMBER (talent rank of talent id this talent depends on)
