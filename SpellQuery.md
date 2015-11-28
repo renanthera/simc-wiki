@@ -2,7 +2,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 Spell data searches can now be done by using the "spell\_query" option in
 simc. This does not do any simulation, but rather reads the expression given as
-a value for the option, and runs it against the spell (or talent) data for live or PTR (by specifying ptr=1 before the spell\_query option). The result is a textual output of all spells (or talents) matching the given query expression. You can also append "@**level**" at the end of your spell query, which will execute the query using an actor level that was specified at **level**.
+a value for the option, and runs it against the spell (or talent) data for live or PTR (by specifying ptr=1 before the spell\_query option). The result is a textual output of all spells (or talents) matching the given query expression. You can also append "@**level**" at the end of your spell query, which will execute the query using an actor level that was specified at **level**. In addition, from version 623-1 forward you can also specify the item level through the **level** option. Spell query will interpret any level higher than the global player maximum level of the simulator to indicate item level scaling for the spell.
 
 To accomplish this, a new expression data type has been defined
 (TOK\_SPELL\_LIST), which contains a list of spell or talent identifiers. To this
