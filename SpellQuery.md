@@ -55,8 +55,8 @@ data source), operand\_type and a brief description:
   * charge\_cooldown, spell, NUMBER (charge cooldown in milliseconds)
   * category, spell, NUMBER (spell cooldown category)
   * duration, spell, NUMBER (spell duration in milliseconds)
-  * rune, spell, STRING, (b = blood, f = frost, u = unholy, will match minimum rune requirement)
-  * power\_gain, spell, NUMBER (amount of runic power gained)
+  * rune, spell, STRING, (b = blood, f = frost, u = unholy, will match minimum rune requirement) **Removed in version 701-1**
+  * power\_gain, spell, NUMBER (amount of runic power gained) **Removed in version 701-1**
   * max\_stack, spell, NUMBER (maximum stack of spell)
   * proc\_chance, spell, NUMBER (spell proc chance in percent (0..100))
   * icd, spell, NUMBER (internal cooldown of a spell in milliseconds)
@@ -68,7 +68,7 @@ data source), operand\_type and a brief description:
   * scaling\_level, spell, NUMBER (level threshold for m\_scaling)
   * desc, spell, STRING (spell description)
   * tooltip, spell, STRING (spell tooltip)
-  * stance\_mask, spell, NUMBER (stance mask of the spell, **Since Simulationcraft 7.0.1 release 1**)
+  * stance\_mask, spell, NUMBER (stance mask of the spell, **Added in version 701-1**)
   * tab, talent, NUMBER (talent tab number, 0..2)
   * dependence, talent, NUMBER (talent id this talent depends on)
   * depend\_rank, talent, NUMBER (talent rank of talent id this talent depends on)
@@ -98,32 +98,33 @@ following operators are available:
   * -  : subtraction (right side identifiers removed from left side list of identifiers)
 
 Examples:
-> a) All activatable class spells of shaman
-> > $ simc spell\_query=class\_spell.class=shaman
 
-> b) All cataclysm activatable spells
-> > $ simc spell\_query="class\_spell.level>80"
+a) All activatable class spells of shaman
+> $ simc spell\_query=class\_spell.class=shaman
 
-> c) All activatable class spells of shaman and priest
-> > $ simc spell\_query="class\_spell.class=shaman|class\_spell.class=priest"
+b) All cataclysm activatable spells
+> $ simc spell\_query="class\_spell.level>80"
 
-> c) All mastery spells
-> > $ simc spell\_query=mastery
+c) All activatable class spells of shaman and priest
+> $ simc spell\_query="class\_spell.class=shaman|class\_spell.class=priest"
 
-> d) All class (and pet) spells costing resources
-> > $ simc spell\_query="class\_spell.cost>0"
+c) All mastery spells
+> $ simc spell\_query=mastery
 
-> e) All spells that contain "shadow damage" in their description or tooltip
-> > $ simc spell\_query="spell.desc~shadow\_damage|spell.tooltip~shadow\_damage"
+d) All class (and pet) spells costing resources
+> $ simc spell\_query="class\_spell.cost>0"
 
-> f) All death knight spells that use at minimum a blood and an unholy rune
-> > $ simc spell\_query="spell.class=death\_knight&spell.rune=bu"
+e) All spells that contain "shadow damage" in their description or tooltip
+> $ simc spell\_query="spell.desc~shadow\_damage|spell.tooltip~shadow\_damage"
 
-> g) All spells using the constant scaling
-> > $ simc spell\_query=spell.scaling=-1
+f) All death knight spells that use at minimum a blood and an unholy rune
+> $ simc spell\_query="spell.class=death\_knight&spell.rune=bu"
 
-> h) All spells that are fire or frost based (including derivations)
-> > $ simc spell\_query="spell.school=fire|spell.school=frost"
+g) All spells using the constant scaling
+> $ simc spell\_query=spell.scaling=-1
+
+h) All spells that are fire or frost based (including derivations)
+> $ simc spell\_query="spell.school=fire|spell.school=frost"
 
 Note that depending on your shell interpreter, you may need to escape some special
 characters used in the spell queries.
@@ -158,8 +159,8 @@ followed by one of the actual data field names:
 
 An example:
 
-> a) All shaman talents that additively increase the critical strike bonus of spells
-> > $ ./simc spell\_query="talent\_spell.class=shaman&talent\_spell.effect.sub\_type=108&talent\_spell.effect.misc\_value=15"
+a) All shaman talents that additively increase the critical strike bonus of spells
+> $ ./simc spell\_query="talent\_spell.class=shaman&talent\_spell.effect.sub\_type=108&talent\_spell.effect.misc\_value=15"
 
 ..........................................................................................
 
