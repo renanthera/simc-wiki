@@ -175,7 +175,8 @@ For example, on the plot below, we can observe, for an affliction warlock, that 
 
 ![http://www.simulationcraft.org/images/wiki/reforge3d.png](http://www.simulationcraft.org/images/wiki/reforge3d.png)
 
-  * **reforge\_plot\_stat** (scope: global; default: "") allows you to enumerate the stats you want to reforge between. The stats must be separated with commas ",". There must be at least 2 stats. You can add more but, beyond 3 stats, the generated data are harder to analyze. For a list of available stats, see [Equipment#Stats\_abbreviations](Equipment#Appendix:_Stats_abbreviations).
+  * **reforge\_plot\_stat** (scope: global; default: "") allows you to enumerate the stats you want to reforge between. The stats must be separated with comma ",". There must be at least 2 stats. You can add more but, beyond 3 stats, the generated data are harder to analyze. For a list of available stats, see [Equipment#Stats\_abbreviations](Equipment#Appendix:_Stats_abbreviations).
+You can multiple reforge plots in a single simulation, by separating them with a slash "/".
 ```
  # This example will produce a 2D plot that show how the dps evolve between (+200 crit ; -200 haste) on
  # the left side and (-200 crit ; +200 haste) on the right side.
@@ -186,6 +187,9 @@ For example, on the plot below, we can observe, for an affliction warlock, that 
  # (-200 crit; +200 mastery; 0 haste) ; (-200 crit; 0 mastery; +200 haste)
  # (+200 crit; -200 mastery; 0 haste) ; (+200 crit; 0 mastery; -200 haste)
  reforge_plot_stat=crit,mastery,haste
+
+ # This example will produce a 2D plot with crit/haste and a 3D plot with mastery/versatility/haste
+ reforge_plot_stat=crit,haste/mastery,versatility,haste
 ```
   * **reforge\_plot\_amount** (scope: global; default: 200) is the maximum amount to reforge per stat.
 ```
