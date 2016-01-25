@@ -15,9 +15,9 @@ The default location is returned by QStandardPaths::CacheLocation (http://doc.qt
 
 OS     |  Path
 -------- | ---------
-Windows | "C:/Users/`<`USER`>`/AppData/Local/<APPNAME>/cache/SimulationCraft/SimulationCraft/simc_gui.simc"
+Windows | "`<`executable-dir`>`/simc_gui.simc"
 OsX | "~/Library/Application Support/SimulationCraft/SimulationCraft/simc_gui.simc"
-Linux | "~/.cache/SimulationCraft/SimulationCraft/simc_gui.simc"
+Linux | "~/.cache/SimulationCraft/SimulationCraft/simc_gui.simc" or "~/.local/share/SimulationCraft/SimulationCraft/simc_gui.simc"
 
 
 
