@@ -26,6 +26,6 @@ Registering a key is incredibly easy.
   1. Register, it will take you back to "My API Keys"
   1. Copy/Paste the 32-character key into Simulationcraft under "Options" "Globals" "Advanced Settings"
 
-Note, if you use the command line client, you can put your api key into a file called "api\_key.txt" that is located in the same directory as the simulationcraft command line executable. On unixes (anywhere that has the HOME environment variable defined), you can also place the API key into a file called ".simc\_apikey" in your home directory.
+Note, if you use the command line client, you can put your api key into a file called "./apikey.txt" that is located in the same directory as the simulationcraft command line executable. On unixes (anywhere that has the HOME environment variable defined), you can also place the API key into a file called ".simc\_apikey" in your home directory.
 
 **WinXP will likely NOT work with the new armory API, even if you use a key. The SSL library on XP doesn't seem to be compatible with the code we are using.**
