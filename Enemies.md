@@ -10,17 +10,17 @@ Just as with [characters](Characters), you can use the TCI to define enemies. Th
 
 Simulationcraft has some built-in enemies ready-made for you to use.
 
-> ## Fluffy Pillow
+## Fluffy Pillow
 
-> If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists).
+If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists).
 
-> ## Healing Enemies
+## Healing Enemies
 
-> If you run a simulation with healers and don't specify a target for them to heal (see [Character Basics](Characters#Basics)), the simulation will spawn a "healing enemy" for your healer to heal. It will also spawn a Fluffy\_Pillow that attacks the healing target so that you won't overheal.
+If you run a simulation with healers and don't specify a target for them to heal (see [Character Basics](Characters#Basics)), the simulation will spawn a "healing enemy" for your healer to heal. It will also spawn a Fluffy\_Pillow that attacks the healing target so that you won't overheal.
 
-> ## Tank Raid Dummies
+## Tank Raid Dummies
 
-> Simc now also has models for the tank dummies that are available in Shattrath City (Outlands) on beta/PTR realms. These enemies have the same melee, Dummy Strike, and Uber Strike attacks that the tank dummies do. You can define one of these enemies with the **tank\_dummy** command and **tank\_dummy\_type** option:
+Simc now also has models for the tank dummies that are available in Shattrath City (Outlands) on beta/PTR realms. These enemies have the same melee, Dummy Strike, and Uber Strike attacks that the tank dummies do. You can define one of these enemies with the **tank\_dummy** command and **tank\_dummy\_type** option:
 
 ```
   #Create a Weak Tank Dummy named Alice
@@ -40,16 +40,16 @@ Simulationcraft has some built-in enemies ready-made for you to use.
   tank_dummy=Bob_Mythic
 ```
 
-> ## TMI Standard Bosses
+## TMI Standard Bosses
 
-> The default boss (`Fluffy_Pillow`) uses a mixture of abilities, but isn't regularly adjusted to content levels. For tanks, there are a set of "standard" bosses that are designed for generating reliable/repeatable TMI scores for tanks. These bosses use auto attacks and apply a ticking dot, and the damage values are roughly tuned to simulate specific content levels. The **tmi\_boss** command and **tmi\_boss\_type** option are used to define a TMI standard boss. The syntax is
+The default boss (`Fluffy_Pillow`) uses a mixture of abilities, but isn't regularly adjusted to content levels. For tanks, there are a set of "standard" bosses that are designed for generating reliable/repeatable TMI scores for tanks. These bosses use auto attacks and apply a ticking dot, and the damage values are roughly tuned to simulate specific content levels. The **tmi\_boss** command and **tmi\_boss\_type** option are used to define a TMI standard boss. The syntax is
 
 ```
    tmi_boss=Name
    tmi_boss_type=T<tier #><difficulty>
 ```
 
-> In Warlords of Draenor, `<difficulty>` levels will be L, N, H, and M for LFR, Normal, Heroic, and Mythic, respectively. So for example `T17N` for the tier 17 normal boss, `T18H` for the tier 18 heroic boss, and so on.
+In Warlords of Draenor, `<difficulty>` levels will be L, N, H, and M for LFR, Normal, Heroic, and Mythic, respectively. So for example `T17N` for the tier 17 normal boss, `T18H` for the tier 18 heroic boss, and so on.
 ```
   #An LFR boss
   tmi_boss=Larry_LFR
@@ -84,9 +84,9 @@ Note that all enemy options should only be specified after you declare an enemy.
 
 All of the options in this section are "current enemy" scoped - in other words, they only apply to the enemy currently being defined. If you are defining [multiple enemies](Enemies#Multiple_Targets_(AoE)), these options need to be set for each enemy (see `enemy_tank` example below).
 
-> ## Assigning a target to enemy
+## Assigning a target to enemy
 
-> You can use **enemy\_tank** option to assign a target for this enemy.
+You can use **enemy\_tank** option to assign a target for this enemy.
 ```
   enemy=Mean_Fluffy_Pillow
   enemy_tank=Theck
@@ -94,7 +94,7 @@ All of the options in this section are "current enemy" scoped - in other words, 
   enemy_tank=Collision
 ```
 
-> ## Health-Related Options
+## Health-Related Options
 
   * **enemy\_health** will allow you to set the starting health of the enemy, instead of having the sim calculate the enemy's health automatically.
 ```
@@ -119,7 +119,7 @@ All of the options in this section are "current enemy" scoped - in other words, 
 ```
   * **health\_recalculation\_dampening\_exponent**
 
-> ## Other Enemy Options
+## Other Enemy Options
 
   * **apply\_debuff** (**Simulationcraft 6.0.1 release 1 and later**) (default: 0) allows you to specify the integer number of stacks of the `damage_taken` debuff the boss applies with every successful attack. Each stack causes the target to take 1% increased damage from all sources. This is extremely useful for setting up tank swaps (see [Simulationcraft for Tanks](SimcForTanks.md)). Note that you can also specify this option for each attack individually on the enemy's [action list](Enemies#Action_Lists), and the action list option takes precedence.
 ```
@@ -135,13 +135,13 @@ All of the options in this section are "current enemy" scoped - in other words, 
    enemy_size=10
 ```
 
-> ## Action Lists
+## Action Lists
 
-> The real power of defining custom enemies is the ability to customize their action priority lists. Enemies have a small but comprehensive set of spells you can use to mimic real boss encounters. The abilities all have default settings, but you can customize their exact behavior through various options.
+The real power of defining custom enemies is the ability to customize their action priority lists. Enemies have a small but comprehensive set of spells you can use to mimic real boss encounters. The abilities all have default settings, but you can customize their exact behavior through various options.
 
-> ### Abilities
+### Abilities
 
-> These are the abilities that an enemy actor has at its disposal. Examples will be given after we describe the options.
+These are the abilities that an enemy actor has at its disposal. Examples will be given after we describe the options.
 
   * **auto\_attack** specifies the enemy's main-hand auto-attack.
   * **auto\_attack\_off\_hand** (**Simulationcraft 6.0.1 release 1 and later**) specifies the enemy's off-hand auto-attack (for dual-wielding bosses)
@@ -151,9 +151,9 @@ All of the options in this section are "current enemy" scoped - in other words, 
   * **spell\_aoe** is a direct-damage spell that does fire damage, and hits all players in the simulation.
   * **summon\_add** summons an add.
 
-> ### Ability Options
+### Ability Options
 
-> These options apply to all enemy actions unless otherwise noted. The order of the options is irrelevant, so you can mix and match in whatever order you like.
+These options apply to all enemy actions unless otherwise noted. The order of the options is irrelevant, so you can mix and match in whatever order you like.
 
   * **damage** specifies the amount of damage the attack does. For spell\_dot, it specifies the damage per tick. Default amount varies per attack.
   * **attack\_speed** (default: 1.5 for auto-attacks, 3.0 for others) specifies the cast time of the action, in seconds. For auto-attacks this is the swing timer.
@@ -167,9 +167,9 @@ All of the options in this section are "current enemy" scoped - in other words, 
   * **name** (summon\_add only) specifies the name of the add being summoned.
   * **duration** (summon\_add only) specifies the lifetime of the add being summoned. Adds will have a health percentage linked to their remaining duration (in other words, they're just damage sponges, you can't kill them early).
 
-> ### Example Action List
+### Example Action List
 
-> Here is an example that illustrates the actions and their options:
+Here is an example that illustrates the actions and their options:
 
 ```
    enemy=Razor_Sharp_Pillow
@@ -201,9 +201,9 @@ To simulate an AoE fight, simply define multiple enemies.  This simple example s
 
 # Global (Sim-Wide) Enemy Options
 
-> ## Sim-wide Target Level
+## Sim-wide Target Level
 
-> The option **target\_level** allows you to specify what level all targets in the simulator should be. The default is three levels higher than the highest level character in the sim, normally 88.
+The option **target\_level** allows you to specify what level all targets in the simulator should be. The default is three levels higher than the highest level character in the sim, normally 88.
 ```
   enemy=Bob_the_Dinosaur
   target_level=87
@@ -213,9 +213,9 @@ To simulate an AoE fight, simply define multiple enemies.  This simple example s
   enemy_death_pct=30
 ```
 
-> ## Sim-wide Target Race
+## Sim-wide Target Race
 
-> The **target\_race** options allow you to specify what race all targets in the simulator are to kick in the effects of certain talents.
+The **target\_race** options allow you to specify what race all targets in the simulator are to kick in the effects of certain talents.
 ```
   enemy=Fred_the_Zombie
   target_race=undead
