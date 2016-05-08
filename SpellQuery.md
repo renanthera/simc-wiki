@@ -156,6 +156,9 @@ followed by one of the actual data field names:
   * p\_combo\_points - Effect combo point based multiplier (usage unknown at the moment)
   * p\_level - Effect level based multiplier
   * damage\_range - Effect damage range modifier (usage unknown at the moment)
+  * chain\_target - Number of targets the effect chains to
+  * target\_1 - First targeting type identifier (**Added in version 703-1**)
+  * target\_2 - Second targeting type identifier (**Added in version 703-1**)
 
 An example:
 
