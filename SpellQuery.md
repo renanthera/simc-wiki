@@ -27,6 +27,7 @@ identifiers. The following identifier data sources have been defined:
   * set\_bonus - All set bonus spells
   * effect - All effects
   * perk\_spell - All perk spells (NOTE: WoD only)
+  * artifact - All artifact spells (**Added in version 703-1**)
 
 A data source can be filtered by giving it a data field name, by suffixing the
 data source name with a period and the filtering data field name. Currently the
