@@ -35,7 +35,7 @@ The Anticipation talent allows Rogues to store up to 5 Combo Points in a buff ca
 
 Anticipation now increases your maximum Combo Points to 8. `anticipation_charges` expression is removed, as is the Anticipation buff.
 
-You can get the current number of combo points an ability is generating with the new `cp_gain` expression.
+You can get the guaranteed number of combo points an ability is generating with the new `cp_gain` expression.
 ```
   # Backstab, if there would be no CP waste.
   actions+=/backstab,if=combo_points+cp_gain<=combo_points.max
