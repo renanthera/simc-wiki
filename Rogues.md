@@ -1,7 +1,5 @@
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
-
-
 # Textual configuration interface
 _This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
@@ -33,6 +31,22 @@ The Anticipation talent allows Rogues to store up to 5 Combo Points in a buff ca
  actions+=/dispatch,if=(combo_points<5(talent.anticipation.enabled&anticipation_charges<4)
 ```
 
+### Combo point changes in Simulationcraft 7.0.3, release 1
+
+Anticipation now increases your maximum Combo Points to 8. `anticipation_charges` expression is removed, as is the Anticipation buff.
+
+You can get the current number of combo points an ability is generating with the new `cp_gain` expression.
+```
+  # Backstab, if there would be no CP waste.
+  actions+=/backstab,if=combo_points+cp_gain<=combo_points.max
+```
+
+You can get the maximum number of combo points spent with the new `cp_max_spend` expression.
+```
+  # Eviscerate at maximum combo point spendage.
+  actions+=/eviscerate,if=combo_points>=cp_max_spend
+```
+
 ## Poisons
   * _apply\_poison_ instantly changes the poisons on the player's weapons. The action won't be performed if the poisons already match your specifications or if you specified inactive poisons for both weapons.
     1. _main\_hand_ and _off\_hand_ (default: none) are used to specify the poison to use on every weapon. Acceptable values are: "deadly", "instant" or "wound". Other values will result in an inactive poison being applied.
@@ -49,6 +63,8 @@ For single actor simulations, Honor Among Thieves can be approximated through th
  actions.precombat+=/honor_among_thieves,cooldown=2.3,cooldown_stddev=0.1
 ```
 Note that this proxy Honor Among Thieves action is disabled if the Subtlety Rogue is simulated in an environment with other player profiles.
+
+**Since Simulationcraft 7.0.3, release 1** Honor Among Thieves is no longer in the simulator.
 
 ## Buffs
 Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
@@ -72,6 +88,10 @@ off_hand_secondary=oregorgers_acidetched_gutripper,id=113874,bonus_id=567,enchan
 actions+=/swap_weapon,slot=both,swap_to=secondary,if=active_enemies>1
 actions+=/swap_weapon,slot=both,swap_to=primary,if=active_enemies=1
 ```
+
+## Finality
+
+**Since Simulationcraft 7.0.3 release 1** you can determine whether the Eviscerate or Nightblade abilities are using the Finality or the normal version using the `finality_eviscerate` or `finality_nightblade` expressions. They evaluate to 1 if the Finality version is currently usable, 0 otherwise.
 
 # Reports
 We only document here non-obvious entries.
