@@ -93,6 +93,16 @@ actions+=/swap_weapon,slot=both,swap_to=primary,if=active_enemies=1
 
 **Since Simulationcraft 7.0.3 release 1** you can determine whether the Eviscerate or Nightblade abilities are using the Finality or the normal version using the `finality_eviscerate` or `finality_nightblade` expressions. They evaluate to 1 if the Finality version is currently usable, 0 otherwise.
 
+## Exsanguinate
+
+**Since Simulationcraft 7.0.3 release 1** Garrote and Rupture have an expression to determine whether the current target has an exsanguinated dot on them. `exsanguinated` expression on a `garrote` or `rupture` action will evaluate to 1 if the current dot (on the target) is exsanguinated.
+```
+  # Don't refresh Garrote if the current target's dot is Exsanguinated
+  actions+=/garrote,if=!exsanguinated&remains<=5&combo_points<combo_points.max
+```
+
+In addition, you can use the more generic form `dot.X.exsanguinated` (where X is either `garrote` or `rupture`) on any action in an action priority list to check whether the current target's respective dot is exsanguinated.
+
 # Reports
 We only document here non-obvious entries.
 
