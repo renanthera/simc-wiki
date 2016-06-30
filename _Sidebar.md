@@ -18,7 +18,8 @@
     * [Spell queries](SpellQuery)
     * [Overriding spell data](SpellData)
   * Classes
-    * [Death knights](DeathKnights)
+    * [Death Knights](DeathKnights)
+    * [Demon Hunters](Demon-Hunters)
     * [Druids](Druids)
     * [Hunters](Hunters)
     * [Mages](Mages)
