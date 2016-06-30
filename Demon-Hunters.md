@@ -19,9 +19,15 @@ demons_bite_per_chaos_strike = ( chaos_strike_cost - 20 * crit_chance ) / demons
 ( blade_dance_damage + demons_bite_per_dance * demons_bite_damage ) / ( 1 + demons_bite_per_dance ) > ( chaos_strike_damage + demons_bite_per_chaos_strike * demons_bite_damage ) / ( 1 + demons_bite_per_chaos_strike )
 ```
 
+## Special Actions
+
+* **pick_up_fragment**: Move to and consume a nearby Soul Fragment. Any if expression (if provided) will be evaluated at both the start of the movement and when reaching the fragment, which may result in the action being executed without a fragment being consumed. See action options section for more details on how to use this action.
+
 ## Action Options
 
 * **fel_rush,jump_cancel=1**: The Fel Rush is cast without causing the Demon Hunter to move.
+* **pick_up_fragment,type=x**: The type of soul fragment to be picked up. Valid options: *greater*, *lesser*, *all* or *any*. Default: *all*
+* **pick_up_fragment,mode=x**: The mode that determines which fragments should be prioritized. Valid options: *closest* or *nearest* or *close* or *near*, *newest* or *new*, *oldest* or *old*. Default: *oldest*
 
 # Reporting
 
