@@ -108,7 +108,15 @@ In addition, you can use the more generic form `dot.X.exsanguinated` (where X is
 **Since Simulationcraft 7.0.3 release 1** You can check for the number of active Roll the Bones buffs on the actor with the new `rtb_buffs` expression.
 ```
   # Use Roll the Bones until you have 6 buffs up!
-  actions+=/roll_the_bones,if=combo_points=combo_points.max&rtb_buffs<6
+  actions+=/roll_the_bones,if=combo_points>=cp_max_spend&rtb_buffs<6
+```
+
+Additionally, you may use `rtb_list` expression to check for the presence of specific buffs on the actor. The expression takes the form `rtb_list.OP.LIST`, where OP is the operating mode and LIST is the list of buffs. The expression will return 0 if the evaluation fails, and 1 if it succeeds.
+  * The `OP` accepts two values: `any`, meaning any of the buffs on `LIST` being up succeeds the evaluation, and `all`, meaning all of the buffs on `LIST` must be up to succeed the evaluation.
+  * The `LIST` accepts a sequence of RTB buffs, represented by numerical values from 1 to 6. The numbers correspond to the six buffs in alphabetical order: 1: Broadsides, 2: Buried Treasure, 3: Grand Melee, 4: Jolly Roger, 5: Shark Infested Waters, 6: True Bearing
+```
+  # Use Roll the Bones until you have at least Shark Infested Waters and Broadsides up
+  actions+=/roll_the_bones,if=combo_points>=cp_max_spend&rtb_list.all.15
 ```
 
 # Reports
