@@ -103,6 +103,14 @@ actions+=/swap_weapon,slot=both,swap_to=primary,if=active_enemies=1
 
 In addition, you can use the more generic form `dot.X.exsanguinated` (where X is either `garrote` or `rupture`) on any action in an action priority list to check whether the current target's respective dot is exsanguinated.
 
+## Roll the Bones
+
+**Since Simulationcraft 7.0.3 release 1** You can check for the number of active Roll the Bones buffs on the actor with the new `rtb_buffs` expression.
+```
+  # Use Roll the Bones until you have 6 buffs up!
+  actions+=/roll_the_bones,if=combo_points=combo_points.max&rtb_buffs<6
+```
+
 # Reports
 We only document here non-obvious entries.
 
