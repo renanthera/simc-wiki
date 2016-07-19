@@ -116,7 +116,7 @@ Additionally, you may use `rtb_list` expression to check for the presence of spe
   * The `LIST` accepts a sequence of RTB buffs, represented by numerical values from 1 to 6. The numbers correspond to the six buffs in alphabetical order: 1: Broadsides, 2: Buried Treasure, 3: Grand Melee, 4: Jolly Roger, 5: Shark Infested Waters, 6: True Bearing
 ```
   # Use Roll the Bones until you have at least Shark Infested Waters and Broadsides up
-  actions+=/roll_the_bones,if=combo_points>=cp_max_spend&rtb_list.all.15
+  actions+=/roll_the_bones,if=combo_points>=cp_max_spend&!rtb_list.all.15
 ```
 
 # Reports
