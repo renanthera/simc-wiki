@@ -119,6 +119,10 @@ Additionally, you may use `rtb_list` expression to check for the presence of spe
   actions+=/roll_the_bones,if=combo_points>=cp_max_spend&!rtb_list.all.15
 ```
 
+## Bleed effects
+
+**Since Simulationcraft 7.0.3 release 1** A new expression `bleeds` evaluates to the number of bleeding effects on the target. Currently Rogue module defines Garrote and Rupture abilities as bleeds.
+
 # Reports
 We only document here non-obvious entries.
 
