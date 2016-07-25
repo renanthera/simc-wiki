@@ -471,7 +471,8 @@ Finally, here is the full operators priorities list, from the highest ones to th
 * Multiplication and division (**`* , %`**)
 * Addition and subtraction (**`+ , -`**)
 * Comparison operators (**`= , != , < , <= , >= , > , ~, !~`**)
-* Binary logical operators (**`& , |`**)
+* Binary logical and (**`&`**)
+* Binary logical or (**`|`**)
 
 ## Operands
 
