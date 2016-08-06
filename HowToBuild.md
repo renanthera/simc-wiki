@@ -90,14 +90,17 @@
 
 ## Command Line Interface
 
-  * Your Linux distro should have come with g++ by default. If not, use the built-in software update mechanism to download and install it.
+  * If not already installed, install the following packages:
+    * `g++`
+    * `build-essential`
   * `cd your_simc_source_dir/engine`
   * `make`
   * This builds an optimized executable named `simc`
 
 ## Graphical User Interface
 
-  * Get qt4-qmake or qt5-qmake
+  * Install qt5-qmake. On Ubuntu, the package is called `qt5-default`.
+  * Install `libqt5webkit5-dev`.
   * `cd your_simc_source_dir`
   * `qmake simcqt.pro`
   * `make`
