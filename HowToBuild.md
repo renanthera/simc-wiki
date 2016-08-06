@@ -90,9 +90,7 @@
 
 ## Command Line Interface
 
-  * If not already installed, install the following packages:
-    * `g++`
-    * `build-essential`
+  * If not already installed, install `build-essential`. This contains g++.
   * `cd your_simc_source_dir/engine`
   * `make`
   * This builds an optimized executable named `simc`
