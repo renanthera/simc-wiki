@@ -71,3 +71,29 @@ Water elemental in Warlords of Draenor casts "Water Jet" that debuffs the target
  # Manually cast Water Jet, when the mage has no Fingers of Frost charges
  actions+=/water_jet,if=buff.fingers_of_frost.react=0
 ```
+
+## Specifying Cinderstorm Cinder-count
+
+In Legion, Cinderstorm has a variable number of possible cinder impacts. To model this, SimulationCraft gives the user two separate options. One action-specific("cinders"), and one player-wide(global_cinder_count). By default, Cinderstorm will set "cinders"=6 and global_cinder_count=0. If global_cinder_count is given a value above 0, it will override all action-level "cinders" specified.
+
+Use of global_cinder_count:
+```
+#Specify mage variables
+mage="Mage_Fire_T19P"
+level=110
+race=orc
+role=spell
+position=back
+talents=1022021
+artifact=54:133022:137420:133022:0:748:1:749:6:751:3:754:3:755:3:756:3:759:1:762:1:763:1:1340:1
+spec=fire
+#give global_cinder_count
+global_cinder_count=3
+
+actions=cinderstorm
+```
+
+Use of cinders to set a single cinderstorms action to 3:
+```
+actions=cinderstorm,cinders=3,if=buff.rune_of_power.down
+```
