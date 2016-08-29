@@ -49,7 +49,7 @@ You can get the maximum number of combo points spent with the new `cp_max_spend`
 
 ## Poisons
   * _apply\_poison_ instantly changes the poisons on the player's weapons. The action won't be performed if the poisons already match your specifications or if you specified inactive poisons for both weapons.
-    1. _main\_hand_ and _off\_hand_ (default: none) are used to specify the poison to use on every weapon. Acceptable values are: "deadly", "instant" or "wound". Other values will result in an inactive poison being applied.
+    1. _main\_hand_ and _off\_hand_ (default: none, optional) are used to specify the poison to use on every weapon. Acceptable values are: "deadly", "instant" or "wound". Other values will result in an inactive poison being applied. **Since Simulationcraft 7.0.3, release 1** If no option is given, `apply_poison` will apply the "best" lethal poison for the actor (Deadly Poison or Agonizing Poison).
 ```
  actions+=/apply_poison,main_hand=instant,off_hand=deadly
 ```
@@ -66,12 +66,8 @@ Note that this proxy Honor Among Thieves action is disabled if the Subtlety Rogu
 
 **Since Simulationcraft 7.0.3, release 1** Honor Among Thieves is no longer in the simulator.
 
-## Buffs
-Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
-
-  * deadly\_proc: when this buff is up, your deadly poison is applied on the target.
-  * poison\_doses: the number of stacks is the number of doses currently applied.
-  * stealthed: when up, you are stealthed.
+## Miscellaneous
+  * An expression called `stealthed` evaluates to 1 when any of the stealth-like effect crating buffs is up (Vanish, Stealth, or Shadow Dance). Notably, Shadowmeld is not in the list as it is not a true stealth-like effect.
 
 ## Weapon Swapping
 
