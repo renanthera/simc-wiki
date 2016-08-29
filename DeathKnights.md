@@ -31,3 +31,7 @@ The _antimagic\_shell_ action allows a Death Knight to simulate the Runic Power 
  # Simulate Runic Power gain on using Anti-Magic Shell to absorb 100000 magic damage every 60 seconds on average.
  actions+=/antimagic_shell,damage=100000
 ```
+
+## Miscellanous
+
+The Legion Artifact power *Armies of the Damned* exact proc chance is currently (2016-08-29) unknown. The community has approximated it through testing to be 20%, which simulationcraft implements. Additionally, a player scope option `aotd_proc_chance` (default: 0.2, minimum 0, maximum 1) can be used to control the proc chance.
