@@ -354,11 +354,12 @@ actions+=/bloodlust,target.health.pct<25
 # Stop channeling mind flay when any other action with a higher priority is made available.
 actions+=/mind_flay,interrupt=1
 ```
-* _interrupt\_if_ can be used on channeled spells to interrupt the channeling if a higher priority action is ready (the same as _interrupt_), **and** the specified conditions are met. The interrupt will only occur immediately following a tick. The conditions are provided using the syntax for conditional expressions.
+* _interrupt\_if_ can be used on channeled spells to interrupt the channeling if a higher priority action is ready (the same as _interrupt_), the global cooldown has elapsed, **and** the specified conditions are met. The interrupt will only occur immediately following a tick. The conditions are provided using the syntax for conditional expressions.
 ```
 # Stop channeling when there is less than 1s remaining on the mind blast cooldown.
 actions+=/mind_flay,interrupt_if=cooldown.mind_blast.remains<1
 ```
+* _interrupt\_immediate_ can be used on a channeled spell that has an _interrupt\_if_ expression to instruct the actor to immediately interrupt the channeled action, even if the global cooldown has not elapsed yet. **Added in Simulationcraft 7.0.3, release 1**
 * _chain_ can be used to re-cast a channeled spell at the beginning of its last tick.  This has two advantages over waiting for the channel to complete before re-casting: 1) the gcd finishes sooner, and 2) it avoids the roughly 1/4 second delay between the end of a channel and the beginning of the next cast.
 ```
 # Chain-cast Mind Flay until a higher priority action is ready
