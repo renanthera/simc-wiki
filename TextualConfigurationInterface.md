@@ -138,3 +138,5 @@ You can easily include external TCI files (usually named with the .simc extensio
  # The following will make the application look for includes in c:\includes, .\profiles and ..\simc_scripts
  path="c:\includes|.\profiles|..\simc_scripts"
 ```
+
+**Since Simulationcraft 7.0.3, release 1** If you include a file through the `input` option, a text template variable `current_base_name` is automatically assigned to contain the base file name of the inputted file during the parsing of that file.
