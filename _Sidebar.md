@@ -41,7 +41,7 @@
   * Developers Corner
     * [Participate](Participate)
     * [How to build](HowToBuild)
-      * [On Windows for Newbies](Newbie-build-instructions)
+    * [How to build for Newbies using Windows](Newbie-build-instructions)
     * [TortoiseGit](UsingTortoiseGitWithSimcraft)
     * [Coding Guidelines](CodingGuidelines)
     * [Documentation](DevelopersDocumentation)
