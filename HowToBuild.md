@@ -90,9 +90,9 @@
 
 ## Command Line Interface
 
-  * If not already installed, install `build-essential`. This contains g++.
+  * If not already installed, install `build-essential` and `libssl-dev`. This contains g++.
   * `cd your_simc_source_dir/engine`
-  * `make`
+  * `make OPENSSL=1 optimized`
   * This builds an optimized executable named `simc`
 
 ## Graphical User Interface
