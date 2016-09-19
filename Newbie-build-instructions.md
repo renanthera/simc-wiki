@@ -8,11 +8,11 @@ The entire first-time setup will take anywhere from 30-60 minutes depending on t
 2: Install TortoiseGIT - https://tortoisegit.org/download/
 - Default settings are fine
 
-3: Install QT 5.7.0 - http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-windows-x86-msvc2015_64-5.7.0.exe
+3: Install QT 5.6.1 - http://download.qt.io/official_releases/qt/5.6/5.6.1-1/qt-opensource-windows-x86-msvc2015_64-5.6.1-1.exe
 - Default settings are fine – **Skip the account creation.**
 
-4: Add QT 5.7.0 to your Windows Environment Path. There are plenty of guides for doing this on the internet.
-- C:\Qt\Qt5.7.0\5.7\msvc2015_64\bin
+4: Add QT 5.6.1 to your Windows Environment Path. There are plenty of guides for doing this on the internet..
+- C:\Qt\Qt5.6.1\5.6\msvc2015_64\bin
 
 5: Open My Computer, go to the drive that you want to copy all simc files to.  Right click in the directory section, and “Git Clone.”   Under URL, paste in the following: https://github.com/simulationcraft/simc.git
 
