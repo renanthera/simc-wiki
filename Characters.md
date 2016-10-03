@@ -50,6 +50,9 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
  # Call with explicit region and server
  guild=willyoumaryme,region=us,server=illidan
 
+ # Use " " if your guild name has spaces
+ guild="will you mary me",region=us,server=illidan
+
  # Call with default region and server
  default_region=us
  default_server=illidan
