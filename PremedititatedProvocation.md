@@ -8,7 +8,7 @@ The depth of angry emotion that the spec ranking bar chart generates is quite re
 
 # The 13th Labor of Hercules
 
-Before we consider the apparent disparity between the classes, let us consider the problem that Blizzard devs face: 11 classes, 22 dps specs, talents, glyphs, and item progression.  PVP vs PVE.  Heroic vs Normal.  25man vs 10man.  Quite frankly, given the circumstances Blizzard has done a spectacular job at class balance!
+Before we consider the apparent disparity between the classes, let us consider the problem that Blizzard devs face: 12 classes, 23 dps specs, talents, and item progression.  PVP vs PVE. Mythic vs Heroic vs Normal. Quite frankly, given the circumstances Blizzard has done a spectacular job at class balance!
 
 # Damn Lies
 
