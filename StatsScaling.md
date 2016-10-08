@@ -2,8 +2,6 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
-
-
 # Introduction
 Simulationcraft can evaluate scale factors for stats, as shown in our sample reports (see [simulationcraft.org](http://www.simulationcraft.org/)). Scale factors are computed by adding a given number of points (deltas) to a character's stat, and then comparing the resulting dps/heal/deaths count with the reference one : the scale factor is equal to the dps/heal/deaths count difference, divided by the delta.
 
@@ -29,12 +27,6 @@ Note that, because of the fighting variance, in order to have accurate enough re
  positive_scale_delta=1
 ```
 
-  * **weapon\_speed\_scale\_factors** (scope: global; default: 0), when different from zero, will force the simulation to compute scale factors for weapon speeds.
-```
- calculate_scale_factors=1
- weapon_speed_scale_factors=1
-```
-
   * **scale\_over** (scope: global; default: "") is the value over which the scale factors are evaluated. Acceptable values are:
     1. default: the dps of the player alone (or hps for a healer, see **role**).
     1. _tmi_: the theck meloree index, a measure of how smooth damage intake is for tanks.
@@ -51,26 +43,24 @@ Note that, because of the fighting variance, in order to have accurate enough re
 
 # Default deltas
 
-  * **scale\_stamina** = 183
-  * **scale\_agility** = 183
-  * **scale\_strength** = 183
-  * **scale\_intellect** = 183
-  * **scale\_spirit** = 183
+  * **scale\_stamina** = 1333
+  * **scale\_agility** = 1333
+  * **scale\_strength** = 1333
+  * **scale\_intellect** = 1333
 
-  * **scale\_spell\_power** = 183
-  * **scale\_attack\_power** = 183
+  * **scale\_spell\_power** = 1333
+  * **scale\_attack\_power** = 1333
 
-  * **scale\_crit\_rating** = 183
-  * **scale\_haste\_rating** = 183
-  * **scale\_mastery\_rating** = 183
-  * **scale\_versatility\_rating** = 183
-  * **scale\_multistrike\_rating** = 183
+  * **scale\_crit\_rating** = 1333
+  * **scale\_haste\_rating** = 1333
+  * **scale\_mastery\_rating** = 1333
+  * **scale\_versatility\_rating* = 1333
 
-  * **scale\_weapon\_dps** = 17
-  * **scale\_offhand\_weapon\_dps** = 17
+  * **scale\_weapon\_dps** = 1333
+  * **scale\_offhand\_weapon\_dps** = 1333
 
-  * **scale\_armor** = 183
-  * **scale\_bonus\_armor** = 183
+  * **scale\_armor** = 1333
+  * **scale\_bonus\_armor** = 1333
 
 use **positive\_scale\_delta** to use the absolute values instead.
 
@@ -134,9 +124,7 @@ Basically, the scale factors computed by default are the benefit per stat point 
 ```
 
 # Plotting
-Simulationcraft can produce plots showing the dps versus the stats of your choice: all stats will be displayed on the same plot, their deltas on the horizontal axis and the dps gain on the vertical axis, as in the example below:
-
-> ![http://chart.googleapis.com/chart?chs=500x170&cht=lc&chd=t:23520,23523,23543,23546,23575,23588,23620,23645,23666,23672,23681,23692,23694,23701,23711,23728,23737,23782,23794,23803,23812&chds=23520,23834&chxt=x,y&chxl=0:|-300|-150|0|%2b150|%2b300|1:|23520|23662|23834&chxp=0,0,24.5,50,74.5,100|1,1,45,100&chdl=Crit&chco=C41F3B&chg=5,10,1,3&chts=000000,20&dummy=dummy.png](http://chart.googleapis.com/chart?chs=500x170&cht=lc&chd=t:23520,23523,23543,23546,23575,23588,23620,23645,23666,23672,23681,23692,23694,23701,23711,23728,23737,23782,23794,23803,23812&chds=23520,23834&chxt=x,y&chxl=0:|-300|-150|0|%2b150|%2b300|1:|23520|23662|23834&chxp=0,0,24.5,50,74.5,100|1,1,45,100&chdl=Crit&chco=C41F3B&chg=5,10,1,3&chts=000000,20&dummy=dummy.png)
+Simulationcraft can produce plots showing the dps versus the stats of your choice: all stats will be displayed on the same plot, their deltas on the horizontal axis and the dps gain on the vertical axis.
 
   * **dps\_plot\_stat** (scope: global; default: "") is a list of stats to plot. You can indifferently use _haste_ or _haste\_rating_, _crit_ or _crit\_rating_, etc.
 ```
