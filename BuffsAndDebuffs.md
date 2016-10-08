@@ -2,8 +2,6 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
-
-
 # Introduction
 
 By default, Simulationcraft adds every buff you're supposed to have in an optimal 20-man raid, including a permanent replenishment effect and bloodlust at the end of the fight.
@@ -19,33 +17,6 @@ By default, Simulationcraft adds every buff you're supposed to have in an optima
 You can override the helpful buffs and target debuffs you benefit from the **optimal\_raid** setting and explicitly disable or enable them, one by one. All those settings have a global scope and their default value is the last specified **optimal\_raid** setting, or 1 if not specified.
 
 Beware! You need to declare the overrides **`***`after`***`** you declared **optimal\_raid**!
-
-  * +10% AP
-    * **override.attack\_power\_multiplier**
-
-  * +10% Spell Power
-    * **override.spell\_power\_multiplier**
-
-  * +5% critical chance
-    * **override.critical\_strike**
-
-  * +5% melee, ranged and caster haste
-    * **override.haste**
-
-  * +5% multistrike
-    * **override.multistrike**
-
-  * +5% strength, agility, and intelligence
-    * **override.str\_agi\_int**
-
-  * +10% stamina
-    * **override.stamina**
-
-  * +3% Versatility
-    * **override.versatility**
-
-  * +Mastery
-    * **override.mastery**
 
   * Unique buffs and debuffs
     * **override.bloodlust** and **override.bloodlust\_early** (see the relevant section below)
