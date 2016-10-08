@@ -1,6 +1,7 @@
   * [Features](Features)
   * [Starters guide](StartersGuide)
   * [Frequently asked questions](FAQ)
+  * [Common Issues](CommonIssues)
   * Textual configuration interface
     * [Basics](TextualConfigurationInterface)
     * [Examples](Examples)
