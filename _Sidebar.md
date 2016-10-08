@@ -48,6 +48,5 @@
     * [Documentation](DevelopersDocumentation)
     * [WoW game client data](GameClientData)
     * [Coded\_flags](Coded_flags)
-    * [Visual\_Studio](Visual_Studio)
     * [Localization](Localization)
     * [TODO](TODO)
