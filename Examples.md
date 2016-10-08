@@ -22,8 +22,6 @@ You can also use a locally saved JSON formatted [Blizzard community API](http://
  save=profile.simc
 ```
 
-Note that Simulationcraft no longer supports Chardev (out of date), Wowhead (incomplete information), or Wowreforge (out of date) profilers.
-
 # Compute stats scaling
 Run a simulation to compute John's scale factors.
 ```
@@ -32,15 +30,14 @@ Run a simulation to compute John's scale factors.
  calculate_scale_factors=1
  html=scaling.html
 ```
-Let's make some changes: a positive delta for hit rating and including the weapon speed.
+Let's make some changes: a positive delta for crit rating.
 ```
  profile.simc
  iterations=10000
  calculate_scale_factors=1
  html=scaling.html
 
- weapon_speed_scale_factors=1
- scale_hit_rating=300
+ scale_crit_rating=300
 ```
 
 # Compare the PTR with live servers
@@ -102,16 +99,6 @@ Let's keep an optimal raid but disable bloodlust, a shaman's actions list will t
  override.bloodlust=0
  html=manual_bloodlust.html
 ```
-Let's import Bill, a warlock, and have him cast dark intent on John. The report won't mention Bill but he will be active throughout the whole simulation.
-```
- profile.simc
-
- armory=us,illidan,bill
- dark_intent_target=john
- quiet=1
-
- html=dark_intent.html
-```
 # Add a fake enchant
 Let's add a fake 500 strength enchant on john
 ```
@@ -119,16 +106,7 @@ Let's add a fake 500 strength enchant on john
  enchant_strength=500
  html=john_500str.html
 ```
-# Change the target
-We want to make a simulation for pvp, let's have a 85 target with 3000 resilience.
-```
- profile.simc
- target_level=85
- target_resilience=3000
- html=pvp.html
-```
 # Make the raid suffer periodic damages
-A very interesting option for bears and warriors since it will make them gain rage.
 ```
  profile.simc
  raid_events+=/damage,cooldown=30,amount=20000
