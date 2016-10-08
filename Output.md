@@ -4,8 +4,6 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 Note: the standard output mentioned on this page is the console output, not your report.
 
-
-
 # Combat logs
   * **log** (scope: global; default: 0), when different from zero, will force the application to print a human-readable log on the standard output. It is easier to read than the wow combat log. Enabling this setting will force **iterations** to 1.
 ```
@@ -68,11 +66,6 @@ Note: the standard output mentioned on this page is the console output, not your
 ```
 
 # Others
-  * **csv** (scope: global; default: "") can be used to specify a file to write a csv version of a simplified combat log to. It is unmaintained and may disappear in the future.
-```
- csv=report.csv
-```
-
   * **reference\_player** (scope: global; default: "") can be used to specify the name of a reference player. This will force the application to print on the standard output, and for each player, the dps difference, expressed as a percentage, in respect to the reference player.
 ```
  armory=us,illidan,john
