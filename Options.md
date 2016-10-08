@@ -181,9 +181,9 @@ All configurations have a safeguard to end combat eventually, to avoid endless s
 **Options you should probably not mess up with.**
 
 ## Aura delay
-  * **aura\_delay** (scope: global; default: 0.15) is the delay, in seconds, the Blizzard servers need to process aura applications: it is the timespan between the action triggering an aura application and the actual application. It has nothing to do with latency, it is only related to the intricacies of Blizzard's code and their servers' performances. It is used through a normal distribution with a 25% standard deviation (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). This setting affects the following spells: druids' eclipse procs, mages' ignites and warrior's deep wounds. For ignite and deep wounds, see also [MunchingAndRolling](MunchingAndRolling).
+  * **default_aura_delay** (scope: global; default: 0.15) is the delay, in seconds, the Blizzard servers need to process aura applications: it is the timespan between the action triggering an aura application and the actual application. It has nothing to do with latency, it is only related to the intricacies of Blizzard's code and their servers' performances. It is used through a normal distribution with a 25% standard deviation (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). This setting affects the following spells: druids' eclipse procs, mages' ignites and warrior's deep wounds. For ignite and deep wounds, see also [MunchingAndRolling](MunchingAndRolling).
 ```
- aura_delay=0.25
+ default_aura_delay=0.25
 ```
 
 ## Timing wheel
