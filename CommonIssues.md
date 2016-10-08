@@ -5,7 +5,7 @@
 # **api-ms-win-crt-runtime-l1-1-0.dll is missing!**
 > Run windows update and grab everything, or download this - https://support.microsoft.com/en-us/kb/2999226.
 
-# **If you are on Windows 7, make sure to install Service Pack 1. The GUI will crash**every time**without it.**
+# **If you are on Windows 7, make sure to install Service Pack 1. The GUI will crash **every time** without it.**
 
 **While importing any character: BCP API: Unable to download player from '(Website)' reason: Internal server error.**
 
