@@ -9,7 +9,7 @@ See the [Download Page](http://www.simulationcraft.org/download.html) for Releas
 On [simulationcraft.org](http://www.simulationcraft.org/).
 
 ## How did you setup those Best-in-Slot profiles and default actions lists?
-We monitor the usual theorycrafters' lairs such as the [Elitist Jerks forums](http://elitistjerks.com/forums.php) and use the informations and profiles found there.
+Most profiles and action lists are submitted by users like you! Please submit an issue if you believe you have improvements for them.
 
 ## I cannot import my Russian/Korean/Chinese/... character
 If you use configuration files, they must be encoded as latin1 or utf-8, please take time to read [TextualConfigurationInterface#Characters\_encoding](TextualConfigurationInterface#Characters_encoding).
@@ -20,7 +20,7 @@ The GPU is good at iterating small pieces of code millions of times, in a parall
 # Graphical user interface
 
 ## Where are my files saved?
- * On Windows, it is the application's directory, or the working directory if you specified one (through the shortcut's settings).
+ * On Windows, it is in the %appdata% folder.
  * On OSX, when you use the GUI, it is `$HOME/Library/Application Support/simcqt`
 
 ## How can I change the region and language for the armory page?
@@ -35,4 +35,4 @@ You can also directly change the url. For example, replace the "en" by "fr" if y
 Of course since Simulationcraft is a [simulation](SimulationVsFormulation). Your results will slightly vary but will always stay close from the truth.
 
 ## There is no way my dps can be so high on a target dummy
-By default, you're considered to be in an optimal raid: the simulation will include all buffs (and target debuffs) you should have in a 20 man raid. You can use the options tab (graphical client) or **optimal\_raid** ([TCI](TextualConfigurationInterface)) if you want to change that.
+By default, you're considered to be in an optimal raid, which includes bloodlust/heroism/time warp. There is also no movement/distractions, but these can be added by advanced users!
