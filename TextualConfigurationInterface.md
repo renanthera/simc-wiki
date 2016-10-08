@@ -1,7 +1,5 @@
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
-
-
 # Presentation
 The textual configuration interface (TCI) is a set of textual options or commands one can use in Simulationcraft. The TCI can be fully and extensively used in anyone of those contexts:
   * The **overrides** tab within the graphical user interface (GUI), Simulationcraft.exe.
@@ -77,7 +75,7 @@ Some options, such as **actions** or **raid\_events**, are very long strings con
 
 White spaces and tabs act as line breaks in any circumstances. You can add as much blank lines or spaces as you want but all of them are treated as blank lines. As a result, do not insert white spaces on the middle of options declaration, only at the very beginning or the very end.
 ```
- #This work:
+ #This works:
  iterations=10
   iterations=10
 
