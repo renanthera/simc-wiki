@@ -21,22 +21,20 @@ Regarding the targets, by default it is always the caster himself. Although the 
 Spells with many targets are detailed in the next section; eligible targets will be friendly, non-pet, targets in range (when relevant) and they will be sequentially chosen (following the declaration or importation order) unless specified otherwise.
 
 ## Spells implementation notes
-* Atonement: Defaults to healing the lowest health target in the raid. This behavior can be overriden with the atonement\_target option.
-* Binding Heal: When the default target is the caster himself (default behaviour), the Binding Heal will be used on the first different and eligible target. If none is found, only the "self" part of the Binding Heal will be executed.
-* Divine Hymn: Heals the player with the lowest health in the raid, then the the first two different and eligible targets, whatever their health.
-* Lightwell: at given, customizable, intervals, its target will consume one charge, until exhaustion.
-* Prayer of Mending will first land on its initial target, then jump on the first four different and eligible targets in the raid.
+
 
 # Textual configuration interface
 _This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
 Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
-## Atonement target
-It is possible to override the smart targeting of Atonement heals with the **atonement\_target** Priest option. This makes it possible to simulate, for example, all Atonement heals going to a target with Grace.
+## Lingering Insanity
+There exists a dummy action called "lingering_insanity", which can be called as a pre-combat action to set the stacks of Lingering Insanity going into combat.
+* stacks: Number of stacks to trigger
+* duration: Remaining duration of lingering insanity.
 ```ini
- # Force Atonement heals to target John
- atonement_target=John
+  # Start with 34 stacks of Lingering Insanity and a remaining duration of 27 seconds.
+  actions.precombat +=/lingering_insanity,stacks=34,duration=27
 ```
 
 ## Power Word: Shield
@@ -46,29 +44,10 @@ By default PWS will debuff the target with the Weakened Soul debuff and prevent 
   actions+=/power_word_shield,ignore_debuff=1
 ```
 
-## Lightwell consumption rate
-* The _lightwell_ action is modeled as a hot: at fixed intervals, one charge will be eaten. The _consume\_interval_ (default: 10.0) is the interval, in seconds, between two charges consumption.
-```ini
- # Casts lightwell and have one charge consumed every 5s.
- actions+=lightwell,consume_interval=5
-```
-
-## No jumps for prayer of mending
-* The _prayer\_of\_mending_ action has a _single_ option (default: 0) that, when different from zero, will prevent the prayer to jump on more targets.
-```ini
- # Casts prayer of mending, preventing it to jump.
- actions+=prayer_of_mending,single=1
-```
-
 ## Buffs
 Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
-* chakra\_serenity, chakra\_chastise and chakra\_sanctuary can be used to check for chakras.
-* chakra\_pre is triggered when you activate the "chakra" spell and remains until you use any spell that will determine the type of chakra to gain.
-* chakra\_serenity\_crit is the buff gained after using holy word: serenity.
-```cini
- actions+=/flash_heal,if=buff.chakra_pre.up
-```
+
 
 # Reports
 We only document here non-obvious entries.
