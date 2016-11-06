@@ -67,7 +67,7 @@ Note that this proxy Honor Among Thieves action is disabled if the Subtlety Rogu
 **Since Simulationcraft 7.0.3, release 1** Honor Among Thieves is no longer in the simulator.
 
 ## Miscellaneous
-  * An expression called `stealthed` evaluates to 1 when any of the stealth-like effect crating buffs is up (Vanish, Stealth, or Shadow Dance). Notably, Shadowmeld is not in the list as it is not a true stealth-like effect.
+  * An expression called `stealthed.rogue` evaluates to 1 when any of the stealth-like effect crating buffs is up (Stealth, Vanish, or Shadow Dance). Notably, Shadowmeld is not in the list as it is not a true stealth-like effect, but you can check it using `stealthed.all`.
 
 ## Weapon Swapping
 
