@@ -23,28 +23,12 @@ The _initial\_chi_ (scope: player, default: 5 for WW, 1 for BrM & MW) option set
 ```
 # Set the initial chi of the monk actor to four
 initial_chi=4
-```
+
 The _goto\_throttle_ (scope: player, default: 60) option sets the percent number of Gift of the Ox orbs that are picked up
-```
-# Set the percent of GotO orbs that are picked up to 40.5%
-goto_throttle=40.5
-```
-The _eh\_reset\_throttle_ (scope: player, default: 10) option sets the percent amount of time that the player falls below 35% HP. Since Sims go into negative health values, a good chunk of the fight can be below 35%. So we need to throttle the resetting of Expel Harm so that it doesn't always trigger for most of the fight
-```
-# Set the percent amount of time spent below 35% HP to 33.3%
-eh_reset_throttle=33.3
 ```
 ## Spells implementation notes
 
 Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
-
-### _Stance_
-The _stance_ action has one setting available.
-  1. The _choose_ option (default: empty) is the stance string to which the _stance_ action will switch to.
-```
- # Choose Sturdy Ox stance
- actions+=/stance,choose=sturdy_ox
-```
 
 ### _Keg Smash_
 The _keg\_smash_ action has one setting available.
@@ -57,20 +41,11 @@ The _keg\_smash_ action has one setting available.
 ## Buffs
 Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
-### _Tigereye Brew_
-Split into _buff\_tigereye\_brew_ and _buff\_tigereye\_brew\_use_ because they share the same name in game.
-
-### _Elusive Brew_
-Split into _elusive\_brew\_stacks_ and _elusive\_brew\_activated_ because they share the same name in game.
-
 ## Debuffs
 Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
-### _Rising Sun Kick_
-The _debuff.rising\_sun\_kick_ is used to increase Yellow damage attacks for Windwalkers and Mistweavers
-```
- # Rising Sun Kick if the Rising Sun Kick debuff has less than 3 seconds remaining on the target
- actions+=/rising_sun_kick,if=debuff.rising_sun_kick.remains<3
+### _Mark of the Crane_
+The _debuff.mark\_of\_the\_crake_ is used by Windwalkers to see if the target has a Mark of the Crane debuff.
 ```
 
 ### _Stagger_
