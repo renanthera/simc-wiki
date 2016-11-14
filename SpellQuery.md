@@ -52,7 +52,7 @@ data source), operand\_type and a brief description:
   * max\_range, spell, NUMBER (maximum range in yards)
   * cooldown, spell, NUMBER (spell cooldown, in milliseconds)
   * gcd, spell, NUMBER (spell gcd duration, in milliseconds)
-  * category_cooldown, spell, NUMBER (shared cooldown duration, in milliseconds)
+  * category_cooldown, spell, NUMBER (shared cooldown duration, in milliseconds **New in version 710-03**)
   * charges, spell, NUMBER (number of charges for the spell)
   * charge\_cooldown, spell, NUMBER (charge cooldown in milliseconds)
   * category, spell, NUMBER (spell cooldown category)
