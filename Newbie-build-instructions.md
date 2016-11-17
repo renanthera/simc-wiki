@@ -25,6 +25,6 @@ By default this will clone the repository into C:\simc\
 7: Open simulationcraft.sln
 - Under Solution Explorer there will be items named Simulationcraft CLI and Simulationcraft GUI. CLI is the command line interface, GUI is the normal client that most people on Windows use. 
 
-8: Right click Simulationcraft GUI – Click Build – After this has completed, a file named Simulationcraft.exe will show up in your C:\simc\ folder.
+8: Look near the top of the window, there will be "Debug" listed beside "x64", change it to "Release", then right click Simulationcraft GUI – Click Build – After this has completed, a file named Simulationcraft.exe will show up in your C:\simc\ folder.
 
 9: If you get errors about missing dlls when attempting to load Simulationcraft.exe, that means that you may not have successfully completed step #4. Windows is finicky about updating paths, and it may require a restart of the computer as well. 
