@@ -1,6 +1,6 @@
-The entire first-time setup will take anywhere from 30-60 minutes depending on the speed of your computer/internet. 
+The entire first-time setup will take anywhere from 30-60 minutes depending on the speed of your computer/internet. Step #1 takes the most time, but steps 2-5 may be performed while #1 is installing.
 
-1: Install Visual Studio 2015 Community Edition - https://www.visualstudio.com/
+1: Install Visual Studio 2015 Community Edition - https://www.visualstudio.com/downloads/
 * Use **custom** installation, enable the following options
 * Programming Languages - Visual C++
 * Common Tools – Git for Windows, Github Extension for Visual Studio
@@ -16,7 +16,7 @@ The entire first-time setup will take anywhere from 30-60 minutes depending on t
 
 5: Open My Computer, go to the drive that you want to copy all simc files to.  Right click in the directory section, and “Git Clone.”   Under URL, paste in the following: https://github.com/simulationcraft/simc.git
 
-Click OK, and then it will download the entire repository. This will take a few minutes. As the repo is around 700 MB large.
+Click OK, and then it will download the entire repository. This will take a while due to the size of it.
 
 By default this will clone the repository into C:\simc\
 
@@ -27,4 +27,4 @@ By default this will clone the repository into C:\simc\
 
 8: Look near the top of the window, there will be "Debug" listed beside "x64", change it to "Release", then right click Simulationcraft GUI – Click Build – After this has completed, a file named Simulationcraft.exe will show up in your C:\simc\ folder.
 
-9: If you get errors about missing dlls when attempting to load Simulationcraft.exe, that means that you may not have successfully completed step #4. Windows is finicky about updating paths, and it may require a restart of the computer as well. 
+9: If you get errors about missing dlls when attempting to load Simulationcraft.exe, that means that you may not have successfully completed step #4, Windows is finicky about updating paths, and it may require a restart of the computer. There are other possibilities here - https://github.com/simulationcraft/simc/wiki/CommonIssues.
