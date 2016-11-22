@@ -1,4 +1,4 @@
-The entire first-time setup will take anywhere from 30-60 minutes depending on the speed of your computer/internet. Step #1 takes the most time, but steps 2-5 may be performed while #1 is installing. Temporarily disabling antivirus software will speed this up as well.
+The entire first-time setup will take anywhere from 30-60 minutes depending on the speed of your computer/internet. Step #1 takes the most time, but steps 2-4 may be performed while #1 is installing. Temporarily disabling antivirus software will speed this up as well.
 
 1: Install Visual Studio 2015 Community Edition - https://www.visualstudio.com/downloads/
 * Use **custom** installation, enable the following options
