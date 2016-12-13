@@ -120,7 +120,7 @@ Additionally, you may use `rtb_list` expression to check for the presence of spe
 **Since Simulationcraft 7.0.3 release 1** A new expression `bleeds` evaluates to the number of bleeding effects on the target. Currently Rogue module defines Garrote and Rupture abilities as bleeds.
 
 ## Shadow Satyr's Walk
-**Since Simulationcraft 7.1.0 release 3** An option and expression called `ssw_refund_offset`let you modify the amount of energy refund by the legendary item "Shadow Satyr's Walk" (Subtlety). In fact, the amount refund is based on the distance from the center of the enemy and not the edge (i.e. it doesn't take in account the enemy hitbox). You MUST specify the option per-character.
+**Since Simulationcraft 7.1.0 release 3** An option and expression called `ssw_refund_offset`let you modify the amount of energy refund by the legendary item "Shadow Satyr's Walk" (Subtlety). In fact, the amount refund is based on the distance from the center of the enemy and not the edge (i.e. it doesn't take in account the enemy hitbox). The option must be defined inside an actor, if you want to re-use it on multiple actors then you must use `copy="",""` or re-define it for each actor.
 ```
  # Increases the amount of energy refund from SSW effect by 15.
  ssw_refund_offset=15
