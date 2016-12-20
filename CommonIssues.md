@@ -9,14 +9,13 @@
 >  Run windows update and grab everything, or download this - https://support.microsoft.com/en-us/kb/2999226.
 
 3. The program crashes immediately after opening
-> Create an environment variable named QT_OPENGL
-> Instructions for making environment variables: https://kb.wisc.edu/cae/page.php?id=24500
->
-> Set QT_OPENGL to one of the following - Try software first, then desktop, then angle
-> software
-> desktop
-> angle
-> After setting QT_OPENGL to any of those 3, reload simulationcraft to see if it works. 
+> Create an environment variable named QT_OPENGL  
+> Instructions for making environment variables: https://kb.wisc.edu/cae/page.php?id=24500  
+> Set QT_OPENGL to one of the following - Try software first, then desktop, then angle  
+> software  
+> desktop  
+> angle  
+> After setting QT_OPENGL to any of those 3, reload simulationcraft to see if it works.   
 
 4. If you are on Windows 7, make sure to install Service Pack 1. The GUI will crash every time without it.
 
