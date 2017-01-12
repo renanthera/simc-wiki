@@ -4,6 +4,9 @@
 
 1. The program crashes near the end of a simulation, right before the report is open. 
 > Try adding     decorated_tooltips=0   to your simulation. There are some overzealous "internet security" and VPN programs that crash Simulationcraft during the report generation for currently unknown reasons.
+>
+> If that does not work, there are various forms of malware that have been crashing Simulationcraft because they infected chrome, which is what Simulationcraft's GUI runs on.
+> Try running ADWCleaner, which seems to fix this in a lot of cases - https://toolslib.net/downloads/viewdownload/1-adwcleaner/ - Make sure to restart computer after running this.
  
 2. api-ms-win-crt-runtime-l1-1-0.dll is missing!
 >  Run windows update and grab everything, or download this - https://support.microsoft.com/en-us/kb/2999226.
