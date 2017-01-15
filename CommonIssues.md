@@ -22,9 +22,13 @@
 
 4. Simulationcraft randomly blue screens or crashes my computer
 >If the computer is blue screening or abruptly restarting during the simulation AND the crashes aren't consistent, it's likely either failing memory, the cpu is not getting enough voltage, or your cpu is overheating due to a cooling system that has somehow broken.
+>
 >Simc is the most stressful program you can run on a computer outside of cpu benchmarks and prime95, and can expose problems with the stability in your computer that videogames normally do not. 
+>
 >If you are overclocking, disable the overclock and see if the program works.
+>
 >Make sure the CPU isn't overheating by using one of the various temperature monitors, speccy, speedfan, etc. 
+>
 >A guide for testing memory is here - http://www.howtogeek.com/260813/how-to-test-your-computers-ram-for-problems/
 
 5. If you are on Windows 7, make sure to install Service Pack 1. The GUI will crash every time without it.
