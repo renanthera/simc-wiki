@@ -47,7 +47,7 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 ### _Mark of the Crane_
 The _debuff.mark\_of\_the\_crake_ is used by Windwalkers to see if the target has a Mark of the Crane debuff.
 
-The _spinning\_crane\_kick.count_ is used if you wish to see the total number of Mark of the Crane debuffs are currently on targets. For WoW API developers, in Blizzard uses the "count" function in the spell api to return the Spinning Crane Kick stack number. Hence the reason I used this permutation; for consistency sake.
+The _spinning\_crane\_kick.count_ is used if you wish to see the total number of Mark of the Crane debuffs are currently on targets. For WoW API developers, Blizzard uses the "count" variable in the spell api to return the Spinning Crane Kick stack number. Hence the reason I used this permutation; for consistency sake.
 
 ```
  actions+=/spinning_crane_kick,if=spinning_crane_kick.count>3
