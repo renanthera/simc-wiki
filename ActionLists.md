@@ -610,6 +610,11 @@ actions+=/flash_of_light,if=target.name!=Bob
 # Starfall is going to be nerfed in the next patch? Then we won't use it anymore.
 actions+=/starfall,if=ptr=0
 ```
+* _bugs_ is zero when bugs are disabled, else it returns 1. Useful when a bug is implemented but will likely be fixed soon. (It's enabled by using the token option "bugs=1" or "bugs=0")
+```
+# In 7.1.5, casting Shadow Dance before going in combat let you extends the stealth buff, so it's worth to use with Subterfuge talent. Will likely be fixed in 7.2!
+actions.precombat+=/shadow_dance,if=talent.subterfuge.enabled&bugs
+```
 * _race_._`<`racename`>`_ evaluates true if `<`racename`>` is equal to the player's race.
 ```
 # Use Berserking only if race is Troll.
