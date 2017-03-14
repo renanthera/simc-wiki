@@ -45,7 +45,7 @@
 
 ### Alternate way for Microsoft Windows
   * Install Visual Studio and Qt as above
-  * Once your Qt version is installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.6 64-bit for Desktop (MSVC 2015)`.
+  * Once your Qt version is installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.8 64-bit for Desktop (MSVC 2015)`.
   * In the command prompt, navigate to `your_simc_source_dir`.
   * In `your_simc_source_dir`, issue the command
     * `qmake -r -tp vc -spec win32-msvc<version> simulationcraft.pro`, where **\<version>** is your Visual Studio version (e.g., 2013 or 2015).
