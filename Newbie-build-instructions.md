@@ -1,9 +1,11 @@
 The entire first-time setup will take anywhere from 30-60 minutes depending on the speed of your computer/internet. Step #1 takes the most time, but steps 2-4 may be performed while #1 is installing. Temporarily disabling antivirus software will speed this up as well.
 
-1: Install Visual Studio 2015 Community Edition - https://www.visualstudio.com/downloads/
+1: Install Visual Studio 2015 Community Edition - https://www.microsoft.com/en-us/download/details.aspx?id=48146
 * Use **custom** installation, enable the following options
 * Programming Languages - Visual C++
 * Common Tools – Git for Windows, Github Extension for Visual Studio
+
+* Note: Visual Studio 2017 Community Edition is available but the QT version we use does not support 2017 just yet.
 
 2: Install TortoiseGIT - https://tortoisegit.org/download/
 - Default settings are fine
