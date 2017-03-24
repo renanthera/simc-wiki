@@ -29,10 +29,13 @@ The spell data can be overridden with the following fields. The list contains th
   * `min_range` (_float_), Minimum range of the spell (currently unused)
   * `max_range` (_float_), Maximum range of the spell (currently unused)
   * `cooldown` (_integer_, _milliseconds_), The cooldown of the spell in milliseconds
+  * `charge_cooldown` (_integer_, _milliseconds_), The charge cooldown of the spell in milliseconds
   * `internal_cooldown` (_integer_, _milliseconds_), The internal cooldown of the spell in milliseconds
+  * `category_cooldown` (_integer_, _milliseconds_), The cooldown of the category in milliseconds
+  * `charges` (_integer_), The number of cooldown charges
   * `gcd` (_integer_, _milliseconds_), The global cooldown of the spell in milliseconds
   * `duration` (_integer_, _milliseconds_), The duration of the aura in milliseconds
-  * `rune_cost` (_integer_), The rune cost of the spell. The following values can be combined for the rune cost: `1`: blood, `4`: unholy, `16`: frost, `64`: death
+  * `rune_cost` (_integer_), The rune cost of the spell. The following values can be combined for the rune cost: `1`: blood, `4`: unholy, `16`: frost, `64`: death. **Obsoleted in Simulationcraft release 7**
   * `runic_power_gain` (_integer_), The runic power gain when the ability is used, multiplied by 10
   * `max_stack` (_integer_), The maximum stack of the aura
   * `proc_charges` (_integer_), The number of stacks per trigger for the aura
