@@ -115,6 +115,14 @@ Additionally, you may use `rtb_list` expression to check for the presence of spe
   actions+=/roll_the_bones,if=combo_points>=cp_max_spend&!rtb_list.all.15
 ```
 
+If you want to check what effect different buffs or buff combinations have, you can use the `fixed_rtb` option to force the simulation to always give you the specified buff list. Like for the list above, use numbers for the buffs in alphabetical order.
+```
+  # Always roll Broadsides
+  fixed_rtb=1
+  # Always roll 6 buffs
+  fixed_rtb=123456
+```
+
 ## Bleed effects
 
 **Since Simulationcraft 7.0.3 release 1** A new expression `bleeds` evaluates to the number of bleeding effects on the target. Currently Rogue module defines Garrote and Rupture abilities as bleeds.
