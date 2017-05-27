@@ -167,9 +167,8 @@ Spawning new adds via _adds_ has several unique parameters that affect how adds 
 ```
 
 # Casting
-The _casting_ keyword allows you to make a raid event with two periodical consequences:
+The _casting_ keyword allows you to make a raid event with the following effect:
   1. The target will cast a spell your players must interrupt. There is no action condition relative to the target's casting but off-gcd interrupts do not need to be present in the actions list: they will be automatically used by the Simulationcraft.
-  1. The players will be interrupted if they were casting at this time, to simulate the use of "/stopcasting" macros. Note that all players will be interrupted.
 
 There is no specific option for this keyword.
 ```
