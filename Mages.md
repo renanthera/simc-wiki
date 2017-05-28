@@ -7,72 +7,100 @@ _This section is a part of the [TCI](TextualConfigurationInterface) reference._
 
 Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
 
-## Targeting
+## Actions
 
-(**Since Simulationcraft 6.0.2**) Mages in Warlords of Draenor get a talent called Prismatic Crystal (PC), that necessitates a rethinking of the targeting model in Simulationcraft. As such, to allow Mages to explore different strategies with PC, they have a custom targeting system.
+### Burn phase
 
-In conventional Simulationcraft, each ability has its own target. Mages, on the other hand have a single shared target between all abilities (the current target of the Mage). Mages can change their current target, and also PC will forcibly swap their current target to itself, to model in game behavior. Note that when PC despawns, as a convenience, the simulator will automatically target the Mage's primary target.
-
-### Choose target
-
-To support proper targeting, a new action has been introduced. The `choose_target` action allows mages to change targets instantaneously.
+Burn phase can be started by `start_burn_phase` and stopped by `stop_burn_phase`. These actions set and reset the `burn_phase` flag, which can then be used in conditions of other actions.
 
 ```
-# Change target to default target, if Prismatic Crystal is active
-actions+=/choose_target,if=pet.prismatic_crystal.active
+actions=start_burn_phase,if=!burn_phase&cooldown.evocation.remains<20
+actions+=/stop_burn_phase,if=prev_gcd.1.evocation
+actions+=/arcane_blast,if=burn_phase
+...
 ```
 
-Specifying the target for the action is done through the `name` option. The name option scans through actors in the sim, and matches the option value with their name. The scanning is prioritized in the order of mage's pets, hostile targets, friendly players. As a shorthand, the `name` option can be omitted for targeting the default target of the Mage, or also the alias `default` used as the name of the default target.
+### Water Elemental
 
-By default, any if= expression passed to the `choose_target` action checks the mage's current target for validity. This behavior can be changed with the `check_selected` option (possible values 0/1), which forces the action to check the If= conditions against the potential selected target.
+By default, Water Elemental casts Water Jet on cooldown and Waterbolt otherwise. If needed, Water Jet can be controlled manually via the `water_jet` action. When used, `water_jet` interrupts Water Elemental's current spell and forces it to cast Water Jet next.
 
-### Expressions
+Water Elemental's Freeze can also be controlled manually via the `freeze` action. Freeze will only grant charges of Fingers of Frost when it hits a target that can be crowd-controlled, see below.
 
-The `current_target` expression evaluates to the current target of the Mage, under the new targeting system.
-
-```
-# Execute Frostbolt, if the current target of the Mage is an enemy named Fluffy_Pillow
-actions+=/frostbolt,if=current_target=Fluffy_Pillow
-```
-
-In addition, the `default_target` expression evaluates to the primary target of the Mage (by default Fluffy\_Pillow, controllable through the `target` option for the player).
-```
-# Execute Frostbolt, if the current target of the Mage is the default enemy in the sim
-actions+=/frostbolt,if=current_target=default_target
-```
-
-### Important notes
-
-  * The `cycle_targets` option works normally with the mage targeting system. If specified for an action, the Mage's current target is ignored for that action, and the (cycled) target of the action is used instead.
-  * The `target` option for actions is current unavailable for mages
-
-## Ability Tracking and Custom Flags
-
-In order to facilitate simpler APL conditions for certain abilities, custom expressions have been implemented.
-
-Due to the complexity of controlling when to pyro camp vs. build ignite for combustion, the _pyro\_chain_ flag exists. Together with actions _stop\_pyro\_chain_ and _start\_pyro\_chain_ they allow for more simple entering / exiting periods where spell priorities shift significantly. Effectively, this allows us to force the mage to have the option of occupying different states - see Mage Fire APL, circa SoO MoP / WoD era, for examples of how this is taken advantage of.
+Note that when either of these actions is included in the APL, Water Elemental will never use Water Jet unless explicitly instructed to.
 
 ```
-   # start_pyro_chain toggles pyro_chain to 1 (true)
-   actions+=/start_pyro_chain
-
-   # Combustion will only be cast if pyro_chain is = 1 (true)
-   actions+=/combustion,if=pyro_chain
-
-   # stop_pyro_chain toggles pyro_chain to 0 (false), in this case if combustion is on cooldown
-   actions+=/stop_pyro_chain,if=cooldown.combustion.remains>0
+...
+actions+=/water_jet,if=buff.fingers_of_frost.react=0&active_enemies=1
+actions+=/freeze,if=buff.fingers_of_frost.react=0&active_enemies>=2
+...
 ```
 
-## Water Elemental
+## Expressions
 
-Water elemental in Warlords of Draenor casts "Water Jet" that debuffs the target, and generates Fingers of Frost charges for the mage. You can control the behavior how Water Jet is cast using the _water\_jet_ action. If _water\_jet_ action is omitted from the Action Priority List, the Water Elemental will automatically cast the spell when its cooldown has elapsed.
+### Burn phase
+
+`burn_phase` expression evaluates to 1 if burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of burn phase, it gives the duration of the last burn phase.
+
+### Icicles
+
+Icicles can be tracked in two ways: `buff.icicles.stack` and `icicles`. The former corresponds to the in-game buff that is used for example with Glacial Spike, the latter gives the actual number of Icicles.
+
+As an example, when Frostbolt is cast, the mage gains a stack of the Icicles buff (and `buff.icicles.stack=1`), but the actual Icicle is not created until Frostbolt impacts (therefore `icicles=0`).
+
+### Incanter's Flow
+
+`incanters_flow_dir` can be used to determine if Incanter's Flow is currently gaining or losing stacks.
 
 ```
- # Manually cast Water Jet, when the mage has no Fingers of Frost charges
- actions+=/water_jet,if=buff.fingers_of_frost.react=0
+Time                   | 1  2  3  4  5  6  7  8  9 10 11 12 ...
+-----------------------+---------------------------------------
+Incanter's Flow stacks | 1  2  3  4  5  5  4  3  2  1  1  2 ...
+incanters_flow_dir     | 1  1  1  1  0 -1 -1 -1 -1  0  1  1 ...
 ```
 
-## Specifying Cinderstorm Cinder-count
+### Ground AoE
+
+Ground AoE can be tracked by `ground_aoe.X.Y`.
+
+`X` can be any of:
+* `blizzard`
+* `comet_storm`
+* `flame_patch`
+* `frozen_orb`
+* `legendary_comet_storm` - from Shattered Fragments of Sindragosa
+* `legendary_meteor_burn` - from Contained Infernal Core
+* `meteor_burn`
+
+`Y` can be any of:
+* `remains`
+
+If the specified ground AoE is currently not active, this expression evaluates to 0.
+
+For example:
+
+```
+...
+actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.frozen_orb.remains=0
+...
+```
+
+## Mage options
+
+### Firestarter
+
+TODO
+
+### Greater Blessing of Wisdom
+
+TODO
+
+### Cinderstorm
+
+Number of cinders can be controlled globally via `global_cinder_count`, see below.
+
+## Ability options
+
+### Cinderstorm
 
 In Legion, Cinderstorm has a variable number of possible cinder impacts. To model this, SimulationCraft gives the user two separate options. One action-specific("cinders"), and one player-wide(global_cinder_count). By default, Cinderstorm will set "cinders"=6 and global_cinder_count=0. If global_cinder_count is given a value above 0, it will override all action-level "cinders" specified.
 
