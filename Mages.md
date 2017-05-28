@@ -88,7 +88,21 @@ actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.froz
 
 ### Firestarter
 
-TODO
+Firestarter's value hugely depends on a raid composition. In a single actor simulations, it is usually overvalued.
+
+`firestater_time` can be used to combat this. It turns off the standard Firestarter behavior and gives Fireball and Pyroblast 100% crit chance for the specified time after combat starts.
+
+Note that with this option, Firestarter won't have any effect on enemies that join the fight later (for example `adds` raid event).
+
+```
+mage=Mage
+level=110
+...
+spec=fire
+
+firestarter_time=20
+# Firestarter is only active for the first 20 seconds
+```
 
 ### Greater Blessing of Wisdom
 
@@ -125,3 +139,7 @@ Use of cinders to set a single cinderstorms action to 3:
 ```
 actions=cinderstorm,cinders=3,if=buff.rune_of_power.down
 ```
+
+## Crowd control
+
+TODO
