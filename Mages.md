@@ -106,7 +106,17 @@ firestarter_time=20
 
 ### Greater Blessing of Wisdom
 
-TODO
+Arcane mages benefit from the extra mana gained from Greater Blessing of Wisdom. `blessing_of_wisdom_count` can be used to simulate this exact scenario.
+
+```
+mage=Mage
+level=110
+...
+spec=arcane
+
+blessing_of_wisdom_count=2
+# Two paladins buffed us with GBoW
+```
 
 ### Cinderstorm
 
@@ -142,4 +152,9 @@ actions=cinderstorm,cinders=3,if=buff.rune_of_power.down
 
 ## Crowd control
 
-TODO
+Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect, it won't trigger any charges of Fingers of Frost and it won't activate Sephuz's Secret.
+
+Target is susceptible to crowd control in these situations:
+
+* Target's level is strictly smaller than player level + 3
+* Target is an add spawned by the `adds` raid event
