@@ -84,6 +84,15 @@ actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.froz
 ...
 ```
 
+### Firestarter
+
+The expression `firestarter_active` can be used to check if Firestarter is active. See below.
+
+```
+actions=fireball,target_if=firestarter_active
+# Cast Fireball on any target that will make it crit.
+```
+
 ## Mage options
 
 ### Firestarter
