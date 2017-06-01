@@ -39,7 +39,7 @@ actions+=/freeze,if=buff.fingers_of_frost.react=0&active_enemies>=2
 
 ### Burn phase
 
-`burn_phase` expression evaluates to 1 if burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of burn phase, it gives the duration of the last burn phase.
+`burn_phase` expression evaluates to 1 if burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of burn phase, it returns 0.
 
 ### Icicles
 
@@ -86,10 +86,10 @@ actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.froz
 
 ### Firestarter
 
-The expression `firestarter_active` can be used to check if Firestarter is active. See below.
+The expression `firestarter.active` can be used to check if Firestarter is active. Time until Firestarter becomes inactive is represented by `firestarter.remains`. See below.
 
 ```
-actions=fireball,target_if=firestarter_active
+actions=fireball,target_if=firestarter.active
 # Cast Fireball on any target that will make it crit.
 ```
 
