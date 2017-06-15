@@ -33,7 +33,7 @@ There are two time-based combat length models:
 ### Configuration
 
 Both Time-based models have the following parameters:
- * **max\_time** (scope: global; default: 450) is the duration, in seconds, you desire for the average fight duration.
+ * **max\_time** (scope: global; default: 300) is the duration, in seconds, you desire for the average fight duration.
 
 ```
  // This example will make the fights durations converge to 400s.
