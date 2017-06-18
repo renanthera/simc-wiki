@@ -25,3 +25,5 @@ You can only include a single baseline profile in the profile set simulation. Pr
 ### Supported options for profile sets
 
 Profile sets support the vast majority of simulation and player scope options. You can control the number of threads, override spell data, use `target_error` or `iterations` in an individual profile set without it leaking to other profile sets. You can also specify output options for individual profile sets, in which case the corresponding report is generated. Note that the profile set simulations are currently run with `report_details=0`, so detailed reporting of actions and buffs is unavailable.
+
+Options that do not work in profile sets include (but are not limited to): various output-only options such as ```spell_query```, scale factor calculation, any kind of plotting, or adding additional players (e.g., ```armory```, ```copy```, or ```class_name``` options).
