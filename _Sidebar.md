@@ -16,7 +16,7 @@
       * [Equipment](Equipment)
       * [Action lists](ActionLists)
     * [Enemies](Enemies)
-    * [ProfileSet](Profile Sets)
+    * [Profile Sets](ProfileSet)
     * [Spell queries](SpellQuery)
     * [Overriding spell data](SpellData)
   * Classes
