@@ -1,6 +1,6 @@
 # Profile Sets
 
-**_(Added in Simulationcraft 725-?)_**
+**_(Added in Simulationcraft 725-01)_**
 
 Profile sets are a new mechanism of batch-simulating actors. Simulationcraft currently has two ways to do large (multi-actor) simulations. First, inputting multiple actors without any additional options will simulate all actors in the same environment (i.e., a raid). Adding `single_actor_batch=1` option will segregate the actors to simulating separately in individual phases.
 
