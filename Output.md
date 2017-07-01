@@ -61,10 +61,6 @@ Note: the standard output mentioned on this page is the console output, not your
  html=mytoon.html
  hosted_html=1
 ```
-  * **ilevel\_raid\_report** (scope: global; default: 0), when different from zero, will add the ilevel of the character to their name on raid dps charts.
-```
- ilevel_raid_report=1
-```
 
 # Others
   * **reference\_player** (scope: global; default: "") can be used to specify the name of a reference player. This will force the application to print on the standard output, and for each player, the dps difference, expressed as a percentage, in respect to the reference player.
