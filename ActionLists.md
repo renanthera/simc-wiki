@@ -236,11 +236,11 @@ actions+=/wait_until_ready,sec=0.5
 
 ```
 # First example, without using for_next: the application will pool energy while the player has less than 60 energy and slice and dice must soon be refreshed (within 5s).
-actions+=/pool_energy,if=energy<60&buff.slice_and_dice.remains<5
+actions+=/pool_resource,if=energy<60&buff.slice_and_dice.remains<5
 actions+=/slice_and_dice,if=combo_points>=3&buff.slice_and_dice.remains<2
 
 # Second example, with for_next: if the player is not stealthed and has less than 5 combo points but the player has less than 85 energy (the only non-satisfied criteria for shadow dance), then the application will pool energy until the player has 85 or more energy. If the player is stealthed or has 5 combo points, both lines will be skipped.
-actions+=/pool_energy,for_next=1,extra_amount=85
+actions+=/pool_resource,for_next=1,extra_amount=85
 actions+=/shadow_dance,if=energy>=85&combo_points<5&buff.stealthed.down
 ```
 
