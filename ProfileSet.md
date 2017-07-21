@@ -26,6 +26,8 @@ You can only include a single baseline profile in the profile set simulation. Pr
 
 You can also control which metric is used to collect from profile sets with the ```profileset_metric``` option (default `dps`). Note that output may be odd for metrics that do not support extended data collection (e.g., percentiles).
 
+**Using `armory` with profilesets is not recommended as it will significantly slow profileset initialization. Save your profile to a file (using `save`command) and use that as the base.**
+
 ### Supported options for profile sets
 
 Profile sets support the vast majority of simulation and player scope options. You can control the number of threads, override spell data, define different `raid_events`, or use `target_error` or `iterations` in an individual profile set without it leaking to other profile sets. You can also specify output options for individual profile sets, in which case the corresponding report is generated. Note that the profile set simulations are currently run with `report_details=0`, so detailed reporting of actions and buffs is unavailable.
