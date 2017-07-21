@@ -268,7 +268,7 @@ There is no specific option for this keyword.
  raid_events+=/vulnerable,cooldown=80,duration=20
 
  #This line will disable automatic bloodlust 
- overrides.bloodlust=0
+ override.bloodlust=0
 
  #This line, when added to a shaman's action list, will make bloodlust cast on the first vulnerable moment.
  actions+=/bloodlust,vulnerable=1,time_to_die<=100
