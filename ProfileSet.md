@@ -26,7 +26,7 @@ You can only include a single baseline profile in the profile set simulation. Pr
 
 You can also control which metric is used to collect from profile sets with the ```profileset_metric``` option (default `dps`). Note that output may be odd for metrics that do not support extended data collection (e.g., percentiles).
 
-**Using `armory` with profilesets is not recommended as it will significantly slow profileset initialization. Save your profile to a file (using `save`command) and use that as the base.**
+**Using `armory` option with profile sets is not recommended as it will significantly slow down the initialization process. Save your base profile to a file (using `save`command), or use an externally imported Blizzard armory data with the `local_json` option.**
 
 ### Supported options for profile sets
 
