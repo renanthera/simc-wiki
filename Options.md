@@ -128,7 +128,8 @@ All configurations have a safeguard to end combat eventually, to avoid endless s
 
 # Multithreading
 
-  * **threads** (scope: global; default: 1) is the number of threads to use to perform computations. Increasing this number will linearly decrease the computations times: maximum performances are reached with a value equal to the number of soft cores your CPU has. It may have a slight impact on other applications, though. Note that some features such as outputting combat logs are not available when using more than one thread! Besides, the memory consumption will also increase as data are duplicated across threads to simplify the conception and enhance performances. Finally, the report will display the number of iterations per thread rather then the total number.
+  * **threads** (scope: global; default: 0) is the number of threads to use to perform computations. A value of 0 or less will use as many threads as there are CPU threads available on your system.
+Increasing this number will linearly decrease the computations times: maximum performances are reached with a value equal to the number of soft cores your CPU has. It may have a slight impact on other applications, though. Note that some features such as outputting combat logs are not available when using more than one thread! Besides, the memory consumption will also increase as data are duplicated across threads to simplify the conception and enhance performances. Finally, the report will display the number of iterations per thread rather then the total number.
 ```
  # An Intel Nehalem core i7 has 4 cores and, through the hyper-threading technology, 8 soft cores. Let's use 7 of them for Simulationcraft and leave one for foreground applications.
  threads=7
