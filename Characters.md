@@ -168,7 +168,7 @@ Here is the list of supported types:
 # Specifications
 
 ## Basics
-  * **race** (scope: current character; default: "") is the player's race. It may be one of the following: none, beast, blood\_elf, draenei, dragonkin, dwarf, giant, gnome, goblin, human, humanoid, night\_elf, orc, tauren, troll, undead, worgen.
+  * **race** (scope: current character; default: "") is the player's race. It may be one of the following: none, beast, blood\_elf, draenei, dragonkin, dwarf, giant, gnome, goblin, human, humanoid, night\_elf, orc, pandaren, tauren, troll, undead, worgen.
   * **level** (scope: global; default: 85) is the player's level.
 ```
  # Import a character and change his race
