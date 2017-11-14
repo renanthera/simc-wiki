@@ -19,6 +19,7 @@
     * [Profile Sets](ProfileSet)
     * [Spell queries](SpellQuery)
     * [Overriding spell data](SpellData)
+    * [Expansion-specific Options](ExpansionOptions)
   * Classes
     * [Death Knights](DeathKnights)
     * [Demon Hunters](Demon-Hunters)
