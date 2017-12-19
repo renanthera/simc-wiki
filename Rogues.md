@@ -139,6 +139,9 @@ Also, you can use it as expression to get the amount refund (useful if you want 
  actions+=/variable,name=ssw_refund,value=equipped.shadow_satyrs_walk*(12+ssw_refund_offset)
 ```
 
+## Rotation Options
+* Due to Assassination relic scaling as of 2017-12-19, you can set the option `fok_rotation=1` for an actor and it will make the default APL use Fan of Knives instead of Mutilate.
+
 # Reports
 We only document here non-obvious entries.
 
