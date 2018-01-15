@@ -134,15 +134,15 @@ This combo can be enabled via `allow_shimmer_lance`. When set to true, Shimmer t
 If you want to try it out, you can make the following change to the default APL. Replace this Ice Lance line
 
 ```
-actions+=/ice_lance,if=variable.fof_react=0&prev_gcd.1.flurry
+actions+=/ice_lance,if=!buff.fingers_of_frost.react&prev_gcd.1.flurry
 ```
 
 with the following three lines
 
 ```
-actions+=/shimmer,if=prev_gcd.2.flurry&prev_gcd.1.ice_lance&debuff.winters_chill.remains>action.ice_lance.travel_time-20%38&variable.fof_react=0
-actions+=/ice_lance,if=(variable.fof_react=0|variable.fof_react=1&spell_haste<=0.607)&prev_gcd.1.flurry
-actions+=/ice_lance,if=prev_off_gcd.shimmer
+actions+=/ice_lance,if=prev_gcd.1.flurry
+actions+=/ice_lance,if=prev_off_gcd.shimmer&debuff.winters_chill.remains>travel_time
+actions+=/shimmer,if=spell_haste<=0.666&prev_gcd.2.flurry&charges>=1&!buff.fingers_of_frost.react
 ```
 
 If you don't want to use Shimmer back to back, you can enforce time between two Shimmers in this way.
