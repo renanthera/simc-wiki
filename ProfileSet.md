@@ -28,6 +28,16 @@ You can also control which metric is used to collect from profile sets with the 
 
 **Using `armory` option with profile sets is not recommended as it will significantly slow down the initialization process. Save your base profile to a file (using `save`command), or use an externally imported Blizzard armory data with the `local_json` option.**
 
+### Parallel processing for profilesets 
+
+**_(Supported in Simulationcraft 735-01 or newer)_**
+
+The default behavior of Simulationcraft profilesets iterates over all of the profilesets in (an unordered) sequence. Each profileset simulation uses the same number of threads as the baseline simulation has defined (by default the number of hardware concurrent threads).
+
+In addition to the sequential mode, Simulationcraft can also process profilesets in parallel. With parallel processing, each profileset will create a worker thread (up to a maximum number of workers), responsible for simulating the profile. A simulation-scope option `profileset_worker_threads` specifies the number of threads each worker is allowed to use. The maximum number of workers in the simulator is defined as `floor( threads / profileset_worker_threads )`. For example, with `threads=8` and `profileset_worker_threads=2` the simulator would run four concurrent profileset workers.
+
+The parallel profileset mode will also change the progress bar of the simulator to no longer report iteration-level details of each simulated profileset, but rather express the progress in terms of finished profilesets.
+
 ### Supported options for profile sets
 
 Profile sets support the vast majority of simulation and player scope options. You can control the number of threads, override spell data, define different `raid_events`, or use `target_error` or `iterations` in an individual profile set without it leaking to other profile sets. You can also specify output options for individual profile sets, in which case the corresponding report is generated. Note that the profile set simulations are currently run with `report_details=0`, so detailed reporting of actions and buffs is unavailable.
