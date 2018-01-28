@@ -34,7 +34,7 @@ You can also control which metric is used to collect from profile sets with the 
 
 The default behavior of Simulationcraft profilesets iterates over all of the profilesets in (an unordered) sequence. Each profileset simulation uses the same number of threads as the baseline simulation has defined (by default the number of hardware concurrent threads).
 
-In addition to the sequential mode, Simulationcraft can also process profilesets in parallel. With parallel processing, each profileset will create a worker thread (up to a maximum number of workers), responsible for simulating the profile. A simulation-scope option `profileset_worker_threads` specifies the number of threads each worker is allowed to use. The maximum number of workers in the simulator is defined as `floor( threads / profileset_worker_threads )`. For example, with `threads=8` and `profileset_worker_threads=2` the simulator would run four concurrent profileset workers.
+In addition to the sequential mode, Simulationcraft can also process profilesets in parallel. With parallel processing, each profileset will create a worker thread (up to a maximum number of workers), responsible for simulating the profile. A simulation-scope option `profileset_work_threads` specifies the number of threads each worker is allowed to use. The maximum number of workers in the simulator is defined as `floor( threads / profileset_work_threads )`. For example, with `threads=8` and `profileset_work_threads=2` the simulator would run four concurrent profileset workers.
 
 The parallel profileset mode will also change the progress bar of the simulator to no longer report iteration-level details of each simulated profileset, but rather express the progress in terms of finished profilesets.
 
