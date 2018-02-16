@@ -2,13 +2,12 @@
 
 # Downloading the Source
 
-  * Downloading via !Git
-    * OSX and most Linux installs should already include **git**, if not, try to install it through your package manager or  go [here](http://www.tigris.org).
-      * Use the git command found on the [source page](http://code.google.com/p/simulationcraft/source/checkout)
-    * Git client integrated with Windows Explorer: [TortoiseGit](http://code.google.com/p/tortoisegit/)
-      * See [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft) for help on installing/using TortoiseGit.
-    * Git client for Windows (cmd line interface): [Git for Windows](http://code.google.com/p/msysgit/)
-      * Use the git command found on the [source page](http://code.google.com/p/simulationcraft/source/checkout)
+  * Downloading via Git
+    * The repository address can be found on the [SimulationCraft Github page](https://github.com/simulationcraft/simc). Click the green **Clone or Download** button on the right.
+      * OSX and most Linux installs should already include **git**, if not, try to install it through your package manager.
+      * You can download Git for all platforms directly from [here](https://git-scm.com/downloads).
+      * Git client integrated with Windows Explorer: [TortoiseGit](https://tortoisegit.org/)
+        * See [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft) for help on installing/using TortoiseGit.
 
   * Downloading release code
     * For each releases you can find a source code archive used to build that release on the download page
