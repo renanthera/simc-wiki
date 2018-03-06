@@ -41,6 +41,7 @@
     * [Contrasting formulation and simulation](FormulationVsSimulation)
     * [Why we publish spec rankings](PremedititatedProvocation)
     * [simc_gui.simc](simc_gui.simc)
+    * [Logos](Logos)
   * Developers Corner
     * [Participate](Participate)
     * [How to build](HowToBuild)
