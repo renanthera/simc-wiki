@@ -1,6 +1,6 @@
 # Collection of SimulationCraft logos throughout World of Warcraft expansions.
 
-All modern logos are created by Julianne Albert. 
+All modern logos are created by graphics designer Julianne Albert (enchant@silkenfire.com). 
 
 ## Battle for Azeroth
 
