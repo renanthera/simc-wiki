@@ -8,8 +8,8 @@ Simulationcraft recently switched from Subversion to Git. If you're a Windows us
 First thing's first, we need to download and install all of the components.
 
   * Download and install the latest version of [Git](https://msysgit.github.io/). You're looking for the "Full Installer for official Git for Windows"; for this tutorial I'm using version 1.8.5.2. You will be presented with several options for the install; I left all of these at their defaults.
-  * According to the [TortoiseGit site](http://code.google.com/p/tortoisegit/wiki/SetupHowTo), you also need Windows Installer. Most people should already have this though. If not, grab it and install.
-  * Download and install the latest version of [TortoiseGit](http://code.google.com/p/tortoisegit/wiki/Download?tm=2). Again, I installed the default components.
+  * According to the [TortoiseGit site](https://tortoisegit.org/), you also need Windows Installer. Most people should already have this though. If not, grab it and install.
+  * Download and install the latest version of [TortoiseGit](https://tortoisegit.org/download/). Again, I installed the default components.
 
 # Setting up your local repository
 
