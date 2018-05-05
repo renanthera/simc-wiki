@@ -8,7 +8,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 Battle for Azeroth introduces Azerite powers to specific item slots. Simulationcraft supports the specification of selected azerite powers for items, and the actor-level overriding of azerite powers.
 
- * **azerite_powers** (scope: item; default: empty) A new item option that takes a ´/´ or `:` delimited list of azerite power identifiers.
+ * **azerite_powers** (scope: item; default: empty) A new item option that takes a `/` or `:` delimited list of azerite power identifiers.
  * **azerite_override** (scope: player; default: empty) An option that takes a list of `/` delimited azerite power override specifications. Each azerite power override is of the format `tokenized_power_name:ilevel`. A special `ilevel` value of 0 will disable the azerite power for the actor, no matter the source (i.e., item, or other azerite power override specifications).
 ## Legion
 
