@@ -1,6 +1,7 @@
 # Expansion-specific options
 
-Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here. All expansion-specific options are prefixed with the short name of the expansion (e.g., `legion`), followed by a period, and the actual option name.
+Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here.
+
 ## Battle for Azeroth
 
 ### Azerite
