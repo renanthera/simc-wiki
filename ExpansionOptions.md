@@ -8,7 +8,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 Battle for Azeroth introduces Azerite powers to specific item slots. Simulationcraft supports the specification of selected azerite powers for items, and the actor-level overriding of azerite powers.
 
- * **azerite_powers** (scope: item; default: empty) A new item option that takes a `/` or `:` delimited list of azerite power identifiers.
+ * **azerite_powers** (scope: item; default: empty) A new item option that takes a `/` or `:` delimited list of azerite power identifiers. Note that the simulator currently does not check whether the item is allowed to be azerite empowered. This is a conscious decision to give the users the most flexibility in how they want to express their azerite-related effects in an actor profile. This may change in the future if it turns out that we need to apply limitations to the valid set of items that can be empowered.
  * **azerite_override** (scope: player; default: empty) An option that takes a list of `/` delimited azerite power override specifications. Each azerite power override is of the format `tokenized_power_name:ilevel`. A special `ilevel` value of 0 will disable the azerite power for the actor, no matter the source (i.e., item, or other azerite power override specifications).
  * **disable_azerite** (scope: global; default: empty) An option that allows the user to disable some or all sources of azerite-related effects from the simulator. An option value `items` will disable azerite-related effects from item sources, and an option value `all` or `1` will disable all azerite-related effects (i.e., items and overrides) from the simulator. 
 
