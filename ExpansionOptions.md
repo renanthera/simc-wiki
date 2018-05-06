@@ -10,6 +10,8 @@ Battle for Azeroth introduces Azerite powers to specific item slots. Simulationc
 
  * **azerite_powers** (scope: item; default: empty) A new item option that takes a `/` or `:` delimited list of azerite power identifiers.
  * **azerite_override** (scope: player; default: empty) An option that takes a list of `/` delimited azerite power override specifications. Each azerite power override is of the format `tokenized_power_name:ilevel`. A special `ilevel` value of 0 will disable the azerite power for the actor, no matter the source (i.e., item, or other azerite power override specifications).
+ * **disable_azerite** (scope: global; default: empty) An option that allows the user to disable some or all sources of azerite-related effects from the simulator. An option value `items` will disable azerite-related effects from item sources, and an option value `all` or `1` will disable all azerite-related effects (i.e., items and overrides) from the simulator. 
+
 ## Legion
 
 ### Items
