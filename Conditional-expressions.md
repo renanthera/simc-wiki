@@ -83,7 +83,7 @@ Finally, here is the full operators priorities list, from the highest ones to th
 
 ## Operands
 
-### Action properties
+### Actions
 Action properties are related to the action you want to perform. They require no specific syntax. The available properties are:
 ```
 # If sw:p has not been used so far or its last occurrence missed, then recast it, provided it's not active or close to expiration.
@@ -105,6 +105,11 @@ actions+=/shadow_word_pain,if=(!ticking|dot.shadow_word_pain.remains<gcd+0.5)&mi
 * _miss\_react_ is 1 if the last occurrence of this action missed or has never been used, 0 otherwise, taking into account the reaction time, as specified through **reaction\_time**. If you specified 0.5s and the miss only occurred 0.3s ago, this property will return 1.
 * _cooldown\_react_ is 1 if the cooldown has elapsed, the reaction time for the abrupt reset has elapsed, or the cooldown was reset in a determined way. The expression returns 0 if the reset of the cooldown happened early (e.g., due to a proc or another action) and the cooldown specific reaction time to the abrupt reset of the cooldown has not yet elapsed.
 * _cast\_delay_ is 1 if sufficient time has elapsed after the previous player executable action's cast time (including gcd). The time is controlled by two separate parameters, _brain\_lag_ and _brain\_lag\_stddev_.
+* _multiplier_ is the player's highest damages/healing multiplier for the schools used by the action. A buff that would increase your damages by 20% would give you a 1.2 multiplier. All damages multipliers are multiplicative (5% and 20% give 1.2\*1.05).
+```
+# Consumes a potion as soon as we have enough stacked buffs to reach a minimum 30% multiplier.
+actions+=/golemblood_potion,if=multiplier>1.3
+```
 
 ### Buffs and debuffs
 The character's buffs and the raid-friendly debuffs on your target (sunder armor, curses, etc) can all be used through the following syntax: `buff.<aura_name>.<aura_property>` (recommended) or `aura.<aura_name>.<aura_property>` (not recommended, see below). As usual, for the aura name, use underscores instead of white spaces and ignore non-alphanumeric characters.
@@ -185,7 +190,7 @@ They can be combined with other conditions:
 actions+=/recklessness,if=trinket.stat.strength.cooldown_remains>15&cooldown.skull_banner.remains<20
 ```
 
-**Since Simulationcraft 6.0.1 release 1**; You can also express trinket cooldowns through the expression system. Generic syntax is `trinket.(has_|)cooldown.<cooldown_expr>`, where `<cooldown_expr>` refers to any cooldown expression we support. `has_cooldown` requires no cooldown expression. Positional trinket parameters are also supported, see above for example. If the actor has no trinkets with cooldown, both expressions will always return 0. If both trinket slots have a cooldown, the larger cooldown expression return value will be chosen. The system will scan both Equip and Use trinkets in the slot(s), and use either type, if available.
+* You can also express trinket cooldowns through the expression system. Generic syntax is `trinket.(has_|)cooldown.<cooldown_expr>`, where `<cooldown_expr>` refers to any cooldown expression we support. `has_cooldown` requires no cooldown expression. Positional trinket parameters are also supported, see above for example. If the actor has no trinkets with cooldown, both expressions will always return 0. If both trinket slots have a cooldown, the larger cooldown expression return value will be chosen. The system will scan both Equip and Use trinkets in the slot(s), and use either type, if available.
 ```
 # Use Ascendance, if there are no trinket cooldowns ready in the next 10 seconds.
 actions +=/ascendance,if=!trinket.has_cooldown|trinket.cooldown.remains>10
@@ -199,17 +204,17 @@ Character properties require no specific syntax. The available properties are:
 # Shadow fiend is only acquired on lv66 so if we want to test low-level toons...
 actions+=/shadowfiend,if=level>=66
 ```
-* _in\_combat_ is zero when not in combat, 1 otherwise.
-```
-# Set stance before we enter combat
-actions=/stance,choose=berserker,if=!in_combat
-```
 * _name_ and _self_ both return a unique integer (called the "actor\_index") for the player. By default, if the sim encounters an unknown operand, it will attempt to match it to the names of the actors and return the actor\_index if it finds a match. Thus, you can use _name_ and _self_ to perform tests like follows:
 ```
 # Use Reckoning if the boss is targeting another player (see Simulationcraft For Tanks)
 actions+=/reckoning,if=target.current_target!=self
 # Cast Flash of Light as long as the target's name isn't Bob (see Target Properties section)
 actions+=/flash_of_light,if=target.name!=Bob
+```
+* _in\_combat_ is zero when not in combat, 1 otherwise.
+```
+# Set stance before we enter combat
+actions=/stance,choose=berserker,if=!in_combat
 ```
 * _ptr_ is zero when using the mechanics from the live server, 1 when using the modifications on ptr.
 ```
@@ -221,21 +226,17 @@ actions+=/starfall,if=ptr=0
 # In 7.1.5, casting Shadow Dance before going in combat let you extends the stealth buff, so it's worth to use with Subterfuge talent. Will likely be fixed in 7.2!
 actions.precombat+=/shadow_dance,if=talent.subterfuge.enabled&bugs
 ```
-* _race_._`<`racename`>`_ evaluates true if `<`racename`>` is equal to the player's race.
-```
-# Use Berserking only if race is Troll.
-actions+=/berserking,if=race.troll
-```
-* _multiplier_ is the player's damages/healing multiplier. A buff that would increase your damages by 20% would give you a 1.2 multiplier. All damages multipliers are multiplicative (5% and 20% give 1.2\*1.05).
-```
-# Consumes a potion as soon as we have enough stacked buffs to reach a minimum 30% multiplier.
-actions+=/golemblood_potion,if=multiplier>1.3
-```
+* _is\_add_ is true if the player is a add.
+* _is\_enemy_ is true if the player is a enemy.
 * _spell\_haste_ and _attack\_haste_ are the player's attack and spell factors.  For example, 50% haste on your character sheet corresponds to a _spell\_haste_ or _attack\_haste_ value of 1/1.5=0.667.
 ```
 # Only cast some_slow_spell if its cast time will be reduced to 70% of its base time.
 actions+=/some_slow_spell,if=spell_haste<0.7
 ```
+* _attack\_speed_ is the player's attack speed.
+* _mastery\_value_ is the player's mastery value.
+* _position\_front_ is true if the player is in front of its target.
+* _position\_back_ is true if the player is in the back of its target.
 * _rage_, _mana_, _energy_, _focus_, _runic\_power_, _health_ and _soul\_shards_ are the corresponding resources.
 ```
 # Use heroic strike if we have a large enough rage pool
@@ -268,7 +269,11 @@ actions+=/berserk,if=(max_energy-energy)/energy_regen>=2.0
 actions+=/death_strike,if=incoming_damage_5s>health.max*0.3
 ```
 Note: The time can be specified in seconds or milliseconds, but must be an integer.  For fractional parts of a second, milliseconds must be used; for example, `incoming_damage_1500ms` will return the damage taken in the last 1.5 seconds.
-
+* _race_._`<`racename`>`_ evaluates true if `<`racename`>` is equal to the player's race.
+```
+# Use Berserking only if race is Troll.
+actions+=/berserking,if=race.troll
+```
 ### Class-specific
 
 See the relevant page for each class.
