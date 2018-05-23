@@ -74,6 +74,8 @@ raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
  #This example will make the raid spend 15s moving every 30s. It will only happen during the first three minutes.
  raid_events+=/movement,cooldown=30,duration=15,last=180
 ```
+
+# Filtering affected players
   1. You may also make raid events distinguish between players and pets:
     * _players\_only_ (default: 0) specifies whether or not the raid event should only target players. When set to '0' both players and pets are affected by the raid event and when set to '1' only players are affected. Note: The **distraction** event is the only event that enables players\_only by default.
 ```
@@ -86,13 +88,21 @@ raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
  #This example has a 25% chance of distracting players for 5s every 60s
  raid_events+=/distraction,player_chance=.25,duration=5,cooldown=60
 ```
-  1. Finally, you can use distance\_min and distance\_max conditions (the distance in yards, extending from the boss) so that only ranged or melee characters are affected. See also the **distance** setting for characters.
+  1. you can use distance\_min and distance\_max conditions (the distance in yards, extending from the boss) so that only ranged or melee characters are affected. See also the **distance** setting for characters.
 ```
  #This example will make the raid spend 15s moving every 30s, only players closer than 10m from the boss will be affected.
  raid_events+=/movement,cooldown=30,duration=15,distance_max=10
 
  #This example will make the raid spend 15s moving every 30s, only players further than 20m from the boss will be affected.
  raid_events+=/movement,cooldown=30,duration=15,distance_min=20
+```
+  1. (BFA only) Finally, you can use player\_if= expressions to filter the affected players. This allows you to leverage the might of the already available expressions system from the action-priority system.
+```
+ #This example will make the raid spend 15s moving every 30s, only players with health percentage below 50 will be affected.
+ raid_events+=/movement,cooldown=30,duration=15,player_if=health.pct<50
+
+ #This example will make the raid spend 15s moving every 30s, only players with role 'spell' and level of at least 100.
+ raid_events+=/movement,cooldown=30,duration=15,player_if=role.spell&level>=100
 ```
 
 # Adds
