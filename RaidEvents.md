@@ -274,8 +274,11 @@ The _vulnerable_ keyword can be used to make the target periodically vulnerable,
 
 There is no specific option for this keyword.
 ```
- #This example will make your target vulnerable for 20s every 80s.
+ #This example will make your target vulnerable, taking twice as much damage for 20s every 80s.
  raid_events+=/vulnerable,cooldown=80,duration=20
+
+ #This example will make your target vulnerable, taking 3x the normal damage for 10s every 120s.
+ raid_events+=/vulnerable,cooldown=120,duration=10,multiplier=3.0
 
  #This line will disable automatic bloodlust 
  override.bloodlust=0
