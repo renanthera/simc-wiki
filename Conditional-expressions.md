@@ -237,6 +237,24 @@ actions+=/some_slow_spell,if=spell_haste<0.7
 * _mastery\_value_ is the player's mastery value.
 * _position\_front_ is true if the player is in front of its target.
 * _position\_back_ is true if the player is in the back of its target.
+* _time\_to\_bloodlust_ is the time until the next scheduled bloodlust cast, as defined by the `bloodlust_time` and `bloodlust_percent` parameters.
+```
+# Use avenging wrath as long as bloodlust will not be cast within the next 110 seconds
+actions+=/avenging_wrath,if=time_to_bloodlust>110
+```
+* _raw\_haste\_pct_ is the players raw haste percentage.
+  
+  Note: raw means: Base + Passive + Gear (overridden or items) + Player Enchants + Global Enchants
+
+* _incoming\_damage\_X_ will return the damage done to the player in the past X seconds.  For example, a Death Knight may want to put a conditional on Death Strike usage such as:
+```
+# If damage taken in last 5 seconds exceeds 30% of max health, Death Strike
+actions+=/death_strike,if=incoming_damage_5s>health.max*0.3
+```
+  Note: The time can be specified in seconds or milliseconds, but must be an integer.  For fractional parts of a second, 
+  milliseconds must be used; for example, `incoming_damage_1500ms` will return the damage taken in the last 1.5 seconds.
+
+#### Resource expressions
 * _rage_, _mana_, _energy_, _focus_, _runic\_power_, _health_ and _soul\_shards_ are the corresponding resources.
 ```
 # Use heroic strike if we have a large enough rage pool
@@ -256,23 +274,34 @@ actions+=/some_expensive_spell,if=mana.pct>50
 ```
 * _energy.regen_ and _focus.regen_ are the amount of regenerated points per second for the corresponding resources.
 * _energy.time\_to\_max_ and _focus.time\_to\_max_ are the time, in seconds, you would need to fully regenerate the corresponding resources assuming you would not spend anymore. It only takes into account the natural regeneration, not possible procs and such.
-```
-# Those two statements are equivalent.
-actions+=/berserk,if=time_to_max_energy>=2.0
-actions+=/berserk,if=(max_energy-energy)/energy_regen>=2.0
-```
 * _`<resource>`.net\_regen_ is the net resource regen a player has had so far in combat. Basically, it's the resources gained minus resources lost, divided by the current time.
 * _stat.`<x>`_ is the value of a certain stat.  _`<x>`_ can be any of: strength, agility, stamina, intellect, spirit, health, maximum\_health, mana, maximum\_mana, rage, maximum\_rage, energy, maximum\_energy, focus, maximum\_focus, runic, maximum\_runic, spell\_power, mp5, attack\_power, expertise\_rating, inverse\_expertise\_rating, hit\_rating, inverse\_hit\_rating, crit\_rating, haste\_rating, weapon\_dps, weapon\_speed, weapon\_offhand\_dps, weapon\_offhand\_speed, armor, bonus\_armor, resilience\_rating, dodge\_rating, parry\_rating, block\_rating, mastery\_rating.
-* _incoming\_damage\_X_ will return the damage done to the player in the past X seconds.  For example, a Death Knight may want to put a conditional on Death Strike usage such as:
-```
-# If damage taken in last 5 seconds exceeds 30% of max health, Death Strike
-actions+=/death_strike,if=incoming_damage_5s>health.max*0.3
-```
-Note: The time can be specified in seconds or milliseconds, but must be an integer.  For fractional parts of a second, milliseconds must be used; for example, `incoming_damage_1500ms` will return the damage taken in the last 1.5 seconds.
+
+#### Split expressions
+
+
+* _variable_._`<`variablename`>`_ evaluates to the current value of the player's variable.
+
+* _equipped_._`<`item_id`>`_ or _equipped_._`<`item_name`>`_ evaluates to true if the player has the specified item equipped.
+
+* _main_hand_._1h_, _main_hand_._2h_, _off_hand_._1h_, _off_hand_._2h_ evaluates to true if the player has the specified weapon type equipped.
+
 * _race_._`<`racename`>`_ evaluates true if `<`racename`>` is equal to the player's race.
 ```
 # Use Berserking only if race is Troll.
 actions+=/berserking,if=race.troll
+```
+
+* _spec_._`<`spec_name`>`_ evaluates true if `<`spec_name`>` is equal to the player's specialization.
+```
+# Use Haunt only if spec is affliction
+actions+=/haunt,if=spec.affliction
+```
+
+* _role_._`<`role_name`>`_ evaluates true if `<`role_name`>` is equal to the player's role.
+```
+# Use taunt only if players role is tank
+actions+=/taunt,if=role.tank
 ```
 ### Class-specific
 
@@ -329,11 +358,6 @@ General properties require no specific syntax. The available properties are:
 ```
 # Use bloodlust after at least 20s minimum
 actions+=/bloodlust,if=time>20
-```
-* _time\_to\_bloodlust_ is the time until the next scheduled bloodlust cast, as defined by the `bloodlust_time` and `bloodlust_percent` parameters.
-```
-# Use avenging wrath as long as bloodlust will not be cast within the next 110 seconds
-actions+=/avenging_wrath,if=time_to_bloodlust>110
 ```
 * _active\_enemies_ is the number of active enemy targets.
 ```
