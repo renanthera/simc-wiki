@@ -445,10 +445,10 @@ The major role types are:
 There are some deprecated roles that will also parse (_dps_, _hybrid_), but as they're deprecated they (hopefully) won't show up very often.
 
 ### Set bonuses
-You can check whether the character currently has a set bonus with the following syntax: `set_bonus.tier<number>_[2pc/4pc]_[caster/melee/tank]`. It will return 1 if the set bonus is active, 0 otherwise. **(Since Simulationcraft 6.0.2)** From Tier 17 onwards, roles should not be specified, only the tier number and the bonus type.
+You can check whether the character currently has a set bonus with the following syntax: `set_bonus.tier<number>_[1pc/2pc/.../8pc]`. It will return 1 if the set bonus is active, 0 otherwise. 
 ```
-# Only use some_spell if the character currently has the T11 2pc caster bonus
-actions+=/some_spell,if=set_bonus.tier11_2pc_caster
+# Only use some_spell if the character currently has the T21 4pc bonus
+actions+=/some_spell,if=set_bonus.tier21_4pc
 ```
 
 For Tier 17 and beyond:
