@@ -254,6 +254,9 @@ actions+=/death_strike,if=incoming_damage_5s>health.max*0.3
   Note: The time can be specified in seconds or milliseconds, but must be an integer.  For fractional parts of a second, 
   milliseconds must be used; for example, `incoming_damage_1500ms` will return the damage taken in the last 1.5 seconds.
 
+* _time\_to\_die_ is the estimated remaining time, in seconds, before the player dies.
+* _time\_to\_pct`<health_pct>`_ is the estimated remaining time, in seconds, before the player reaches `<health_pct>` of health.
+
 #### Resource expressions
 * _rage_, _mana_, _energy_, _focus_, _runic\_power_, _health_ and _soul\_shards_ are the corresponding resources.
 ```
@@ -279,7 +282,7 @@ actions+=/some_expensive_spell,if=mana.pct>50
 
 #### Split expressions
 
-
+##### 2 Parts
 * _variable_._`<`variablename`>`_ evaluates to the current value of the player's variable.
 
 * _equipped_._`<`item_id`>`_ or _equipped_._`<`item_name`>`_ evaluates to true if the player has the specified item equipped.
@@ -299,10 +302,52 @@ actions+=/haunt,if=spec.affliction
 ```
 
 * _role_._`<`role_name`>`_ evaluates true if `<`role_name`>` is equal to the player's role.
+   The major role types are:
+
+   * _attack_ (melee dps and hunters)
+   * _heal_
+   * _spell_ (caster dps)
+   * _tank_
+
+   There are some deprecated roles that will also parse (_dps_, _hybrid_), but as they're deprecated they (hopefully) 
+   won't show up very often.
 ```
-# Use taunt only if players role is tank
-actions+=/taunt,if=role.tank
+   # This will cast Seal of Truth if the players role is "attack"
+   actions+=/seal_of_truth,if=role.attack
 ```
+
+* _stat_._`<`stat_name`>`_ returns the amount of stat you have.
+```
+# Use smash only if players strength is above 1000
+actions+=/smash,if=stat.strenght>1000
+```
+
+* _using\_apl_._`<`apl\_name`>`_ returns true if the specified apl is explicitly used by the player.
+
+* _active\_dot_._`<`dot\_name`>`_ returns the number of dots with the given name currently active on all targets.
+```
+# Fire nova if enough Flame Shocks are active
+actions+=/fire_nova,if=active_dot.flame_shock>=5
+```
+
+* _movement_._remains_ returns the amount of remaining movement time of the player.
+* _movement_._distance_ returns the amount of remaining movement distance of the player.
+* _movement_._speed_ returns the current movement speed.
+
+##### 3 Parts
+
+* _spell_._`<`spell\_name`>`_._exists_ returns true if a spell with the given name exists for the player.
+* _talent_._`<`talent\_name`>`_._enabled_ returns true if the talent with the given name is active/selected for the player.
+* _artifact_._`<`artifact\_spell_name`>`_._enabled_ returns true if the artifact-spell with the given name is active for the player.
+* _artifact_._`<`artifact\_spell_name`>`_._rank_ returns the active rank of the artifact-spell with the given name for the player.
+
+### Set bonuses
+You can check whether the character currently has a set bonus with the following syntax: `set_bonus.tier<number>_[1pc/2pc/.../8pc]`. It will return 1 if the set bonus is active, 0 otherwise. 
+```
+# Only use some_spell if the character currently has the T21 4pc bonus
+actions+=/some_spell,if=set_bonus.tier21_4pc
+```
+
 ### Class-specific
 
 See the relevant page for each class.
@@ -343,13 +388,7 @@ The available properties are:
 * _ticks_ the number of ticks that have already happened for the current application of the dot.
 * _crit\_pct_ last critical strike percentage snapshot used for dot damage calculation.
 * _crit\_dmg_ last critical damage strike bonus percentage used for dot damage calculation.
-* (**Since Simulationcraft 6.0.0**) _tick\_time\_remains_ remaining time on the ongoing tick in seconds. 0 if the dot is not ticking.
-
-(**Since Simulationcraft 6.0.0**) You can also check the number of active dots of any type using the `active_dot` expression.
-```
-# Fire nova if enough Flame Shocks are active
-actions+=/fire_nova,if=active_dot.flame_shock>=5
-```
+* _tick\_time\_remains_ remaining time on the ongoing tick in seconds. 0 if the dot is not ticking.
 
 ### General
 General properties require no specific syntax. The available properties are:
@@ -429,27 +468,6 @@ The list of event types and filters are given below. Event types are described i
 * _min\_distance_ - returns the minimum distance of the next event of the appropriate event type.
 * _to\_pct_ - returns the target health percentage of a heal event, if specified, 0 otherwise.
 
-### Role
-You can check the role of the actor using the syntax `role.role_type`. For example,
-```
-# This will cast Seal of Truth if the players role is "attack"
-actions+=/seal_of_truth,if=role.attack
-```
-
-The major role types are:
-
-* _attack_ (melee dps and hunters)
-* _heal_
-* _spell_ (caster dps)
-* _tank_
-There are some deprecated roles that will also parse (_dps_, _hybrid_), but as they're deprecated they (hopefully) won't show up very often.
-
-### Set bonuses
-You can check whether the character currently has a set bonus with the following syntax: `set_bonus.tier<number>_[1pc/2pc/.../8pc]`. It will return 1 if the set bonus is active, 0 otherwise. 
-```
-# Only use some_spell if the character currently has the T21 4pc bonus
-actions+=/some_spell,if=set_bonus.tier21_4pc
-```
 
 For Tier 17 and beyond:
 ```
@@ -482,7 +500,6 @@ The available properties are:
 * _health\_pct_ is the target's health percent, between 0 and 100.
 * _adds_ is the number of adds the target has.
 * _adds\_never_ is 0 if the target will never have adds (no initial adds and no "adds" raid event), 1 otherwise.
-* _time\_to\_die_ is the estimated remaining time, in seconds, before the target dies.
 * _distance_ is the distance to the target. Handy for checking spells who have damage based on the distance from the target, such as the Priest Level 90 talents (Divine Star, Cascade, and Halo)
 * _current\_target_ (**Simulationcraft 6.0.1 release 1 and later**) is the target's target, usually the tank that currently has "aggro." This can be useful for making conditional tank swaps (see [Simulationcraft For Tanks](SimcForTanks)).
 * _name_ is the target's unique identifier (actor\_index). The sim attempts to match unknown operands to the names of each actor, and returns the actor\_index if it finds a match, so this can be used to test against the target's name:
