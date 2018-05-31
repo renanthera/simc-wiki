@@ -51,6 +51,7 @@
     * [Coding Guidelines](CodingGuidelines)
     * [Documentation](DevelopersDocumentation)
     * [WoW game client data](GameClientData)
+      * [Using CASC Extract and DBC Extract](Using-CASC-Extract-and-DBC-Extract)
     * [Coded\_flags](Coded_flags)
     * [Localization](Localization)
     * [TODO](TODO)
