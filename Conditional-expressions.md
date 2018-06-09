@@ -432,6 +432,8 @@ actions+=/some_spell,if=owner.level>60
 ### Raid Events
 You can check for upcoming [Raid Events](RaidEvents) with the syntax `raid_event.event_type.filter`. This will return a value depending on the particular `event_type` and `filter` you choose.
 
+* With WoW 8.0 (BFA) you can also filter by custom [Raid Events](RaidEvents) names. The new syntax is: `raid_event.type_or_name.filter`. You can name a raid event through its ,name=<myCustomName> option.
+
 The `event_type` should be the name of the raid event as described in the [Raid Events](RaidEvents#Classic_syntax) documentation. The `filter` is the property of the raid event that you're interested in.
 ```
 # This will cast ice_floes if there's a movement raid event happening within the next second
