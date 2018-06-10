@@ -11,6 +11,15 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 
 **Since Simulationcraft 7.0.3, release 1** Runes are treated as a standard resource in the simulator. Normal resource expressions work on runes, with the exception of the `regen` and `time_to_max` resource expressions.
 
+You can also use rune.time_to_X to return the time until X runes are available.
+
+For example you can use this line to only execute obliterate if the actor has 4 or more runes available, and frost strike if the time until 3 runes are available is superior to the length of the global cooldown.
+```
+actions+=/obliterate,if=rune>=4
+actions+=/frost_strike,if=rune.time_to_3>gcd
+```
+
+
 ## Incoming damage
 The expression `incoming_damage_5s` returns the amount of damage the Death Knight has taken in the previous five seconds.
 ```
@@ -34,4 +43,4 @@ The _antimagic\_shell_ action allows a Death Knight to simulate the Runic Power 
 
 ## Miscellanous
 
-The Legion Artifact power *Armies of the Damned* exact proc chance is currently (2016-08-29) unknown. The community has approximated it through testing to be 20%, which simulationcraft implements. Additionally, a player scope option `aotd_proc_chance` (default: 0.2, minimum 0, maximum 1) can be used to control the proc chance.
+N/A
