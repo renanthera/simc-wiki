@@ -109,7 +109,7 @@ In addition, you can use the more generic form `dot.X.exsanguinated` (where X is
 
 Additionally, you may use `rtb_list` expression to check for the presence of specific buffs on the actor. The expression takes the form `rtb_list.OP.LIST`, where OP is the operating mode and LIST is the list of buffs. The expression will return 0 if the evaluation fails, and 1 if it succeeds.
   * The `OP` accepts two values: `any`, meaning any of the buffs on `LIST` being up succeeds the evaluation, and `all`, meaning all of the buffs on `LIST` must be up to succeed the evaluation.
-  * The `LIST` accepts a sequence of RTB buffs, represented by numerical values from 1 to 6. The numbers correspond to the six buffs in alphabetical order: 1: Broadsides, 2: Buried Treasure, 3: Grand Melee, 4: Jolly Roger, 5: Shark Infested Waters, 6: True Bearing
+  * The `LIST` accepts a sequence of RTB buffs, represented by numerical values from 1 to 6. The numbers correspond to the six buffs in alphabetical order: 1: Broadsides, 2: Buried Treasure, 3: Grand Melee, 4: Jolly Roger, 5: Shark Infested Waters, 6: True Bearing. With **BfA** this changes to: 1: Broadside, 2: Buried Treasure, 3: Grand Melee, 4: Ruthless Precision, 5: Skull and Crossbones, 6: True Bearing.
 ```
   # Use Roll the Bones until you have at least Shark Infested Waters and Broadsides up
   actions+=/roll_the_bones,if=combo_points>=cp_max_spend&!rtb_list.all.15
@@ -117,7 +117,7 @@ Additionally, you may use `rtb_list` expression to check for the presence of spe
 
 If you want to check what effect different buffs or buff combinations have, you can use the `fixed_rtb` option to force the simulation to always give you the specified buff list. Like for the list above, use numbers for the buffs in alphabetical order.
 ```
-  # Always roll Broadsides
+  # Always roll Broadside
   fixed_rtb=1
   # Always roll 6 buffs
   fixed_rtb=123456
