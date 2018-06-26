@@ -470,6 +470,10 @@ The list of event types and filters are given below. Event types are described i
 * _min\_distance_ - returns the minimum distance of the next event of the appropriate event type.
 * _to\_pct_ - returns the target health percentage of a heal event, if specified, 0 otherwise.
 
+With WoW 8.0 (BFA):
+* _up_ - returns true if there is at least 1 raid event currently up. Prefer up over _remains_ if it satisfies your needs.
+* _remains_ - returns the remaining duration of the raid event currently up which has the longest remaining duration. Does not take into account not yet up raid events.
+
 
 For Tier 17 and beyond:
 ```
