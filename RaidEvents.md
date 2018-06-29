@@ -67,6 +67,13 @@ raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
   1. The following settings allow you to force the events to only occur during a certain phase:
     * _first_ (default: 0) specifies the first time, in seconds, the event will occur. When zero, the first event will occur on `cooldown / 2`.
     * _last_ (default: 0) specifies the last time, in seconds, the event may occur. It will not force the event to occur at this time, though. When lesser than or equal to zero, this setting will be ignored.
+
+  With WoW 8.0 (BFA):
+
+  * _first\_pct_  specifies the boss health pct when the event will first occur and be scheduled.
+  * _last\_pct_  specifies the boss health pct when the event will last occur and no longer be scheduled.
+  * _force\_stop_ (default: false) specifies if a raid event which is up when _last_ or _last\_pct_ occurs will be instantly canceled or not
+
 ```
  #This example will make the raid spend 15s moving every 30s. It will only happen after two minutes.
  raid_events+=/movement,cooldown=30,duration=15,first=120
