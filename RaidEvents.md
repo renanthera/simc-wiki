@@ -65,7 +65,7 @@ raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
  raid_events+=/movement,cooldown=30,duration=15,duration>=14,duration<=16
 ```
   1. The following settings allow you to force the events to only occur during a certain phase:
-    * _first_ (default: 0) specifies the first time, in seconds, the event will occur. When zero, the first event will occur on `cooldown / 2`.
+    * _first_ (default: 0) specifies the first time, in seconds, the event will occur. 
     * _last_ (default: 0) specifies the last time, in seconds, the event may occur. It will not force the event to occur at this time, though. When lesser than or equal to zero, this setting will be ignored.
 
   With WoW 8.0 (BFA):
