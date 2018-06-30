@@ -12,27 +12,27 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 Acceptable values are:
   1. _Patchwerk_ will set up an empty raid events list. This is a perfect stand still and DPS fight.
   1. _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
-```
-raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
-```
+     ```
+     raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
+     ```
   1. _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
-```
- raid_events+=/movement,players_only=1,first=10,distance=25,duration=4
-```
+     ```
+     raid_events+=/movement,players_only=1,first=10,distance=25,duration=4
+     ```
   1. _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). For a 450second fight it is the same as
-```
- raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
- raid_events+=/movement,players_only=1,first=22,cooldown=33,distance=20,last=337
- raid_events+=/movement,players_only=1,first=13,cooldown=13,duration=7
-```
+     ```
+     raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
+     raid_events+=/movement,players_only=1,first=22,cooldown=33,distance=20,last=337
+     raid_events+=/movement,players_only=1,first=13,cooldown=13,duration=7
+     ```
 
   1. _HelterSkelter_ will set up a "crazy" fight. It is equivalent to:
-```
- raid_events+=/casting,cooldown=30,duration=3,first=15
- raid_events+=/movement,cooldown=30,distance=20
- raid_events+=/stun,cooldown=60,duration=2
- raid_events+=/invulnerable,cooldown=120,duration=3
-```
+     ```
+     raid_events+=/casting,cooldown=30,duration=3,first=15
+     raid_events+=/movement,cooldown=30,distance=20
+     raid_events+=/stun,cooldown=60,duration=2
+     raid_events+=/invulnerable,cooldown=120,duration=3
+     ```
 
 # Classic syntax
   * **raid\_events** (scope: global; default: "") is a string sequence specifying the events affecting the whole raid. See [TextualConfigurationInterface](TextualConfigurationInterface).
@@ -41,76 +41,82 @@ raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
  raid_events+=/movement,cooldown=30,distance=40
 ```
 
-  1. All events are periodic. The following options are available to you:
-    * _cooldown_ or _period_ (default: 0) specifies the periodicity of the event, in seconds. When lesser than or equal to zero, the event will occur every 1ms. TOCHECK.
-    * _duration_ (default:0) specifies the duration of the event, in seconds. When lesser than or equal to zero, the event will last 1ms. TOCHECK.
-    * _distance_ specifies the distance of the movement event, which will take raid/personal movement cooldowns into account.
-```
- #This example will make the raid spend 15s moving every 30s.
- raid_events+=/movement,cooldown=30,duration=15
-```
-  1. The duration and cooldown are always following a normal distribution (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). The following settings help you adjust this:
+1. All events are periodic. The following options are available to you:
+   * _cooldown_ or _period_ (default: 0) specifies the periodicity of the event, in seconds. When lesser than or equal to zero, the event will occur every 1ms. TOCHECK.
+   * _duration_ (default:0) specifies the duration of the event, in seconds. When lesser than or equal to zero, the event will last 1ms. TOCHECK.
+   * _distance_ specifies the distance of the movement event, which will take raid/personal movement cooldowns into account.
+    ```
+    #This example will make the raid spend 15s moving every 30s.
+    raid_events+=/movement,cooldown=30,duration=15
+    ```
+1. The duration and cooldown are always following a normal distribution (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)). The following settings help you adjust this:
     * _cooldown\_stddev_ (default: 0) is the _standard deviation_, in seconds, of the cooldown. When left to zero, it will be defaulted to 10% of the cooldown.
     * _duration\_stddev_ (default: 0) is the _standard deviation_, in seconds, of the duration. When left to zero, it will be defaulted to 10% of the duration.
-```
- #This example will make the raid spend 10s moving (with a 5s standard deviation) every 30s (with a 10s standard duration).
- raid_events+=/movement,cooldown=30,cooldown_stddev=10,duration=10,duration_stddev=5
-```
-  1. You can also specify bounds for duration and cooldown, using the "<=" and ">=" operators with those keywords (note that _periodic_ won't work for specifying bounds for the cooldown though). If you don't specify any bounds, Simulationcraft will use 50% and 150% of the base value as the lower and upper bounds.
-```
- #This example will make the raid spend 15s moving every 30s. Both duration and cooldown follow a normal law but the cooldown will always be greater than 28s and lesser than 32s (rather than 27s and 33s with the default settings).
- raid_events+=/movement,cooldown=30,cooldown>=28,cooldown<=32,duration=15
+     ```
+     #This example will make the raid spend 10s moving (with a 5s standard deviation) every 30s (with a 10s standard 
+     duration).
+     raid_events+=/movement,cooldown=30,cooldown_stddev=10,duration=10,duration_stddev=5
+     ```
+1. You can also specify bounds for duration and cooldown, using the "<=" and ">=" operators with those keywords (note that _periodic_ won't work for specifying bounds for the cooldown though). If you don't specify any bounds, Simulationcraft will use 50% and 150% of the base value as the lower and upper bounds.
+   ```
+   #This example will make the raid spend 15s moving every 30s. Both duration and cooldown follow a normal law but the 
+   cooldown will always be greater than 28s and lesser than 32s (rather than 27s and 33s with the default settings).
+   raid_events+=/movement,cooldown=30,cooldown>=28,cooldown<=32,duration=15
 
- #This example will make the raid spend 15s moving every 30s. Both duration and cooldown follow a normal law but the duration will always be greater than 14s and lesser than 16s (rather than 13.5s and 16.5s with the default settings).
- raid_events+=/movement,cooldown=30,duration=15,duration>=14,duration<=16
-```
-  1. The following settings allow you to force the events to only occur during a certain phase:
+   #This example will make the raid spend 15s moving every 30s. Both duration and cooldown follow a normal law but the 
+   duration will always be greater than 14s and lesser than 16s (rather than 13.5s and 16.5s with the default settings).
+   raid_events+=/movement,cooldown=30,duration=15,duration>=14,duration<=16
+   ```
+1. The following settings allow you to force the events to only occur during a certain phase:
     * _first_ (default: 0) specifies the first time, in seconds, the event will occur. 
     * _last_ (default: 0) specifies the last time, in seconds, the event may occur. It will not force the event to occur at this time, though. When lesser than or equal to zero, this setting will be ignored.
 
-  With WoW 8.0 (BFA):
+      With WoW 8.0 (BFA):
 
-  * _first\_pct_  specifies the boss health pct when the event will first occur and be scheduled.
-  * _last\_pct_  specifies the boss health pct when the event will last occur and no longer be scheduled.
-  * _force\_stop_ (default: false) specifies if a raid event which is up when _last_ or _last\_pct_ occurs will be instantly canceled or not
+    * _first\_pct_  specifies the boss health pct when the event will first occur and be scheduled.
+    * _last\_pct_  specifies the boss health pct when the event will last occur and no longer be scheduled.
+    * _force\_stop_ (default: false) specifies if a raid event which is up when _last_ or _last\_pct_ occurs will be instantly canceled or not
 
-```
- #This example will make the raid spend 15s moving every 30s. It will only happen after two minutes.
- raid_events+=/movement,cooldown=30,duration=15,first=120
+    ```
+    #This example will make the raid spend 15s moving every 30s. It will only happen after two minutes.
+    raid_events+=/movement,cooldown=30,duration=15,first=120
 
- #This example will make the raid spend 15s moving every 30s. It will only happen during the first three minutes.
- raid_events+=/movement,cooldown=30,duration=15,last=180
-```
+    #This example will make the raid spend 15s moving every 30s. It will only happen during the first three minutes.
+    raid_events+=/movement,cooldown=30,duration=15,last=180
+    ```
 
 # Filtering affected players
-  1. You may also make raid events distinguish between players and pets:
+1. You may also make raid events distinguish between players and pets:
     * _players\_only_ (default: 0) specifies whether or not the raid event should only target players. When set to '0' both players and pets are affected by the raid event and when set to '1' only players are affected. Note: The **distraction** event is the only event that enables players\_only by default.
-```
- #This example will stun all players in the raid every 30s for 5s, but will ignore all pets.
- raid_events+=/stun,players_only=1,cooldown=30,duration=5
-```
-  1. The following setting allows you to set a per player chance that the raid event will affect them:
+      ```
+      #This example will stun all players in the raid every 30s for 5s, but will ignore all pets.
+      raid_events+=/stun,players_only=1,cooldown=30,duration=5
+      ```
+1. The following setting allows you to set a per player chance that the raid event will affect them:
     * _player\_chance_ (default: 1.0) specifies a % chance for the raid event to affect each eligible player and pet. By default, 100% (1.0) of eligible players and pets are affected by each raid event.
-```
- #This example has a 25% chance of distracting players for 5s every 60s
- raid_events+=/distraction,player_chance=.25,duration=5,cooldown=60
-```
-  1. you can use distance\_min and distance\_max conditions (the distance in yards, extending from the boss) so that only ranged or melee characters are affected. See also the **distance** setting for characters.
-```
- #This example will make the raid spend 15s moving every 30s, only players closer than 10m from the boss will be affected.
- raid_events+=/movement,cooldown=30,duration=15,distance_max=10
+      ```
+      #This example has a 25% chance of distracting players for 5s every 60s
+      raid_events+=/distraction,player_chance=.25,duration=5,cooldown=60
+      ```
+1. you can use distance\_min and distance\_max conditions (the distance in yards, extending from the boss) so that only ranged or melee characters are affected. See also the **distance** setting for characters.
+   ```
+   #This example will make the raid spend 15s moving every 30s, only players closer than 10m from the boss will be 
+   affected.
+   raid_events+=/movement,cooldown=30,duration=15,distance_max=10
 
- #This example will make the raid spend 15s moving every 30s, only players further than 20m from the boss will be affected.
- raid_events+=/movement,cooldown=30,duration=15,distance_min=20
-```
-  1. (BFA only) Finally, you can use player\_if= expressions to filter the affected players. This allows you to leverage the might of the already available expressions system from the action-priority system.
-```
- #This example will make the raid spend 15s moving every 30s, only players with health percentage below 50 will be affected.
- raid_events+=/movement,cooldown=30,duration=15,player_if=health.pct<50
+   #This example will make the raid spend 15s moving every 30s, only players further than 20m from the boss will be 
+   affected.
+   raid_events+=/movement,cooldown=30,duration=15,distance_min=20
+   ```
+1. (BFA only) Finally, you can use player\_if= expressions to filter the affected players. This allows you to leverage the might of the already available expressions system from the action-priority system.
+   ```
+   #This example will make the raid spend 15s moving every 30s, only players with health percentage below 50 will be 
+   affected.
+   raid_events+=/movement,cooldown=30,duration=15,player_if=health.pct<50
 
- #This example will make the raid spend 15s moving every 30s, only players with role 'spell' and level of at least 100.
- raid_events+=/movement,cooldown=30,duration=15,player_if=role.spell&level>=100
-```
+   #This example will make the raid spend 15s moving every 30s, only players with role 'spell' and level of at least 100.
+   raid_events+=/movement,cooldown=30,duration=15,player_if=role.spell&level>=100
+   ```
 
 # Adds
 See also **target\_adds** in the [target properties](#Target) section if you rather want to spawn adds who will live through the whole fight.
