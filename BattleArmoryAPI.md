@@ -1,8 +1,10 @@
 # Introduction
 
-Blizzard will no longer support non-authenticated armory access (In the future!). We have recently added in a default API key for Simulationcraft, so that users will be able to access their armory without registering to get a key.
+Blizzard will no longer support non-authenticated armory access. We add a default API key for the official binary builds of Simulationcraft, so that users will be able to access their armory without registering to get a key.
 
 However, we still encourage people who make heavy use of Simulationcraft to get their own key. Most users do not fall under this category. Unless you regularly import 20+ unique armories at the same time, you probably do not need to get your own key. In fact, if you only use Simulationcraft to import your own characters, you definitely do not need to get your own key.
+
+People building their own binaries of SimulationCraft are required to obtain their own API key.
 
 The restrictions we are dealing with using the same key for everyone:
   1. Limit of 100 calls per second
