@@ -27,7 +27,7 @@ identifiers. The following identifier data sources have been defined:
   * set\_bonus - All set bonus spells
   * effect - All effects
   * perk\_spell - All perk spells (NOTE: WoD only)
-  * artifact - All artifact spells (**Added in version 703-1**)
+  * artifact - All artifact spells (**Added in version 703-1, Removed in 8.0**)
   * azerite - All azerite power spells (**Added in version 8.0**)
 
 A data source can be filtered by giving it a data field name, by suffixing the
