@@ -7,7 +7,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 By default, Simulationcraft adds every buff you're supposed to have in an optimal 20-man raid, including a permanent replenishment effect and bloodlust at the end of the fight.
 
 # Optimal raid
-  * **optimal\_raid** (scope: global; default: 1), when different from zero, will make your characters benefit from every helpful buffs you're supposed to have in a 20-man raid. It does includ a bloodlust at the start of the fight. Of course, it does not include weird buffs such as the icecrown citadel one. If you simulate a whole raid, it may be a good idea to disable this setting to have buffs and debuffs being dynamically applied throughout the course of the simulation and your players' actions lists.
+  * **optimal\_raid** (scope: global; default: 1), when different from zero, will make your characters benefit from every helpful buffs you're supposed to have in a 20-man raid. It does include a bloodlust at the start of the fight. Of course, it does not include weird buffs such as the icecrown citadel one. If you simulate a whole raid, it may be a good idea to disable this setting to have buffs and debuffs being dynamically applied throughout the course of the simulation and your players' actions lists.
 ```
  # This will leave you with absolutely no buff, unless the self buffs you cast on your actions list.
  optimal_raid=0
