@@ -405,3 +405,21 @@ The available keywords are:
  armory=us,illidan,lucy
  party=lucy
 ```
+
+## Modifying Flask/Food/Potion/Rune
+* Flask
+```
+flask=whispered_pact
+```
+* Food
+```
+food=lemon_herb_filet
+```
+* Potion
+```
+potion=prolonged_power
+```
+* Rune
+```
+augmentation=defiled
+```
