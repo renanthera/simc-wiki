@@ -25,15 +25,15 @@
 
 # Building SimulationCraft on Windows
 
-## Graphical User Interface using Microsoft Visual Studio
+## Building using Microsoft Visual Studio
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
   * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017 )](https://www.qt.io/download) or newer.
   * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
-  * Build WebEngine solution on x64 architecture
-  * Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft64.exe`
+  * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
+  * Build project SimcGUI_qt5.9.1 for the Graphical User Interface (GUI). Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft.exe`
 
 ### Advanced Settings
   * Make sure you have openssl (ssleay32.dll) available, or install  [OpenSSL Light](http://www.slproweb.com/products/Win32OpenSSL.html).
@@ -50,37 +50,6 @@
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
   * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
     * `qmake PGO=1 -r -tp vc -spec win32-msvc<version> simulationcraft.pro`.
-
-## Graphical User Interface using MinGW
-  * Download and install [Qt 5.4.0 for Windows 32-bit (MinGW 4.9.1, OpenGL, 852 MB)](http://download.qt-project.org/archive/qt/5.4/5.4.0/).
-  * Make sure you have openssl (ssleay32.dll) available, or install  [OpenSSL Light](http://www.slproweb.com/products/Win32OpenSSL.html).
-
-  * Building with QtCreator:
-    * Start QtCreator and open the `simcqt.pro` project file from your SimulationCraft folder; it will prompt you to setup Debug & Release build configurations.
-    * Build All (From the build menu, click the hammer icon in the lower left, or hit Control-B)
-    * Clicking the computer icon in the lower left (Control-T) pops up the target selector that lets you pick Debug or Release config.
-    * You can run from inside QtCreator with the green triangle icon (Control-R).
-
-  * If you want to be able to run your `SimulationCraft.exe` from _outside_ QtCreator, you need to move it from the `debug` or `release` folder into the top-level source folder and make the Qt libraries available through one of two options:
-    * Add Qt and MinGW to your  [PATH](HowToBuild#Adding_directory_to_PATH).
-    * Run the batch script `GUI_dll_setup_mingw.bat` to copy DLLs from Qt and MinGW into `your_simc_source_dir`
-
-## Command Line Interface using Microsoft Visual Studio
-  * Download and install  [Microsoft Visual Studio Express 2013 for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop)
-  * Open `your_simc_source_dir\simc_vs2013.sln` project file
-  * Build `simc`Solution (`Build` -> `Build Solution` or `F7` by default)
-  * It doesn't matter if it's done with webengine/webkit, those are only options for the gui.
-  * Creates executable `your_simc_source_dir\simc.exe`
-
-## Command Line Interface using MinGW
-
-  * Download a MinGW compiler and add it to your  [PATH](HowToBuild#Adding_directory_to_PATH).
-    * Recommended: Install [Qt 5.4.0 for Windows 32-bit (MinGW 4.9.1, OpenGL, 852 MB)](http://download.qt-project.org/archive/qt/5.4/5.4.0/) which comes with a modern MinGW, and is required to build the GUI anyway.
-      * Add C:\Qt\Qt5.3.0\Tools\mingw49\_32\bin to your  [PATH](HowToBuild#Adding_directory_to_PATH).
-  * Open command prompt window and run
-    * `cd your_simc_source_dir\engine`
-    * `mingw32-make`
-  * Creates executable `your_simc_source_dir\engine\simc.exe`
 
 # Building SimulationCraft on Linux
 
