@@ -27,16 +27,13 @@
 
 ## Graphical User Interface using Microsoft Visual Studio
 
-  * Download and install  [Microsoft Visual Studio Express 2013 for Windows Desktop](http://www.microsoft.com/visualstudio/eng/downloads#d-express-windows-desktop)
-  * If using Visual Studio 2013, please ensure that you have the [4th major update installed.](http://support.microsoft.com/kb/2994375) The 32-bit version of simc will not function properly without it.
-  * Download and install [Qt 5.5.0 for Windows 64-bit (VS 2013 )](http://www.qt.io/download-open-source/#section-2). The file you want will look similar to qt-opensource-windows-x86-msvc2013\_64-5.5.0.exe. Note that if you are running on a 32-bit machine, please install that version instead.
-  * Add C:\Qt\Qt5.5.0\5.5\msvc2013\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH).
-  * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2013.props`
-  * Open `your_simc_source_dir\simc_vs2013.sln` project file
-  * Build SimcGUI\_qt5.5.0 solution on x64 architecture
-  * WebEngine configuration is the chrome-based browser, however it tends to have issues with some configurations of windows 7.
-  * WebKit configuration is the legacy browser, and does not have any issues that we know of.
-  * Creates executable `your_simc_source_dir\bin\<debug/release>\SimulationCraft64.exe`
+  * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
+  * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017 )](https://www.qt.io/download) or newer.
+  * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH).
+  * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
+  * Open `your_simc_source_dir\simc_vs2017.sln` project file
+  * Build WebEngine solution on x64 architecture
+  * Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft64.exe`
 
 ### Advanced Settings
   * Make sure you have openssl (ssleay32.dll) available, or install  [OpenSSL Light](http://www.slproweb.com/products/Win32OpenSSL.html).
