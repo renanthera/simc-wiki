@@ -39,17 +39,22 @@
   * Make sure you have openssl (ssleay32.dll) available, or install  [OpenSSL Light](http://www.slproweb.com/products/Win32OpenSSL.html).
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
 
-### Alternate way for Microsoft Windows
+### Alternative way using command line QMake with simulationcraft.pro
   * Install Visual Studio and Qt as above
   * Once your Qt version is installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.8 64-bit for Desktop (MSVC 2015)`.
   * In the command prompt, navigate to `your_simc_source_dir`.
   * In `your_simc_source_dir`, issue the command
-    * `qmake -r -tp vc -spec win32-msvc<version> simulationcraft.pro`, where **\<version>** is your Visual Studio version (e.g., 2013 or 2015).
+    * `qmake -r -tp vc -spec win32-msvc<version> simulationcraft.pro`, where **\<version>** is your Visual Studio version (e.g., 2017).
     * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
   * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
   * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
     * `qmake PGO=1 -r -tp vc -spec win32-msvc<version> simulationcraft.pro`.
+
+### Alternate way using QtCreator with simulationcraft.pro
+  * Install Visual Studio and Qt as above
+  * Once your Qt version is installed, open `your_simc_source_dir`/simulationcraft.pro file with QtCreator.
+  * Build Simulationcraft CLI/GUI
 
 # Building SimulationCraft on Linux
 
