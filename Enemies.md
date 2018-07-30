@@ -128,13 +128,6 @@ You can use **enemy\_tank** option to assign a target for this enemy.
    apply_debuff=2
 ```
 
-  * **enemy\_size** (default: 0) Allows you to specify the "size" of the enemy, which is an additional amount of distance that spells need to travel before they impact the enemy.
-```
-   enemy=Harold_Hightower
-   #Harold is so tall, spells need to travel an additional 10 yards to hit him!
-   enemy_size=10
-```
-
 ## Action Lists
 
 The real power of defining custom enemies is the ability to customize their action priority lists. Enemies have a small but comprehensive set of spells you can use to mimic real boss encounters. The abilities all have default settings, but you can customize their exact behavior through various options.
