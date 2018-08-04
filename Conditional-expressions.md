@@ -254,6 +254,7 @@ actions+=/death_strike,if=incoming_damage_5s>health.max*0.3
 ```
   Note: The time can be specified in seconds or milliseconds, but must be an integer.  For fractional parts of a second, 
   milliseconds must be used; for example, `incoming_damage_1500ms` will return the damage taken in the last 1.5 seconds.
+* _incoming\_magic\_damage\_X_ will return the magical damage done to the player in the past X seconds.
 
 * _time\_to\_die_ is the estimated remaining time, in seconds, before the player dies.
 * _time\_to\_pct`<health_pct>`_ is the estimated remaining time, in seconds, before the player reaches `<health_pct>` of health.
