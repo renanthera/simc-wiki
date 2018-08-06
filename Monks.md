@@ -98,6 +98,12 @@ Stagger is part of the Brewmaster active mitigation. Given how unique it is, the
  # Purify stagger once there is 50,000 damage remaining on the stagger
  actions+=/purifying_brew,if=stagger.amount_remains<50000
   ```
+1. **Stagger Last Tick damage** - This evaluates the stagger damage done from the last n ticks.
+
+  ```
+ # Purify stagger if the last 3 stagger ticks did more than 10000 damage.
+ actions+=/purifying_brew,if=stagger.last_tick_damage_3>10000
+  ```
 
 # Reports
 We only document here non-obvious entries.
