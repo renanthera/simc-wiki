@@ -20,6 +20,11 @@ Beware! You need to declare the overrides **`***`after`***`** you declared **opt
 
   * Unique buffs and debuffs
     * **override.bloodlust** and **override.bloodlust\_early** (see the relevant section below)
+    * **override.arcane_intellect**
+    * **override.battle_shout**
+    * **override.power_word_fortitude**
+    * **override.chaos_brand**
+    * **override.mystic_touch**
 
   * Specials
     * **override.bleeding** will flag your target as permanently bleeding
