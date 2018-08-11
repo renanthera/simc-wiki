@@ -19,11 +19,11 @@ Additionally, the player expression `azerite.<tokenized_power_name>.enabled` wil
 
 A number of azerite powers and items have characteristics that can be customized through expansion specific options. All of the following options are in the sim scope (i.e., global option that affects all actors in the profile). The following options are currently implemented.
 
-  * **jes_howler_allies** (scope: global; default: 0) The number of allies Jes' Howler trinket hits. Accepts values from 0 to 4.
-  * **secrets_of_the_deep_chance** (scope: global; default: 0.1) The chance to spawn a "rare" droplet (a void droplet). Accepts values from 0 to 1.
-  * **secrets_of_the_deep_collect_chance** (scope: global; default: 1.0) The chance that the actors will pick up the droplets. Accepts values from 0 to 1.
-  * **gutripper_default_rppm** (scope: global; default: 1.0) The proc chance of the Gutripper azerite power when the target has more than 30% health.
-  * **battlefield_debuff_stacks** (scope: global; default: 2) The number of damage events each actor is allowed to generate from each Battlefield Focus / Precision azerite trait proc on a target. Accepts values from the range 1-25.
+  * **bfa.jes_howler_allies** (scope: global; default: 0) The number of allies Jes' Howler trinket hits. Accepts values from 0 to 4.
+  * **bfa.secrets_of_the_deep_chance** (scope: global; default: 0.1) The chance to spawn a "rare" droplet (a void droplet). Accepts values from 0 to 1.
+  * **bfa.secrets_of_the_deep_collect_chance** (scope: global; default: 1.0) The chance that the actors will pick up the droplets. Accepts values from 0 to 1.
+  * **bfa.gutripper_default_rppm** (scope: global; default: 1.0) The proc chance of the Gutripper azerite power when the target has more than 30% health.
+  * **bfa.battlefield_debuff_stacks** (scope: global; default: 2) The number of damage events each actor is allowed to generate from each Battlefield Focus / Precision azerite trait proc on a target. Accepts values from the range 1-25.
 
 ## Legion
 
