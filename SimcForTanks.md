@@ -8,18 +8,6 @@ Simulationcraft now supports a number of options to facilitate simming and analy
 # Enemies
 If you simulate a tank, the default boss "Fluffy Pillow" will not only take hits from the raid, but also deal a lot of damage to any tank in the simulation. However, you can also choose to use one of several other preconfigured enemies or create a custom enemy that's more to your liking.
 
-## TMI Bosses
-TMI bosses are standardized bosses that approximate certain content levels. You can choose these bosses from the "TMI Standard Boss" drop-down box on the Options -> Global tab of the GUI. If this drop-down is left at "custom," it will instead look for your custom definition of a boss (see below) or, if none is defined in the profile, spawn a Fluffy Pillow.
-
-![http://wiki.simulationcraft.googlecode.com/git/images/tmi_boss_drop_down.png](http://wiki.simulationcraft.googlecode.com/git/images/tmi_boss_drop_down.png)
-
-You can also specify TMI bosses using the Textual Configuration Interface. To define an enemy as a Tier 15 Heroic 25-man TMI boss, you would use the option `tmi_boss` like so:
-```
- enemy=Not_A_Fluffy_Pillow
- tmi_boss=T15H25
-```
-The [Enemies](Enemies) page goes into more detail about the syntax for these bosses.
-
 ## Custom Bosses
 
 You can also define a custom action list for an enemy similar to how you control your own character:
@@ -111,56 +99,3 @@ You can also change the scaling metric with the `scale_over` [option](StatsScali
 The scale factors and bar plot will be produced as usual, though the values will be negative (hopefully) for DTPS, TMI, and ETMI because a lower number is better in those metrics.
 
 ![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_factors.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_factors.png)
-
-# Advanced Setups
-
-This section will discuss advanced topics in tank simulation.
-
-## Taunting
->(**Simulationcraft 6.0.1 release 1 and later**)
-
-Simulating tank swaps is possible in newer versions of SimC. If there are two or more tanks in the simulation, the enemy will have one action list for each tank, and its default action list will look something like this:
-```
- actions=/run_action_list,name=Alice,if=current_target=Alice
- actions+=/run_action_list,name=Bob,if=current_target=Bob
-```
-Note the use of the `current_target` conditional here. In Simulationcraft, the `target` variable is static and set upon actor creation. To facilitate tank swaps, we've added a `current_target` variable that stores the player the enemy is currently attacking. Player taunts change this variable, which then causes the boss to run a different action list in the example shown above.
-
-Each tank's action list will be a copy of the enemy's usual default action list. If you define a custom action list for the tank, the simulation will copy that instead (and replace it with the /run\_action\_list default). So in the following example, the simulation would create a new action list for each tank in the simulation (actions.Alice, actions.BoB, etc.) containing the `auto_attack`, `spell_dot`, and `melee_nuke` entries we've defined.
-```
- enemy=Fluffy_Pillow
- apply_debuff=1 
- actions=/auto_attack
- actions+=/spell_dot,if=!ticking 
- actions+=/melee_nuke,apply_debuff=2,cooldown=5
-```
-
-Each tank's taunt has been implemented by name (taunt for Warriors, reckoning for Paladins, growl for Druids, etc.). They can be implemented in a player's action priority list just like any other ability:
-```
-  actions+=/taunt
-```
-However, since taunts are off-GCD, this line will cause the tank to taunt the boss on cooldown (every 8 seconds). Generally, you will want to specify a conditional to limit the use of taunt. One option is to use time-based conditions:
-```
-  # taunt after 150 seconds have elapsed
-  actions+=/taunt,if=time>150 
-  # taunt every 30 seconds
-  actions+=/taunt,line_cd=30
-```
-Another option is to take advantage of the `damage_taken` debuff. In the example boss above, `apply_debuff=1` tells the sim to apply one stack of the `damage_taken` debuff, which increases all damage taken by 1% per stack, every time the enemy deals damage. You could then query the enemy's `current_target`'s debuff stack size with `target.current_target.debuff.damage_taken`. The example below shows a paladin and warrior taunting off of each other at 60 stacks of the debuff:
-```
-  paladin=Alice
-  _other character definition stuff_
-  actions=/reckoning,if=target.current_target.debuff.damage_taken>60
-  
-  warrior=Bob
-  _other character definition stuff_
-  actions=/taunt,if=target.current_target.debuff.damage_taken>60
-```
-Note that you could append "`&target.current_target!=Alice`" to Alice's reckoning conditional to make sure she doesn't try to taunt off of herself.
-
-You can customize the rate at which the debuff stacks using the `apply_debuff` option. When specified as a character option (`apply_debuff=1` in the example enemy above), it sets the default amount the boss applies with each damaging event. If used as an action option (`apply_debuff=2` in the `melee_nuke` action definition above), it sets the amount of stacks applied by that action. The action option takes precedence, so in the above example `melee_nuke` would apply two stacks, not three. Likewise, if we wanted to add a `spell_nuke` which did not apply the debuff, we could define it as:
-```
-  actions+=/spell_nuke,apply_debuff=0
-```
-
-The "dual\_tank\_example.simc" profile, found in the "profiles" folder, demonstrates a complete sim with Alice and Bob taunting off of one another throughout the simulation.
