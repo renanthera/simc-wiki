@@ -41,7 +41,7 @@ Simulationcraft provides a number of ways for you to analyze your tank's perform
 ## Player Stats
 The sim automatically reports several metrics about your character. When simulating a tank, it will automatically report DPS, Damage Taken Per Second (DTPS), Healing Per Second (HPS) and Absorption Per Second (APS), and a tanking metric described below called Theck-Meloree Index (TMI).
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_metrics.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_metrics.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_metrics.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_metrics.png)
 
 The DTPS, HPS, and APS reporting may be little unintuitive at first, so it warrants further explanation. DTPS is the net damage per second your character actually takes, so any absorbed damage won't count in that value. Absorbs are counted as HPS in SimC, because healers often want absorbs counted as part of their throughput. As such, we report the three metrics as:
 
@@ -51,11 +51,11 @@ Meaning that you actually took X damage per second, and produced Y total healing
 
 The report will also contain an extra table containing statistics for DTPS, TMI, and Maximum Spike Damage (MSD), much like the DPS/HPS table that you may be familiar with on DPS and healing specs.
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_extra_table.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_extra_table.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_extra_table.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_extra_table.png)
 
 You will also find extra timelines on your report detailing your DTPS and Resolve amounts:
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_dtps_timeline.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_dtps_timeline.png)
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_resolve_timeline.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_resolve_timeline.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_dtps_timeline.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_dtps_timeline.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_resolve_timeline.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_resolve_timeline.png)
 
 
 ### TMI, ETMI, & MSD
@@ -63,11 +63,11 @@ The Theck-Meloree Index, or TMI, is a tanking metric that was developed to measu
 
 The report will contain a chart showing you the distribution of TMI values observed over all iterations:
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_distribution_chart.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_distribution_chart.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_tmi_distribution_chart.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_tmi_distribution_chart.png)
 
 TMI only considers effects caused by the tank and the boss. In other words, it ignores external healing and absorption entirely. You can safely add healers to your simulation without significantly altering the calculated TMI value. An alternative form of the metric called "Effective TMI" (ETMI) includes all sources of healing and absorption, and will be shown on the report if you are in a group. You can modify this setting from the "Show ETMI" drop-down box on the Options->Globals tab in the GUI:
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_options.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_tmi_options.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_tmi_options.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_tmi_options.png)
 
 By default TMI uses a six-second window to calculate spike damage. This can also be customized via the GUI (shown above), or using the `tmi_window` [character option](Characters#Optional.md). The window size is reported in the table of tank metrics, and a TMI generated using a window that it not 6 seconds will have the window size specified in the name (e.g. TMI-5.0 in the summary line of the report shown in the [Player Stats](SimcForTanks#Player_Stats) section).
 ```
@@ -82,12 +82,12 @@ The tanking table also contains information about Maximum Spike Damage (MSD). Th
 
 You can take a look at fluffy pillow's attack table to see how your tank dodged/parried/blocked etc. You can also look at the damage breakdown for the boss to see what percentage of that damage came from each action, and thus what percentage was physical vs. magical damage. Note that the pie chart will be showing you the total damge breakdown for the boss, so if you have multiple tanks in the simulation (or the boss has spell\_aoe actions and there are multiple players) it may be a little more complicated to analyze.
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_fluffy_pillow_pie_chart.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_fluffy_pillow_pie_chart.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_fluffy_pillow_pie_chart.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_fluffy_pillow_pie_chart.png)
 
 ## Scale Factors
 Tanks have several additional options for calculating scale factors. These include scaling over DTPS, healing taken per second (HTPS), TMI, and ETMI. These can be selected from the "Scale Over" drop down box on the Options->Scaling tab:
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_over.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_over.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_scale_over.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_scale_over.png)
 
 You can also change the scaling metric with the `scale_over` [option](StatsScaling#Basics):
 ```
@@ -98,4 +98,4 @@ You can also change the scaling metric with the `scale_over` [option](StatsScali
 
 The scale factors and bar plot will be produced as usual, though the values will be negative (hopefully) for DTPS, TMI, and ETMI because a lower number is better in those metrics.
 
-![http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_factors.png](http://wiki.simulationcraft.googlecode.com/git/images/simc_for_tanks_scale_factors.png)
+![https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_scale_factors.png](https://raw.githubusercontent.com/wiki/simulationcraft/simc/images/simc_for_tanks_scale_factors.png)
