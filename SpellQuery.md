@@ -145,7 +145,7 @@ followed by one of the actual data field names:
   * index - Effect index on the spell (effect indexes in data are 0..2)
   * type - Effect type (see data\_enums.hh for effect\_type\_t)
   * sub\_type - Effect (aura) sub type (see data\_enums.hh for effect\_subtype\_t)
-  * m\_average - Effect average scaling multiplier (class-based scaling)
+  * m\_coefficient - Effect average scaling multiplier (class-based scaling)
   * m\_delta - Effect delta scaling multiplier (class-based scaling)
   * m\_bonus - Effect bonus scaling multiplier (class-based scaling)
   * coefficient - Effect coefficient
