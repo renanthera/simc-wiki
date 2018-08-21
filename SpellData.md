@@ -50,7 +50,7 @@ The spell data can be overridden with the following fields. The list contains th
 ### Effects
 
 The effect data can be overridden with the following fields.
-  * `average` (_float_), The average amount scaling coefficient for the effect
+  * `coefficient` (_float_), The average amount scaling coefficient for the effect
   * `delta` (_float_), The delta amount scaling coefficient for the effect
   * `bonus` (_float_), The bonus (in essence, per combo point) amount scaling coefficient for the effect
   * `sp_coefficient` (_float_), The spell power coefficient for the effect
