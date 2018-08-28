@@ -43,4 +43,8 @@ The _antimagic\_shell_ action allows a Death Knight to simulate the Runic Power 
 
 ## Miscellanous
 
-N/A
+Army of the dead has an option to set the prepull delay. It only works when army of the dead is used in the precombat APL and won't have any effect otherwise. It takes an integer value between 0 (cast right on pull) and 10. Default value : 6
+```
+# Simulate the cast of army of the dead 4s before combat begins
+actions.precombat+=/army_of_the_dead,delay=4
+```
