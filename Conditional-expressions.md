@@ -405,6 +405,7 @@ actions+=/bloodlust,if=time>20
 # Use Consecration if there are at least 3 enemies
 actions+=/consecration,if=active_enemies>=3
 ```
+* _expected_combat_length_ is the expected duration of the combat on that iteration. **Added in Simulationcraft 801-02.**
 
 ### Pet
 You can always refer to your pet's properties through the `pet.<pet_name>.<pet_property>` syntax. The pet's name is formatted using underscores instead of white spaces and ignoring non-alphanumeric characters.
