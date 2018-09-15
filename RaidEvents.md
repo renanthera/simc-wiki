@@ -225,10 +225,14 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 # Invulnerability
   The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots on it (debuffs will remain though, because of a bug). There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not, see [ActionLists](ActionLists).
 
-  There is no specific option for this keyword.
+  Specific options are:
+  1. _retarget_ (default: 0) wether the players should acquire a new target or not.
   ```
     #This example will make your target invulnerable for 10s every 1min.
     raid_events+=/invulnerable,cooldown=60,duration=10
+
+    #This example will make your target invulnerable for 10s every 1min and search a new target during this time
+    raid_events+=/invulnerable,cooldown=60,duration=10,retarget=1
   ```
 
 # Incoming damage
