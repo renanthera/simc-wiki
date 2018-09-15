@@ -157,7 +157,7 @@ The Arcane Mage azerite trait Brain Storm makes using Evocation before combat st
 
 ## Crowd control
 
-Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect, it won't trigger any charges of Fingers of Frost and it won't activate Sephuz's Secret.
+Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
 
 Target is susceptible to crowd control in these situations:
 
