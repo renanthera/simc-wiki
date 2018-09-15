@@ -153,7 +153,7 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 The Arcane Mage azerite trait Brain Storm makes using Evocation before combat starts preferable. Simply putting Evocation into the precombat APL isn't enough, as the channel will finish few seconds after combat started.
 
-`evocation,precombat=1` doesn't suffer from this issue and when put into the precombat APL, it will finish channeling before the combat starts. Brain Storm buff is triggered when combat starts, which means that extra care must be taken when combining this with other precombat actions, otherwise it could lead to unrealistic results (for example combining precombat Evocation with other actions such as Rune of Power, Arcane Power or precombat Arcane Blast).
+`evocation,precombat=1` doesn't suffer from this issue and when put into the precombat APL, it will finish channeling before the combat starts. Brain Storm buff is triggered when combat starts, which means that extra care must be taken when combining this with other precombat actions, otherwise it could lead to unrealistic results (for example combining Evocation with other actions such as Rune of Power, Arcane Power or Arcane Blast).
 
 ## Crowd control
 
