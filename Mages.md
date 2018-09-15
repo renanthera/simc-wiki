@@ -80,6 +80,10 @@ actions=fireball,target_if=firestarter.active
 # Cast Fireball on any target that will make it crit.
 ```
 
+### Brain Freeze
+
+`brain_freeze_active` expression helps distinguish between normal and Brain Freeze empowered Flurry casts. This expression evaluates to 1 (`true`) if the last Flurry was cast with Brain Freeze, otherwise it evalutes to 0 (`false`).
+
 ## Mage options
 
 ### Firestarter
@@ -138,6 +142,18 @@ If you don't want to use Shimmer back to back, you can enforce time between two 
 # Do not allow two Shimmers within 5 sec of eachother.
 actions+=/shimmer,line_cd=5,if=...
 ```
+
+### Freeze effects
+
+Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
+
+`frozen_duration=<time in seconds>` overrides this default duration with a user specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
+
+### Precombat Evocation
+
+The Arcane Mage azerite trait Brain Storm makes using Evocation before combat starts preferable. Simply putting Evocation into the precombat APL isn't enough, as the channel will finish few seconds after combat started.
+
+`evocation,precombat=1` doesn't suffer from this issue and when put into the precombat APL, it will finish channeling before the combat starts. Brain Storm buff is triggered when combat starts, which means that extra care must be taken when combining this with other precombat actions, otherwise it could lead to unrealistic results (for example combining precombat Evocation with other actions such as Rune of Power, Arcane Power or precombat Arcane Blast).
 
 ## Crowd control
 
