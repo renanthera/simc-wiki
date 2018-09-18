@@ -15,6 +15,9 @@ Battle for Azeroth introduces Azerite powers to specific item slots. Simulationc
 
 Additionally, the player expression `azerite.<tokenized_power_name>.enabled` will evaluate to `1` if the actor has the azerite power selected (through items or overrides). Otherwise the expression will evaluate to `0`. Player expression `azerite.<tokenized_power_name>.rank` evaluates to the number of items the actor has that has `<tokenized_power_name>` selected, or the number of overrides specified for the power..
 
+A map containing the power ID, spell ID and name of each azerite trait can be found here:
+https://github.com/simulationcraft/simc/blob/bfa-dev/engine/dbc/generated/azerite.inc
+
 ### Azerite-power and item specific options
 
 A number of azerite powers and items have characteristics that can be customized through expansion specific options. All of the following options are in the sim scope (i.e., global option that affects all actors in the profile). The following options are currently implemented.
