@@ -50,7 +50,7 @@ Both Time-based models have the following parameters:
 ```
 
 To enable the Fixed Time model use:
- * **fixed\_time** (scope: global; default: 0), when different from zero, will enable the Fixed Time model. Enabling this setting will ignore the **override.target\_health** setting.
+ * **fixed\_time** (scope: global; default: 1), when different from zero, will enable the Fixed Time model. Enabling this setting will ignore the **override.target\_health** setting.
 ```
  #This example will make the combat length being exactly 300s on all iterations.
  max_time=300
