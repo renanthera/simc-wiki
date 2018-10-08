@@ -340,7 +340,7 @@ To activate the event based system, use
 **challenge\_mode** (scope: global; default: false) activates down scaling of the gear for challenge mode dungeons in Warlords of Draenor. Based on the difference in "power" of the current and the target item level (620) primary/secondary stats and weapon damage are scaled down. Scaling results in WoD should match perfectly in-game, but if you see a difference we would appreciate if you submit an issue providing details on it.
 
 ## Timewalking
-**Timewalking** (scope: global; default: 0) enables player and gear scaling as you would find in a Timewalking dungeon. The option should be set to the player level to scale to (Eg: timewalking=80) which will automatically set the appropriate gear scaling, while allowing characters to keep all of their high level talents.
+**Timewalk** (scope: global; default: 0) enables player and gear scaling as you would find in a Timewalking dungeon. The option should be set to the player level to scale to (Eg: timewalk=80) which will automatically set the appropriate gear scaling, while allowing characters to keep all of their high level talents.
 
 ## Disable Set Bonuses
   * **disable\_set\_bonuses** (scope: global; default: false ) will deactivate all set bonuses in the simulation.
