@@ -16,7 +16,7 @@ The GUI defaults to to the same settings as above.
 If `iterations` is specified and `target_error` is empty, SimC will run that exact number of iterations.
 
 # Target Error
-  * **target\_error** (scope:global, default:0.2), when different from zero, will potentially end the simulation before all iterations complete.  The simulator tracks metrics based upon player role (dps, heal, tank) each iteration.  Using this growing sample of metrics it can examine the distribution of values to determine statistical error.  As iterations increase, the error decreases.  Once the error reaches the specified target level, the simulator stops iterating and generates reports.  Examples of error values are in current reports for values like player DPS.  Note that the maximum number of iterations when target\_error is specified is 100000 unless set explicitly.
+  * **target\_error** (scope:global, default:0.2), when different from zero, will potentially end the simulation before all iterations complete.  The simulator tracks metrics based upon player role (dps, heal, tank) each iteration.  Using this growing sample of metrics it can examine the distribution of values to determine statistical error.  As iterations increase, the error decreases.  Once the error reaches the specified target level, the simulator stops iterating and generates reports.  Examples of error values are in current reports for values like player DPS.  Note that the maximum number of iterations when target\_error is specified is 1000000 unless set explicitly.
 ```
  target_error=0.2
 ```
