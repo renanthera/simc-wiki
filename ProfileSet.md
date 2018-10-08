@@ -22,7 +22,7 @@ profileset.<profileset name>+=<option-2>
 profileset.<profileset name>+=<option-N>
 ```
 
-You can only include a single baseline profile in the profile set simulation. Profile set names must be unique. In reporting, the profile set name is what differentiates the results. If you want to use whitespaces in the profile set names, enclose the name in double quotes (```profileset."white space"=...```).
+You can only include a single baseline profile in the profile set simulation. Profile set names must be unique. In reporting, the profile set name is what differentiates the results. If you want to use whitespaces in the profile set names, enclose the name in double quotes (```profileset."white space"=...```). You cannot use the `.` character in a profileset name.
 
 You can also control which metric is used to collect from profile sets with the ```profileset_metric``` option (default `dps`). Note that output may be odd for metrics that do not support extended data collection (e.g., percentiles).
 
