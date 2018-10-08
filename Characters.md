@@ -422,3 +422,12 @@ potion=prolonged_power
 ```
 augmentation=defiled
 ```
+
+To disable, use the `disabled` text:
+
+```
+potion=disabled
+food=disabled
+flask=disabled
+augmentation=disabled
+```
