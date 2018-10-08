@@ -35,7 +35,7 @@
     * [Warlocks](Warlocks)
     * [Warriors](Warriors)
   * Graphical User Interface
-    * [Automation Tool](Automation)
+    * [Automation Tool - Deprecated](Automation)
   * Appendixes
     * [Fighting variance](FightingVariance)
     * [Simulationcraft For Tanks](SimcForTanks)
