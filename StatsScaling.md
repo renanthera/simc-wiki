@@ -42,7 +42,7 @@ Note that, because of the fighting variance, in order to have accurate enough re
 
 # Default deltas
 
-The default delta is calculated by determined how much haste rating it takes to increase haste by 3.5%.
+The default delta is determined by how much rating it takes to increase haste by 3.5%.
 
 For Battle for Azeroth this will scale stats by 238 by default (SimC will test agility + 238, haste + 238, crit + 238, etc).
 
