@@ -36,9 +36,9 @@ Connected to the rest of the world
 ====================================
 Simulationcraft can import character profiles from [Battle.net](http://us.battle.net/wow/en/), [Wowhead profiles](http://www.wowhead.com/profiles)
 
-It provides you with link towards [Wowhead](http://www.wowhead.com/?items&filter=ub=1;gm=3;gb=1;rf=1;minle=346;wt=20:21:77:117:119:96:103:170:32;wtv=2.6373:1.2115:1.1952:1.5543:1.4658:1.5130:1.0993:1.3631:5.0913;) and [GuildOx](http://www.guildox.com/wr.asp?usr=&ser=&grp=www&Cla=1024&F=H&Int=3.2213&Spi=2.2387&spd=2.4038&mhit=2.2286&mcr=0.9007&mh=1.7434&Mr=1.1686&Ver=6) for items comparison, or a string to paste in [Pawn](http://wow.curse.com/downloads/wow-addons/details/pawn.aspx). Simulationcraft can also export CSV and XML files for your custom tools, or combat logs in a custom format.
+It provides you with link towards [Wowhead](http://www.wowhead.com/?items&filter=ub=1;gm=3;gb=1;rf=1;minle=346;wt=20:21:77:117:119:96:103:170:32;wtv=2.6373:1.2115:1.1952:1.5543:1.4658:1.5130:1.0993:1.3631:5.0913;) for items comparison, or a string to paste in [Pawn](http://wow.curse.com/downloads/wow-addons/details/pawn.aspx). Simulationcraft can also export JSON, CSV, and XML files for your custom tools, or combat logs in a custom format.
 
-Finally, the [Elitist Jerks forums](http://elitistjerks.com/forums.php) and others theorycrafters' lairs are frequently monitored to grab the latest bis lists and discoveries, and their feedback about Simulationcraft.
+Finally, class Discords, class websites, and others theorycrafters' lairs are frequently monitored to grab the latest research and discoveries, and their feedback about Simulationcraft.
 
 Have your simulated avatar play the way you want
 =======================================================
