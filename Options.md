@@ -5,7 +5,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 
 # Public test realms
-  * **ptr** (scope: ulterior characters; default: 0) allows you to target the ptr version. By default, Simulationcraft targets the live WoW version. Beware:  Simulationcraft may not be fully updated for the ptr version, you're advised to check the version changes on [ReleaseNotes](ReleaseNotes).
+  * **ptr** (scope: ulterior characters; default: 0) allows you to target the ptr version. By default, Simulationcraft targets the live WoW version. Beware:  Simulationcraft may not be fully updated for the ptr version, you're advised to check the version changes on [SimC commits](https://github.com/simulationcraft/simc/commits).
 ```
  # This allows you to compare the live version of a character
  # with his evil twin on the ptr. 
