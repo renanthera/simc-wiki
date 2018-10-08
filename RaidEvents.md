@@ -48,7 +48,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_events+=/movement,first=13,distance=5,cooldown=20,players_only=1,player_chance=0.1
       raid_events+=/adds,name=Beast,count=1,first=10,duration_stddev=5,duration=67,cooldown=112,cooldown_stddev=0,last=292
     ```
-  * _Ultraxion_ will set up a fight similair to the Tier17 encounter Beastlord Darmac. The events scale with `max_time`, with 450 it is the same as:
+  * _Ultraxion_ will set up a fight similair to the Tier17 encounter Ultraxion. The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_event=/flying,first=0,duration=500,cooldown=500
       raid_event+=/position_switch,first=0,duration=500,cooldown=500
