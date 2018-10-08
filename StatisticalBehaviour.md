@@ -9,7 +9,7 @@ Because of the very nature of simulations (see [FormulationVsSimulation](Formula
 
 # Default Behavior
 
-If the user does not specify any settings, SimC will use 0.2% target error and a maximum of 100000 iterations.
+If the user does not specify any settings, SimC will use 0.2% target error and a maximum of 1000000 (1M) iterations.
 
 The GUI defaults to to the same settings as above.
 
@@ -22,7 +22,7 @@ If `iterations` is specified and `target_error` is empty, SimC will run that exa
 ```
 
 # Iterations
-  * **iterations** (scope: global; default: 100000) is the number of simulated fights per run. Increasing this setting is the most obvious way to improve the accuracy and stability of the simulations but it also increases computations times.  The normal default is 100000 with target_error=0.2
+  * **iterations** (scope: global; default: 1000000 (1M)) is the number of simulated fights per run. Increasing this setting is the most obvious way to improve the accuracy and stability of the simulations but it also increases computations times.  The normal default is 1000000 (1M) with target_error=0.2
 ```
  iterations=10000
 ```
