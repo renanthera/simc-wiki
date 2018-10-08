@@ -11,8 +11,8 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 ```
 
   Acceptable values are:
-  * _Patchwerk_ will set up an empty raid events list. This is a perfect stand still and DPS fight.
-  * _CastingPatchwerk_ will set up a fight similair to _Patchwerk_ but the master target will be casting instead. It is equivalent to:
+  * _Patchwerk_ will set up an empty raid events list. This is a perfect stand still, single-target DPS fight. The name comes from the iconic DPS check fight from Naxxramas.
+  * _CastingPatchwerk_ will set up a fight similar to _Patchwerk_ but the master target will be casting instead. It is equivalent to:
     ```
       raid_events+=/casting,cooldown=500,duration=500
     ```
@@ -41,14 +41,14 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
       raid_events+=/adds,count=1,first=22,cooldown=33,duration=22,last=405
     ```
-  * _Beastlord_ will set up a fight similair to the Tier17 encounter Beastlord Darmac. The events scale with `max_time`, with 450 it is the same as:
+  * _Beastlord_ will set up a fight similar to the Tier 17 encounter Beastlord Darmac. The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_events+=/adds,name=Pack_Beast,count=6,first=15,duration=10,cooldown=30,angle_start=0,angle_end=360,distance=3
       raid_events+=/adds,name=Heavy_Spear,count=2,first=15,duration=15,cooldown=20,spawn_x=-15,spawn_y=0,distance=15
       raid_events+=/movement,first=13,distance=5,cooldown=20,players_only=1,player_chance=0.1
       raid_events+=/adds,name=Beast,count=1,first=10,duration_stddev=5,duration=67,cooldown=112,cooldown_stddev=0,last=292
     ```
-  * _Ultraxion_ will set up a fight similair to the Tier17 encounter Ultraxion. The events scale with `max_time`, with 450 it is the same as:
+  * _Ultraxion_ will set up a fight similar to the Tier 17 encounter Ultraxion. The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_event=/flying,first=0,duration=500,cooldown=500
       raid_event+=/position_switch,first=0,duration=500,cooldown=500
@@ -84,7 +84,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       #This example will make the raid spend 10s moving (with a 5s standard deviation) every 30s (with a 10s standard duration).
       raid_events+=/movement,cooldown=30,cooldown_stddev=10,duration=10,duration_stddev=5
     ```
-  * You can also specify bounds for duration and cooldown, using the "<=" and ">=" operators with those keywords (note that _periodic_ won't work for specifying bounds for the cooldown though). If you don't specify any bounds, Simulationcraft will use 50% and 150% of the base value as the lower and upper bounds.
+  * You can also specify bounds for duration and cooldown, using the "<=" and ">=" operators with those keywords (note that _periodic_ won't work for specifying bounds for the cooldown though). If you don't specify any bounds, SimulationCraft will use 50% and 150% of the base value as the lower and upper bounds.
     ```
       #This example will make the raid spend 15s moving every 30s. Both duration and cooldown follow a normal law but the 
       cooldown will always be greater than 28s and lesser than 32s (rather than 27s and 33s with the default settings).
