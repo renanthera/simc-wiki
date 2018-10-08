@@ -3,16 +3,15 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
 
-
 # Declaration
 
 ## Manual
-  * **death\_knight**, **druid**, **mage**, **paladin**, **priest**, **shaman**, **hunter**, **rogue**, **warlock**, **warrior** (scope:new character; default: "") can be used to manually create a new character of the corresponding class.
+  * **death\_knight**, **demon_hunter**, **druid**, **hunter**, **mage**, **monk**, **paladin**, **priest**, **shaman**,  **rogue**, **warlock**, **warrior** (scope:new character; default: "") can be used to manually create a new character of the corresponding class.
 ```
  warrior=John
 ```
 
-  * **copy** (scope: new character; default: "") can be used to copy a character to another one. The syntax is either `<new_char_name>[,<source_char_name>]`. If you omit the source character, Simulationcraft will use the current character.
+  * **copy** (scope: new character; default: "") can be used to copy a character to another one. The syntax is either `<new_char_name>[,<source_char_name>]`. If you omit the source character, SimulationCraft will use the current character.
 ```
  # This creates a copy of John, named John_evil_twin
  armory=us,illidan,john
