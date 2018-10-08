@@ -407,7 +407,7 @@ The available keywords are:
 
 ## Modifying Flask/Food/Potion/Rune
 
-By default, SimC will use the consumable defined by the class/spec APL.
+By default, SimC will use all consumables. The default is determined by the class module.
 
 * Flask
 ```
