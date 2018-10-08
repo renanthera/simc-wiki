@@ -24,11 +24,13 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 There are various combat length settings and modes in SimC, both allowing various combat models and also increasing its complexity.
 ## Time-based models
 There are two time-based combat length models:
-  * **Enemy Health Estimation** _(default)_:
- The enemies health gets adjusted so that the resulting combat length based on the enemies demise corresponds to the configured time-based combat length parameters. The reason for this is to allow a realistic enemy health flow depending on the simulated characters dps variation, especially execute effects.
- This is the default setting in SimulationCraft.
-  * **Fixed Time**:
+  * **Fixed Time** _(default)_:
  The combat length is purely based on the configured time-based combat length parameters. Enemy health percentage is uniformly distributed over the combat length.
+  This is the default setting in SimulationCraft.
+  * **Enemy Health Estimation**:
+ The enemies health gets adjusted so that the resulting combat length based on the enemies demise corresponds to the configured time-based combat length parameters. The reason for this is to allow a realistic enemy health flow depending on the simulated characters dps variation, especially execute effects.
+  To use this model, set `fixed_time=0`
+
 
 ### Configuration
 
