@@ -44,9 +44,9 @@ Note that, because of the fighting variance, in order to have accurate enough re
 
 The default delta is determined by how much rating it takes to increase haste by 3.5%.
 
-For Battle for Azeroth this will scale stats by 238 by default (SimC will test agility + 238, haste + 238, crit + 238, etc).
+For Battle for Azeroth this will scale stats by **238** by default (SimC will test agility + 238, haste + 238, crit + 238, etc).
 
-use **positive\_scale\_delta** to use the absolute values instead.
+Use **positive\_scale\_delta** to use the absolute values instead.
 
 Note: those values will be doubled if you use **smooth\_scale\_factors**
 
