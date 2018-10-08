@@ -42,24 +42,9 @@ Note that, because of the fighting variance, in order to have accurate enough re
 
 # Default deltas
 
-  * **scale\_stamina** = 238 
-  * **scale\_agility** = 238 
-  * **scale\_strength** = 238 
-  * **scale\_intellect** = 238 
+The default delta is calculated by determined how much haste rating it takes to increase haste by 3.5%.
 
-  * **scale\_spell\_power** = 238 
-  * **scale\_attack\_power** = 238 
-
-  * **scale\_crit\_rating** = 238 
-  * **scale\_haste\_rating** = 238 
-  * **scale\_mastery\_rating** = 238 
-  * **scale\_versatility\_rating* = 238 
-
-  * **scale\_weapon\_dps** = 238 
-  * **scale\_offhand\_weapon\_dps** = 238 
-
-  * **scale\_armor** = 238 
-  * **scale\_bonus\_armor** = 238 
+For Battle for Azeroth this will scale stats by 238 by default (SimC will test agility + 238, haste + 238, crit + 238, etc).
 
 use **positive\_scale\_delta** to use the absolute values instead.
 
