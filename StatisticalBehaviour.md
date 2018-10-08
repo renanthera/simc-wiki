@@ -7,12 +7,27 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 # Introduction
 Because of the very nature of simulations (see [FormulationVsSimulation](FormulationVsSimulation)), Simulationcraft produces slightly different results on every run. This is why multiple iterations of the same fight are performed, to produce average and more stable results, and smoothen out the randomness. The following options can help you to tweak out those problems.
 
+# Default Behavior
+
+If the user does not specify any settings, SimC will use 0.2% target error and a maximum of 100000 iterations.
+
+The GUI defaults to to the same settings as above.
+
+If `iterations` is specified and `target_error` is empty, SimC will run that exact number of iterations.
+
+# Target Error
+  * **target\_error** (scope:global, default:0.2), when different from zero, will potentially end the simulation before all iterations complete.  The simulator tracks metrics based upon player role (dps, heal, tank) each iteration.  Using this growing sample of metrics it can examine the distribution of values to determine statistical error.  As iterations increase, the error decreases.  Once the error reaches the specified target level, the simulator stops iterating and generates reports.  Examples of error values are in current reports for values like player DPS.  Note that the maximum number of iterations when target\_error is specified is 100000 unless set explicitly.
+```
+ target_error=0.2
+```
+
 # Iterations
-  * **iterations** (scope: global; default: 1000 or 100000) is the number of simulated fights per run. Increasing this setting is the most obvious way to improve the accuracy and stability of the simulations but it also increases computations times.  The normal default is 1000.  When target\_error is used to control simulation iteration, the default is increased to 100000.
+  * **iterations** (scope: global; default: 100000) is the number of simulated fights per run. Increasing this setting is the most obvious way to improve the accuracy and stability of the simulations but it also increases computations times.  The normal default is 100000 with target_error=0.2
 ```
  iterations=10000
 ```
 > You can give a look at [FightingVariance](FightingVariance) if you want more information on the relationship between the number of iterations and the variance of the results.
+
 
 
 # Constant seed
@@ -40,10 +55,4 @@ Note: there are some misconceptions about constant seeds. You may think it is us
   * **average\_gauss** (scope:global; default:0), when different from zero, will force normal distribution rolls (see [Wikipedia - Normal distribution](http://en.wikipedia.org/wiki/Normal_distribution)), such as the ones for gcd variation, travel time variation on raid movement, etc, to always return the average value. It obviously makes settings such as **gcd\_stddev** useless.
 ```
  average_gauss=1
-```
-
-# Target Error
-  * **target\_error** (scope:global, default:0.0), when different from zero, will potentially end the simulation before all iterations complete.  The simulator tracks metrics based upon player role (dps, heal, tank) each iteration.  Using this growing sample of metrics it can examine the distribution of values to determine statistical error.  As iterations increase, the error decreases.  Once the error reaches the specified target level, the simulator stops iterating and generates reports.  Examples of error values are in current reports for values like player DPS.  Note that the maximum number of iterations when target\_error is specified is 100000 unless set explicitly.
-```
- target_error=0.1
 ```
