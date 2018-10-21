@@ -28,7 +28,7 @@ Extract CSV files from DBC:
 
 `./dbc_extract.py -b [WOW_BUILD] -t csv -p [PATH_TO_DBCS] [DBC]`
 
-`WOW_BUILD` is _only_ the build number, not the full WoW version (Good: `26715`, Bad: `8.0.1.26715`)
+`WOW_BUILD` is the full WoW version (e.g. `8.0.1.26715`)
 
 `PATH_TO_DBCS` will likely be based on the `OUTPUT_DIR` you used with `casc_extract.py` and will usually need to point to the `[WOW_VERSION]/DBFilesClient/` subdirectory
 
@@ -61,11 +61,11 @@ Full example to convert ItemSparse DBC into a CSV file
 
 # This would create /tmp/casc-data/8.0.1.26715
 
-./dbc_extract.py -b 26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.csv
+./dbc_extract.py -b 8.0.1.26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.csv
 ```
 
 To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
 
 ```
-./dbc_extract.py -b 26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient --hotfix /path/to/wow/Cache/ADB/enUS/DBCache.bin ItemSparse > /tmp/ItemSparse.csv
+./dbc_extract.py -b 8.0.1.26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient --hotfix /path/to/wow/Cache/ADB/enUS/DBCache.bin ItemSparse > /tmp/ItemSparse.csv
 ```
