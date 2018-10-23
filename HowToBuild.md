@@ -60,7 +60,7 @@
 
 ## Command Line Interface & Graphical User Interface using Cmake (preferred)
  * If not already installed, install `build-essential` and `libssl-dev` (e.g., a compilation toolchain and OpenSSL include headers).
-  * Install qt5-qmake. On Ubuntu, the package is called `qt5-default`.
+  * Install qt5-qmake & qt5-webengine. On Ubuntu, the package is called `qt5-default`.
   * `cd your_simc_source_dir`
   * `mkdir build && cd build`
   * `cmake ../`
@@ -80,8 +80,7 @@
 
 ## Graphical User Interface (using qmake)
 
-  * Install qt5-qmake. On Ubuntu, the package is called `qt5-default`.
-  * Install `libqt5webkit5-dev`.
+  * Install qt5-qmake & qt5-webengine. On Ubuntu, the package is called `qt5-default`.
   * `cd your_simc_source_dir`
   * `qmake simulationcraft.pro`
   * `make`
