@@ -58,26 +58,31 @@
 
 # Building SimulationCraft on Linux
 
-## Command Line Interface
+## Command Line Interface & Graphical User Interface using Cmake (preferred)
+ * If not already installed, install `build-essential` and `libssl-dev` (e.g., a compilation toolchain and OpenSSL include headers).
+  * Install qt5-qmake. On Ubuntu, the package is called `qt5-default`.
+  * `cd your_simc_source_dir`
+  * `mkdir build && cd build`
+  * `cmake ../`
+  * `make`
+  * This builds target `simc` (CLI) and `qt/SimulationCraft` (GUI)
+
+## Command Line Interface (classic build)
 
   * If not already installed, install `build-essential` and `libssl-dev` (e.g., a compilation toolchain and OpenSSL include headers).
   * `cd your_simc_source_dir/engine`
   * `make OPENSSL=1 optimized`
   * This builds an optimized executable named `simc`
 
-## Graphical User Interface
+## Graphical User Interface (using qmake)
 
   * Install qt5-qmake. On Ubuntu, the package is called `qt5-default`.
   * Install `libqt5webkit5-dev`.
   * `cd your_simc_source_dir`
-  * `qmake simcqt.pro`
+  * `qmake simulationcraft.pro`
   * `make`
   * Optional: Install to `~/SimulationCraft`:
     * `make install`
-
-## Install Script
-
-  * run the `install` script found in the main SimC folder. This will create a command line + GUI version, install it to  your home directory/SimulationCraft and install a .desktop file for it.
 
 ## Building Debian/Ubuntu packages
 
