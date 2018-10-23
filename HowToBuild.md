@@ -66,6 +66,10 @@
   * `cmake ../`
   * `make`
   * This builds target `simc` (CLI) and `qt/SimulationCraft` (GUI)
+  * Additional cmake options:
+    * `cmake ../ -DCMAKE_BUILD_TYPE=Release` for Release build
+    * `cmake ../ -DCMAKE_BUILD_TYPE=Debug` for Debug build
+    * `make simc` build CLI only
 
 ## Command Line Interface (classic build)
 
