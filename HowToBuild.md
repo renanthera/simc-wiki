@@ -77,6 +77,8 @@
   * `cd your_simc_source_dir/engine`
   * `make OPENSSL=1 optimized`
   * This builds an optimized executable named `simc`
+  * Additional options:
+    * Build with clang: Add CXX=clang++, eg. `make OPENSSL=1 optimized CXX=clang++`
 
 ## Graphical User Interface (using qmake)
 
