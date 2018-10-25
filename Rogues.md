@@ -127,21 +127,6 @@ If you want to check what effect different buffs or buff combinations have, you 
 
 **Since Simulationcraft 7.0.3 release 1** A new expression `bleeds` evaluates to the number of bleeding effects on the target. Currently Rogue module defines Garrote and Rupture abilities as bleeds.
 
-## Shadow Satyr's Walk
-**Since Simulationcraft 7.1.0 release 3** An option and expression `called ssw_refund_offset` let you modify the amount of energy refunded by the legendary item "Shadow Satyr's Walk" (Subtlety). The amount refund is based on the distance from the center of the enemy and not the edge (i.e. it doesn't take in account the size of the enemy hitbox). The option must be defined inside an actor, if you want to re-use it on multiple actors then you must use copy="","" or re-define it for each actor.
-```
- # Increases the amount of energy refund from SSW effect by 15.
- ssw_refund_offset=15
-```
-Also, you can use it as expression to get the amount refund (useful if you want to improve the APL).
-```
- # Assign a variable with the amount of energy refund by SSW. (0 if not equipped, 12+refund if equipped, 12 is the current default value assuming you're 4yds away)
- actions+=/variable,name=ssw_refund,value=equipped.shadow_satyrs_walk*(12+ssw_refund_offset)
-```
-
-## Rotation Options
-* Due to Assassination relic scaling as of 2017-12-19, you can set the option `fok_rotation=1` for an actor and it will make the default APL use Fan of Knives instead of Mutilate.
-
 # Reports
 We only document here non-obvious entries.
 
