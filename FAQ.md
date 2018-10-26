@@ -3,7 +3,7 @@
 Simulationcraft is licensed under the [GPL v3](http://www.gnu.org/licenses/gpl.html). It is free and open-source. Anyone can contribute (help with the development, check the code, report issues, provide feedback, etc), including you.
 
 ## Where are the changelogs / version notes?
-See the [Download Page](http://www.simulationcraft.org/download.html) for Release Notes, or the the [list of commits](https://github.com/simulationcraft/simc/commits/master).
+See the [Download Page](http://www.simulationcraft.org/download.html) for Release Notes, or the the [list of commits](https://github.com/simulationcraft/simc/commits/bfa-dev).
 
 ## Where are the sample outputs?
 On [simulationcraft.org](http://www.simulationcraft.org/).
