@@ -149,12 +149,6 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 `frozen_duration=<time in seconds>` overrides this default duration with a user specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
 
-### Precombat Evocation
-
-The Arcane Mage azerite trait Brain Storm makes using Evocation before combat starts preferable. Simply putting Evocation into the precombat APL isn't enough, as the channel will finish few seconds after combat started.
-
-`evocation,precombat=1` doesn't suffer from this issue and when put into the precombat APL, it will finish channeling before the combat starts. Brain Storm buff is triggered when combat starts, which means that extra care must be taken when combining this with other precombat actions, otherwise it could lead to unrealistic results (for example combining Evocation with other actions such as Rune of Power, Arcane Power or Arcane Blast).
-
 ## Crowd control
 
 Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
