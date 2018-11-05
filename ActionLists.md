@@ -371,6 +371,24 @@ actions+=/mind_flay,chain=1
 actions+=/mind_flay_insanity,interrupt=1,chain=1,early_chain_if=dot.devouring_plague_tick.remains<=tick_time
 ```
 
+## Non-standard timing
+
+By default, the sim will only try to perform actions after GCD has elapsed and the actor isn't casting or channeling. Sometimes, it is desirable to use actions during GCD. This only works for actions that do not trigger GCD (such as interrupts) and can be enabled with `use_off_gcd` (default: 0).
+
+```
+# Use Water Elemental's Freeze while Ice Lance is in flight
+actions+=/freeze,use_off_gcd=1,if=action.ice_lance.in_flight
+```
+
+Some actions can also be used while casting or channeling. This only works for actions that support cast while casting and can be enabled with `use_while_casting` (default: 0).
+
+```
+# Use Combustion right before Pyroblast finishes casting
+actions+=/combustion,use_while_casting=1,if=action.pyroblast.executing&action.pyroblast.execute_remains<0.5
+```
+
+Note that `use_while_casting=1` does not imply `use_off_gcd=1`.
+
 ## Tweaking out the flight speed
 * _travel\_speed_ (default: _ingame flight speed_) is the flight speed, in yards per second, of the spell (a fireball for example).
 ```
