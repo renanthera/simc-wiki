@@ -128,7 +128,7 @@ Simulationcraft can produce plots showing the dps versus the stats of your choic
   * **dps\_plot\_positive** (scope: global; default: 0), when different from zero, will produce plots between `[0 ; points * steps]` (rather than `[-points * steps / 2 ; +points * steps / 2]`).
 ```
  #The following example will compute 20 points for haste deltas between 0 and 600.
- dps_plot_positive=0
+ dps_plot_positive=1
  dps_plot_stat=haste
  dps_plot_points=20
  dps_plot_step=30
