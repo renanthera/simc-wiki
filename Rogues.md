@@ -85,9 +85,9 @@ actions+=/swap_weapon,slot=both,swap_to=secondary,if=active_enemies>1
 actions+=/swap_weapon,slot=both,swap_to=primary,if=active_enemies=1
 ```
 
-## Finality
+## Shrouded Suffocation
 
-**Since Simulationcraft 7.0.3 release 1** you can determine whether the Eviscerate or Nightblade abilities are using the Finality or the normal version using the `finality_eviscerate` or `finality_nightblade` expressions. They evaluate to 1 if the Finality version is currently usable, 0 otherwise.
+**Since Simulationcraft 8.1.0 release 1** you can determine whether the Garrote has the damage bonus from Shrouded Suffocation by using the `ss_buffed` expression for actions.
 
 ## Exsanguinate
 
