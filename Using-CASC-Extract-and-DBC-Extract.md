@@ -4,7 +4,7 @@ SimC has a couple of useful command line tools for downloading and extracting da
 
 `casc_extract/casc_extract.py` can extract binary DBC files or images/icons.
 
-`dbc_extract/dbc_extract.py` can extract data from DBCs into more "friendly" formats like CSV
+`dbc_extract/dbc_extract.py` can extract data from DBCs into more "friendly" formats like JSON or CSV
 
 (These notes were written for 8.x / bfa-dev versions)
 
@@ -24,9 +24,9 @@ SimC has a couple of useful command line tools for downloading and extracting da
 
 ## Extract Game Data
 
-Extract CSV files from DBC:
+Extract JSON files from DBC:
 
-`./dbc_extract.py -b [WOW_BUILD] -t csv -p [PATH_TO_DBCS] [DBC]`
+`./dbc_extract.py -b [WOW_BUILD] -t json -p [PATH_TO_DBCS] [DBC]`
 
 `WOW_BUILD` is the full WoW version (e.g. `8.0.1.26715`)
 
@@ -54,14 +54,14 @@ Interface\ICONS\Ability_CheapShot.blp
 
 # Full Example
 
-Full example to convert ItemSparse DBC into a CSV file
+Full example to convert ItemSparse DBC into a JSON file
 
 ```bash
 ./casc_extract.py --cdn -m batch -o /tmp/casc-data
 
 # This would create /tmp/casc-data/8.0.1.26715
 
-./dbc_extract.py -b 8.0.1.26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.csv
+./dbc_extract.py -b 8.0.1.26715 -t json -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.csv
 ```
 
 To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
