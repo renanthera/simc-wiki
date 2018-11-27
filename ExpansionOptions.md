@@ -28,7 +28,7 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.reorigination_array_stacks** (scope: gobal; default: 0) The number of stacks provided by the Uldir (raidzone) only buff, enabled by the traits "Laser Matrix" and "Archive of the Titans". Stacks are unlocked by killing three raid bosses each week. After doing so for 10 weeks the maximum stack count of 10 is unlocked. Accepts values from 0 to 10.
   * **bfa.secrets_of_the_deep_chance** (scope: global; default: 0.1) The chance to spawn a "rare" droplet (a void droplet). Accepts values from 0 to 1.
   * **bfa.secrets_of_the_deep_collect_chance** (scope: global; default: 1.0) The chance that the actors will pick up the droplets. Accepts values from 0 to 1.
-  * **bfa.initial_archive_of_the_titans_stacks** (scope: global; default: 0) The number of stacks of the azerite trait Archive of the Titans will apply at the start of combat. This trait applies its first stack 5s into combat and increase by one stack every 5s thereafter. Normally the stacks are reset when entering combat with a raid boss, but in non-raid encounters, such as Mythic+ dungeons, you can typically enter combat with certain amount of stacks already present.
+  * **bfa.initial_archive_of_the_titans_stacks** (scope: global; default: 0) The number of stacks of the azerite trait Archive of the Titans to apply at the start of combat. This trait normally applies its first stack 5s into combat and increase by one stack every 5s thereafter. The stacks are reset when entering combat with a raid boss, but in non-raid encounters, such as Mythic+ dungeons, you can typically enter combat with certain number of stacks already present.
 
 
 ## Legion
