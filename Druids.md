@@ -1,6 +1,10 @@
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
+## Options
 
+* **initial_astral_power** (default: 8) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath.
+
+* **lively_spirit_stacks** (default: 9) Set the number of stacks of the Lively Spirit azerite trait when you innervate a healer.
 
 ## Buffs
 > Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
