@@ -24,6 +24,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
       raid_events+=/movement,players_only=1,first=10,distance=25,duration=4
     ```
+  * _DungeonSlice_ approximates a "slice" of a BfA M+ (roughly equivalent to an M10). A single boss mob followed by alternating large/weak trash packs (4-6 mobs for 15 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Fight length locked to 6 minutes, int/fort/shout/bloodlust always enabled.
   * _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
