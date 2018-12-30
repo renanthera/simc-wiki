@@ -18,6 +18,25 @@ This 0.25 second throttle is disabled if you use your own api key.
 
 We have fallbacks for cases where the call limit is reached, such as scraping html from the armory itself. This method is not as accurate and no where near as fast as using a normal armory lookup, so it is a last resort that hopefully is never used.
 
+**Starting from Simulationcraft 810-02, the following instructions detail how to create client credentials for the Simulationcraft client**
+
+Client credentials can be obtained by going to the <a href='https://develop.battle.net/'>Battle.Net Dev Website.</a>
+
+Registering a key is incredibly easy.
+  1. Sign in with a Battle.net account with two-factor authentication enabled
+  1. Click "API ACCESS" at the top-left of the page
+  1. Click on the "Create new client"
+  1. **The only required field on the key registration is the name of the application, choose a globally unique name**
+  1. Click create, it will take you to the credential information page
+  1. Copy/Paste the 32-character client id into Simulationcraft GUI under "Options" "Globals" "Advanced Settings"
+  1. Copy/Paste the 32-character client secret into Simulationcraft GUI under "Options" "Globals" "Advanced Settings"
+
+Note, if you use the command line client, you can put your client credentials into a file called "./apikey.txt" that is located in the same directory as the simulationcraft command line executable. On unixes (anywhere that has the HOME environment variable defined), you can also place the client credentials into a file called ".simc\_apikey" in your home directory. The format of the file is a single line, with client id and secret separated by a colon (:) character (for example `0123456789012345678901:0123456789012345678901`).
+
+**WinXP will likely NOT work with the new armory API, even if you use a key. The SSL library on XP doesn't seem to be compatible with the code we are using.**
+
+**As of January 6th 2019 the instructions below are deprecated, and will be removed from this page once 810-02 is released.**
+
 This key can be obtained by going to the <a href='https://dev.battle.net/'>Battle.Net Dev Website.</a>
 
 Registering a key is incredibly easy.
@@ -28,6 +47,3 @@ Registering a key is incredibly easy.
   1. Register, it will take you back to "My API Keys"
   1. Copy/Paste the 32-character key into Simulationcraft under "Options" "Globals" "Advanced Settings"
 
-Note, if you use the command line client, you can put your api key into a file called "./apikey.txt" that is located in the same directory as the simulationcraft command line executable. On unixes (anywhere that has the HOME environment variable defined), you can also place the API key into a file called ".simc\_apikey" in your home directory.
-
-**WinXP will likely NOT work with the new armory API, even if you use a key. The SSL library on XP doesn't seem to be compatible with the code we are using.**
