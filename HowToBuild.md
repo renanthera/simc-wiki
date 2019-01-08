@@ -1,5 +1,3 @@
-
-
 # Downloading the Source
 
   * Downloading via Git
@@ -16,6 +14,7 @@
 
 # Building SimulationCraft
 
+  * **Starting from Simulationcraft 8.1.0 release 2, libcurl (https://curl.haxx.se) is required for armory imports**
   * Building the command line interface (CLI) is very easy on all platforms
   * Building the graphical user interface (GUI) is considerably harder
     * The GUI was built using [Qt](http://qt-project.org/)
@@ -29,23 +28,33 @@
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
   * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017 )](https://www.qt.io/download) or newer.
-  * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](HowToBuild#Adding_directory_to_PATH).
+  * Download [CURL](https://curl.haxx.se) sources and compile
+    * Unpack the sources to a directory (for example D:\Dev)
+    * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
+    * Navigate to the directory `<curl install path>\winbuild` (for example D:\Dev\curl-7.63.0\winbuild)
+    * Compile libcurl (and curl) by issuing the command `nmake /f Makefile.vc mode=dll`
+    * Once compilation ends, with default options you should have a directory `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl` (for example D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl). Note that if you are compiling on 32-bit platform, `x64` will be `x86`
+    * Add `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin` to your [PATH](HowToBuild#adding-directory-to-path) or copy `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin\libcurl.dll` to `your_simc_source_dir`
+    * Create a new environment variable name `CURL_ROOT` that contains the value `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl`
+  
+  * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](#adding-directory-to-path).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
   * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
   * Build project SimcGUI_qt5.9.1 for the Graphical User Interface (GUI). Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft.exe`
 
 ### Advanced Settings
-  * Make sure you have openssl (ssleay32.dll) available, or install  [OpenSSL Light](http://www.slproweb.com/products/Win32OpenSSL.html).
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
 
 ### Alternative way using command line QMake with simulationcraft.pro
   * Install Visual Studio and Qt as above
-  * Once your Qt version is installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.8 64-bit for Desktop (MSVC 2017)`.
+  * Download, build and perform installation steps for CURL as [above](#building-using-microsoft-visual-studio)
+  * Once your CURL and Qt versions are installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.8 64-bit for Desktop (MSVC 2017)`.
   * In the command prompt, navigate to `your_simc_source_dir`.
   * In `your_simc_source_dir`, issue the command
     * `qmake -r -tp vc -spec win32-msvc<version> simulationcraft.pro`, where **\<version>** is your Visual Studio version (e.g., 2017).
     * Note that for newer Qt versions the `<version>` may be omitted from the command
+    * You can also specify `CURL_ROOT` for the qmake command if you do not want to provide it in an environment variable. For example `qmake CURL_ROOT="D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl" -r -tp vc -spec win32-msvc simulationcraft.pro`.
     * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
   * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
@@ -60,7 +69,7 @@
 # Building SimulationCraft on Linux
 
 ## Command Line Interface & Graphical User Interface using Cmake (preferred)
- * If not already installed, install `build-essential` and `libssl-dev` (e.g., a compilation toolchain and OpenSSL include headers).
+ * If not already installed, install `build-essential`, `libcurl-dev`, and `pkg-config` (e.g., a compilation toolchain, libcurl include headers, and library metainformation tool).
   * Install qt5-qmake & qt5-webengine. On Ubuntu, the package is called `qt5-default`.
   * `cd your_simc_source_dir`
   * `mkdir build && cd build`
@@ -74,12 +83,13 @@
 
 ## Command Line Interface (classic build)
 
-  * If not already installed, install `build-essential` and `libssl-dev` (e.g., a compilation toolchain and OpenSSL include headers).
+  * If not already installed, install `build-essential`, `libcurl-dev` (e.g., a compilation toolchain and libcurl include headers).
   * `cd your_simc_source_dir/engine`
-  * `make OPENSSL=1 optimized`
+  * `make optimized`
   * This builds an optimized executable named `simc`
   * Additional options:
-    * Build with clang: Add CXX=clang++, eg. `make OPENSSL=1 optimized CXX=clang++`
+    * Build with clang: Add CXX=clang++, eg. `make optimized CXX=clang++`
+  * Note that if you issue the build with `SC_NO_NETWORKING=1`, `libcurl-dev` package is not necessary
 
 ## Graphical User Interface (using qmake)
 
@@ -173,7 +183,7 @@ Building SimulationCraft on OS X requires you to install the XCode development e
 ## Command Line Interface / Makefile builds
 
   * `cd your_simc_source_dir/engine`
-  * `make`
+  * `make optimized`
   * This builds an optimized executable named `simc`
 
 ## Graphical User Interface / Qmake builds
