@@ -28,7 +28,7 @@
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
   * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017 )](https://www.qt.io/download) or newer.
-  * Download [CURL](https://curl.haxx.se) sources and compile
+  * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
     * Unpack the sources to a directory (for example D:\Dev)
     * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
     * Navigate to the directory `<curl install path>\winbuild` (for example D:\Dev\curl-7.63.0\winbuild)
@@ -40,6 +40,7 @@
   * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](#adding-directory-to-path).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
+  * Select `WebEngine` configuration to build a release version of Simulationcraft. If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.
   * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
   * Build project SimcGUI_qt5.9.1 for the Graphical User Interface (GUI). Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft.exe`
 
