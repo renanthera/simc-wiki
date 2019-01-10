@@ -213,6 +213,20 @@ Acceptable slots are:
  head=earthen_helmet,ilevel=359,quality=epic,suffix=169
 ```
 
+### Itemlevel
+To manipulate the itemlevel of an item you have two options.
+- `,ilevel=X`, where X is the wanted itemlevel, sets the item to a fixed itemlevel. If an item has a trait (Battle for Azeroth), that would change the itemlevel, this trait would be ignored with this option.
+- `,bonus_id=X`, where X is one or multiple bonus ids. Multiple bonus ids use "/" as a delimiter
+
+### Bonus IDs
+To get a full list of all known bonus IDs, execute simc with the parameter `show_bonus_ids=1`. Most useful:
+
+bonus_id | effect
+--- | ---
+1674 | "epic" item quality
+1473 | +1 itemlevel, 
+... | +... itemlevel
+1672| +200 itemlevel
 ## Set bonuses
 Set bonuses have to be manually added, even if you have enough set pieces equipped. This is done with keywords such as **tier11\_2pc\_caster**. The generic syntax is `tier<number>_[2pc/4pc]_[melee/caster/tank/heal]`. The correct bonus is chosen according to your class and the suffix you used.
 
