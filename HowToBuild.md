@@ -71,7 +71,7 @@
 
 ## Command Line Interface & Graphical User Interface using Cmake (preferred)
  * If not already installed, install `build-essential`, `libcurl-dev`, and `pkg-config` (e.g., a compilation toolchain, libcurl include headers, and library metainformation tool).
-  * Install qt5-qmake & qt5-webengine. On Ubuntu, the package is called `qt5-default`.
+  * Install qt5-qmake & qt5-webengine if you want to build the GUI. On Ubuntu, the package is called `qt5-default`.
   * `cd your_simc_source_dir`
   * `mkdir build && cd build`
   * `cmake ../`
@@ -80,7 +80,7 @@
   * Additional cmake options:
     * `cmake ../ -DCMAKE_BUILD_TYPE=Release` for Release build
     * `cmake ../ -DCMAKE_BUILD_TYPE=Debug` for Debug build
-    * `make simc` build CLI only
+    * `make simc` build CLI only, no need to have Qt installed.
 
 ## Command Line Interface (classic build)
 
