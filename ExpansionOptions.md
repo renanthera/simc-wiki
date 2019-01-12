@@ -32,7 +32,7 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.seductive_power_pickup_chance** (scope: global; default: 1.0) Chance of picking up the visage spawned by Seductive Power azerite trait.
   * **bfa.initial_seductive_power_stacks** (scope: global; default: 0) How many stacks of Seductive Power buff to apply when the combat starts.
   * **bfa.randomize_oscillation** (scope: global; default: 1) Randomize Oscillation state of Variable Intensity Gigavolt Oscillating Reactor at the beginning of combat.
-
+  * **bfa.auto_oscillating_overload** (scope: global; default: 1) Automatically cast Oscillating Overload (the On-Use effect of Variable Intensity Gigavolt Oscillating Reactor) when the V.I.G.O.R. Engaged buff reaches its maximum stack count. Disabling this option will enable `use_items` and `use_item` actions to control the triggering of Oscillating Overload.
 
 ## Legion
 
