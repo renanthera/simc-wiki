@@ -69,6 +69,8 @@
 
 # Building SimulationCraft on Linux
 
+  * Linux compilation using various g++ versions (at least 5, 6, and 8 series) may fail at the linking stage if Link Time Optimization (LTO) is used in conjunction with the new curl-based networking interface. Error message output will have something akin to `lto1: internal compiler error: in odr_types_equivalent_p, at ipa-devirt.c`. In this case, either switch `llvm-clang` compiler, use `SC_NO_NETWORKING` if you don't need the HTTP interfaces in Simulationcraft (to use `armory` or `guild` options), or stop using LTO in compilation.
+
 ## Command Line Interface & Graphical User Interface using Cmake (preferred)
  * If not already installed, install `build-essential`, `libcurl-dev`, and `pkg-config` (e.g., a compilation toolchain, libcurl include headers, and library metainformation tool).
   * Install qt5-qmake & qt5-webengine if you want to build the GUI. On Ubuntu, the package is called `qt5-default`.
