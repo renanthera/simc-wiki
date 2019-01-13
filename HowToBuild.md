@@ -40,7 +40,7 @@
   * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](#adding-directory-to-path).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
-  * Select `WebEngine` configuration to build a release version of Simulationcraft. If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.
+  * Select `WebEngine` configuration to build a release version of Simulationcraft. **If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.**
   * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
   * Build project SimcGUI_qt5.9.1 for the Graphical User Interface (GUI). Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft.exe`
 
