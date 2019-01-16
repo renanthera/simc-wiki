@@ -31,7 +31,7 @@
   * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
     * Unpack the sources to a directory (for example D:\Dev)
     * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
-    * Navigate to the directory `<curl install path>\winbuild` (for example D:\Dev\curl-7.63.0\winbuild)
+    * Navigate to the directory `<curl install path>\winbuild` (for example D:\Dev\curl-7.63.0\winbuild). Note that if you cloned the GIT repository of CURL, you will need to invoke `buildconf.bat` in the `<curl install path>` to generate the prerequisite files.
     * Compile libcurl (and curl) by issuing the command `nmake /f Makefile.vc mode=dll`
     * Once compilation ends, with default options you should have a directory `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl` (for example D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl). Note that if you are compiling on 32-bit platform, `x64` will be `x86`
     * Add `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin` to your [PATH](HowToBuild#adding-directory-to-path) or copy `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin\libcurl.dll` to `your_simc_source_dir`
