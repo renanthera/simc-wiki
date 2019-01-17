@@ -47,7 +47,7 @@
   * In the command prompt, navigate to `your_simc_source_dir`.
 
   * In `your_simc_source_dir`, issue the command `qmake -r -tp vc -spec win32-msvc simulationcraft.pro`
-    * Note that for older Qt versions the spec parameter may require your visual studio version (e.g., `win64-msvc2017`)
+    * Note that for older Qt versions the spec parameter may require your visual studio version (e.g., `win32-msvc2017`)
     * You can also specify `CURL_ROOT` for the qmake command if you do not want to provide it in an environment variable. For example `qmake CURL_ROOT="D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl" -r -tp vc -spec win32-msvc simulationcraft.pro`.
     * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
     * If you have upgraded your Qt version, you should delete `.qmake.stash` file before issuing the qmake command
@@ -56,7 +56,7 @@
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
 
   * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
-    * `qmake PGO=1 -r -tp vc -spec win64-msvc simulationcraft.pro`.
+    * `qmake PGO=1 -r -tp vc -spec win32-msvc simulationcraft.pro`.
 
 ### Advanced Settings
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
