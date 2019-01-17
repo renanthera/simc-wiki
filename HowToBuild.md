@@ -28,7 +28,7 @@
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
     * Just use basic install with the `Desktop development with C++`
-  * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017)](https://www.qt.io/download) or newer.
+  * Download and install [Qt 5.12.0 for Windows 64-bit (VS 2017)](https://www.qt.io/download) or newer.
     * The Open Source version is fine for this use case, select the latest Qt version during "Select Components", i.e. `Qt 5.12.0`
   * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
     * Unpack the sources to a directory (for example D:\Dev)
@@ -39,7 +39,7 @@
     * Add `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin` to your [PATH](HowToBuild#adding-directory-to-path) or copy `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin\libcurl.dll` to `your_simc_source_dir`
     * Create a new environment variable name `CURL_ROOT` that contains the value `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl`
   
-  * Add C:\Qt\Qt5.9.1\5.5\msvc2017\_64\bin to your [PATH](#adding-directory-to-path).
+  * Add C:\Qt\5.12.0\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
   * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
   * Select `WebEngine` configuration to build a release version of Simulationcraft. **If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.**
