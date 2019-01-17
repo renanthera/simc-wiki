@@ -44,7 +44,7 @@
   * Open `your_simc_source_dir\simc_vs2017.sln` project file
   * Select `WebEngine` configuration to build a release version of Simulationcraft. **If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.**
   * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
-  * Build project SimcGUI_qt5.9.1 for the Graphical User Interface (GUI). Creates executable `your_simc_source_dir\x64\WebEngine\SimulationCraft.exe`
+  * **If you need to build the Simulationcraft GUI, follow the instructions below ("Alternative way using command line QMake with simulationcraft.pro")**
 
 ### Advanced Settings
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
