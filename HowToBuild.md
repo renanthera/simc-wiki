@@ -27,7 +27,9 @@
 ## Building using Microsoft Visual Studio
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
-  * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017 )](https://www.qt.io/download) or newer.
+    * Just use basic install with the `Desktop development with C++`
+  * Download and install [Qt 5.9.1 for Windows 64-bit (VS 2017)](https://www.qt.io/download) or newer.
+    * The Open Source version is fine for this use case, select the latest Qt version during "Select Components", i.e. `Qt 5.12.0`
   * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
     * Unpack the sources to a directory (for example D:\Dev)
     * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
