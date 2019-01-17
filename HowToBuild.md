@@ -28,8 +28,11 @@
 
   * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
     * Just use basic install with the `Desktop development with C++`
+
   * Download and install [Qt 5.12.0 for Windows 64-bit (VS 2017)](https://www.qt.io/download) or newer.
     * The Open Source version is fine for this use case, select the latest Qt version during "Select Components", i.e. `Qt 5.12.0`
+    * Add C:\Qt\5.12.0\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
+
   * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
     * Unpack the sources to a directory (for example D:\Dev)
     * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
@@ -38,31 +41,25 @@
     * Once compilation ends, with default options you should have a directory `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl` (for example D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl). Note that if you are compiling on 32-bit platform, `x64` will be `x86`
     * Add `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin` to your [PATH](HowToBuild#adding-directory-to-path) or copy `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin\libcurl.dll` to `your_simc_source_dir`
     * Create a new environment variable name `CURL_ROOT` that contains the value `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl`
-  
-  * Add C:\Qt\5.12.0\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
-  * If you have installed QT to a different location, edit `your_simc_source_dir\vs\Qt_vs2017.props`
-  * Open `your_simc_source_dir\simc_vs2017.sln` project file
-  * Select `WebEngine` configuration to build a release version of Simulationcraft. **If you do not need to import characters or guilds from Blizzard API endpoints (armory), you can select the `WebEngine-NoNetworking` configuration. In this case, you also do not need to download and compile libcurl.**
-  * Build Project simc for command line interface (CLI). Creates executable `your_simc_source_dir\x64\WebEngine\simc.exe`
-  * **If you need to build the Simulationcraft GUI, follow the instructions below ("Alternative way using command line QMake with simulationcraft.pro")**
+
+  * Open a developer command prompt for Qt (shortcut in start menu), for example `Qt 5.12 64-bit for Desktop (MSVC 2017)`.
+
+  * In the command prompt, navigate to `your_simc_source_dir`.
+
+  * In `your_simc_source_dir`, issue the command `qmake -r -tp vc -spec win32-msvc simulationcraft.pro`
+    * Note that for older Qt versions the spec parameter may require your visual studio version (e.g., `win64-msvc2017`)
+    * You can also specify `CURL_ROOT` for the qmake command if you do not want to provide it in an environment variable. For example `qmake CURL_ROOT="D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl" -r -tp vc -spec win32-msvc simulationcraft.pro`.
+    * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
+    * If you have upgraded your Qt version, you should delete `.qmake.stash` file before issuing the qmake command
+
+  * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
+    * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
+
+  * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
+    * `qmake PGO=1 -r -tp vc -spec win64-msvc simulationcraft.pro`.
 
 ### Advanced Settings
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
-
-### Alternative way using command line QMake with simulationcraft.pro
-  * Install Visual Studio and Qt as above
-  * Download, build and perform installation steps for CURL as [above](#building-using-microsoft-visual-studio)
-  * Once your CURL and Qt versions are installed, open a developer command prompt for it (shortcut in start menu), for example `Qt 5.8 64-bit for Desktop (MSVC 2017)`.
-  * In the command prompt, navigate to `your_simc_source_dir`.
-  * In `your_simc_source_dir`, issue the command
-    * `qmake -r -tp vc -spec win32-msvc<version> simulationcraft.pro`, where **\<version>** is your Visual Studio version (e.g., 2017).
-    * Note that for newer Qt versions the `<version>` may be omitted from the command
-    * You can also specify `CURL_ROOT` for the qmake command if you do not want to provide it in an environment variable. For example `qmake CURL_ROOT="D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl" -r -tp vc -spec win32-msvc simulationcraft.pro`.
-    * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
-  * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
-    * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
-  * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
-    * `qmake PGO=1 -r -tp vc -spec win32-msvc<version> simulationcraft.pro`.
 
 ### Alternate way using QtCreator with simulationcraft.pro
   * Install Visual Studio and Qt as above
@@ -214,3 +211,4 @@ The easiest way to build a release package for OS X is to use the qmake system. 
 ## GNU Make Options
     * Add -j n  where n is the number of threads used for compiling
     * The GCC flag -dM will stop the compiler after the preprocessing pass and make it dump all #define
+
