@@ -34,6 +34,8 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.randomize_oscillation** (scope: global; default: 1) Randomize Oscillation state of Variable Intensity Gigavolt Oscillating Reactor at the beginning of combat.
   * **bfa.auto_oscillating_overload** (scope: global; default: 1) Automatically cast Oscillating Overload (the On-Use effect of Variable Intensity Gigavolt Oscillating Reactor) when the V.I.G.O.R. Engaged buff reaches its maximum stack count. Disabling this option will enable `use_items` and `use_item` actions to control the triggering of Oscillating Overload.
   * **bfa.zuldazar** (scope: global; default: 0) Specifies whether the players are in Zuldazar, which is relevant for the Gift of the Loa set bonus from Battle of Dazar'alor.
+  * **bfa.covenant_period** (scope: global; default: 1.0) Specifies the frequency at which Treacherous Covenant is updated (Treacherous Covenant buff application or expiration).
+  * **bfa.covenant_chance** (scope: global; default: 1.0) Chance of gaining Treacherous Covenant buff on each update (see **bfa.covenant_period**). This roughly corresponds to the buff uptime.
 
 ## Legion
 
