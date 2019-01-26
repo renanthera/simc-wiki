@@ -36,6 +36,7 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.zuldazar** (scope: global; default: 0) Specifies whether the players are in Zuldazar, which is relevant for the Gift of the Loa set bonus from Battle of Dazar'alor.
   * **bfa.covenant_period** (scope: global; default: 1.0) Specifies the frequency at which Treacherous Covenant is updated (Treacherous Covenant buff application or expiration).
   * **bfa.covenant_chance** (scope: global; default: 1.0) Chance of gaining Treacherous Covenant buff on each update (see **bfa.covenant_period**). This roughly corresponds to the buff uptime.
+  * **bfa.incandescent_sliver_chance** (scope: global; default: 1.0) Chance of gaining a stack of Incandescent Sliver buff on each tick. When the random roll fails, a stack is removed (as if someone without the trinket was standing next to the actor).
 
 ## Legion
 
