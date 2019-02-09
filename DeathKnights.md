@@ -43,8 +43,15 @@ The _antimagic\_shell_ action allows a Death Knight to simulate the Runic Power 
 
 ## Miscellanous
 
-Army of the dead has an option to set the prepull delay. It only works when army of the dead is used in the precombat APL and won't have any effect otherwise. It takes an integer value between 0 (cast right on pull) and 10. Default value : 6
+Army of the dead has an option to set the prepull delay. It only works when army of the dead is used in the precombat APL and won't have any effect otherwise. It takes an integer value between 0 (cast right on pull) and 10. Default value: 6
 ```
 # Simulate the cast of army of the dead 4s before combat begins
 actions.precombat+=/army_of_the_dead,delay=4
+```
+
+The Magus of the dead azerite trait spawns a magus pet that will melee attack nearby enemies even while casting, you can use the magus_of_the_dead_melee_uptime option to set its melee uptime. Every time the pet tries to melee, it will roll a chance equal to the option to simulate the melee attack. If the roll fails, the attack will miss.
+This player-scope option takes a number between 0 and 1. Default value: 0
+```
+# Simulate a melee uptime of 50%, meaning that 50% of the attacks will miss
+magus_of_the_dead_melee_uptime=0.5
 ```
