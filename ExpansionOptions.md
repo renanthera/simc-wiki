@@ -37,6 +37,8 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.covenant_period** (scope: global; default: 1.0) Specifies the period (in seconds) of Treacherous Covenant updates (i.e. buff application or expiration).
   * **bfa.covenant_chance** (scope: global; default: 1.0) Chance of gaining Treacherous Covenant buff on each update (see **bfa.covenant_period**). This roughly corresponds to the buff uptime.
   * **bfa.incandescent_sliver_chance** (scope: global; default: 1.0) Chance of gaining a stack of Incandescent Sliver buff on each tick. When the random roll fails, a stack is removed (as if someone without the trinket was standing next to the actor).
+  * **bfa.fight_or_flight_period** (scope: global; default: 1.0) Specifies the period (in seconds) of Fight or Flight proc attempts (as if the player was dropping below 35% hp in-game).
+  * **bfa.fight_or_flight_chance** (scope: global; default: 0) Chance of triggering Fight or Flight buff (in the limits of the buff's own internal cooldown) on each attempt (see **bfa.fight_or_flight_period**).
 
 ## Legion
 
