@@ -47,7 +47,9 @@ Incanter's Flow stacks | 1  2  3  4  5  5  4  3  2  1  1  2 ...
 incanters_flow_dir     | 1  1  1  1  0 -1 -1 -1 -1  0  1  1 ...
 ```
 
-`incanters_flow_time_to.<stack number>.<stack type>` evaluates to remaining time (in seconds) until the next occurence of the specified stack. `stack_number` is a whole number between 1 and 5, `stack_type` can be `up`, `down` or `any`. `up` checks only stacks on the raising part of the cycle, `down` checks stacks on the falling part of the cycle and `any` checks both types.
+`incanters_flow_time_to.<stack number>.<stack type>` evaluates to remaining time (in seconds) until the next occurence of the specified stack. When the buff is in the desired state, this expression evalutes to 0.
+
+`stack_number` is a whole number between 1 and 5, `stack_type` can be `up`, `down` or `any`. `up` checks only stacks on the raising part of the cycle, `down` checks stacks on the falling part of the cycle and `any` checks both types.
 
 ### Ground AoE
 
