@@ -266,6 +266,18 @@ If you want to specify talents individually (as in a custom .simc file), you can
  timeofday=daytime
 ```
 
+  * **zandalari_loa** (scope: current character; default: "paku") can be used to specify the Embrace of the Loa racial, relevant for BfA Zandalari Trolls. Available options are:
+    1. akunda / embrace_of_akunda
+    1. bwonsamdi / embrace_of_bwonsamdi
+    1. gonk / embrace_of_gonk
+    1. kimbul / embrace_of_kimbul
+    1. kragwa / embrace_of_kragwa
+    1. paku / embrace_of_paku
+```
+ # set loa to kimbul
+ zandalari_loa=kimbul
+```
+
 ## Status
   * **sleeping** (scope: current character; default: 0), when different from zero, will make the character inactive: he won't do anything. The purpose of this setting if to allow you to quickly remove a character from the simulation without removing everything about him in your .simc files.
 ```
