@@ -3,6 +3,7 @@
 # Options
   * **use\_pre\_soulburn**
   * **dark\_intent\_target**
+  * **flashpoint\_threshold**
 
 # Actions
   * _shadow\_bolt_ (isb)
