@@ -39,7 +39,8 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.incandescent_sliver_chance** (scope: global; default: 1.0) Chance of gaining a stack of Incandescent Sliver buff on each tick. When the random roll fails, a stack is removed (as if someone without the trinket was standing next to the actor).
   * **bfa.fight_or_flight_period** (scope: global; default: 1.0) Specifies the period (in seconds) of Fight or Flight proc attempts (as if the player was dropping below 35% hp in-game).
   * **bfa.fight_or_flight_chance** (scope: global; default: 0) Chance of triggering Fight or Flight buff (in the limits of the buff's own internal cooldown) on each attempt (see **bfa.fight_or_flight_period**).
-  * **bfa.harbingers_inscrutable_will_silence_chance** (scope: global; default: 0) Chance of getting silenced by Harbinger's Inscrutable Will trinket.
+  * **bfa.harbingers_inscrutable_will_silence_chance** (scope: global; default: 0) Chance of getting silenced by Harbinger's Inscrutable Will projectile. `1 - (silence_chance + move_chance)` is the probability of the scenario where the player doesn't have to move to avoid the projectile.
+  * **bfa.harbingers_inscrutable_will_move_chance** (scope: global; default: 0) Chance of avoiding Harbinger's Inscrutable Will projectile by moving.
 
 ## Legion
 
