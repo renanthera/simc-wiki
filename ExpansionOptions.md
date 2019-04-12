@@ -41,6 +41,10 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.fight_or_flight_chance** (scope: global; default: 0) Chance of triggering Fight or Flight buff (in the limits of the buff's own internal cooldown) on each attempt (see **bfa.fight_or_flight_period**).
   * **bfa.harbingers_inscrutable_will_silence_chance** (scope: global; default: 0) Chance of getting silenced by Harbinger's Inscrutable Will projectile. `1 - (silence_chance + move_chance)` is the probability of the scenario where the player doesn't have to move to avoid the projectile.
   * **bfa.harbingers_inscrutable_will_move_chance** (scope: global; default: 0) Chance of avoiding Harbinger's Inscrutable Will projectile by moving.
+  * **bfa.aberrant_tidesage_damage_chance** (scope: global; default: 1) Chance that the player is above 60% HP when Leggings of the Aberrant Tidesage proc.
+  * **bfa.fathuuls_floodguards_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Fa'thuul's Floodguards proc.
+  * **bfa.grips_of_forsaken_sanity_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Grips of Forsaken Sanity proc.
+  * **bfa.stormglide_steps_take_damage_chance** (scope: global: default: 0) Chance every second that the player takes damage which will remove the Untouchable buff.
 
 ## Legion
 
