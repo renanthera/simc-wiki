@@ -44,7 +44,8 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.aberrant_tidesage_damage_chance** (scope: global; default: 1) Chance that the player is above 60% HP when Leggings of the Aberrant Tidesage proc.
   * **bfa.fathuuls_floodguards_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Fa'thuul's Floodguards proc.
   * **bfa.grips_of_forsaken_sanity_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Grips of Forsaken Sanity proc.
-  * **bfa.stormglide_steps_take_damage_chance** (scope: global: default: 0) Chance every second that the player takes damage which will remove the Untouchable buff.
+  * **bfa.stormglide_steps_take_damage_chance** (scope: global; default: 0) Chance every second that the player takes damage which will remove the Untouchable buff.
+  * **bfa.lurkers_insidious_gift_duration** (scope: global; default: 0) Overrides the duration of the Lurker's Insidious Gift trinket buff. A value of 0 will use the buff's maximum duration. Accepts values between 0 and 30.
 
 ## Legion
 
