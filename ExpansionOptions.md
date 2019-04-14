@@ -45,7 +45,9 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.fathuuls_floodguards_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Fa'thuul's Floodguards proc.
   * **bfa.grips_of_forsaken_sanity_damage_chance** (scope: global; default: 1) Chance the player is above 90% HP when Grips of Forsaken Sanity proc.
   * **bfa.stormglide_steps_take_damage_chance** (scope: global; default: 0) Chance every second that the player takes damage which will remove the Untouchable buff.
-  * **bfa.lurkers_insidious_gift_duration** (scope: global; default: 0) Overrides the duration of the Lurker's Insidious Gift trinket buff. A value of 0 will use the buff's maximum duration. Accepts values between 0 and the maximum duration of the buff.
+  * **bfa.lurkers_insidious_gift_duration** (scope: global; default: 0) Overrides the duration of the Lurker's Insidious Gift trinket buff. A value of 0 will use the buff's maximum duration.
+  * **bfa.abyssal_speakers_gauntlets_shield_duration** (scope: global; default: 0) Overrides the duration of the Ephemeral Vigor buff from Abyssal Speaker's Gauntlets. A value of 0 will use the buff's maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end.
+  * **bfa.trident_of_deep_ocean_duration** (scope: global; default: 0) Overrides the duration of the Custody of the Deep absorb buff from Trident of Deep Ocean. A value of 0 will use the buff's maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end. Note that the effect is rppm based on damage taken only, and will not proc in the normal scenario of a non-tank simulation.
 
 ## Legion
 
