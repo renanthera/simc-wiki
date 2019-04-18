@@ -47,6 +47,7 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.lurkers_insidious_gift_duration** (scope: global; default: 0) Overrides the duration of the Lurker's Insidious Gift trinket buff. A value of 0 will use the buff's maximum duration.
   * **bfa.abyssal_speakers_gauntlets_shield_duration** (scope: global; default: 0) Overrides the duration of the Ephemeral Vigor buff from Abyssal Speaker's Gauntlets. A value of 0 will use the buff's maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end.
   * **bfa.trident_of_deep_ocean_duration** (scope: global; default: 0) Overrides the duration of the Custody of the Deep absorb buff from Trident of Deep Ocean. A value of 0 will use the buff's maximum duration. If the absorb shield is fully consumed by damage taken by the player, the effect will end. Note that the effect is rppm based on damage taken only, and will not proc in the normal scenario of a non-tank simulation.
+  * **bfa.legplates_of_unbound_anguish_chance** (scope: global; default: 1.0) Set the chance that the check for having a higher health percentage than the target succeeds. Note: since the proc is rppm-based, a reduced chance won't affect the number of procs linearly. As this replaces the health percentage check entirely, setting the enemy's fixed health percentage will not affect the proc's behaviour unless you also change this setting. Accepts values from 0 to 1.
 
 ## Legion
 
