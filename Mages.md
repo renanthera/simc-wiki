@@ -110,7 +110,7 @@ firestarter_time=20
 
 ### Greater Blessing of Wisdom
 
-Arcane mages benefit from the extra mana gained from Greater Blessing of Wisdom. `blessing_of_wisdom_count` can be used to simulate this exact scenario.
+Arcane mages benefit from the extra mana gained from Greater Blessing of Wisdom. `greater_blessing_of_wisdom_count` can be used to simulate this exact scenario.
 
 ```
 mage=Mage
@@ -118,7 +118,7 @@ level=110
 ...
 spec=arcane
 
-blessing_of_wisdom_count=2
+greater_blessing_of_wisdom_count=2
 # Two paladins buffed us with GBoW
 ```
 
