@@ -49,10 +49,9 @@ Army of the dead has an option to set the prepull delay. It only works when army
 actions.precombat+=/army_of_the_dead,delay=4
 ```
 
-The Magus of the dead azerite trait spawns a magus pet that will melee attack nearby enemies even while casting, you can use the magus_of_the_dead_melee_uptime option to set its melee uptime. Every time the pet tries to melee, it will roll a chance equal to the option to simulate the melee attack. If the roll fails, the attack will miss.
-Its default behavior is a 60% melee uptime when summoned during combat, and 0% for pre-pull army of the dead.
-This player-scope option takes a number between 0 and 1.
+On 8.2 PTR, Breath of Sindragosa has double the chance to trigger Runic Empowerment.
+Even though PTR data isn't enabled, you can already enable that behaviour with the following option (scope: player, default: 0)
 ```
-# Simulate a melee uptime of 50%, meaning that 50% of the attacks will miss
-magus_of_the_dead_melee_uptime=0.5
+# BoS has double the chance to trigger Runic Empowerment
+bos_doubles_re_chance=1
 ```
