@@ -49,9 +49,9 @@ Army of the dead has an option to set the prepull delay. It only works when army
 actions.precombat+=/army_of_the_dead,delay=4
 ```
 
-On 8.2 PTR, Breath of Sindragosa has double the chance to trigger Runic Empowerment.
-Even though PTR data isn't enabled, you can already enable that behaviour with the following option (scope: player, default: 0)
+On 8.2 PTR, Breath of Sindragosa has an increased chance to trigger Runic Empowerment.
+Even though PTR data isn't enabled, you can already simulate that behavior with the following option (scope: player, default: 0)
 ```
-# BoS has double the chance to trigger Runic Empowerment
-bos_doubles_re_chance=1
+# BoS has an increased chance to trigger Runic Empowerment
+bos_increases_re_chance=1
 ```
