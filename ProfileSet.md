@@ -44,4 +44,4 @@ Profile sets support the vast majority of simulation and player scope options. Y
 
 Options that do not work in profile sets include (but are not limited to): various output-only options such as ```spell_query```, scale factor calculation, any kind of plotting, or adding additional players (e.g., ```armory```, ```copy```, or ```class_name``` options).
 
-Note that currently spell data overrides will leak from profileset to profileset. If you intend to use them, you must override the full set of values on each profileset to guarantee correct simulation environment.
+Note that currently spell data overrides are registered globally in the simulator, and will "leak out of profilesets". Due to the processing behavior of profilesets, what override options are enabled when a profileset is actually being simulated is undefined.
