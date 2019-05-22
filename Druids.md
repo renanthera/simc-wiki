@@ -2,7 +2,7 @@
 
 ## Options
 
-* **initial_astral_power** (default: 8) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath.
+* **initial_astral_power** (default: 8) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
 
 * **lively_spirit_stacks** (default: 9) Set the number of stacks of the Lively Spirit azerite trait when you innervate a healer.
 
