@@ -78,6 +78,7 @@ data source), operand\_type and a brief description:
   * depend\_rank, talent, NUMBER (talent rank of talent id this talent depends on)
   * col, talent, NUMBER (talent column 0..3)
   * row, talent, NUMBER (talent "tier" 0..6)
+  * essence\_id - Necklace azerite essences (**Added in version 8.2**)
 
 For numeric data fields, the following numeric operators between a spell list
 and a numeric right-side operand are available: ==, !=, >, <, >=, <=. All string data
