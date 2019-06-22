@@ -50,6 +50,53 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.legplates_of_unbound_anguish_chance** (scope: global; default: 1.0) Set the chance that the check for having a higher health percentage than the target succeeds. Note: since the proc is rppm-based, a reduced chance won't affect the number of procs linearly. As this replaces the health percentage check entirely, setting the enemy's fixed health percentage will not affect the proc's behaviour unless you also change this setting. Accepts values from 0 to 1.
   * **bfa.loyal_to_the_end_allies** (scope: global; default 4) Set the number of allies that have the azerite trait Loyal to the End. Each ally increases the mastery bonus you gain from this trait, up to a maximum of 4 allies. Accepts values from 0 to 4.
 
+### Azerite Essences
+Battle for Azeroth introduced Azerite Essences as a different empowerment system to the necklace. Contrary to the Azerite Trait system of Head, Shoulders, and Chest these Essences consist of two separate effects. A major and a minor one. The necklace offers two types of slots. One Major slot, which activated the major **and** minor effect of the applied essence and 2 minor slots, which activate only the minor effects. Selection and replacement of the essences happens for free in any resting area. SimulationCraft offers the following additional option to add these effects to a profile.
+
+* **azerite_essences** (scope: character, default empty) Enables the provided azerite essences for that character (and any who inherits from it). format: `token/token/token`. An example will be provided below.
+
+Token schemes:
+* `essence_id:rank`
+* `essence_id:rank:type`
+* `spell_id`
+
+`essence_id` can either be found in `AzeriteEssence.db2` or uses the tokenized form of the essence name
+* `rank`: 1...4
+* `type`: 0 (minor) **or** 1 (major)
+* `spell_id`: passive milestone spell id
+
+Only 2 or 3 element tokens for major/minor powers allowed. If 2 element tokens are used, the first element is the major essence, and the two subsequent tokens are the minor essences. In 3 element tokens, ordering does not matter. Placement of passive milestone spells is irrelevant.
+
+**Typical essence IDs**
+```
+4    Worldvein
+5    Focusing Iris
+6    Purification Protocol
+12   Crucible of Flames (Concentrated Flames)
+14   Condensed Life-Force / Guardian of Azeroth
+15   Ripple in Space
+22   Vision of Perfection
+23   Blood of the Enemy
+27   Lucid Dreams
+28   Unbound Force
+32   Conflict and Strife
+```
+
+**Examples**
+
+Enables Lucid Dreams major and minor effect.
+```
+azerite_essences=27:3
+```
+Enables Crucible of Flames major and Ripple in Space minor.
+```
+azerite_essences=12:3/15:3
+```
+Enables Crucible of Flames major and Ripple in Space minor but this time uses their type explicitly to order them freely.
+```
+azerite_essences=ripple_in_space:3:0/crucible_of_flames:3:1
+```
+
 ## Legion
 
 ### Items
