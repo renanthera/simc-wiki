@@ -60,7 +60,7 @@ A number of azerite powers and items have characteristics that can be customized
   * **bfa.leviathans_lure_base_rppm** (scope: global; default 0.5) Leviathan's Lure has a base rppm on the main damage proc which is increased over time by the trinket's second proc. This base rppm is currently unknown, and can be set with this option. Accepts values from 0.0 to 2.0.
   * **bfa.aquipotent_nautilus_catch_chance** (scope: global; default 1.0) Aquipotent Nautilus sends out a wave which damages enemies then returns to you. Catching the returning wave will lower the cooldown by 30s. The chance to catch the returning wave can be set with this option. Accepts values from 0.0 to 1.0.
   * **bfa.zaquls_portal_key_move_chance** (scope: global; default 0.0) Za'qul's Portal Key will summon a void tear which will open a portal to grant to a buff when you move near the tear. This option sets the chance that you will be forced to move to open the portal. Accepts values from 0.0 to 1.0.
-  * **bfa.anuazshara_unleash_timer** (scope: global; default _disabled_) Anu-Azshara, Staff of the Eternal will unleashed its damage if you fall below 10% hp or mana. This option will set, in seconds, how often this happens. Minimum value accepted is 10.
+  * **bfa.anuazshara_unleash_time** (scope: global; default _disabled_) Anu-Azshara, Staff of the Eternal will unleash its damage if you fall below 10% hp or mana. This option will set, in seconds, how many seconds into combat this will happen. Accepts minimum value of 1.
   * **bfa.nazjatar** (scope: global; default 1) Set to 0 to disable Nazjatar/Eternal Palace only special effects.
 
 ### Azerite Essences
