@@ -164,11 +164,13 @@ For every buff/debuff, the available properties are:
 ### Trinket Procs
 These commands can be combined with trinkets if you wish to create action lists that react to trinket procs.
 
-Syntax: trinket.has\_stacking\_stat_._stat_._specific stat_._buff expression
+Syntax: trinket[.1|2|name].has\_stacking\_stat_._stat_._specific stat_._buff expression
 
 All commands that work with buffs will also work with this.
 
-The slot is not required, and can be skipped. If skipped, it will scan both trinket slots. If both trinkets satisfy the buff expression, the maximum value of the buff expressions will be chosen. Examples:
+The slot (**1**, **2**, or **Since Simulationcraft 8.2.0 release 1, name**) is not required, and can be skipped. If skipped, it will scan both trinket slots. If both trinkets satisfy the buff expression, the maximum value of the buff expressions will be chosen. If tokenized trinket name is specified, and the name is invalid, the item is not a trinket, or the item is not found on the actor, an expression that always returns `0` will be generated.
+
+Examples:
 ```
 # Flags as true if the trinket in slot 2 has the ability to proc an agility stacking proc.
 trinket.2.has_stacking_stat.agility
