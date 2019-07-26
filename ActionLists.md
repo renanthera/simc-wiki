@@ -62,7 +62,7 @@ A couple pieces of advice for writing actions lists:
 ```
   * _use\_item_ triggers the use of an item.
     1. _name_ is the item's name
-    1. Alternatively, you can also specify the _slot_ of the item
+    1. Alternatively, you can also specify an item by the _slot_ or the on-use _effect_name_
     1. **Since Simulationcraft 6.1.2-01** In addition, you can also evaluate the type of stat buff the item triggers with the `use_buff.<stat_type>` expression. It evaluates to 1 if the item triggers the expressed stat, 0 otherwise.
 ```
  # Uses the "shard of woe" trinket
