@@ -53,13 +53,13 @@ data source), operand\_type and a brief description:
   * max\_range, spell, NUMBER (maximum range in yards)
   * cooldown, spell, NUMBER (spell cooldown, in milliseconds)
   * gcd, spell, NUMBER (spell gcd duration, in milliseconds)
-  * category_cooldown, spell, NUMBER (shared cooldown duration, in milliseconds **New in version 710-03**)
+  * category_cooldown, spell, NUMBER (shared cooldown duration, in milliseconds, **New in version 710-03**)
   * charges, spell, NUMBER (number of charges for the spell)
   * charge\_cooldown, spell, NUMBER (charge cooldown in milliseconds)
   * category, spell, NUMBER (spell cooldown category)
   * duration, spell, NUMBER (spell duration in milliseconds)
-  * rune, spell, STRING, (b = blood, f = frost, u = unholy, will match minimum rune requirement) **Removed in version 701-1**
-  * power\_gain, spell, NUMBER (amount of runic power gained) **Removed in version 701-1**
+  * rune, spell, STRING, (b = blood, f = frost, u = unholy, will match minimum rune requirement, **Removed in version 701-1**)
+  * power\_gain, spell, NUMBER (amount of runic power gained, **Removed in version 701-1**)
   * max\_stack, spell, NUMBER (maximum stack of spell)
   * proc\_chance, spell, NUMBER (spell proc chance in percent (0..100))
   * icd, spell, NUMBER (internal cooldown of a spell in milliseconds)
@@ -78,7 +78,8 @@ data source), operand\_type and a brief description:
   * depend\_rank, talent, NUMBER (talent rank of talent id this talent depends on)
   * col, talent, NUMBER (talent column 0..3)
   * row, talent, NUMBER (talent "tier" 0..6)
-  * essence\_id - Necklace azerite essences (**Added in version 8.2**)
+  * power\_id, spell/azerite, NUMBER (azerite armor trait id, **Added in version 8.0**)
+  * essence\_id, spell, NUMBER (heart of azeroth essence id, **Added in version 8.2**)
 
 For numeric data fields, the following numeric operators between a spell list
 and a numeric right-side operand are available: ==, !=, >, <, >=, <=. All string data
