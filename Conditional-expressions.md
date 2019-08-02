@@ -196,7 +196,7 @@ actions+=/recklessness,if=trinket.stat.strength.cooldown_remains>15&cooldown.sku
 ### Trinket Cooldowns
 You can also express trinket cooldowns through the expression system. Generic syntax is `trinket.(has_|)cooldown.<cooldown_expr>`, where `<cooldown_expr>` refers to any cooldown expression we support. `has_cooldown` requires no cooldown expression. Positional trinket parameters are also supported, see above for example. If the actor has no trinkets with cooldown, both expressions will always return 0. If both trinket slots have a cooldown, the larger cooldown expression return value will be chosen. The system will scan both Equip and Use trinkets in the slot(s), and use either type, if available.  
 
-**NOTE:** This syntax will not be evaluated against the 20s lockout typically shared by on-use items. To check both the trinket's cooldown and the shared lockout, use the expression `trinket[1|2|name].ready_cooldown`.  
+**NOTE:** This syntax will not be evaluated against the 20s lockout typically shared by on-use items. To check if both the trinket's cooldown and the shared lockout are up, use the expression `trinket[1|2|name].ready_cooldown`.  
 
 ```
 # Use Ascendance, if there are no trinket cooldowns ready in the next 10 seconds.
