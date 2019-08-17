@@ -33,7 +33,7 @@
     * The Open Source version is fine for this use case, select the latest Qt version during "Select Components", i.e. `Qt 5.12.0`
     * Add C:\Qt\5.12.0\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
-  * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI
+  * Download [CURL](https://curl.haxx.se) sources and compile if you intend to use the `armory` or `guild` options or import characters in the GUI.
     * Unpack the sources to a directory (for example D:\Dev)
     * Start Visual Studio native command prompt for your platform (for example "x64 Native Tools Command Prompt for VS 2017")
     * Navigate to the directory `<curl install path>\winbuild` (for example D:\Dev\curl-7.63.0\winbuild). Note that if you cloned the GIT repository of CURL, you will need to invoke `buildconf.bat` in the `<curl install path>` to generate the prerequisite files.
@@ -41,7 +41,7 @@
     * Once compilation ends, with default options you should have a directory `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl` (for example D:\Dev\curl-7.63.0\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl). Note that if you are compiling on 32-bit platform, `x64` will be `x86`
     * Add `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin` to your [PATH](HowToBuild#adding-directory-to-path) or copy `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl\bin\libcurl.dll` to `your_simc_source_dir`
     * Create a new environment variable name `CURL_ROOT` that contains the value `<curl install path>\builds\libcurl-vc-x64-release-dll-ipv6-sspi-winssl`
-
+  * **To build without CURL** (and its armory import functionality) select the `NoNetworking` configurations from Visual Studios (`WebEngine-NoNetworking` in VS2017 and `Debug-NoNetworking` or `Release-NoNetworking` in VS2019).
   * Open a developer command prompt for Qt (shortcut in start menu), for example `Qt 5.12 64-bit for Desktop (MSVC 2017)`.
 
   * In the command prompt, navigate to `your_simc_source_dir`.
