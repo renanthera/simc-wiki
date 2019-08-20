@@ -19,10 +19,10 @@ There are a total of three available pets to summon (storm, earth, and fire pets
 
 ## Resources
 
-The _initial\_chi_ (scope: player, default: 5 for WW, 1 for BrM & MW) option sets the amount of chi the monk actor has at the beginning of the combat.
+The _initial\_chi_ (scope: player, default: 0 for WW) option sets the amount of chi the monk actor has at the beginning of the combat.
 ```
-# Set the initial chi of the monk actor to four
-initial_chi=4
+# Set the initial chi of the monk actor to one
+initial_chi=1
 
 The _goto\_throttle_ (scope: player, default: 60) option sets the percent number of Gift of the Ox orbs that are picked up
 ```
