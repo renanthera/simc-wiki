@@ -49,9 +49,15 @@ Army of the dead has an option to set the prepull delay. It only works when army
 actions.precombat+=/army_of_the_dead,delay=4
 ```
 
-On 8.2 PTR, Breath of Sindragosa has an increased chance to trigger Runic Empowerment.
-Even though PTR data isn't enabled, you can already simulate that behavior with the following option (scope: player, default: 0)
+Army of the Dead can be entirely disabled from a death knight profile with disable_aotd. (scope: player, default: 0)
+This is made to make the process of running shorter fights that may not use army of the dead without fiddling with the Action Priority List.
 ```
-# BoS has an increased chance to trigger Runic Empowerment
-bos_increases_re_chance=1
+# Run a simulation that will not use Army of the Dead
+disable_aotd=1
+```
+
+The state of the option can also be checked from the APL with death_knight.disable_aotd.
+```
+# Use Festering Strike unless army of the dead will be available soon and it's not disabled
+actions+=/festering_strike,if=cooldown.army_of_the_dead.remains>6|death_knight.disable_aotd
 ```
