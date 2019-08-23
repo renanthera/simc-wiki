@@ -56,6 +56,9 @@ Note: the standard output mentioned on this page is the console output, not your
 ```
  report_pets_separately=1
 ```
+  * **buff_uptime_timeline** (scope: global; default: 0), when set, will record uptime timelines of all non-constant buffs. This will be reported to the buff's JSON output as `"stack_uptime"`. If used in conjunctions with `report_details=1` the HTML report will display the buff uptime timeline chart in the details pane of each buff.
+  * **buff_stack_uptime_timeline** (scope: global; default: 0), when set in conjunction with `buff_uptime_timeline=1`, will record uptime timelines as above but multiply the value by their current stack. This will be reported in the same manner as above.
+
   * **hosted\_html** (scope: global; default: 0), when different from zero, will have the javascript and css contents removed from the html reports and hosted on [simulationcraft.org](http://www.simulationcraft.org). There will be no visible changes but you will need to be able to connect to our website to correctly view the report.
 ```
  html=mytoon.html
