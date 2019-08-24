@@ -166,7 +166,7 @@ Once one of the sub-actions has been performed, Simulationcraft does not immedia
 ```
 # So, some class has three spells: yellow, blue and red. They all share the global cooldown.
 actions+=/yellow
-actions+=/sequence:red:blue
+actions+=/sequence,red:blue
 
 # On the first gcd, yellow is not ready, red and blue are: the application will execute "red"
 # On the second gcd, all spells are ready: the application will execute "yellow"
@@ -201,7 +201,9 @@ actions+=/restart_sequence,name=default
 Do you have headaches already ? Yes, sequences are tricky, they are rarely used. If you do use them, do it with caution.
 
 ## Strict Sequences
-Strict Sequences are a breed of sequence, except for they do not need to be reset, and when they are started, they cannot be stopped under normal circumstances. A strict sequence requires all actions in the sequence to be ready for the duration of the sequence.
+Strict Sequences are a breed of sequence, except for they do not need to be reset, and when they are started, they cannot be stopped under normal circumstances. A strict sequence requires all actions in the sequence to be ready for the duration of the sequence.  
+
+Unlike normal sequences, strict sequences must have a _name_, there is no default.
 ```
 # Arms Warrior will perform Recklessness, bloodbath, colossus smash, mortal strike, whirlwind, whirlwind when all are available.
 # The name allows you to call this sequence from other parts of the action list. 
