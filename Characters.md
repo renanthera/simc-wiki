@@ -5,6 +5,8 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 # Declaration
 
+**Warning**: Make sure to define your character BEFORE you define enemies (if you tinker with those). Otherwise some profileset simulations can potentially become funky.
+
 ## Manual
   * **death\_knight**, **demon_hunter**, **druid**, **hunter**, **mage**, **monk**, **paladin**, **priest**, **shaman**,  **rogue**, **warlock**, **warrior** (scope:new character; default: "") can be used to manually create a new character of the corresponding class.
 ```
