@@ -4,7 +4,7 @@
 
 # Introduction
 
-Just as with [characters](Characters), you can use the TCI to define enemies. This is most useful to tanks, since DPS and healing classes usually don't care what the boss does.
+Just as with [characters](Characters), you can use the TCI to define enemies. This is most useful to tanks, since DPS and healing classes usually don't care what the boss does. Make sure to define enemies AFTER you've defined your character profiles. Otherwise some profileset simulations can potentially become funky.
 
 # Built-in Enemies
 
@@ -75,6 +75,8 @@ In Warlords of Draenor, `<difficulty>` levels will be L, N, H, and M for LFR, No
 # Custom Enemies
 
 Simulationcraft supports defining custom enemies so that you can try to model specific boss encounters. Several properties of the enemy may be set, and you can define custom [action lists](Enemies#Action_Lists.md) for the enemy. You can also code custom raid events (like a periodic raid-wide AoE) that function independently of enemies - see the [Raid Events](RaidEvents) page for more details.
+
+Make sure to define enemies AFTER you've defined your character profiles. Otherwise some profileset simulations can potentially become funky.
 
 Note that all enemy options should only be specified after you declare an enemy.
 ```
