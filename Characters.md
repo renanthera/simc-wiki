@@ -73,15 +73,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 ### From local JSON file
   * If you have your armory profile as a JSON file, you can directly import from it instead of connecting to the armory servers.
-    * **local\_json** (scope: new character; default: "") can be used to import a character from the armory. The syntax is `<file>,<charactername>`. Inactive talent specs are imported with the spec=inactive option.
-```
- # This will import John from the file john.json
- armory=john.json,john
+    * **local\_json** (scope: new character; default: "") can be used to import a character from the armory. The syntax is `local_json=mainfile,spec=specfile,equipment=equipmentfile`. Additionally, there's a `media=mediafile` suboption available if you want to have character backgrounds in the HTML report.
 
- # Same here but we're importing the inactive talents spec.
- armory=john.json,john,spec=inactive
+The files in question, are the sub-documents for a character profile that you get, as per information found in https://us.battle.net/forums/en/bnet/topic/20772457051
 
-```
 
 ## Importation: other sources
   * **wowhead** (scope: new character; default: "") allows you to import a character from wowhead. The syntax is either `wowhead=<id>` or `wowhead=<region>,<server>,<playername1>[,<playername2>,...]`. If the player id or the player name are prefixed with an exclamation mark, the application will import the inactive talents spec.
