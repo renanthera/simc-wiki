@@ -245,6 +245,28 @@ actions+=/slice_and_dice,if=combo_points>=3&buff.slice_and_dice.remains<2
 actions+=/pool_resource,for_next=1,extra_amount=85
 actions+=/shadow_dance,if=energy>=85&combo_points<5&buff.stealthed.down
 ```
+## APL Variables
+APL variables take the general form of _variable,name=,<value=>,<op=>,<delay=>,<condition=>_ If all optional values are omitted the variable will default to the _set_ operation.
+* _name_ is the user assigned name for the variable. This can be used to reference that variable later or to perform additional operations on it.
+* _value_ is the value which is to be used for the operation. This supports any string which can be evaluated to a value as well.
+* _op_ is the operation to perform on the variable. Possible values are:
+    1. _print_ prints the current value of the variable to the log. Requires either _log=1_ or _debug=1_ to generate a log. a 1 second _delay_ value will be used as default to prevent spooling. 
+    1. _reset_ current value is reset to 0.
+    1. _floor_ performs the floor operation on _value_ and sets current value to the result.
+    1. _ceil_ performs the ceil operation on _value_ and sets current value to the result.
+The following operations also require the _value_ to be set:
+    1. _set_ sets the value in the variable to the value in the _value_ parameter
+    1. _add_ adds _value_ to the current value and sets current value to the result.
+    1. _sub_ subtracts _value_ from the current value and sets current value to the result.
+    1. _mul_ multiplies _value_ by the current value and sets current value to the result.
+    1. _div_ divides the current value by _value_ and sets current value to the result. If _value_ is 0 then current value will be set to 0.
+    1. _pow_ raises current value to the power of _value_ and sets current value to the result.
+    1. _mod_ performs the modulo operation on current value with _value_ and sets current value to the result.
+    1. _min_ performs the min operation on current value and _value_ and sets the current value to the result.
+    1. _max_ performs the max operation on current value and _value_ and sets the current value to the result.
+    1. _setif_ Requires the additional parameter _value\_else_. If _value_ evaluates to a non-zero value then sets current value to _value_. Else if _value_ evaluates to 0 then sets current value to _value\_else_
+* _delay_ is the delay (simulation time) before the variable action can be executed again.
+* _condition_ allows [Conditional expressions](Conditional-expressions) to control execution of the variable action.
 
 # Actions modifiers
 All actions have additional options, we're listing them here.
