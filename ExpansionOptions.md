@@ -115,6 +115,30 @@ Enables Crucible of Flames major and Ripple in Space minor but this time uses th
 azerite_essences=ripple_in_space:3:0/crucible_of_flames:3:1
 ```
 
+### Corruption
+
+Battle for Azeroth introduced gear corruption in patch 8.3. This system adds new affixes on gear, as well as two new substats: Corruption and Corruption Resistance. 
+Non-azerite gear obtained in patch 8.3 from seasonal content can come with new powers on top of their regular stats. These bonuses are associated with a Corruption stat increase on the item. Players can remove ("cleanse") the corruption effects from an item or chose to equip it and offset Corruption with Corruption Resistance, obtained from the new legendary cloak and new Azerite Essences.
+You can affect the corruption on a player with the following options:
+ * **gear_corruption** and **gear_corruption_resistance** (scope: player) will override the total corruption and total corruption resistance from a profile's gear.
+ * **enchant_corruption** and **enchant_corruption_resistance** (scope: player) will add (or substract if provided a negative value) the amount specified to the profile's current corruption or corruption resistance
+ * **enchant** (scope: item) can be used in the same way as with regular stats to add a fake enchantment to an item, artificially increasing its Corruption or Corruption Resistance stat
+
+```
+# Override the gear_corruption and gear_corruption_resistance to 30 to ensure that Heart of Darkness is always active
+gear_corruption=30
+gear_corruption_resistance=0
+
+# Add 30 corruption to a profile
+enchant_corruption=30
+
+# Substract 50 corruption resistance from a profile
+enchant_corruption_resistance=-50
+
+# Enchant an item with +15 corruption
+wrists=dragonbone_vambraces,id=174170,bonus_id=4824/1517,enchant=15Cor
+```
+
 ## Legion
 
 ### Items
