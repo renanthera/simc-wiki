@@ -381,6 +381,7 @@ The available keywords are:
  1. Primary: gear\_strength, gear\_agility, gear\_intellect, gear\_stamina, gear\_spirit
  1. Secondary: gear\_mastery\_rating, gear\_haste\_rating, gear\_multistrike\_rating, gear\_versatility\_rating, gear\_crit\_rating, gear\_spell\_power, gear\_attack\_power, gear\_mp5
  1. Defensive: gear\_armor
+ 1. Battle for Azeroth specific: gear\_corruption, gear\_corruption\_resistance
 
 ## Bonuses and maluses
 
