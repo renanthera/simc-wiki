@@ -68,6 +68,14 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
   * **bfa.arcane_heart_hps** (scope global; default 0) Sets the healing per second done on top of the sim damage. Note that not all healing in game is counted for this (E.g. leech). This healing would need to be deducted from the hps seen in game. Accepts any positive int value.
   * **bfa.ripple_in_space_proc_chance** (scope global; default 0) Sets the chance to proc the ripple in space minor. Chance is checked every second and cannot proc while on cooldown. Accepts values from 0.0 to 1.0.
 
+#### 8.3 - Visions of N'Zoth  options
+
+* **bfa.surging_vitality_damage_taken_period** (scope global; default 1) Sets how often to create a fake damage event to attempt to proc Surging Vitality.
+* **bfa.manifesto_allies_start** (scope global; default 0; max 12) Number of allies within 8 yards when the trinket procs (more allies = lower crit)
+* **bfa.manifesto_allies_end** (scope global; default 0; max 5) Number of allies within 5 yards when the proc ends (more allies = more vers)
+* **bfa.echoing_void_collapse_chance** (scope global; default 0; max 1) Chance that the Echoing Void collapses on ability use which deals AOE damage.
+* **bfa.void_ritual_increased_chance_active** (scope global; default 0) Set to 1 to simulate the increased proc chance when allies are near you.
+
 ### Azerite Essences
 Battle for Azeroth introduced Azerite Essences as a different empowerment system to the necklace. Contrary to the Azerite Trait system of Head, Shoulders, and Chest these Essences consist of two separate effects. A major and a minor one. The necklace offers two types of slots. One Major slot, which activated the major **and** minor effect of the applied essence and 2 minor slots, which activate only the minor effects. Selection and replacement of the essences happens for free in any resting area. SimulationCraft offers the following additional option to add these effects to a profile.
 
