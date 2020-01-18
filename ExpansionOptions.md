@@ -70,6 +70,7 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
 
 #### 8.3 - Visions of N'Zoth  options
 
+* **bfa.voidtwisted_titanshard_percent_duration** (scope global; default 0) How long the crit buff lasts (as a percentage). 0 and 1 both provide full duration (15 seconds), 0.5 would provide half duration (7.5 seconds)
 * **bfa.surging_vitality_damage_taken_period** (scope global; default 1) Sets how often to create a fake damage event to attempt to proc Surging Vitality.
 * **bfa.manifesto_allies_start** (scope global; default 0; max 12) Number of allies within 8 yards when the trinket procs (more allies = lower crit)
 * **bfa.manifesto_allies_end** (scope global; default 0; max 5) Number of allies within 5 yards when the proc ends (more allies = more vers)
