@@ -78,7 +78,7 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
 * **bfa.void_ritual_increased_chance_active** (scope global; default 0) Set to 1 to simulate the increased proc chance when allies are near you.
 * **bfa.symbiotic_presence_interval** (scope global; default 22) Approximate interval in seconds between raid member major essence uses that trigger Symbiotic Presence.
 * **bfa.whispered_truths_offensive_chance** (scope global; default 0.75) Percentage of Whispered Truths reductions to be applied to offensive spells.
-  * **bfa.nyalotha** (scope: global; default: 1) Specifies whether the players are in Ny'alotha, which is relevant for the Titanic Empowerment set bonus.
+* **bfa.nyalotha** (scope: global; default: 1) Specifies whether the players are in Ny'alotha, which is relevant for the Titanic Empowerment set bonus.
 
 ### Azerite Essences
 Battle for Azeroth introduced Azerite Essences as a different empowerment system to the necklace. Contrary to the Azerite Trait system of Head, Shoulders, and Chest these Essences consist of two separate effects. A major and a minor one. The necklace offers two types of slots. One Major slot, which activated the major **and** minor effect of the applied essence and 2 minor slots, which activate only the minor effects. Selection and replacement of the essences happens for free in any resting area. SimulationCraft offers the following additional option to add these effects to a profile.
