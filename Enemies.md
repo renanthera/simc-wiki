@@ -12,15 +12,17 @@ Simulationcraft has some built-in enemies ready-made for you to use.
 
 ## Fluffy Pillow
 
-If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists).
+If you don't specify an enemy, SimC will spawn Fluffy Pillow as your adversary. For DPS specs, Fluffy Pillow is just what he sounds like, and just stands there and takes it while you kill him. For a healing spec, he auto-attacks the [Healing Enemy](Enemies#Healing_Enemy.md) described below. However, for a tank spec, Fluffy Pillow becomes a monstrosity that throws every attack he has at you (see the section on [enemy action lists](Enemies#Action_Lists)).
 
 ## Healing Enemies
+
+**Note: Healing is currently not properly supported** 
 
 If you run a simulation with healers and don't specify a target for them to heal (see [Character Basics](Characters#Basics)), the simulation will spawn a "healing enemy" for your healer to heal. It will also spawn a Fluffy\_Pillow that attacks the healing target so that you won't overheal.
 
 ## Tank Raid Dummies
 
-Simc now also has models for the tank dummies that are available in Shattrath City (Outlands) on beta/PTR realms. These enemies have the same melee, Dummy Strike, and Uber Strike attacks that the tank dummies do. You can define one of these enemies with the **tank\_dummy** command and **tank\_dummy\_type** option:
+Simc now also has models for the tank dummies that are available in most major cities. These enemies have the same melee, Dummy Strike, and Uber Strike attacks that the tank dummies do. You can define one of these enemies with the **tank\_dummy** command and **tank\_dummy\_type** option:
 
 ```
   #Create a Weak Tank Dummy named Alice
@@ -41,6 +43,8 @@ Simc now also has models for the tank dummies that are available in Shattrath Ci
 ```
 
 ## TMI Standard Bosses
+
+**Note: Tanking and thus TMI is currently not properly supported** 
 
 The default boss (`Fluffy_Pillow`) uses a mixture of abilities, but isn't regularly adjusted to content levels. For tanks, there are a set of "standard" bosses that are designed for generating reliable/repeatable TMI scores for tanks. These bosses use auto attacks and apply a ticking dot, and the damage values are roughly tuned to simulate specific content levels. The **tmi\_boss** command and **tmi\_boss\_type** option are used to define a TMI standard boss. The syntax is
 
