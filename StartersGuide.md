@@ -104,7 +104,7 @@ The existing options in the **options** tab allow you to use 80% of Simulationcr
 ```
 
 # Simulationcraft as a Tank
-With the release of MoP, we started adding support for tanks. See the [Simulationcraft For Tanks](SimcForTanks) appendix for details on how to customize your simulation for tanking.
+With the release of MoP, we started adding support for tanks. See the [Simulationcraft For Tanks](SimcForTanks) appendix for details on how to customize your simulation for tanking. Currently only dps is supported for tanks.
 
 # The command-line client
 At first, Simulationcraft was a command-line tool and people had to use the [TCI](TextualConfigurationInterface) through configuration files passed as arguments to the command line. Nowadays, although the GUI cover the needs of most of our users, the command-line client remains and many people still prefer to use it. Actually, once you're used to it (and it's really not that hard!), it's far more convenient to use than the GUI.
