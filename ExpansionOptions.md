@@ -70,7 +70,7 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
 
 #### 8.3 - Visions of N'Zoth  options
 
-* **bfa.voidtwisted_titanshard_percent_duration** (scope global; default 0.5) How long the crit buff lasts (as a percentage). 0 and 1 both provide full duration (15 seconds), 0.5 would provide half duration (7.5 seconds)
+* **bfa.voidtwisted_titanshard_percent_duration** (scope global; default 0.5) How long the crit buff lasts (as a percentage). For example 1 provides full duration (15 seconds) and 0.5 would provide half duration (7.5 seconds)
 * **bfa.surging_vitality_damage_taken_period** (scope global; default 0) Sets how often to create a fake damage event to attempt to proc Surging Vitality.
 * **bfa.manifesto_allies_start** (scope global; default 0; max 12) Number of allies within 8 yards when the trinket procs (more allies = lower crit)
 * **bfa.manifesto_allies_end** (scope global; default 5; max 5) Number of allies within 5 yards when the proc ends (more allies = more vers)
@@ -102,6 +102,7 @@ Only 2 or 3 element tokens for major/minor powers allowed. If 2 element tokens a
 4    Worldvein
 5    Focusing Iris
 6    Purification Protocol
+7    Anima of Life and Death
 12   Crucible of Flames (Concentrated Flames)
 14   Condensed Life-Force / Guardian of Azeroth
 15   Ripple in Space
@@ -110,6 +111,9 @@ Only 2 or 3 element tokens for major/minor powers allowed. If 2 element tokens a
 27   Lucid Dreams
 28   Unbound Force
 32   Conflict and Strife
+35   Breath of the Dying
+36   Spark of Inspiration
+37   The Formless Void
 ```
 
 **Examples**
