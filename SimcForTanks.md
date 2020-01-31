@@ -3,7 +3,7 @@
 
 
 # Simulationcraft as a Tank
-Simulationcraft now supports a number of options to facilitate simming and analyzing tank performance.
+Simulationcraft currently does not fully support simming and analyzing tank performance due to lack of updates.
 
 # Enemies
 If you simulate a tank, the default boss "Fluffy Pillow" will not only take hits from the raid, but also deal a lot of damage to any tank in the simulation. However, you can also choose to use one of several other preconfigured enemies or create a custom enemy that's more to your liking.
