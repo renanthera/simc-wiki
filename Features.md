@@ -77,5 +77,5 @@ Limitations
 =====================
 At first, Simulationcraft was made for damage dealers, with just a dummy target. It evolved since then but there are still some limitations although we hope to see some of them be removed.
 
- * **Tanking:** Warrior, Druid, Blood DK and Paladin should have fairly complete support. Brewmaster is advanced as well, but would require their dedicated developer completing and testing everything.
- * **Healing:** Only the Priest ( Discipline and Holy ) module has been completely developed.
+ * **Tanking:** No tanking support currently.
+ * **Healing:** No healing support currently.
