@@ -293,7 +293,7 @@ actions+=/some_expensive_spell,if=mana.pct>50
 ##### 2 Parts
 * _variable_._`<`variablename`>`_ evaluates to the current value of the player's variable.
 
-* _equipped_._`<`item_id`>`_ or _equipped_._`<`item_name`>`_ or _equipped_._`<`on_use_effect_name`>`_ evaluates to true if the player has equipped the specified item or an item with the specified on-use effect.
+* _equipped_._`<`item_id`>`_ or _equipped_._`<`item_name`>`_ or _equipped_._`<`on_use_effect_name`>`_ or _equipped_._`<`on_equip_effect_name`>`_ evaluates to true if the player has equipped the specified item or an item with the specified effect.
 
 * _main_hand_._1h_, _main_hand_._2h_, _off_hand_._1h_, _off_hand_._2h_ evaluates to true if the player has the specified weapon type equipped.
 
