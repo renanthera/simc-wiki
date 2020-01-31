@@ -14,15 +14,12 @@ This page details various features that are either missing from the sim, that wo
   * Improved add support.
 
 ## Classes
-  * In general, AoE support for all classes
-  * Death Knight
-    * Blood DPS support
+  * Update for tanking support (all tanks)
+  * Update for healing support (all healers)
 
 # Nice to Have
   * GUI Paperdoll
   * World of Warcraft client combat log export
-  * Improved HTML Output Sorting
-    * A nice feature would be to be able to sort by damage percentage on the results. Ideally on the web page resulted.
   * Buff Reaction Times: Make reaction times dependent on the observer, not on the buff source.
   * Allow scaling of all stats when explicitly specified
     * Expect to be able to calculate Scale Factor for X, even if X isn't calculated by default by calculate\_scale\_factors=1
