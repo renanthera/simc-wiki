@@ -22,7 +22,6 @@ We only document here non-obvious entries.
 
 ## Procs
   * combo\_points\_wasted: combo points wasted because you were already capped.
-  * wrong\_eclipse\_wrath/starfire: number of times you casted wrath instead of starfire and vice-versa (unanticipated eclipse proc). With a perfect skill (1.0), it measures the efficiency of the actions list.
 
 ## Uptimes
   * energy\_cap: fraction of the fight spent with a full energy bar.
