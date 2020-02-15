@@ -76,7 +76,7 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
 * **bfa.manifesto_allies_end** (scope global; default 5; max 5) Number of allies within 5 yards when the proc ends (more allies = more vers)
 * **bfa.echoing_void_collapse_chance** (scope global; default 0.15; max 1) Chance that the Echoing Void collapses on ability use which deals AOE damage.
 * **bfa.void_ritual_increased_chance_active** (scope global; default 0) Set to 1 to simulate the increased proc chance when allies are near you.
-* **bfa.symbiotic_presence_interval** (scope global; default 22) Approximate interval in seconds between raid member major essence uses that trigger Symbiotic Presence.
+* **bfa.symbiotic_presence_interval** (scope global; default 22) Approximate interval in seconds between raid member major essence uses that trigger Symbiotic Presence (The Formless Void).
 * **bfa.whispered_truths_offensive_chance** (scope global; default 0.75) Percentage of Whispered Truths reductions to be applied to offensive spells.
 * **bfa.nyalotha** (scope: global; default: 1) Specifies whether the players are in Ny'alotha, which is relevant for the Titanic Empowerment set bonus.
 
