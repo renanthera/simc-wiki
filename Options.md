@@ -212,3 +212,9 @@ Simulationcraft divides the time into very short slices, which are sequentially 
 ```
  confidence=0.97
 ```
+
+## Allow experimental specialization
+  * **allow_experimental_specializations** (scope: global; default: 0) if enabled allows circumventing the deactivation for not fully supported, experimental class specialization. This affects mostly healer specs which often have some basic, but no full support in SimulationCraft. Please note that this is a positional option and needs to come before the character creation.
+```
+allow_experimental_specializations=1
+```
