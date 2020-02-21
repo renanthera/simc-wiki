@@ -153,6 +153,26 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 `frozen_duration=<time in seconds>` overrides this default duration with a user specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
 
+### Frost Mage Rotations
+
+There are multiple Frost Mage builds that use different rotations. The `rotation` option can be used to specify which APL will be loaded. The valid options are `rotation=standard` for the standard Frost Mage rotation applicable to most cases, `rotation=no_ice_lance` for the No Ice Lance rotation, and `rotation=frozen_orb` for the Frozen Orb rotation.
+
+### Overriding APL Variables
+
+The default Mage APLs include several variables, which can be configured through the `apl_variable` option.
+
+#### Disabling Combustion
+
+Combustion and any cooldowns such as Essences or Trinkets that are only ever used with Combustion can be disabled with `apl_variable.disable_combustion=1`. This is mainly useful for exploring scenarios where Combustion will not be used, such as some trash pulls in dungeons.
+
+#### Delaying Combustion for Essence Cooldowns
+
+Sometimes, it can be better to delay Combustion for Memory of Lucid Dreams or Worldvein Resonance. By default, if Combustion is ready and one of those essences will be ready within 20 seconds, then Combustion will be delayed. The threshold where this occurs can be configured with `apl_variable.hold_combustion_threshold=<time in seconds>`.
+
+#### Channeling Azshara's Font of Power Before Combat Begins
+
+It is common for Mages to channel Azshara's Font of Power long before combat begins so that another trinket can be used with their cooldowns. By default when two on-use trinkets that are used with Combustion or Arcane Power are equipped, the Fire APL will channel Azshara's Font of Power 18 seconds before combat and the Arcane APL will channel it 12 seconds before combat. This timing can be configured with `apl_variable.font_of_power_precombat_channel=<time in seconds>`. This can also be configured globally for all players by using `bfa.font_of_power_precombat_channel=<time in seconds>`. If both options are specified, then the value given by `bfa.font_of_power_precombat_channel` will be used.
+
 ## Crowd control
 
 Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
