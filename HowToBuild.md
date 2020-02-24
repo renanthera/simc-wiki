@@ -18,7 +18,7 @@
   * Building the command line interface (CLI) is very easy on all platforms
   * Building the graphical user interface (GUI) is considerably harder
     * The GUI was built using [Qt](http://qt-project.org/)
-    * Building the GUI requires that the Qt libraries be downloaded and installed
+    * Building the GUI requires that the Qt libraries be downloaded and installed, **including the Webengine component**
     * Qt DLLs are used at runtime, so they need to be in your PATH; to create a release package, a subset must be shipped with it.
     * Refer to platform-specific directions below
 
