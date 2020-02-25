@@ -191,8 +191,8 @@ Building SimulationCraft on OS X requires you to install the XCode development e
 ## Graphical User Interface / Qmake builds
   * Install Qt 5
     * If you use Qt 5.1, you should fix the install names for Qt frameworks by pointing the `qt/fix_qt51_osx_paths.sh` to your qt install directory (the `clang_64` directory). This is only relevant if you are building a release, though, or intend to use the `macdeployqt` binary to create a framework independent bundle of `SimulationCraft.app`.
-  * In terminal, issue "qmake simcqt.pro". This will create a `Makefile` in your simc source directory.
-  * If you receive an error from Qmake such as `Project ERROR: Could not resolve SDK path for 'macosx10.9'`, you will need to explicitly tell make what OS X SDK to use, for example `qmake QMAKE_MAC_SDK=macosx<version> simcqt.pro`, where <version> is your OS X version (e.g., 10.10, 10.11). Note that the "OS X" version here is at least partly determined by your Xcode version, and may not match 1:1 with your operating system version.
+  * In terminal, issue "qmake simulationcraft.pro". This will create a `Makefile` in your simc source directory.
+  * If you receive an error from Qmake such as `Project ERROR: Could not resolve SDK path for 'macosx10.9'`, you will need to explicitly tell make what OS X SDK to use, for example `qmake QMAKE_MAC_SDK=macosx<version> simulationcraft.pro`, where <version> is your OS X version (e.g., 10.10, 10.11). Note that the "OS X" version here is at least partly determined by your Xcode version, and may not match 1:1 with your operating system version.
   * Then, issuing "make" in the terminal will build SimulationCraft.app to your source directory.
 
 ## Graphical User Interface / XCode builds
