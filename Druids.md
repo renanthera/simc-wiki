@@ -1,5 +1,11 @@
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
+## APL expressions
+
+* **ap_check.<allowed overcap = 0>** Returns false if the action Astral Power + (if enabled) Nature's Balance passive Astral Power over execute time + (if enabled) Shooting Stars 1 proc Astral Power is higher than the maximum Astral Power. True otherwise.
+
+* **<action>.ap_check.<allowed overcap = 0>** Same as above with the distinction that the action is specified.
+
 ## Options
 
 * **initial_astral_power** (default: 8) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
