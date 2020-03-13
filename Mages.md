@@ -173,6 +173,12 @@ Sometimes, it can be better to delay Combustion for Memory of Lucid Dreams or Wo
 
 It is common for Mages to channel Azshara's Font of Power long before combat begins so that another trinket can be used with their cooldowns. By default when two on-use trinkets that are used with Combustion or Arcane Power are equipped, the Fire APL will channel Azshara's Font of Power 18 seconds before combat and the Arcane APL will channel it 12 seconds before combat. This timing can be configured with `apl_variable.font_of_power_precombat_channel=<time in seconds>`. This can also be configured globally for all players by using `bfa.font_of_power_precombat_channel=<time in seconds>`. If both options are specified, then the value given by `bfa.font_of_power_precombat_channel` will be used.
 
+#### Configuring Flamestrike usage
+
+The number of targets at which Flamestrike should be used can vary significantly with gear and talents. Due to this, the thresholds used by the default APL may not be optimal for all gearsets. The target thresholds for using Flamestrike can be configured with `apl_variable.hot_streak_flamestrike=<number of targets>` and `apl_variable.hard_cast_flamestrike=<number of targets>`. These will configure the number of targets at which Flamestrike will be used outside of Combustion with Hot Streaks or as hard cast filler, respectively.
+
+After Combustion, a large Ignite will usually be present on the primary target. Due to Ignite spreading mechanics, using Flamestrike is often a significant DPS loss after Combustion while this Ignite has a lot of damage stored in it. By default, Flamestrike usage will not resume until 25 seconds after Combustion ends. This delay can be adjusted with `apl_variable.delay_flamestrike=<time in seconds>`.
+
 ## Crowd control
 
 Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
