@@ -230,7 +230,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   ```
 
 # Invulnerability
-  The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots on it (debuffs will remain though, because of a bug). There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not, see [ActionLists](ActionLists).
+  The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots and debuffs on it. There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not, see [ActionLists](ActionLists).
 
   Specific options are:
   1. _retarget_ (default: 0) wether the players should acquire a new target or not.
