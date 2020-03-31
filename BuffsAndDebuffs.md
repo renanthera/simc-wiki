@@ -19,7 +19,7 @@ You can override the helpful buffs and target debuffs you benefit from the **opt
 Beware! You need to declare the overrides **`***`after`***`** you declared **optimal\_raid**!
 
   * Unique buffs and debuffs
-    * **override.bloodlust** and **override.bloodlust\_early** (see the relevant section below)
+    * **override.bloodlust** (see the relevant section below)
     * **override.arcane_intellect**
     * **override.battle_shout**
     * **override.power_word_fortitude**
