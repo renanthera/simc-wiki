@@ -285,6 +285,7 @@ actions+=/some_expensive_spell,if=mana.pct>50
 ```
 * _energy.regen_ and _focus.regen_ are the amount of regenerated points per second for the corresponding resources.
 * _energy.time\_to\_max_ and _focus.time\_to\_max_ are the time, in seconds, you would need to fully regenerate the corresponding resources assuming you would not spend anymore. It only takes into account the natural regeneration, not possible procs and such.
+* _energy.time\_to\_x_ and _focus.time\_to\_x_ are the time, in seconds, you would need to regenerate to the specified amount under similar rules as above. Example: _energy.time_to_50_ would check when the player would reach 50 energy (or greater.)
 * _`<resource>`.net\_regen_ is the net resource regen a player has had so far in combat. Basically, it's the resources gained minus resources lost, divided by the current time.
 * _stat.`<x>`_ is the value of a certain stat.  _`<x>`_ can be any of: strength, agility, stamina, intellect, spirit, health, maximum\_health, mana, maximum\_mana, rage, maximum\_rage, energy, maximum\_energy, focus, maximum\_focus, runic, maximum\_runic, spell\_power, mp5, attack\_power, expertise\_rating, inverse\_expertise\_rating, hit\_rating, inverse\_hit\_rating, crit\_rating, haste\_rating, weapon\_dps, weapon\_speed, weapon\_offhand\_dps, weapon\_offhand\_speed, armor, bonus\_armor, resilience\_rating, dodge\_rating, parry\_rating, block\_rating, mastery\_rating.
 
