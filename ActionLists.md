@@ -246,12 +246,13 @@ actions+=/pool_resource,for_next=1,extra_amount=85
 actions+=/shadow_dance,if=energy>=85&combo_points<5&buff.stealthed.down
 ```
 ## APL Variables
-APL variables take the general form of _variable,name=,<value=>,<op=>,<delay=>,<condition=>_ If all optional values are omitted the variable will default to the _set_ operation.
+APL variables take the general form of _variable,name=,<default=>,<value=>,<op=>,<delay=>,<condition=>,<if=>_ If all optional values are omitted the variable will default to the _set_ operation.
 * _name_ is the user assigned name for the variable. This can be used to reference that variable later or to perform additional operations on it.
+* _default_ is the initial value of the variable. If not given as an option, 0 will be used.
 * _value_ is the value which is to be used for the operation. This supports any string which can be evaluated to a value as well.
 * _op_ is the operation to perform on the variable. Possible values are:
     1. _print_ prints the current value of the variable to the log. Requires either _log=1_ or _debug=1_ to generate a log. a 1 second _delay_ value will be used as default to prevent spooling. 
-    1. _reset_ current value is reset to 0.
+    1. _reset_ current value is reset to _default_.
     1. _floor_ performs the floor operation on _value_ and sets current value to the result.
     1. _ceil_ performs the ceil operation on _value_ and sets current value to the result.
 The following operations also require the _value_ to be set:
@@ -264,9 +265,14 @@ The following operations also require the _value_ to be set:
     1. _mod_ performs the modulo operation on current value with _value_ and sets current value to the result.
     1. _min_ performs the min operation on current value and _value_ and sets the current value to the result.
     1. _max_ performs the max operation on current value and _value_ and sets the current value to the result.
-    1. _setif_ Requires the additional parameter _value\_else_. If _value_ evaluates to a non-zero value then sets current value to _value_. Else if _value_ evaluates to 0 then sets current value to _value\_else_
+    1. _setif_ Requires the additional parameter _value\_else_. If _condition_ evaluates to a non-zero value then sets current value to _value_. Else if _value_ evaluates to 0 then sets current value to _value\_else_
 * _delay_ is the delay (simulation time) before the variable action can be executed again.
-* _condition_ allows [Conditional expressions](Conditional-expressions) to control execution of the variable action.
+* _if_ allows [Conditional expressions](Conditional-expressions) to control execution of the variable action.
+* **apl_variable** (scope: current character) is an option that can be used to override the _default_ value of an APL variable.
+```
+# override the default value of an APL variable called "aoe_threshold" to 5.
+apl_variable.aoe_threshold=5
+```
 
 # Actions modifiers
 All actions have additional options, we're listing them here.
