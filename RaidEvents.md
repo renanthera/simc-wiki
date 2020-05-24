@@ -34,8 +34,8 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   * _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
-      raid_events+=/movement,players_only=1,first=22,cooldown=33,distance=20,last=337
-      raid_events+=/movement,players_only=1,first=13,cooldown=13,duration=7
+      raid_events+=/movement,distance=25,first=22,cooldown=33,last=337
+      raid_events+=/movement,players_only=1,distance=8,first=13,cooldown=18
     ```
   * _HelterSkelter_ will set up a "crazy" fight. It is equivalent to:
     ```
