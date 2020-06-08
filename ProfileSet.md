@@ -10,6 +10,8 @@ This has several benefits, the largest being that profile sets only require memo
 
 Note that profile sets only output summary information about the simulated actor. This includes at most the minimum, first quartile, median, mean, third quartile, and maximum metric values, as well as the standard deviation and the number of iterations used. The full information content is only available in JSON reports, the textual report only outputs the median value, and the HTML report includes all but standard deviation and number of iterations.
 
+**Note, profileset functionality is only available on the command-line Simulationcraft program.**
+
 ## Usage
 
 Profile sets can be created in the simulator with the following format:
