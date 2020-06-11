@@ -72,8 +72,8 @@ For example, if you set `bfa.font_of_power_precombat_channel=10` you will be con
 
 * **bfa.voidtwisted_titanshard_percent_duration** (scope global; default 0.5) How long the crit buff lasts (as a percentage). For example 1 provides full duration (15 seconds) and 0.5 would provide half duration (7.5 seconds)
 * **bfa.surging_vitality_damage_taken_period** (scope global; default 0) Sets how often to create a fake damage event to attempt to proc Surging Vitality.
-* **bfa.manifesto_allies_start** (scope global; default 0; max 12) Number of allies within 8 yards when the trinket procs (more allies = lower crit)
-* **bfa.manifesto_allies_end** (scope global; default 5; max 5) Number of allies within 5 yards when the proc ends (more allies = more vers)
+* **bfa.manifesto_allies_start** (scope global; default 0; max 12) Number of allies within 8 yards when the trinket is used (more allies = lower crit)
+* **bfa.manifesto_allies_end** (scope global; default 4; max 4) Number of allies within 5-20 yards(depending on cloak rank) when the first buff ends (more allies = more vers)
 * **bfa.echoing_void_collapse_chance** (scope global; default 0.15; max 1) Chance that the Echoing Void collapses on ability use which deals AOE damage.
 * **bfa.void_ritual_increased_chance_active** (scope global; default 0) Set to 1 to simulate the increased proc chance when allies are near you.
 * **bfa.symbiotic_presence_interval** (scope global; default 22) Approximate interval in seconds between raid member major essence uses that trigger Symbiotic Presence (The Formless Void).
