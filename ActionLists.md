@@ -339,7 +339,7 @@ actions+=/whirlwind,if=prev_gcd.whirlwind
 * _prev\_off\_gcd_ returns all off gcd actions that occurred since the previous gcd was executed. So after a warrior uses raging blow, it will track every off-gcd action until another gcd action is executed, then it is reset.
 ```
 # Only use recklessness if bloodbath was just executed.
-actions+=/recklessness,if=prev_off_gcd=bloodbath
+actions+=/recklessness,if=prev_off_gcd.bloodbath
 ```
 
 ## Time-based usages
