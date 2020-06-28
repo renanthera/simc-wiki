@@ -189,8 +189,9 @@ Here is an example that illustrates the actions and their options:
 ```
 
 # Multiple Targets (AoE)
+Multiple enemies can be added using `desired_targets=X` where X is the number of total targets.
 
-To simulate an AoE fight, simply define multiple enemies.  This simple example simulates a fight with 4 targets:
+Alternatively, simply define multiple enemies.  This simple example simulates a fight with 4 targets:
 ```
  enemy=Fluffy_Pillow
  enemy=enemy2
