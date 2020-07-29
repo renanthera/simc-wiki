@@ -84,6 +84,7 @@ data source), operand\_type and a brief description:
   * power\_id, spell/azerite, NUMBER (azerite armor trait id, **Added in version 8.0**)
   * essence\_id, spell, NUMBER (heart of azeroth essence id, **Added in version 8.2**)
   * covenant, spell, STRING (covenant name in lowercase, **Added in version 9.0.1 release 1**)
+  * conduit_id, spell, NUMBER (conduit identifier, **Added in version 9.0.1 release 1**)
 
 For numeric data fields, the following numeric operators between a spell list
 and a numeric right-side operand are available: ==, !=, >, <, >=, <=. All string data
