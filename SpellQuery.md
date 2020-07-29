@@ -31,6 +31,7 @@ identifiers. The following identifier data sources have been defined:
   * azerite - All azerite power spells (**Added in version 8.0**)
   * covenant_spell - All Covenant abilities (**Added in version 9.0.1, release 1**)
   * soulbind_spell - All Soulbind abilities (**Added in version 9.0.1, release 1**)
+  * conduit_spell - All Soulbind conduit abilities (**Added in version 9.0.1, release 1**)
 
 A data source can be filtered by giving it a data field name, by suffixing the
 data source name with a period and the filtering data field name. Currently the
