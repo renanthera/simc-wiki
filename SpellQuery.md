@@ -29,6 +29,8 @@ identifiers. The following identifier data sources have been defined:
   * perk\_spell - All perk spells (NOTE: WoD only)
   * artifact - All artifact spells (**Added in version 703-1, Removed in 8.0**)
   * azerite - All azerite power spells (**Added in version 8.0**)
+  * covenant_spell - All Covenant abilities (**Added in version 9.0.1, release 1**)
+  * soulbind_spell - All Soulbind abilities (**Added in version 9.0.1, release 1**)
 
 A data source can be filtered by giving it a data field name, by suffixing the
 data source name with a period and the filtering data field name. Currently the
@@ -80,6 +82,7 @@ data source), operand\_type and a brief description:
   * row, talent, NUMBER (talent "tier" 0..6)
   * power\_id, spell/azerite, NUMBER (azerite armor trait id, **Added in version 8.0**)
   * essence\_id, spell, NUMBER (heart of azeroth essence id, **Added in version 8.2**)
+  * covenant, spell, STRING (covenant name in lowercase, **Added in version 9.0.1 release 1**)
 
 For numeric data fields, the following numeric operators between a spell list
 and a numeric right-side operand are available: ==, !=, >, <, >=, <=. All string data
