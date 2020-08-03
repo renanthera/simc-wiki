@@ -52,3 +52,11 @@ Regular buffs for this class are not mentioned here, you just have to follow the
 
 # Reports
 We only document here non-obvious entries.
+
+# Custom Options
+
+## Boon of the Ascended (Kyrian Covenant Ability)
+When running a sim for a player that is apart of the Kyrian covenant (`covenant=kyrian`) you will get access to a new ability: Boon of the Ascended. This ability gives you access to Ascended Blast (replaces Mind Flay / Smite) and Ascended Nova (8yd range) and will explode with Ascended Eruption (15yd range) based on the amount of stacks. By default the sim will cast all of these abilities and assume you are in range of ALL targets (unless you have added targets outside of the range). To disable this you can easily use these options:
+
+- `priest_use_ascended_nova=0` (default: `1`)
+- `priest_use_ascended_eruption=0` (default: `1`)
