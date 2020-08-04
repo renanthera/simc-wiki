@@ -64,5 +64,5 @@ When running a sim for a player that is apart of the Kyrian covenant (`covenant=
 ## Mindgames (Venthyr Covenant Ability)
 This ability gives a total of 40 insanity, however in order to get the full amount the target you cast it on must heal and do damage to break the shield. A player is given 20 insanity for each component that is broken up to a total of 40. By default SimC only assumes that the damage amount is broken, so the actor is only given 20 insanity. You can easily overwrite this with the following options:
 
-- `priest_mindgames_damage_insanity` (default: `1`)
-- `priest_mindgames_healing_insanity` (default: `0`)
+- `priest_mindgames_damage_insanity=1` (default: `1`)
+- `priest_mindgames_healing_insanity=0` (default: `0`)
