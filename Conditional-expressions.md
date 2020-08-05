@@ -21,6 +21,7 @@ Most known operators are the arithmetic ones, so we're going to use them to intr
 * **`%`** is the division operator: it returns the division of the left by the right member.
 * **`-`** is the either the binary subtraction operator (returns the difference between the left and right members) or the unary negation operator ("-7" returns the opposite of the right member, 7).
 * **`+`** is either the binary addition operator (returns the sum of the left and right members) or the unary "plus", which has no effect (+7 transforms 7 into 7).
+* **`%%`** is the modulo operator: it returns the integer remainder of the division operator (**New in Simulationcraft 9.0.1 release 1**)
 
 In addition to the above, Simulationcraft has additional functions defined to perform basic operations on expressions:
 
