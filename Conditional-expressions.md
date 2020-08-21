@@ -102,6 +102,7 @@ actions+=/shadow_word_pain,if=(!ticking|dot.shadow_word_pain.remains<gcd+0.5)&mi
 * _ticks_, for a dot or a hot, will return the number of ticks done so far since the last time the dot was refreshed.
 * _ticks\_remain_, for a dot or a hot, will return the number of remaining ticks before the dot expires.
 * _remains_, for a dot or a hot, will return the remaining time, in seconds, before the dot expires. It does NOT apply to buffs and debuffs.
+* _full_recharge_time_, will return time until all charges of a spell are fully recharged
 * _tick\_time_, for a dot or a hot, is the time in seconds between ticks, if cast using your current haste.
 * _travel\_time_ is the timespan, in seconds, the spell will need to reach its target (a fireball for example).
 * _miss\_react_ is 1 if the last occurrence of this action missed or has never been used, 0 otherwise, taking into account the reaction time, as specified through **reaction\_time**. If you specified 0.5s and the miss only occurred 0.3s ago, this property will return 1.
