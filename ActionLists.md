@@ -297,6 +297,8 @@ actions+=/moonfire,cycle_targets=1,if=!ticking
 actions+=/moonfire,cycle_targets=1,max_cycle_targets=3,if=!ticking
 ```
 
+**Note**: if you are looking for how to check specific buffs/debuffs on a target check the [Conditional Expressions page](https://github.com/simulationcraft/simc/wiki/Conditional-expressions#buffs-and-debuffs).
+
 ## Usage on specific events only
 
 * _buff.bloodlust.react_ (default: 0), when different from zero, will flag the action as usable only when bloodlust (heroism, time warp, etc) is active. When left to zero, the action will be usable anytime.
