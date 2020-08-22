@@ -11,8 +11,11 @@ By default PWS will debuff the target with the Weakened Soul debuff and prevent 
   actions+=/power_word_shield,ignore_debuff=1
 ```
 
-## Power Infusion + Twins of the Sun Priestess (Legendary) + Power Unto Others (Conduit)
-For Shadowlands, the SimC module for priest's assumes that if you are using the Twins of the Sun Priestess Legendary we can check if you have the Power Unto Others conduit to give CD reduction to Power Infusion. The implementation does not actually cast Power Infusion on another actor in the sim, but just assumes that you have done this if using both the Legendary and Conduit together in a sim.
+## Power Infusion
+Power Infusions assumes that the actor is using the spell for its self-use only. To change this behavior, you need to set the option `priest_self_power_infusion` to false. Doing so will change the uptime of PI of the actor to 0%, unless using the legendary Twins of the Sun Priestess 
+
+### Power Unto Others (Conduit)
+This Conduit only works if you have `priest_self_power_infusion` set to false or if you have the legendary Twins of the Sun Priestess equipped, as otherwise the actor is using PI on itself.
 
 # Custom Options
 
@@ -30,6 +33,9 @@ This ability gives a total of 40 insanity, however in order to get the full amou
 
 - `priest_mindgames_damage_insanity=1` (default: `1`)
 - `priest_mindgames_healing_insanity=0` (default: `0`)
+
+## Fae Guardians (Night Fae Covenant Ability)
+Part of this ability increases the rate of which major cooldowns recharge, Shadowfiend/Mindbender and Power Infusion for Priests. You can simulate this effect being given to other players by changing the option `priest_self_benevolent_faerie` to false. 
 
 # Healing implementation
 Healing sims are not currently supported in SimC. The following section is leftover from the last time this was worked on.
