@@ -17,6 +17,10 @@ Power Infusions assumes that the actor is using the spell for its self-use only.
 ### Power Unto Others (Conduit)
 This Conduit only works if you have `priest_self_power_infusion` set to false or if you have the legendary Twins of the Sun Priestess equipped, as otherwise the actor is using PI on itself.
 
+# Bugs
+By activating `bugs=1` inside your character's sim you will get access to the following bugs:
+- Fae Guardians Wrathful Faerie no longer has a 2s ICD
+
 # Custom Options
 
 ## Ignore Healing Events
