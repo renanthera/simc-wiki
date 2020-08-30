@@ -61,7 +61,7 @@ Full example to convert ItemSparse DBC into a JSON file
 
 # This would create /tmp/casc-data/8.0.1.26715
 
-./dbc_extract.py -b 8.0.1.26715 -t json -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.csv
+./dbc_extract.py -b 8.0.1.26715 -t json -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.json
 ```
 
 To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
