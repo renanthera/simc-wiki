@@ -17,7 +17,7 @@
   * **Starting from Simulationcraft 8.1.0 release 2, libcurl (https://curl.haxx.se) is required for armory imports on non-windows platforms**
   * Building the command line interface (CLI) is very easy on all platforms
   * Building the graphical user interface (GUI) is considerably harder
-    * The GUI was built using [Qt](http://qt-project.org/)
+    * The GUI is built using [Qt](http://qt-project.org/)
     * Building the GUI requires that the Qt libraries be downloaded and installed, **including the Webengine component**
     * Qt DLLs are used at runtime, so they need to be in your PATH; to create a release package, a subset must be shipped with it.
     * Refer to platform-specific directions below
@@ -26,16 +26,20 @@
 
 ## Building using Microsoft Visual Studio
 
-  * Download and install  [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com)
-    * Just use basic install with the `Desktop development with C++`
-    * **To build without networking support and Qt**: Select the `NoNetworking` configurations from Visual Studios (`WebEngine-NoNetworking` in VS2017 and `Debug-NoNetworking` or `Release-NoNetworking` in VS2019) solutions (simc_vs**version**.sln).
+Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Select basic install with `Desktop development with C++`.
 
-  * Download and install [Qt 5.12.0 for Windows 64-bit (VS 2017)](https://www.qt.io/download) or newer.
-    * The Open Source version is fine for this use case, select the latest Qt version during "Select Components", i.e. `Qt 5.12.0`
-    * Add C:\Qt\5.12.0\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
+### Building the CLI
+  * Open the solution simc_vs2019.sln
+  * Select 'Debug-NoNetworking' Configuration
+  * build
 
+### Building the GUI
+  * Download and install [Qt 5.12.9 for Windows](https://www.qt.io/download) or newer. 
+    * Look for open source downloads and then either use the online installer or look for offline installers. You can [skip account creation for the offline installer](https://superuser.com/a/1524989).
+    * Select the latest Qt version during "Select Components", i.e. `Qt 5.12.9` for MSVC 2017 64-bit as well as 'Qt WebEngine'
+    * Add C:\Qt\Qt5.12.9\5.12.9\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
-  * Open a developer command prompt for Qt (shortcut in start menu), for example `Qt 5.12 64-bit for Desktop (MSVC 2017)`.
+  * Open a developer command prompt for VS (shortcut in start menu), for example `Developer Command Prompt for VS 2019`.
 
   * In the command prompt, navigate to `your_simc_source_dir`.
 
