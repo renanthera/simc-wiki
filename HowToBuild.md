@@ -51,9 +51,6 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
   * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
 
-  * For release builds, you can also enable Profile Guided Optimization by issuing the qmake command above with PGO=1
-    * `qmake PGO=1 -r -tp vc -spec win32-msvc simulationcraft.pro`.
-
 ### Advanced Settings
   * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
 
