@@ -157,6 +157,14 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 There are multiple Frost Mage builds that use different rotations. The `rotation` option can be used to specify which APL will be loaded. The valid options are `rotation=standard` for the standard Frost Mage rotation applicable to most cases, `rotation=no_ice_lance` for the No Ice Lance rotation, and `rotation=frozen_orb` for the Frozen Orb rotation.
 
+### Focus Magic
+
+If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in seconds>` and `focus_magic_stddev` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `focus_magic_interval=0` will prevent the effect from ever triggering.
+
+### Mirrors of Torment
+
+`mirrors_of_torment_interval=<time in seconds>` and `mirrors_of_torment_stddev` can be used to control how often triggers of Mirrors of Torment will occur relative to the time when the debuff is applied. Setting `mirrors_of_torment_interval=0` will prevent the effect from ever triggering.
+
 ### Overriding APL variables
 
 The default Mage APLs include several variables, which can be configured through the `apl_variable` option.
