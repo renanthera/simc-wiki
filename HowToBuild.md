@@ -1,3 +1,12 @@
+##### Table of Contents
+- [Downloading the Source](#downloading-the-source)
+- [Building SimulationCraft](#building-simulationcraft)
+- [Building SimulationCraft on Windows](#building-simulationcraft-on-windows)
+- [Building SimulationCraft on Linux](#building-simulationcraft-on-linux)
+- [Building SimulationCraft on OSX](#building-simulationcraft-on-osx)
+- [Tips and Tricks](#tips-and-tricks)
+
+
 # Downloading the Source
 
   * Downloading via Git
