@@ -48,7 +48,7 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
     * Select the latest Qt version during "Select Components", i.e. `Qt 5.12.9` for MSVC 2017 64-bit as well as 'Qt WebEngine'
     * Add C:\Qt\Qt5.12.9\5.12.9\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
-  * Open a command prompt and run `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` or PowerShell and run `& "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_file_locations))
+  * Open a command prompt and run `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_file_locations))
 
   * In the command prompt, navigate to `your_simc_source_dir`.
 
