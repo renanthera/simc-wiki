@@ -73,3 +73,10 @@ The state of the option can also be checked from the APL with death_knight.disab
 # Use Festering Strike unless army of the dead will be available soon and it's not disabled
 actions+=/festering_strike,if=cooldown.army_of_the_dead.remains>6|death_knight.disable_aotd
 ```
+
+An expression is available for the APL to count the number of unique enemies currently affected by Festering Wounds (not how many wounds there are).
+It can be called with death_knight.fwounded_targets
+```
+# Use Scourge Strike during Death and Decay if at least 4 enemies are affected by Festering Wounds
+actions+=/scourge_strike,if=death_and_decay.ticking&death_knight.fwounded_targets>=4
+```
