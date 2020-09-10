@@ -41,6 +41,18 @@ The _antimagic\_shell_ action allows a Death Knight to simulate the Runic Power 
  actions+=/antimagic_shell,damage=100000
 ```
 
+## Death Knight Runeforge Expressions
+
+With Shadowlands increasing the variety of available runeforges that can be applied to Death Knight weapons, a new expression type has been added to the shadowlands branch to evaluate from the APL whether a given runeforge is equipped or not by a character.
+It follows the death_knight.runeforge.name format and returns 1 if the runeforge is applied to one of the character's weapon and 0 otherwise.
+
+The following names can be used: razorice, razorice_mh, razorice_oh, fallen_crusader, stoneskin_gargoyle, apocalypse, hysteria, sanguination, spellwarding, unending_thirst.
+```
+# Use Frostscythe only if razorice is equipped on the main hand
+actions+=/frostscythe,if=death_knight.runeforge.razorice_mh
+```
+Note: the simpler runeforge.name format is also supported, but since it is intended to be used with Shadowlands Runeforge Legendary effects, the simulation will output a warning telling the user to use death_knight.runeforge.name instead.
+
 ## Miscellanous
 
 Army of the dead has an option to set the time at which it is used before pull. It only works when army of the dead is used in the precombat APL and won't have any effect otherwise. It takes a value between 1.5 (a full gcd before pull) and 10. Default value: 6
