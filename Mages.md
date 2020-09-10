@@ -159,11 +159,11 @@ There are multiple Frost Mage builds that use different rotations. The `rotation
 
 ### Focus Magic
 
-If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in seconds>` and `focus_magic_stddev` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `focus_magic_interval=0` will prevent the effect from ever triggering.
+If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in seconds>` and `focus_magic_stddev=<fraction of interval>` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `focus_magic_interval=0` will prevent the effect from ever triggering. The standard deviation of the distribution used for the interval is equal to `focus_magic_interval * focus_magic_stddev`.
 
 ### Mirrors of Torment
 
-`mirrors_of_torment_interval=<time in seconds>` and `mirrors_of_torment_stddev` can be used to control how often triggers of Mirrors of Torment will occur relative to the time when the debuff is applied. Setting `mirrors_of_torment_interval=0` will prevent the effect from ever triggering.
+`mirrors_of_torment_interval=<time in seconds>/<time in seconds>/<time in seconds>` and `mirrors_of_torment_stddev=<fraction of interval>/<fraction of interval>/<fraction of interval>` can be used to control how often triggers of Mirrors of Torment will occur relative to the time when the debuff is applied. For example, `mirrors_of_torment_interval=2/4/6` will result in the mirrors being triggered 2 seconds, 6 seconds, and 12 seconds after the debuff is applied. If less than three values are given, the last value will be used for the remaining mirrors instead. For example, `mirrors_of_torment_interval=2/4` will result in the mirrors being triggered at 2 seconds, 6 seconds, and 10 seconds; while `mirrors_of_torment_interval=2` will result in the mirrors being triggered at 2 seconds, 4 seconds, and 6 seconds. The standard deviation of the distribution used for each interval is equal to `mirrors_of_torment_interval * mirrors_of_torment_stddev`.
 
 ### Overriding APL variables
 
