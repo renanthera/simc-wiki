@@ -35,7 +35,7 @@
 
 ## Building using Microsoft Visual Studio
 
-Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Select basic install with `Desktop development with C++`.
+Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Under the `Workloads` tab select `Desktop development with C++` and additionally select `C++ Clang tools for Windows` if you'd like that as well.
 
 ### Building the CLI
   * Open the solution simc_vs2019.sln
