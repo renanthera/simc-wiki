@@ -108,21 +108,7 @@ firestarter_time=20
 # Firestarter is only active for the first 20 seconds
 ```
 
-### Greater Blessing of Wisdom
-
-Arcane mages benefit from the extra mana gained from Greater Blessing of Wisdom. `greater_blessing_of_wisdom_count` can be used to simulate this exact scenario.
-
-```
-mage=Mage
-level=110
-...
-spec=arcane
-
-greater_blessing_of_wisdom_count=2
-# Two paladins buffed us with GBoW
-```
-
-### Shimmer Ice Lance
+## Shimmer Ice Lance
 
 This combo can be enabled via `allow_shimmer_lance`. When set to true, Shimmer temporarily reduces Ice Lance's travel time (as if the player was 20 yd closer). Note that this doesn't actually model player movement.
 
