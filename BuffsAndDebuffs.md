@@ -55,7 +55,7 @@ The default settings will lead Simulationcraft to cast the bloodlust 6 seconds i
 
 Certain buffs that can be used on a player by other players can be enabled through options.
 
-  * **external\_buffs.focus\_magic** (scope: player; default: 0), when different from zero, will make your character benefit from the Focus Magic talent used by a Mage.
+  * **external\_buffs.focus\_magic** (scope: player; default: 0), when set to 1, will make your character benefit from the Focus Magic talent used by a Mage.
   * **external\_buffs.power\_infusion** (scope: player; default: disabled), specifies the times when Power Infusion will be cast on your character by a Priest. Individual times are separated with `/` characters.
 ```
 # Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
