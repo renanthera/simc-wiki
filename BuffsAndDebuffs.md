@@ -51,6 +51,19 @@ The default settings will lead Simulationcraft to cast the bloodlust 6 seconds i
  bloodlust_percent=20
 ```
 
+# External buffs
+
+Certain buffs that can be used on a player by other players can be enabled through options.
+
+  * **external\_buffs.focus\_magic** (scope: player; default: 0), when different from zero, will make your character benefit from the Focus Magic talent used by a Mage.
+  * **external\_buffs.power\_infusion** (scope: player; default: disabled), specifies the times when Power Infusion will be cast on your character by a Priest. Individual times are separated with `/` characters.
+```
+# Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
+external_buffs.power_infusion=0/120/240
+
+# Disable Power Infusion if the option was already enabled.
+external_buffs.power_infusion=
+```
 # Targeted buffs
 
 When both **optimal\_raid** and the relevant **override.xxx** are disabled and you're performing a simulation with many characters, targeted buffs such as "tricks of the trade" have features to let you specify their targets.
