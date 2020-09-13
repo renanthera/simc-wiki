@@ -21,3 +21,11 @@
 * **Hardcoded numbers**
 
   Avoid hard coded numbers if possible. If they are absolutely necessary, document them and include a date.
+
+# Clang format
+To easily follow these rules you can download and run clang-format on files you are working on. The current ruleset can be found in the `.clang-format` file in the root directory of simc. 
+
+To use this in VSCode you can follow these steps:
+1. Install the [CPP extension](https://code.visualstudio.com/docs/languages/cpp) for VSCode
+2. Install [LLVM](https://releases.llvm.org/download.html) to your machine (make sure to Add LLVM to the system PATH for all users when installing)
+3. Format Document inside of VSCode now applies the clang-format rules
