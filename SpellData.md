@@ -29,6 +29,7 @@ The spell data can be overridden with the following fields. The list contains th
   * `spell_level` (_integer_), Required level of the spell
   * `max_level` (_integer_), Maximum scaling level of the spell
   * `req_max_level` (_integer_), Required maximum level of caster of the spell
+  * `max_scaling_level` (_integer_), When non-zero, scaling level capped at `min( player_level, max_scaling_level )`
   * `min_range` (_float_), Minimum range of the spell (currently unused)
   * `max_range` (_float_), Maximum range of the spell (currently unused)
   * `cooldown` (_integer_, _milliseconds_), The cooldown of the spell in milliseconds
