@@ -39,4 +39,7 @@
 7. Error message when loading program that includes 'Qt(something).dll'
 > There have been a few cases that we haven't been able to fix, but a majority of the time this is from antivirus software detecting it as a threat and deleting it. If downloaded from the official links on our site, we can assure you there are no viruses in the program, just tell your antivirus software to ignore it and re-download the file.
 
+8. Intermittent failures on Battle.Net Item downloads
+> This issue occurs when fallback download of low level items is required. See [Issue #5278](https://github.com/simulationcraft/simc/issues/5278)
+
 If you are still having issues with the program, please submit an issue ticket, and we will try our best to help you out.
