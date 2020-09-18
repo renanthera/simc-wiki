@@ -2,6 +2,28 @@
 
 Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here.
 
+## Shadowlands
+
+### Covenants
+
+ * **covenant** (scope: player; default: none) A new player option that takes a covenant identifier or tokenized name. This will enable the corresponding covenant ability for the player's class.
+ * **soulbind** (scope: player; default: empty) A new player option that takes a `/` delimited list of soulbind abilities and conduits. Each conduit has a rank specified after the conduit identifier separated by a `:`. Note that the simulator currently does not check whether the combination of soulbinds and conduits is possible. This is a conscious decision to give the users the most flexibility in how they want to express their soulbind-related effects in an actor profile. This may change in the future if it turns out that we need to apply limitations to the valid set of soulbinds. You can also use the tokenized name of the conduit or soulbind ability as the identifier. This option will not do anything if a covenant is not selected for the actor.
+
+ Soulbind token schemes:
+ * `conduit_id:rank`
+ * `tokenized_conduit_name:rank`
+ * `soulbind_spell_id`
+ * `tokenized_soulbind_name`
+
+### Runeforge Legendaries
+
+Runeforge legendary effects are applied to items through bonus ids. A list of Runeforge legendary effects and their bonus ids (see column 1) can be found here: https://github.com/simulationcraft/simc/blob/shadowlands/engine/dbc/generated/item_runeforge.inc
+
+### Other 9.0 options
+ * **shadowlands.combat_meditation_extend_chance** (scope: global; default: 0.5) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.
+ * **shadowlands.pointed_courage_nearby** (scope: global; default: 5) The number of nearby allies and enemies for the Pointed Courage soulbind ability.
+ * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
+
 ## Battle for Azeroth
 
 ### Azerite
