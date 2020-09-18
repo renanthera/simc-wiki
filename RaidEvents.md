@@ -177,6 +177,12 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       #This example gives all adds in the wave 75,000 health
       raid_events+=/adds,count=3,first=5,duration=15,cooldown=60,health=75000
     ```
+  * You can set whether the adds all spawn with the same duration, or each with its own duration. Both settings use durations as determined via other options standard options such as `duration` and `duration_stddev`.
+    * _same\_duration_ (default: false) when set true will make all adds spawn with the same duration.
+    ```
+      #This example spawns 4 adds, all with the same duration, the duration being 30s with a standard deviation of 5s
+      raid_events+=/adds,duration=30,duration_sttdev=5,same_duration=true
+    ```
   * The following options require **distance\_targeting\_enabled=1** in order to function. The location of an add defaults to 0,0 (stacked on top of the main target). This can be changed in a few ways:
     * _spawn\_x_ and _spawn\_y_ (default: 0) set the x,y coordinates that a wave of adds will spawn at.
     * _distance_ (default: 0) sets the distance from 0,0 that the adds will spawn. The exact location is randomly generated, but will be _distance_ yards away.
