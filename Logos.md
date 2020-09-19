@@ -2,6 +2,18 @@
 
 All modern logos are created by graphics designer Julianne Albert (enchant@silkenfire.com). 
 
+## Shadowlands
+
+Full resolution:
+![](https://raw.githubusercontent.com/wiki/simulationcraft/simc/logos/shadowlands/shadowlandslogofull.png)
+
+HTML resolution:
+![](https://raw.githubusercontent.com/wiki/simulationcraft/simc/logos/shadowlands/shadowlandslogo800.png)
+
+Extra small resolution:
+![](https://raw.githubusercontent.com/wiki/simulationcraft/simc/logos/shadowlands/shadowlandslogo350.png)
+
+
 ## Battle for Azeroth
 
 Full resolution:
