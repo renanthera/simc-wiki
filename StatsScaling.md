@@ -16,7 +16,7 @@ Note that, because of the fighting variance, in order to have accurate enough re
   * **scale\_[stat name]** (scope: global; default: 0) allow you to specify the amount of points to add to the corresponding stat (deltas). When left to 0, default deltas shown in the next section will be used.
 ```
  calculate_scale_factors=1
- scale_strength=200
+ scale_haste_rating=200
 ```
   Increasing this setting does not directly change the resulting scale factor since those factors are proportional to the benefit _per point_. However, since many ratings suffer diminishing returns, you may actually observe a lowered scale factor as you increase this setting.
 
