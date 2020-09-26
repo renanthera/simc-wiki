@@ -7,12 +7,25 @@
 * **`<action>.ap_check.<allowed overcap = 0>`** Same as above with the distinction that the action is specified.
 
 ## Options
+* **affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **initial_astral_power** (default: 8) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+* **initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+
+* **initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
+
+* **predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
+
+* **catweave_bear** (default: 0) Set `catweave_bear=1` to utilize the catweaving APL for Guardian Druids.
 
 * **lively_spirit_stacks** (default: 9) Set the number of stacks of the Lively Spirit azerite trait when you innervate a healer.
 
-* **catweave_bear** (default: 0) Set `catweave_bear=1` to utilize the catweaving APL for Guardian Druids.
+* **kindred_spirits_partner_dps** (default: 1.0) Applies the multiplier to your own damage when determining how much damage your bonded partner does when you bond to a DPS partner with Kindred Spirits. For example, setting the value to 2.0 will mean that you are bonding to someone who does twice as much damage as you.
+
+* **convoke_the_spirits_heals** (default: 3.5) The number of heals that will be cast, in place of a dps spell, for every channel of Convoke the Spirits.
+
+* **convoke_the_spirits_ultimate** (default: 0.2) The chance for each channel of Convoke the Spirits to cast an 'ultimate' spell based on your form (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
+
+* **adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
 
 ## Buffs
 > Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
