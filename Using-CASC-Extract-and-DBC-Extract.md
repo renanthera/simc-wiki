@@ -70,7 +70,7 @@ To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
 ./dbc_extract.py -b 8.0.1.26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient --hotfix /path/to/wow/Cache/ADB/enUS/DBCache.bin ItemSparse > /tmp/ItemSparse.csv
 ```
 
-# Full Walkthrough for pulling Spell Dat
+# Full Walkthrough for pulling Spell Data
 
 1. `casc_extract.py -m batch --cdn -o <path>` (`--beta` or `--ptr` if needed)
 2. Place `DBCache.bin` from the wow folder into the proper `dbc_extract3\cache\live\`
