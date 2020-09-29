@@ -17,6 +17,9 @@ Power Infusions assumes that the actor is using the spell for its self-use only.
 ### Power Unto Others (Conduit)
 This Conduit only works if you have `priest_self_power_infusion` set to false or if you have the legendary Twins of the Sun Priestess equipped, as otherwise the actor is using PI on itself.
 
+## Mind Blast
+For the APL, Mind Blast by default will not work with typical `cast_while_casting=1`. This is because you can only cast this spell while casting Mind Flay or Mind Sear AND you have Dark Thoughts active. To make the APL easier to understand rather than having all these conditional checks there is a `only_cwc` option for Mind Blast only. This option defaults to `false` and with this you can have a separate APL line for the CWC Mind Blast.
+
 # Bugs
 By activating `bugs=1` inside your character's sim you will get access to the following bugs:
 - Fae Guardians Wrathful Faerie no longer has a 2s ICD
