@@ -17,11 +17,15 @@
 
 * **catweave_bear** (default: 0) Set `catweave_bear=1` to utilize the catweaving APL for Guardian Druids.
 
+* **owweave_bear** (default: 0) Set `owweave_bear=1` to utilize the owlweaving APL for Guardian Druids.
+
 * **lively_spirit_stacks** (default: 9) Set the number of stacks of the Lively Spirit azerite trait when you innervate a healer.
 
 * **kindred_spirits_partner_dps** (default: 1.0) Applies the multiplier to your own damage when determining how much damage your bonded partner does when you bond to a DPS partner with Kindred Spirits. For example, setting the value to 2.0 will mean that you are bonding to someone who does twice as much damage as you.
 
 * **kindred_spirits_hide_partner** (default: 0) When set to 1, will not count the damage gained by the bonded partner.
+
+* **kindred_spirits_absorbed** (default: 0.15) Sets percent of pool used up as absorbs by taking damage.
 
 * **convoke_the_spirits_heals** (default: 3.5) The number of heals that will be cast, in place of a dps spell, for every channel of Convoke the Spirits.
 
