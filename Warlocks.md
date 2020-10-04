@@ -10,6 +10,3 @@
   * _shadowfury_ (cast\_gcd)
   * _life\_tap_ (mana\_percentage, trigger)
   * _dark\_intent_ (target)
-
-## Conditional expressions
-  * shards
