@@ -18,8 +18,11 @@ Regular buffs for this class are not mentioned here, you just have to follow the
 ```
 Note that this does not do any fancy calculus to figure out if the next GCD actually _will_ be a HPG. It _only_ returns the time until the next HPG is available. If your action list prioritizes other spells over HPGs, then the time until the next HPG is actually cast could be longer than `time_to_hpg`. It should never be shorter, however.
 
+Note#2: This is only supported for Retribution Paladin at the moment.
+
 ## Blessed Hammer strikes
-Blessed Hammer can hit multiple times depending on the size of the target in-game. To reproduce that behavior, the blessed_hammer action has a `strikes` option (integer, default: 2, min: 1, max: 3) that can be used to specified the number of time each cast will hit each target.
+Blessed Hammer can hit multiple times depending on the size of the target in-game. To reproduce that behavior, the blessed_hammer action has a `strikes` option (float, default: 2, min: 1, max: 10) that can be used to specified the number of time each cast will hit each target.
+If the number has decimals, they will be used as a chance to generate an extra strike for every blessed hammer cast.
 ```
 # Hit every enemy 3 times per blessed hammer cast
 actions+=/blessed_hammer,strikes=3
