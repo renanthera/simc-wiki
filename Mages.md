@@ -149,7 +149,7 @@ If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in 
 
 ### Arcane Missiles
 
-Sometimes, there can be benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_stddev=<fraction of interval> control the average time after a tick when Arcane Missiles will be chained.
+Sometimes, there can be benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_stddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
 
 ### Mirrors of Torment
 
