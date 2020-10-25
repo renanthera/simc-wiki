@@ -53,6 +53,14 @@ actions+=/frostscythe,if=death_knight.runeforge.razorice_mh
 ```
 Note: the simpler runeforge.name format is also supported, but since it is intended to be used with Shadowlands Runeforge Legendary effects, the simulation will output a warning telling the user to use death_knight.runeforge.name instead.
 
+## Dynamic actions
+
+Some action names can be used in the death knight APLs to generate different spells depending on talent choice.
+``wound_spender`` will be replaced by ``scourge_strike``, or ``clawing_shadows`` if it is talented.
+``dnd_any`` and ``any_dnd`` will be replaced by ``death_and_decay`` or ``defile`` if it is talented.
+At the moment, Death's Due isn't implemented in simc yet and no decision has been made on whether it will be included in ``any_dnd`` or not yet.
+
+
 ## Miscellanous
 
 Army of the dead has an option to set the time at which it is used before pull. It only works when army of the dead is used in the precombat APL and won't have any effect otherwise. It takes a value between 1.5 (a full gcd before pull) and 10. Default value: 6
