@@ -22,7 +22,7 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
 ### Other 9.0 options
  * **shadowlands.combat_meditation_extend_chance** (scope: global; default: 0.5) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.
  * **shadowlands.pointed_courage_nearby** (scope: global; default: 5) The number of nearby allies and enemies for the Pointed Courage soulbind ability.
- * **shadowlands.lead_by_example_nearby** (scope: global; default: 3 ) The number of nearby allies for the Lead by Example soulbind ability.
+ * **shadowlands.lead_by_example_nearby** (scope: global; default: 2; max: 2) The number of nearby allies for the Lead by Example soulbind ability.
  * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
  * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
 
