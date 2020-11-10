@@ -401,6 +401,13 @@ The available properties are:
 * _crit\_dmg_ last critical damage strike bonus percentage used for dot damage calculation.
 * _tick\_time\_remains_ remaining time on the ongoing tick in seconds. 0 if the dot is not ticking.
 
+#### Helpful Expressions
+You can use _active\_dot_._`<`dot\_name`>`_ to return the amount of targets that currently have that dot active.
+```
+# Fire nova if enough Flame Shocks are active
+actions+=/fire_nova,if=active_dot.flame_shock>=5
+```
+
 ### General
 General properties require no specific syntax. The available properties are:
 
