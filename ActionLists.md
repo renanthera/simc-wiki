@@ -444,5 +444,61 @@ actions+=/sunfire,moving=1
 ## Enemy-Specific Modifiers
 * See the article on [enemies](Enemies#Action_Lists).
 
+# Raid Event expressions
+If you are using a sim that has raid events active, you can conditionally check for properties of current or future events to handle actions properly.
+
+Current list of raid event types:
+* _adds_
+* _move_enemy_
+* _casting_
+* _distraction_
+* _invul_ or _invulnerable_
+* _interrupt_
+* _movement_ or _moving_
+* _damage_
+* _heal_
+* _stun_
+* _position_switch_
+* _flying_
+* _damage_taken_debuff_
+* _damage_done_buff_
+
+The following expressions are available for raid events:
+* _in_ checks how long until the next raid event
+* _duration_ how long in seconds the raid event will last
+* _cooldown_ how long in seconds is left on the raid event cooldown
+* _distance_ how far away the raid event is
+* _max_disntance_ max distance the raid event will go while active
+* _min_disntance_ min distance the raid event will go while active
+* _amount_ amount of damage the raid event will deal to the player (only works for damage raid events)
+* _to_pct_ healing event expression
+* _count_ how many adds are active in the current raid event (only works for add raid events)
+* _up_ returns 1 if the raid event is currently active
+* _exists_ returns 1 if there is a raid event at some point in the sim
+* _remains_ find how long the current raid event will last, or 0 if no events are currently active
+
+## Remains
+```
+# Check if the adds will live for 15s before casting Unholy Nova
+actions+=/unholy_nova,if=!raid_event.adds.up|raid_event.adds.remains>=15
+```
+
+This condition also checks if `!raid_event.adds.up` that way this line will also work if there are no adds currently active. Alternative you can also use `raid_event.adds.exists` to see if the sim contains any adds for the entire sim.
+
+## Check when adds/movement will spawn next
+Sometimes it would be helpful to use an action only if adds aren't coming soon, otherwise you should hold your ability.
+
+```
+# Use Shadow Crash unless adds will be coming in <=10s
+actions+=/shadow_crash,if=raid_event.adds.in>10
+```
+
+You can use the same check for movement raid events to make sure you don't interrupt a channel mid-way through.
+
+```
+# Use Void Torrent unless there is movement coming that will interrupt you
+actions+=/void_torrent,if=raid_event.movement.in>3
+```
+
 # Conditional expressions
 * See the article on [Conditional expressions](Conditional-expressions) for a in-depth guide on how to conditionally filter actions in a action priority list.
