@@ -402,6 +402,7 @@ actions+=/mind_flay,chain=1
 # Chain-cast Mind Flay Insanity, restarting the cast early if Devouring Plague is about to fall off
 actions+=/mind_flay_insanity,interrupt=1,chain=1,early_chain_if=dot.devouring_plague_tick.remains<=tick_time
 ```
+* _interrupt\_global_ can be used to start the interrupt priority check at the top of the default action list, instead of the current list. By default this is disabled (i.e. Default: 0)
 
 ## Non-standard timing
 
