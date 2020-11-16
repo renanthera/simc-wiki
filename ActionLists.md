@@ -402,7 +402,7 @@ actions+=/mind_flay,chain=1
 # Chain-cast Mind Flay Insanity, restarting the cast early if Devouring Plague is about to fall off
 actions+=/mind_flay_insanity,interrupt=1,chain=1,early_chain_if=dot.devouring_plague_tick.remains<=tick_time
 ```
-* _interrupt\_global_ can be used to start the interrupt priority check at the top of the default action list, instead of the current list. By default this is disabled (i.e. Default: 0)
+* _interrupt\_global_ When set to 1 (default 0), forces an actor to look for the higher priority action in the global action list. This option alters the behavior so that the lookup begins from the actor's currently active action list. In the case of `run_action_list`, it is the action list being run. In other cases, it is the primary action list (i.e., the list defined by `actions` options).
 
 ## Non-standard timing
 
