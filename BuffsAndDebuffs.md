@@ -25,6 +25,7 @@ Beware! You need to declare the overrides **`***`after`***`** you declared **opt
     * **override.power_word_fortitude**
     * **override.chaos_brand**
     * **override.mystic_touch**
+    * **override.windfury_totem**
 
   * Specials
     * **override.bleeding** will flag your target as permanently bleeding
