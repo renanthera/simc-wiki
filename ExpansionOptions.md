@@ -23,7 +23,7 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
  * **shadowlands.combat_meditation_extend_chance** (scope: global; default: 1.0) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.
  * **shadowlands.pointed_courage_nearby** (scope: global; default: 5; min: 0; max: 8) The number of nearby allies and enemies for the Pointed Courage soulbind ability. The player does not count as an ally, but pets do.
  * **shadowlands.lead_by_example_nearby** (scope: global; default: 2; max: 4) The number of nearby allies for the Lead by Example soulbind ability.
- * **shadowlands.volatiles_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
+ * **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
     - Corpse type: "humanoid", "beast", "dragonkin", "elemental", "giant"
     - Buff type: "mastery", "primary", "crit", "magic", "physical"
 
