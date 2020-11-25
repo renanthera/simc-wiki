@@ -212,6 +212,10 @@ Acceptable slots are:
  # Earthen Helmet of the Landslide
  head=earthen_helmet,ilevel=359,quality=epic,suffix=169
 ```
+### Crafted stats (Shadowlands)
+
+Shadowlands normally crafted items use a new way to convey which random secondary stats the item receives.
+  * _crafted_stats_ (default: "") can be used to define a list of secondary stat tokens delimited by `/` for the (maximum of two) random secondary stats on a crafted item. The tokens can be either numbers, in which case they come from the `item_mod_type` enumeration (engine/dbc/data_enums.hpp), or strings, in which case the normal "short" stat names (e.g., `vers`) will function.
 
 ### Itemlevel
 To manipulate the itemlevel of an item you have two options.
