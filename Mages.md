@@ -153,7 +153,7 @@ Sometimes, there can be benefit from chaining Arcane Missiles quickly. `arcane_m
 
 ### Mirrors of Torment
 
-`mirrors_of_torment_interval=<time in seconds> can be used to control how often triggers of Mirrors of Torment will attempt to trigger relative to the time when the debuff is applied.
+`mirrors_of_torment_interval=<time in seconds>` can be used to control how often triggers of Mirrors of Torment will attempt to trigger relative to the time when the debuff is applied.
 
 ### Overriding APL variables
 
