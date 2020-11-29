@@ -29,6 +29,8 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
 
  * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
  * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
+ * **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
+ * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
 
 ## Battle for Azeroth
 
