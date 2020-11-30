@@ -23,14 +23,17 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
  * **shadowlands.combat_meditation_extend_chance** (scope: global; default: 1.0) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.
  * **shadowlands.pointed_courage_nearby** (scope: global; default: 5; min: 0; max: 5) The number of nearby allies and enemies for the Pointed Courage soulbind ability. The player does not count as an ally, but pets do.
  * **shadowlands.lead_by_example_nearby** (scope: global; default: 2; max: 4) The number of nearby allies for the Lead by Example soulbind ability.
+ * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
+ * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
+* **shadowlands.judgment_of_the_arbiter_arc_chance**
  * **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
     - Corpse type: "humanoid", "beast", "dragonkin", "elemental", "giant"
     - Buff type: "mastery", "primary", "crit", "magic", "physical"
-
- * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
- * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
+* **shadowlands.disable_soul_igniter_second_use**
+* **shadowlands.unbound_changeling_stat_type**
  * **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
  * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
+
 
 ## Battle for Azeroth
 
