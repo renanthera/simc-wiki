@@ -438,6 +438,11 @@ potion=prolonged_power
 augmentation=defiled
 ```
 
+* Temporary Enchant
+```
+temporary_enchant=main_hand:shadowcore_oil/off_hand:shadowcore_oil
+```
+
 To disable, use the `disabled` text:
 
 ```
