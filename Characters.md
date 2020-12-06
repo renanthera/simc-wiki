@@ -450,4 +450,5 @@ potion=disabled
 food=disabled
 flask=disabled
 augmentation=disabled
+temporary_enchant=disabled
 ```
