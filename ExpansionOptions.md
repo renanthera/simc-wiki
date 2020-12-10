@@ -26,14 +26,14 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
  * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
  * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
 * **shadowlands.judgment_of_the_arbiter_arc_chance**
- * **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
+* **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
     - Corpse type: "humanoid", "beast", "dragonkin", "elemental", "giant"
     - Buff type: "mastery", "primary", "crit", "magic", "physical"
 * **shadowlands.disable_soul_igniter_second_use**
 * **shadowlands.unbound_changeling_stat_type**
- * **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
- * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
-
+* **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
+* **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
+* **shadowlands.shadowgrasp_totem_retarget** (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules
 
 ## Battle for Azeroth
 
