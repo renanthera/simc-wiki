@@ -25,12 +25,17 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
  * **shadowlands.lead_by_example_nearby** (scope: global; default: 2; max: 4) The number of nearby allies for the Lead by Example soulbind ability.
  * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
  * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
-* **shadowlands.judgment_of_the_arbiter_arc_chance**
+* **shadowlands.judgment_of_the_arbiter_arc_chance** (scope: global; default: 0) Chance that Judgment of the Arbiter will arc to an ally
 * **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
     - Corpse type: "humanoid", "beast", "dragonkin", "elemental", "giant"
     - Buff type: "mastery", "primary", "crit", "magic", "physical"
-* **shadowlands.disable_soul_igniter_second_use**
-* **shadowlands.unbound_changeling_stat_type**
+* **shadowlands.disable_soul_igniter_second_use** (scope: global; default: 1) Setting to 1 will wait to trigger the AOE, setting to 0 will trigger the AOE early
+* **shadowlands.unbound_changeling_stat_type** (scope: global; default: 'default') Override Unbound Changeling's effect. Valid options:
+    - "all": Proc that grants crit, haste, and mastery
+    - "crit": Proc that grants crit
+    - "haste": Proc that grants haste
+    - "mastery": Proc that grants mastery
+    - Any other value will use the proc determined by the bonus ID on the item
 * **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
 * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
 * **shadowlands.shadowgrasp_totem_retarget** (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules
