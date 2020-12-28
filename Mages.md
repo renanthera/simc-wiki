@@ -34,7 +34,7 @@ actions+=/freeze,if=ground_aoe.comet_storm.remains>0.6
 
 ### Burn phase
 
-`burn_phase` expression evaluates to 1 if burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of burn phase, it returns 0.
+`burn_phase` expression evaluates to 1 if the burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of the burn phase, it returns 0.
 
 ### Incanter's Flow
 
@@ -47,7 +47,7 @@ Incanter's Flow stacks | 1  2  3  4  5  5  4  3  2  1  1  2 ...
 incanters_flow_dir     | 1  1  1  1  0 -1 -1 -1 -1  0  1  1 ...
 ```
 
-`incanters_flow_time_to.<stack number>.<stack type>` evaluates to remaining time (in seconds) until the next occurence of the specified stack. When the buff is in the desired state, this expression evalutes to 0.
+`incanters_flow_time_to.<stack number>.<stack type>` evaluates to the remaining time (in seconds) until the next occurrence of the specified stack. When the buff is in the desired state, this expression evaluates to 0.
 
 `stack_number` is a whole number between 1 and 5, `stack_type` can be `up`, `down` or `any`. `up` checks only stacks on the raising part of the cycle, `down` checks stacks on the falling part of the cycle and `any` checks both types.
 
@@ -75,7 +75,7 @@ actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.froz
 ...
 ```
 
-### Firestarter
+### Firestarter and Searing Touch
 
 The expression `firestarter.active` can be used to check if Firestarter is active. Time until Firestarter becomes inactive is represented by `firestarter.remains`. See below.
 
@@ -84,17 +84,19 @@ actions=fireball,target_if=firestarter.active
 # Cast Fireball on any target that will make it crit.
 ```
 
+The expression `searing_touch.active` functions in the same way. Time until Searing Touch becomes active is represented by `searing_touch.remains`.
+
 ### Brain Freeze
 
-`brain_freeze_active` expression helps distinguish between normal and Brain Freeze empowered Flurry casts. This expression evaluates to 1 (`true`) if the last Flurry was cast with Brain Freeze, otherwise it evalutes to 0 (`false`).
+`brain_freeze_active` expression helps distinguish between normal and Brain Freeze empowered Flurry casts. This expression evaluates to 1 (`true`) if the last Flurry was cast with Brain Freeze, otherwise, it evaluates to 0 (`false`).
 
 ## Mage options
 
-### Firestarter
+### Firestarter and Searing Touch
 
-Firestarter's value hugely depends on a raid composition. In a single actor simulations, it is usually overvalued.
+By default, the health of enemies decreases uniformly from 100% to 0%. However, in a raid setting, the raid DPS is not constant and the health doesn't decrease uniformly. This has an effect on the duration of the Firestarter and Searing Touch phases.
 
-`firestater_time` can be used to combat this. It turns off the standard Firestarter behavior and gives Fireball and Pyroblast 100% crit chance for the specified time after combat starts.
+`mage.firestarter_duration_multiplier` and `mage.searing_touch_duration_multiplier` (1.0 default) can be used to change the duration of those phases to better match the given fight.
 
 Note that with this option, Firestarter won't have any effect on enemies that join the fight later (for example `adds` raid event).
 
@@ -129,7 +131,7 @@ actions+=/shimmer,if=spell_haste<=0.666&prev_gcd.2.flurry&charges>=1&!buff.finge
 If you don't want to use Shimmer back to back, you can enforce time between two Shimmers in this way.
 
 ```
-# Do not allow two Shimmers within 5 sec of eachother.
+# Do not allow two Shimmers within 5 sec of each other.
 actions+=/shimmer,line_cd=5,if=...
 ```
 
@@ -137,7 +139,7 @@ actions+=/shimmer,line_cd=5,if=...
 
 Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
 
-`frozen_duration=<time in seconds>` overrides this default duration with a user specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
+`frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
 
 ### Frost Mage Rotations
 
@@ -149,7 +151,7 @@ If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in 
 
 ### Arcane Missiles
 
-Sometimes, there can be benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_stddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
+Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_stddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
 
 ### Mirrors of Torment
 
@@ -179,7 +181,7 @@ After Combustion, a large Ignite will usually be present on the primary target. 
 
 ## Crowd control
 
-Some abilities have different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
+Some abilities have a different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
 
 Target is susceptible to crowd control in these situations:
 
