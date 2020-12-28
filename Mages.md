@@ -36,6 +36,10 @@ actions+=/freeze,if=ground_aoe.comet_storm.remains>0.6
 
 `burn_phase` expression evaluates to 1 if the burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of the burn phase, it returns 0.
 
+### Mana Gem
+
+The remaining charges of a Mana Gem can be obtained by using the `mana_gem_charges` expression.
+
 ### Incanter's Flow
 
 `incanters_flow_dir` can be used to determine if Incanter's Flow is currently gaining or losing stacks.
@@ -86,9 +90,13 @@ actions=fireball,target_if=firestarter.active
 
 The expression `searing_touch.active` functions in the same way. Time until Searing Touch becomes active is represented by `searing_touch.remains`.
 
-### Brain Freeze
+### Winter's Chill
 
-`brain_freeze_active` expression helps distinguish between normal and Brain Freeze empowered Flurry casts. This expression evaluates to 1 (`true`) if the last Flurry was cast with Brain Freeze, otherwise, it evaluates to 0 (`false`).
+The expression `remaining_winters_chill` provides an approximation of the number of remaining Winter's Chill stacks, accounting for spells that are currently in flight.
+
+### Hot Streak
+
+The expression `hot_streak_spells_in_flight` provides the number of spells that are currently in flight (to any target) and are capable of triggering Hot Streak.
 
 ## Mage options
 
@@ -98,52 +106,13 @@ By default, the health of enemies decreases uniformly from 100% to 0%. However, 
 
 `mage.firestarter_duration_multiplier` and `mage.searing_touch_duration_multiplier` (1.0 default) can be used to change the duration of those phases to better match the given fight.
 
-Note that with this option, Firestarter won't have any effect on enemies that join the fight later (for example `adds` raid event).
-
-```
-mage=Mage
-level=110
-...
-spec=fire
-
-firestarter_time=20
-# Firestarter is only active for the first 20 seconds
-```
-
-## Shimmer Ice Lance
-
-This combo can be enabled via `allow_shimmer_lance`. When set to true, Shimmer temporarily reduces Ice Lance's travel time (as if the player was 20 yd closer). Note that this doesn't actually model player movement.
-
-If you want to try it out, you can make the following change to the default APL. Replace this Ice Lance line
-
-```
-actions+=/ice_lance,if=!buff.fingers_of_frost.react&prev_gcd.1.flurry
-```
-
-with the following three lines
-
-```
-actions+=/ice_lance,if=prev_gcd.1.flurry
-actions+=/ice_lance,if=prev_off_gcd.shimmer&debuff.winters_chill.remains>travel_time
-actions+=/shimmer,if=spell_haste<=0.666&prev_gcd.2.flurry&charges>=1&!buff.fingers_of_frost.react
-```
-
-If you don't want to use Shimmer back to back, you can enforce time between two Shimmers in this way.
-
-```
-# Do not allow two Shimmers within 5 sec of each other.
-actions+=/shimmer,line_cd=5,if=...
-```
+For example, `mage.firestarter_duration_multiplier=0.3` reduces the duration of the Firestarter phase by 70%.
 
 ### Freeze effects
 
 Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
 
 `frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
-
-### Frost Mage Rotations
-
-There are multiple Frost Mage builds that use different rotations. The `rotation` option can be used to specify which APL will be loaded. The valid options are `rotation=standard` for the standard Frost Mage rotation applicable to most cases, `rotation=no_ice_lance` for the No Ice Lance rotation, and `rotation=frozen_orb` for the Frozen Orb rotation.
 
 ### Focus Magic
 
