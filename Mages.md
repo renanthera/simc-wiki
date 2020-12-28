@@ -116,11 +116,11 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 ### Focus Magic
 
-If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in seconds>` and `focus_magic_stddev=<fraction of interval>` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `focus_magic_interval=0` will prevent the effect from ever triggering. The standard deviation of the distribution used for the interval is equal to `focus_magic_interval * focus_magic_stddev`.
+If the Mage has the Focus Magic talent selected, `focus_magic_interval=<time in seconds>` and `focus_magic_relstddev=<fraction of interval>` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `focus_magic_interval=0` will prevent the effect from ever triggering. The standard deviation of the distribution used for the interval is equal to `focus_magic_interval * focus_magic_relstddev`.
 
 ### Arcane Missiles
 
-Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_stddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
+Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_relstddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
 
 ### Mirrors of Torment
 
