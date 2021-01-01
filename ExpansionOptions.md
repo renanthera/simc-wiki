@@ -39,6 +39,7 @@ Runeforge legendary effects are applied to items through bonus ids. A list of Ru
 * **shadowlands.anima_field_emitter_mean** (scope: global; default: 0) Average number of seconds that the player will receive the haste buff
 * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
 * **shadowlands.shadowgrasp_totem_retarget** (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules
+* **shadowlands.disable_iqd_execute** (scope: global; default: 0) Disables the execute effect of Inscrutable Quantum Device to make it always proc stats
 
 ## Battle for Azeroth
 
