@@ -1,14 +1,20 @@
-**Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
+**Is there an error? Something missing? Funky grammar? Do not hesitate to reach out on Discord to the [Priest team](https://github.com/orgs/simulationcraft/teams/priest/members).**
+
+# Sim Module notes
+The module is broken up into the following parts:
+- Main Priest file - Holds base spells or other things available to all specs. ([sc_priest.cpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.cpp) and [sc_priest.hpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.hpp))
+- Spec Files - Specialization specific implementations
+  - [Discipline](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_discipline.cpp)
+  - [Holy](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_holy.cpp)
+  - [Shadow](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_shadow.cpp)
+- [APL File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/apl/apl_priest.cpp) - Stores the Action Priority List for each spec.
+- [Pet File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_pets.cpp) - Handles all pets for Priest's (Shadowfiend, Mindbender, and Eternal Call to the Void Tentacles).
 
 # Spell implementation notes
-Regular spells are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting).
+The following spells are mentioned due to oddities with the implementation that are not straightforward or require more clarification. If a spell is not mentioned here you can find it in the correct base or spec file with a typical implementation. Feel free to reach out in discord if you have questions.
 
-## Power Word: Shield
-By default Power Word: Shield will debuff the target with the Weakened Soul debuff and prevent PWS from being cast on that target until it expires. To simulate PWS spam over an entire raid, without having to simulate an entire raid, you can use the 'ignore\_debuff' option.
-```ini
-  # Chain spam PWS
-  actions+=/power_word_shield,ignore_debuff=1
-```
+## Shadow Weaving (Shadow Priest Mastery)
+The Shadow Priest Mastery is not currently applied automatically by SimC due to improper spelldata. To get around this we apply this benefit manually to each priest spell with the `affected_by_shadow_weaving` option. This is turned off by default, so any spells that _are_ affected by mastery should have `affected_by_shadow_weaving = true;` added into the constructor. This should be done for priest or pet spells.
 
 ## Power Infusion
 Power Infusion assumes that the actor is using the spell for its self-use only. To change this behavior, you need to set the option `priest_self_power_infusion=0`. Doing so will change the uptime of PI of the actor to 0%.
@@ -18,6 +24,13 @@ This Conduit only works if you have `priest_self_power_infusion=0` or if you hav
 
 ## Mind Blast
 For the APL, Mind Blast by default will not work with typical `cast_while_casting=1`. This is because you can only cast this spell while casting Mind Flay or Mind Sear AND you have Dark Thoughts active. To make the APL easier to understand rather than having all these conditional checks there is a `only_cwc` option for Mind Blast only. This option defaults to `false` and with this you can have a separate APL line for the CWC Mind Blast.
+
+## Power Word: Shield
+By default Power Word: Shield will debuff the target with the Weakened Soul debuff and prevent PWS from being cast on that target until it expires. To simulate PWS spam over an entire raid, without having to simulate an entire raid, you can use the 'ignore\_debuff' option.
+```ini
+  # Chain spam PWS
+  actions+=/power_word_shield,ignore_debuff=1
+```
 
 # Bugs
 By activating `bugs=1` inside your character's sim you will get access to the following bugs:
