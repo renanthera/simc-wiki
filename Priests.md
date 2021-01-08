@@ -2,7 +2,7 @@
 
 # Sim Module notes
 The module is broken up into the following parts:
-- Main Priest file - Holds base spells or other things available to all specs. ([sc_priest.cpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.cpp) and [sc_priest.hpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.hpp))
+- Main Priest file - Holds base spells or other things available to more than one spec. ([sc_priest.cpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.cpp) and [sc_priest.hpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.hpp))
 - Spec Files - Specialization specific implementations
   - [Discipline](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_discipline.cpp)
   - [Holy](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_holy.cpp)
