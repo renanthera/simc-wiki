@@ -20,6 +20,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 Runeforge legendary effects are applied to items through bonus ids. A list of Runeforge legendary effects and their bonus ids (see column 1) can be found here: https://github.com/simulationcraft/simc/blob/shadowlands/engine/dbc/generated/item_runeforge.inc
 
 ### Other 9.0 options
+To add these use the syntax `shadowlands.option_name=value`. For example `shadowlands.combat_meditation_extend_chance=0.5`.
  * **shadowlands.combat_meditation_extend_chance** (scope: global; default: 1.0) The chance that the player picks up each orb to extend Combat Meditation soulbind ability.
  * **shadowlands.pointed_courage_nearby** (scope: global; default: 5; min: 0; max: 5) The number of nearby allies and enemies for the Pointed Courage soulbind ability. The player does not count as an ally, but pets do.
  * **shadowlands.lead_by_example_nearby** (scope: global; default: dynamic; min: 0; max: 4) The number of nearby allies for the Lead by Example soulbind ability. Profiles with position set to "front" or "back" have a default value of 4 whereas "ranged back" and other positions have a default value of 2. The DungeonSlice fight style makes the default value 2 for every position.
