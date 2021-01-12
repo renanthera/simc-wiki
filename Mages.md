@@ -118,7 +118,7 @@ Since all freeze effects available in simc break on damage and thus almost never
 
 If the Mage has the Focus Magic talent selected, `mage.focus_magic_interval=<time in seconds>` and `mage.focus_magic_relstddev=<fraction of interval>` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `mage.focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `mage.focus_magic_interval=0` will prevent the effect from ever triggering. The standard deviation of the distribution used for the interval is equal to `mage.focus_magic_interval * mage.focus_magic_relstddev`.
 
-`mage.focus_magic_trade` (default 0) automatically enables the 30 min 5% crit buff whenever the mage is using the Focus Magic talent. 
+`mage.focus_magic_trade=<0/1>` automatically enables the 30 min 5% crit buff whenever the mage is using the Focus Magic talent. 
 
 ### Arcane Missiles
 
