@@ -7,31 +7,32 @@
 * **`<action>.ap_check.<allowed overcap = 0>`** Same as above with the distinction that the action is specified.
 
 ## Options
-* **affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
+* **druid.catweave_bear** (default: 0) Set to utilize the catweaving APL for Guardian Druids.
 
-* **initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+* **druid.owlweave_bear** (default: 0) Set to utilize the owlweaving APL for Guardian Druids.
 
-* **initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
+* **druid.owlweave_cat** (default: 0) Set to utilize the owlweaving APL for Feral Druids.
 
-* **predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
+* **druid.no_cds** (default: 0) Set to prevent the APL from casting major offensive cooldowns. *Currently only supported for Balance Druid.*
 
-* **catweave_bear** (default: 0) Set `catweave_bear=1` to utilize the catweaving APL for Guardian Druids.
+* **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **owweave_bear** (default: 0) Set `owweave_bear=1` to utilize the owlweaving APL for Guardian Druids.
+* **druid.kindred_spirits_partner_dps** (default: 1.0) Applies the multiplier to your own damage when determining how much damage your bonded partner does when you bond to a DPS partner with Kindred Spirits. For example, setting the value to 2.0 will mean that you are bonding to someone who does twice as much damage as you.
 
-* **lively_spirit_stacks** (default: 9) Set the number of stacks of the Lively Spirit azerite trait when you innervate a healer.
+* **druid.kindred_spirits_hide_partner** (default: 0) When set to 1, will not count the damage gained by the bonded partner.
 
-* **kindred_spirits_partner_dps** (default: 1.0) Applies the multiplier to your own damage when determining how much damage your bonded partner does when you bond to a DPS partner with Kindred Spirits. For example, setting the value to 2.0 will mean that you are bonding to someone who does twice as much damage as you.
+* **druid.kindred_spirits_absorbed** (default: 0.2) Sets percent of pool used up as absorbs by taking damage.
 
-* **kindred_spirits_hide_partner** (default: 0) When set to 1, will not count the damage gained by the bonded partner.
+* **druid.convoke_the_spirits_ultimate** (default: 0.2) The chance for each channel of Convoke the Spirits to cast an 'ultimate' spell based on your form (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
-* **kindred_spirits_absorbed** (default: 0.15) Sets percent of pool used up as absorbs by taking damage.
+* **druid.adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
 
-* **convoke_the_spirits_heals** (default: 3.5) The number of heals that will be cast, in place of a dps spell, for every channel of Convoke the Spirits.
+* **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
 
-* **convoke_the_spirits_ultimate** (default: 0.2) The chance for each channel of Convoke the Spirits to cast an 'ultimate' spell based on your form (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
+* **druid.initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
 
-* **adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
+* **druid.predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
+
 
 ## Buffs
 > Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
