@@ -41,7 +41,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.anima_field_emitter_stddev** (scope: global; default: 0) Standard deviation number of seconds that the player will receive the haste buff
 * **shadowlands.shadowgrasp_totem_retarget** (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules
 * **shadowlands.disable_iqd_execute** (scope: global; default: 0) Disables the execute effect of Inscrutable Quantum Device to make it always proc stats
-* **shadowlands.iqd_fail_chance** (scope: global; default: 0.0) Sets the chance to not gain a stat buff outside Bloodlust when Inscrutable Quantum Device is activated
+* **shadowlands.iqd_stat_fail_chance** (scope: global; default: 0.0) Sets the chance to not gain a stat buff outside Bloodlust when Inscrutable Quantum Device is activated
 
 ## Battle for Azeroth
 
