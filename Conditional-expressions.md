@@ -369,6 +369,7 @@ The character's cooldowns can be used through the following syntax: `cooldown.<s
 * _duration_ is the initial duration, in seconds (not the remaining duration).
 * _remains_ is the remaining duration, in seconds, before the cooldown is done.
 * _up_ indicated if the cooldown is  done (i.e., the associated ability is ready)
+* _duration_expected_ and _remains_expected_ are the initial/remaining duration, adjusted for cooldown affecting mechanics. The expected duration is evaluated from the difference between the elapsed time since the cooldown started and how much the cooldown duration has actually gone down.
 
 ```
 # Use "aimed shot" if at least 5 seconds remain on "chimera shot".
