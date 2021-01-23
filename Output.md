@@ -22,6 +22,8 @@ Note: the standard output mentioned on this page is the console output, not your
  output=c:\log.txt
 ```
 
+  * **log_spell_id** (scope: global; default: 0) output spell data ids when logging actions or buffs.
+
 # Reports
 
   * **html** (scope: global; default: "") can be used to specify a file to write a html report to.
