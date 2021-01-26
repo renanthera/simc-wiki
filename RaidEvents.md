@@ -18,11 +18,12 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
   * _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
     ```
-      raid_events+=/movement,players_only=1,first=45,cooldown=85,distance=50,last=360
+      raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
     ```
   * _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
     ```
-      raid_events+=/movement,players_only=1,first=10,distance=25,duration=4
+      raid_events+=/movement,players_only=1,cooldown=20,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
+      raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=45,distance_min=40,distance_max=50,first=30
     ```
   * _DungeonSlice_ approximates a "slice" of a BfA M+ (roughly equivalent to an M10). A single boss mob followed by alternating large/weak trash packs (4-6 mobs for 15 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Fight length locked to 6 minutes, int/fort/shout/bloodlust always enabled. Events are equivalent to:
     ```
