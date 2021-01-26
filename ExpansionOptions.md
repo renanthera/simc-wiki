@@ -42,6 +42,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.shadowgrasp_totem_retarget** (scope: global; default: 0) Delay in (fractional) seconds to perform a retargeting based on the use_item action targeting rules
 * **shadowlands.disable_iqd_execute** (scope: global; default: 0) Disables the execute effect of Inscrutable Quantum Device to make it always proc stats
 * **shadowlands.iqd_stat_fail_chance** (scope: global; default: 0.0) Sets the chance to not gain a stat buff outside Bloodlust when Inscrutable Quantum Device is activated
+* **shadowlands.thrill_seeker_killing_blow_chance** (scope: global; default: dynamic, min: 0.0, max: 1.0) Enables the 4 stack increase to Thrill Seeker when an enemy dies inside of a sim. Default chance is set at 5% for all sims except DungeonSlice which defaults to 25% to replicate chance of getting a killing blow.
 
 ## Battle for Azeroth
 
