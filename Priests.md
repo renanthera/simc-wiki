@@ -59,7 +59,7 @@ These options also control the extra healing or damage that actors get when thes
 **Note:** to see the report output for healing actions you'll want to enable `enable_dps_healing=1`.
 
 ## Fae Guardians (Night Fae Covenant Ability)
-Part of this ability increases the rate of which major cooldowns recharge, Shadowfiend/Mindbender and Power Infusion for Priests. You can simulate this effect being given to other players by changing the option `priest.self_benevolent_faerie=0` to false (default: `priest.self_benevolent_faerie=1`). 
+Part of this ability increases the rate of which major cooldowns recharge, Shadowfiend/Mindbender and Power Infusion for Priests. You can simulate this effect being given to other players by changing the option `priest.self_benevolent_faerie=0` to false (default: `priest.self_benevolent_faerie=1`). When you disable this the sim will also turn off the automatic application of Wrathful Faerie when casting Fae Guardians. This is because it is impossible to give someone the full 20s value of Fae Guardians CDR from the Benevolent Faerie (you must target them) and still get the Wrathful Faerie. The sim then casts a Shadow Word: Pain right after Fae Guardians to apply this faerie on your current target.
 
 ## Cauterizing Shadows
 When using the Cauterizing Shadows legendary you will see corresponding healing output whenever Shadow Word: Pain debuffs **expire**. This does **NOT** trigger if the sim refreshes the dot, or the target dies to match in-game behavior. When this does trigger, we assume that a default of 3 allies get the healing (by replicating the healing to the actor for each ally). To configure this you can adjust `priest.cauterizing_shadows_allies=x`, where X should be `0`, `1`, `2`, or `3` (default).
