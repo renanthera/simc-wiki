@@ -58,9 +58,13 @@ Certain buffs that can be used on a player by other players can be enabled throu
 
   * **external\_buffs.focus\_magic** (scope: player; default: 0), when set to 1, will make your character benefit from the Focus Magic talent used by a Mage.
   * **external\_buffs.power\_infusion** (scope: player; default: disabled), specifies the times when Power Infusion will be cast on your character by a Priest. Individual times are separated with `/` characters.
+  * **external\_buffs.benevolent\_faerie** (scope: player; default: disabled), specifies the times when Fae Guardians will be cast on your character by a Priest to trigger the Benevolent Faerie being given to your character. Individual times are separated with `/` characters.
 ```
 # Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
 external_buffs.power_infusion=0/120/240
+
+# Fae Guardians will be cast on the player at 0 seconds, 90 seconds, 180 seconds, and 270 seconds.
+external_buffs.benevolent_faerie=0/90/180/270
 
 # Disable Power Infusion if the option was already enabled.
 external_buffs.power_infusion=
