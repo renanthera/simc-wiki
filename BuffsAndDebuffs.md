@@ -56,9 +56,19 @@ The default settings will lead Simulationcraft to cast the bloodlust 6 seconds i
 
 Certain buffs that can be used on a player by other players can be enabled through options.
 
-  * **external\_buffs.focus\_magic** (scope: player; default: 0), when set to 1, will make your character benefit from the Focus Magic talent used by a Mage.
-  * **external\_buffs.power\_infusion** (scope: player; default: disabled), specifies the times when Power Infusion will be cast on your character by a Priest. Individual times are separated with `/` characters.
-  * **external\_buffs.benevolent\_faerie** (scope: player; default: disabled), specifies the times when Fae Guardians will be cast on your character by a Priest to trigger the Benevolent Faerie being given to your character. Individual times are separated with `/` characters.
+  * **Permanent buffs** (scope: player; default: 0), when set to 1, will make your character benefit from the specified permanent buff given by another player.
+    * **external\_buffs.focus\_magic** 
+```
+# The player will benefit from Focus Magic for the entire simulation.
+external_buffs.focus_magic=1
+```
+  * **Timed buffs** (scope: player; default: disabled), specifies the times when the specified buff will be cast on your character by another player. Individual times are separated with `/` characters.
+    * **external\_buffs.power\_infusion**
+    * **external\_buffs.benevolent\_faerie**
+    * **external\_buffs.blessing\_of\_summer**
+    * **external\_buffs.blessing\_of\_autumn**
+    * **external\_buffs.blessing\_of\_winter**
+    * **external\_buffs.blessing\_of\_spring**
 ```
 # Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
 external_buffs.power_infusion=0/120/240
