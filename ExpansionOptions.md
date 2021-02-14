@@ -44,6 +44,8 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.iqd_stat_fail_chance** (scope: global; default: 0.0) Sets the chance to not gain a stat buff outside Bloodlust when Inscrutable Quantum Device is activated
 * **shadowlands.thrill_seeker_killing_blow_chance** (scope: global; default: dynamic, min: 0.0, max: 1.0) Enables the 4 stack increase to Thrill Seeker when an enemy dies inside of a sim. Default chance is set at 5% for all sims except DungeonSlice which defaults to 25% to replicate chance of getting a killing blow.
 * **shadowlands.gluttonous_spike_overheal_chance** (scope: global; default: 1.0) Chance that Gluttonous Spike trinket procs additional damage from overhealing.
+* **shadowlands.shattered_psyche_allies** (scope: global; default: 0) The number of other players using the Memory of Past Sins trinket.
+* **shadowlands.memory_of_past_sins_precast** (scope: global; default: 0.0, min: 0.0, max: 30.0) The number of seconds before the fight to use the Memory of Past Sins trinket.
 
 ## Battle for Azeroth
 
