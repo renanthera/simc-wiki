@@ -134,16 +134,16 @@ The default Mage APLs include several variables, which can be configured through
 
 #### Fire APL Variables
 
-* `apl_variable.disable_combustion=<0/1>`: If set to 1, Combustion will not be used in the simulation.
-* `apl_variable.firestarter_combustion=<0/1>`: If set to 1, Combustion will be used while Firestarter is active.
-* `apl_variable.hot_streak_flamestrike=<number of targets>`: The number of target at which Hot Streaks should be spent on Flamestrike outside of Combustion.
-* `apl_variable.hard_cast_flamestrike=<number of targets>`: The number of target at which Flamestrike will replace Fireball as filler outside of Combustion.
-* `apl_variable.combustion_flamestrike=<number of targets>`: The number of targets at which a Flamestrike Combustion will be used instead of a Pyroblast Combustion.
-* `apl_variable.arcane_explosion=<number of targets>`: The number of targets at which Arcane Explosion will be used as filler (higher priority than Flamestrike filler).
-* `apl_variable.arcane_explosion_mana=<percentage of mana>`: The percentage of mana to conserve when using Arcane Explosion.
-* `apl_variable.kindling_reduction=<fraction>`: When making decisions, the APL will reduce Combustion's cooldown by this fraction to account for Kindling.
-* `apl_variable.combustion_shifting_power=<number of targets>`: The number of targets at which Shifting Power will be used during Combustion.
-* `apl_variable.combustion_cast_remains=<number of seconds>`: The number of seconds remaining on the cast before Combustion when Combustion will be used.
+* `apl_variable.disable_combustion=<0/1>` If set to 1, Combustion will not be used in the simulation.
+* `apl_variable.firestarter_combustion=<0/1>` If set to 1, Combustion will be used while Firestarter is active.
+* `apl_variable.hot_streak_flamestrike=<number of targets>` The number of target at which Hot Streaks should be spent on Flamestrike outside of Combustion.
+* `apl_variable.hard_cast_flamestrike=<number of targets>` The number of target at which Flamestrike will replace Fireball as filler outside of Combustion.
+* `apl_variable.combustion_flamestrike=<number of targets>` The number of targets at which a Flamestrike Combustion will be used instead of a Pyroblast Combustion.
+* `apl_variable.arcane_explosion=<number of targets>` The number of targets at which Arcane Explosion will be used as filler (higher priority than Flamestrike filler).
+* `apl_variable.arcane_explosion_mana=<percentage of mana>` The percentage of mana to conserve when using Arcane Explosion.
+* `apl_variable.kindling_reduction=<fraction>` When making decisions, the APL will reduce Combustion's cooldown by this fraction to account for Kindling.
+* `apl_variable.combustion_shifting_power=<number of targets>` The number of targets at which Shifting Power will be used during Combustion.
+* `apl_variable.combustion_cast_remains=<number of seconds>` The number of seconds remaining on the cast before Combustion when Combustion will be used.
 
 ## Crowd control
 
