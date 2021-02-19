@@ -132,23 +132,18 @@ Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `arcane
 
 The default Mage APLs include several variables, which can be configured through the `apl_variable` option.
 
-#### Disabling Combustion
+#### Fire APL Variables
 
-Combustion and any cooldowns such as Essences or Trinkets that are only ever used with Combustion can be disabled with `apl_variable.disable_combustion=1`. This is mainly useful for exploring scenarios where Combustion will not be used, such as some trash pulls in dungeons.
-
-#### Delaying Combustion for Essence cooldowns
-
-Sometimes, it can be better to delay Combustion for Memory of Lucid Dreams or Worldvein Resonance. By default, if Combustion is ready and one of those essences will be ready within 20 seconds, then Combustion will be delayed. The threshold where this occurs can be configured with `apl_variable.hold_combustion_threshold=<time in seconds>`.
-
-#### Channeling Azshara's Font of Power before combat begins
-
-It is common for Mages to channel Azshara's Font of Power long before combat begins so that another trinket can be used with their cooldowns. By default when two on-use trinkets that are used with Combustion or Arcane Power are equipped, the Fire APL will channel Azshara's Font of Power 18 seconds before combat and the Arcane APL will channel it 12 seconds before combat. This timing can be configured with `apl_variable.font_of_power_precombat_channel=<time in seconds>`. This can also be configured globally for all players by using `bfa.font_of_power_precombat_channel=<time in seconds>`. If both options are specified, then the value given by `bfa.font_of_power_precombat_channel` will be used.
-
-#### Configuring Flamestrike usage
-
-The number of targets at which Flamestrike should be used can vary significantly with gear and talents. Due to this, the thresholds used by the default APL may not be optimal for all gearsets. The target thresholds for using Flamestrike can be configured with `apl_variable.hot_streak_flamestrike=<number of targets>` and `apl_variable.hard_cast_flamestrike=<number of targets>`. These will configure the number of targets at which Flamestrike will be used outside of Combustion with Hot Streaks or as hard cast filler, respectively.
-
-After Combustion, a large Ignite will usually be present on the primary target. Due to Ignite spreading mechanics, using Flamestrike is often a significant DPS loss after Combustion while this Ignite has a lot of damage stored in it. By default, Flamestrike usage will not resume until 25 seconds after Combustion ends. This delay can be adjusted with `apl_variable.delay_flamestrike=<time in seconds>`.
+* `apl_variable.disable_combustion=<0/1>`: If set to 1, Combustion will not be used in the simulation.
+* `apl_variable.firestarter_combustion=<0/1>`: If set to 1, Combustion will be used while Firestarter is active.
+* `apl_variable.hot_streak_flamestrike=<number of targets>`: The number of target at which Hot Streaks should be spent on Flamestrike outside of Combustion.
+* `apl_variable.hard_cast_flamestrike=<number of targets>`: The number of target at which Flamestrike will replace Fireball as filler outside of Combustion.
+* `apl_variable.combustion_flamestrike=<number of targets>`: The number of targets at which a Flamestrike Combustion will be used instead of a Pyroblast Combustion.
+* `apl_variable.arcane_explosion=<number of targets>`: The number of targets at which Arcane Explosion will be used as filler (higher priority than Flamestrike filler).
+* `apl_variable.arcane_explosion_mana=<percentage of mana>`: The percentage of mana to conserve when using Arcane Explosion.
+* `apl_variable.kindling_reduction=<fraction>`: When making decisions, the APL will reduce Combustion's cooldown by this fraction to account for Kindling.
+* `apl_variable.combustion_shifting_power=<number of targets>`: The number of targets at which Shifting Power will be used during Combustion.
+* `apl_variable.combustion_cast_remains=<number of seconds>`: The number of seconds remaining on the cast before Combustion when Combustion will be used.
 
 ## Crowd control
 
