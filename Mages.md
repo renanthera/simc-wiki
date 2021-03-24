@@ -145,6 +145,10 @@ The default Mage APLs include several variables, which can be configured through
 * `apl_variable.combustion_shifting_power=<number of targets>` The number of targets at which Shifting Power will be used during Combustion.
 * `apl_variable.combustion_cast_remains=<number of seconds>` The number of seconds remaining on the cast before Combustion when Combustion will be used.
 
+### Disciplinary Command
+
+`mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova, or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
+
 ## Crowd control
 
 Some abilities have a different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
@@ -153,7 +157,3 @@ Target is susceptible to crowd control in these situations:
 
 * Target's level is strictly smaller than player level + 3
 * Target is an add spawned by the `adds` raid event
-
-### Disciplinary Command
-
-`mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
