@@ -153,3 +153,7 @@ Target is susceptible to crowd control in these situations:
 
 * Target's level is strictly smaller than player level + 3
 * Target is an add spawned by the `adds` raid event
+
+### Disciplinary Command
+
+`mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
