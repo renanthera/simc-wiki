@@ -8,7 +8,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
  * **covenant** (scope: player; default: none) A player option that takes a covenant identifier or tokenized name. This will enable the corresponding covenant ability for the player's class.
  * **soulbind** (scope: player; default: empty) A player option that takes a `/` delimited list of soulbind abilities and conduits. Each conduit has a rank specified after the conduit identifier separated by a `:`. Note that the simulator currently does not check whether the combination of soulbinds and conduits is possible. This is a conscious decision to give the users the most flexibility in how they want to express their soulbind-related effects in an actor profile. This may change in the future if it turns out that we need to apply limitations to the valid set of soulbinds. You can also use the tokenized name of the conduit or soulbind ability as the identifier. This option will not do anything if a covenant is not selected for the actor.
- * **renown** (scope:player; default: 0) A player option that takes the player's renown level. This will enable the appropriate renown reward abilities.
+ * **renown** (scope: player; default: 0) A player option that takes the player's renown level. This will enable the appropriate renown reward abilities.
 
  Soulbind token schemes:
  * `conduit_id:rank`
