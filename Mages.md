@@ -98,6 +98,9 @@ The expression `remaining_winters_chill` provides an approximation of the number
 
 The expression `hot_streak_spells_in_flight` provides the number of spells that are currently in flight (to any target) and are capable of triggering Hot Streak.
 
+### Kindling
+The expression `expected_kindling_reduction` returns the expected amount of time left until Combustion's cooldown is ready as a fraction of Combustion's cooldown based on the rate that Kindling has been reducing the cooldown.
+
 ## Mage options
 
 ### Firestarter and Searing Touch
@@ -141,10 +144,9 @@ The default Mage APLs include several variables, which can be configured through
 * `apl_variable.combustion_flamestrike=<number of targets>` The number of targets at which a Flamestrike Combustion will be used instead of a Pyroblast Combustion.
 * `apl_variable.arcane_explosion=<number of targets>` The number of targets at which Arcane Explosion will be used as filler (higher priority than Flamestrike filler).
 * `apl_variable.arcane_explosion_mana=<percentage of mana>` The percentage of mana to conserve when using Arcane Explosion.
-* `apl_variable.kindling_reduction=<fraction>` When making decisions, the APL will reduce Combustion's cooldown by this fraction to account for Kindling.
 * `apl_variable.combustion_shifting_power=<number of targets>` The number of targets at which Shifting Power will be used during Combustion.
 * `apl_variable.combustion_cast_remains=<number of seconds>` The number of seconds remaining on the cast before Combustion when Combustion will be used.
-
+* `apl_variable.overpool_fire_blasts=<number_of_seconds>` The number of seconds early (or late if negative) to start pooling Fire Blasts for Combustion.
 ### Disciplinary Command
 
 `mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova, or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
