@@ -131,7 +131,7 @@ expel_harm_effectiveness=0.85
 monk.expel_harm_effectiveness=0.85
 ```
 
-4. **Chi Burst Healing Targets** - How many targets you wish to evaluate Chi Burst healing. SimulationCraft does not handle Area of Effect Healing all that well without having to add multiple dummy targets into the simulation. This can get very resource intensive. This will heal the player X number of times to simulate healing multiple people with the spell. This requires whole numbers. Defaults to 1 for 100%.
+4. **Chi Burst Healing Targets** - How many targets you wish to evaluate Chi Burst healing. SimulationCraft does not handle area of effect healing all that well without having to add multiple dummy targets into the simulation. This can get very resource intensive. This will heal the player X number of times to simulate healing multiple people with the spell. This requires whole numbers. Defaults to 1.
 
 ```
 # Chi Burst hits 20 targets
@@ -139,7 +139,7 @@ chi_burst_healing_targets=20
 monk.chi_burst_healing_targets=20
 ```
 
-5. **Faeline Stomp Uptime** - How much time is spent while fighting in the Faeline Stomp ground effect. Valid between 0 and 1. Defaults to 1.
+5. **Faeline Stomp Uptime** - How much time is spent while fighting in the Faeline Stomp ground effect. Valid between 0 and 1. Defaults to 1 for 100%.
 
 ```
 # Faeline Stomp Uptime is set to 85%
