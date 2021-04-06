@@ -62,48 +62,86 @@ Stagger is part of the Brewmaster active mitigation. Given how unique it is, the
  # Purify stagger if in Light Stagger or green stagger
  actions+=/purifying_brew,if=stagger.light
   ```
-1. **Moderate Stagger** - This is any (Stagger tick damage / Current Player HP) that is between 3.5% and 6.5%
+2. **Moderate Stagger** - This is any (Stagger tick damage / Current Player HP) that is between 3.5% and 6.5%
 
   ```
  # Purify stagger if in Moderate Stagger or yellow stagger
  actions+=/purifying_brew,if=stagger.moderate
   ```
-1. **Heavy Stagger** - This is any (Stagger tick damage / Current Player HP) that is over 6.5%
+3. **Heavy Stagger** - This is any (Stagger tick damage / Current Player HP) that is over 6.5%
 
   ```
  # Purify stagger if in Heavy Stagger or red stagger
  actions+=/purifying_brew,if=stagger.heavy
   ```
-1. **Stagger Percent** - This compares the percent evaluation to the (Stagger tick damage / Current Player HP).
+4. **Stagger Percent** - This compares the percent evaluation to the (Stagger tick damage / Current Player HP).
 
   ```
  # Purify stagger once stagger percent goes over 2.2%
  actions+=/purifying_brew,if=stagger.pct>2.2
   ```
-1. **Stagger Amount** - This evaluates the current Stagger tick damage
+5. **Stagger Amount** - This evaluates the current Stagger tick damage
 
   ```
  # Purify stagger once stagger tick damage goes over 10,000 damage
  actions+=/purifying_brew,if=stagger.amount>10000
   ```
-1. **Stagger Remains** - This evaluates the remaining duration from stagger
+6. **Stagger Remains** - This evaluates the remaining duration from stagger
 
   ```
  # Purify stagger only if stagger remains more than 3 seconds
  actions+=/purifying_brew,if=stagger.remains>3
   ```
-1. **Stagger Amount Remains** - This evaluates the remaining amount of damage from stagger
+7. **Stagger Amount Remains** - This evaluates the remaining amount of damage from stagger
 
   ```
  # Purify stagger once there is 50,000 damage remaining on the stagger
  actions+=/purifying_brew,if=stagger.amount_remains<50000
   ```
-1. **Stagger Last Tick damage** - This evaluates the stagger damage done from the last n ticks.
+8. **Stagger Last Tick damage** - This evaluates the stagger damage done from the last n ticks.
 
   ```
  # Purify stagger if the last 3 stagger ticks did more than 10000 damage.
  actions+=/purifying_brew,if=stagger.last_tick_damage_3>10000
   ```
+
+## Options
+
+1. **Initial Chi** - This sets the Chi at the start of each iteration. It is advised that this is set no higher than 1 chi due to in-game chi gets set to 1 chi if you have more than 1 chi going into a fight. This requires whole numbers.
+
+```
+initial_chi=1
+monk.initial_chi=1
+```
+
+2. **Memory of Lucid Dreams Proc Rate** - Sets the proc rate of Memory of Lucid Dreams Azerite Trait. Valid between 0 and 1. Defaults to 0.15.
+
+```
+memory_of_lucid_dreams_proc_chance=0.15
+monk.memory_of_lucid_dreams_proc_chance=0.15
+```
+
+3. **Expel Harm Effectiveness** - How much of the heal from Expel Harm gets utilized towards the damage calculation. Valid between 0 and 1. Defaults to 1.
+
+```
+expel_harm_effectiveness=0.85
+monk.expel_harm_effectiveness=0.85
+```
+
+4. **Chi Burst Healing Targets** - How many targets you wish to evaluate Chi Burst healing. SimulationCraft does not handle Area of Effect Healing all that well without having to add multiple dummy targets into the simulation. This can get very resource intensive. This will heal the player X number of times to simulate healing multiple people with the spell. This requires whole numbers. Defaults to 1.
+
+```
+# Chi Burst hits 20 targets
+chi_burst_healing_targets=20
+monk.chi_burst_healing_targets=20
+```
+
+5. **Faeline Stomp Uptime** - How much time is spent while fighting in the Faeline Stomp ground effect. Valid between 0 and 1. Defaults to 1.
+
+```
+faeline_stomp_uptime=0.85
+monk.faeline_stomp_uptime=0.85
+```
 
 # Reports
 We only document here non-obvious entries.
