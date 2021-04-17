@@ -73,7 +73,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 ### From local JSON file
   * If you have your armory profile as a JSON file, you can directly import from it instead of connecting to the armory servers.
-    * **local\_json** (scope: new character; default: "") can be used to import a character from the armory. The syntax is `local_json=mainfile,spec=specfile,equipment=equipmentfile`. Additionally, there's a `media=mediafile` suboption available if you want to have character backgrounds in the HTML report.
+    * **local\_json** (scope: new character; default: "") can be used to import a character from the armory. The syntax is `local_json=mainfile,spec=specfile,equipment=equipmentfile`. Additionally, there's a `media=mediafile` suboption available if you want to have character backgrounds in the HTML report. `soulbinds=soulbindsfile` is available for Shadowlands covenants/soulbinds character data.
 
 The files in question, are the sub-documents for a character profile that you get, as per information found in https://us.battle.net/forums/en/bnet/topic/20772457051
 
