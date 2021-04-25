@@ -69,6 +69,8 @@ external_buffs.focus_magic=1
     * **external\_buffs.blessing\_of\_autumn**
     * **external\_buffs.blessing\_of\_winter**
     * **external\_buffs.blessing\_of\_spring**
+    * **external\_buffs.conquerors\_banner**
+    * **external\_buffs.rallying\_cry**
 ```
 # Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
 external_buffs.power_infusion=0/120/240
