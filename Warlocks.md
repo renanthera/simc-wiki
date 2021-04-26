@@ -1,7 +1,7 @@
 
 
 # Options
-  * **use\_pre\_soulburn**
+  * **soul_shards**: Specify initial Soul Shard amount
   * **dark\_intent\_target**
 
 # Actions
