@@ -2,7 +2,7 @@
 
 # Options
   * **soul_shards**: Specify initial Soul Shard amount
-  * **default_pet**: Specify default main pet
+  * **default_pet**: Specify default main pet (_imp_, _voidwalker_, _succubus_, _felstalker_)
 
 # Actions
   * _shadow\_bolt_ (isb)
