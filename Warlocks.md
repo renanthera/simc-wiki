@@ -2,7 +2,7 @@
 
 # Options
   * **soul_shards**: Specify initial Soul Shard amount
-  * **dark\_intent\_target**
+  * **default_pet**: Specify default main pet
 
 # Actions
   * _shadow\_bolt_ (isb)
