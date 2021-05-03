@@ -333,10 +333,10 @@ actions+=/typhoon,moving=1
 # Only use pyroblast when the previous spell used was fireball
 actions+=/pyroblast,if=prev.fireball
 ```
-* _prev\_gcd_ returns only the previous action that used a GCD. This will only include actions such as fireball, but not bloodbath.
+* _prev\_gcd_ returns only the previous action that used a GCD. This will only include actions such as fireball, but not bloodbath. Use integers to change how many GCDs in the past you are looking at.
 ```
 # Only use whirlwind after mortal strike.
-actions+=/whirlwind,if=prev_gcd.whirlwind
+actions+=/whirlwind,if=prev_gcd.1.whirlwind
 ```
 * _prev\_off\_gcd_ returns all off gcd actions that occurred since the previous gcd was executed. So after a warrior uses raging blow, it will track every off-gcd action until another gcd action is executed, then it is reset.
 ```
