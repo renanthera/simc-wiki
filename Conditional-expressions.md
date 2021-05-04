@@ -109,6 +109,9 @@ actions+=/shadow_word_pain,if=(!ticking|dot.shadow_word_pain.remains<gcd+0.5)&mi
 * _cooldown\_react_ is 1 if the cooldown has elapsed, the reaction time for the abrupt reset has elapsed, or the cooldown was reset in a determined way. The expression returns 0 if the reset of the cooldown happened early (e.g., due to a proc or another action) and the cooldown specific reaction time to the abrupt reset of the cooldown has not yet elapsed.
 * _cast\_delay_ is 1 if sufficient time has elapsed after the previous player executable action's cast time (including gcd). The time is controlled by two separate parameters, _brain\_lag_ and _brain\_lag\_stddev_.
 * _multiplier_ is the player's highest damages/healing multiplier for the schools used by the action. A buff that would increase your damages by 20% would give you a 1.2 multiplier. All damages multipliers are multiplicative (5% and 20% give 1.2\*1.05).
+* _casting_ evaluates to 1 if the action is currently being cast, 0 otherwise
+* _channeling_ evaluates to 1 if the action is currently being channeled, 0 otherwise
+* _executing_ evaluates to 1 if the action is currently being cast or channeled, 0 otherwise
 ```
 # Consumes a potion as soon as we have enough stacked buffs to reach a minimum 30% multiplier.
 actions+=/golemblood_potion,if=multiplier>1.3
