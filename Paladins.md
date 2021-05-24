@@ -28,18 +28,13 @@ If the number has decimals, they will be used as a chance to generate an extra s
 actions+=/blessed_hammer,strikes=3
 ```
 
-## Indomitable Justice
-Indomitable Justice is an azerite trait (azerite ID 235) that increases the damage of Judgment based on the difference between the player's current hp percentage and its target's.
-You can set a specific % health to use with the player-scope option indomitable_justice_pct (integer value, default: 0).
+## Consecration Precombat time
+When Consecration is included in the precombat APL, the spell will be used with a special behaviour based on the precombat_time option given to it (default: 2s). The ground aoe's start time will be delayed by 1s to simulate the time the boss takes to run into it. Its duration and cooldown will also be adjusted accordingly.
+>Negative values will be handled the same way as some users may find it more intuitive (-3 is 3s before combat starts). The absolute value has to be lower than consecration's total duration, and higher than the player's based gcd duration (1.5s).
 ```
-# Set the indomitable justice trait to be used as if the player was always at 75% health
-indomitable_justice_pct=75
+# Use consecration 3s before combat starts
+actions.precombat=consecration,precombat_time=3
 ```
->A value of 0 (or if you don't use the option) will automatically use 100% health for Retribution and Holy Paladins, and 80% health for Protection Paladins.
-
->A value of -1 (or any negative value) will use a "realistic" model, checking the player's health throughout the simulation.
-
->Any value higher than 100 will be lowered to 100.
 
 # Reports
 We only document here non-obvious entries.
