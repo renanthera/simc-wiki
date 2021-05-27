@@ -37,6 +37,8 @@ By activating `bugs=1` inside your character's sim you will get access to the fo
 - [Dark Thought Mind Sear Proc Rate](https://github.com/WarcraftPriests/sl-shadow-priest/issues/101)
 - [Ghost Void Bolt Hit](https://github.com/SimCMinMax/WoW-BugTracker/issues/678)
 - [Wrathful Faerie Insanity Gen](https://github.com/SimCMinMax/WoW-BugTracker/issues/777)
+- [Bwonsamdi's Pact Math Error](https://github.com/SimCMinMax/WoW-BugTracker/issues/852)
+- [Pallid Command not affected by Mastery](https://github.com/SimCMinMax/WoW-BugTracker/issues/854)
 
 # Custom Options
 ## Self Power Infusion
@@ -63,6 +65,22 @@ Part of this ability increases the rate of which major cooldowns recharge, Shado
 
 ## Cauterizing Shadows
 When using the Cauterizing Shadows legendary you will see corresponding healing output whenever Shadow Word: Pain debuffs **expire**. This does **NOT** trigger if the sim refreshes the dot, or the target dies to match in-game behavior. When this does trigger, we assume that a default of 3 allies get the healing (by replicating the healing to the actor for each ally). To configure this you can adjust `priest.cauterizing_shadows_allies=x`, where X should be `0`, `1`, `2`, or `3` (default).
+
+## Bwonsamdi's Pact Mask Type
+The Bwonsamdi's pact legendary lets you augment a Faerie. In an optimal setting moving this around likely is not worth it, so the sim sets the mask it augments via this option. By using `priest.bwonsamdis_pact_mask_type='benevolent'` you can set the Faerie that is augmented. Options are `benevolent` or `wrathful`, default is `benevolent`.
+
+## Shadow Word: Manipulation Seconds Remaining
+While using Shadow Word: Manipulation the sim makes an assumption to mimic the debuffs that would be applied that get consumed when the enemy damages or heals. Because this buff does not and cannot be added into simc with special raid events, we just mock this behavior with the option. This option determines the amount of stacks you get on the buff as a factor of the time remaining on Mindgames when it expires. It uses the inverse of that to schedule this event the correct amount of seconds delayed in the future after the Mindgames impact action.
+
+Max is set to 8 seconds as the default duration of Mindgames is 5s + 3s from using Shadow Word: Manipulation. While using the Shattered Perceptions conduit the extra duration is applied outside of the option.
+
+```
+// Min: 0, Max: 8, Default: 7
+priest.shadow_word_manipulation_seconds_remaining=7
+```
+
+## Pallid Command Allies
+Since you get more stacks the more allies that damage into your Unholy Nova, we use this option to determine the magnitude of stacks to add per direct damage hit from the priest as a rough approximation. The default is currently set to 5 stacks per direct hit. You can set this with `priest.pallid_command_allies=5`. Setting this to 0 will cause no buff to be triggered, but still spawn the add.
 
 ***
 
