@@ -6,6 +6,7 @@
 
 # Actions
   * _dark\_soul_ : Shorthand for the specific Dark Soul spell for any Warlock spec
+  * _interrupt_ : Will use an appropriate pet interrupt (Spell Lock/Axe Toss) if target is casting and a valid pet is currently active
 
 # Expressions
   * _last\_cast\_imps_ : Number of Wild Imps with one cast remaining
