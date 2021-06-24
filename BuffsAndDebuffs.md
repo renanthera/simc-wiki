@@ -32,7 +32,7 @@ Beware! You need to declare the overrides **`***`after`***`** you declared **opt
 
 # Heroism/bloodlust
 
-The default settings will lead Simulationcraft to cast the bloodlust 6 seconds into the duration of the fight, or when the target is below 25% health (although this is not relevant under most normal simulations).
+The default settings will lead Simulationcraft to cast the bloodlust at the start of the fight.
 
   * **override.bloodlust** (scope: global; default: equal to **optimal\_raid**, or 1 if never specified) will force the application to automatically cast bloodlust (or not, when zero) at the end of the fight (or the beginning, see the next option).
 ```
@@ -43,8 +43,8 @@ The default settings will lead Simulationcraft to cast the bloodlust 6 seconds i
 
   There are two possible triggers for bloodlust, one based on the elapsed or the remaining time, another one based on the target's health. The simulation checks every 1s if one of the triggers is satisfied and will use bloodlust if that's the case. Both triggers can be disabled. Note that those settings won't affect the manually casted bloodlusts (used through the actions list), only the bloodlusts casted through **optimal\_raid** or **override.bloodlust**.
 
-  * **bloodlust\_percent** (scope: global; default: 25), when greater than zero, is the percent of the target health below which bloodlust will be triggered. When zero, this trigger is disabled.
-  * **bloodlust\_time** (scope: global; default: 0.5), when greater than zero, is the elapsed time threshold, in seconds, since the beginning of the fight. When lesser than zero, it is the estimated remaining time threshold, in seconds, before the target dies. Anytime this threshold is reached, bloodlust will be triggered. When zero, this trigger is disabled.
+  * **bloodlust\_percent** (scope: global; default: 0), when greater than zero, is the percent of the target health below which bloodlust will be triggered. When zero, this trigger is disabled.
+  * **bloodlust\_time** (scope: global; default: 0), when greater than zero, is the elapsed time threshold, in seconds, since the beginning of the fight. When lesser than zero, it is the estimated remaining time threshold, in seconds, before the target dies. Anytime this threshold is reached, bloodlust will be triggered. When zero, this trigger is disabled.
 ```
  # This example enables optimal_raid. Bloodlust will be used as soon as one of there are less than 100s before the end of the fight, or when the target falls below 20% health.
  optimal_raid=1
