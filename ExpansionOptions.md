@@ -28,7 +28,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
  * **shadowlands.stone_legionnaires_in_party** (scope: global; default: 0) The number of other players in each player's party with the Stone Legion Heraldry trinket.
  * **shadowlands.crimson_choir_in_party** (scope: global; default: 0) The number of other players in each player's party with the Cabalist's Hymnal trinket.
 * **shadowlands.judgment_of_the_arbiter_arc_chance** (scope: global; default: 0) Chance that Judgment of the Arbiter will arc to an ally
-* **shadowlands.volatile_solvent_type** (scope: global; default: none) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
+* **shadowlands.volatile_solvent_type** (scope: global; default: mastery) The type of corpse/buff you've consumed for the Volatile Solvent soulbind. Multiple types can be specified, delimited by `/` or `:`.  Valid types are:
     - Corpse type: "humanoid", "beast", "dragonkin", "elemental", "giant"
     - Buff type: "mastery", "primary", "crit", "magic", "physical"
 * **shadowlands.disable_soul_igniter_second_use** (scope: global; default: 1) Setting to 1 will wait to trigger the AOE, setting to 0 will trigger the AOE early
