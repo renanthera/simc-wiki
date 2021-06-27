@@ -111,7 +111,6 @@ Stagger is part of the Brewmaster active mitigation. Given how unique it is, the
 
 ```
 # Initial Chi is set to 1 chi
-initial_chi=1
 monk.initial_chi=1
 ```
 
@@ -119,15 +118,13 @@ monk.initial_chi=1
 
 ```
 # Memory of Lucid Dreams Proc Chance is set to 15%
-memory_of_lucid_dreams_proc_chance=0.15
 monk.memory_of_lucid_dreams_proc_chance=0.15
 ```
 
-3. **Expel Harm Effectiveness** - How much of the heal from Expel Harm gets utilized towards the damage calculation. Valid between 0 and 1. Defaults to 1 for 100%.
+3. **Expel Harm Effectiveness** - How much of the heal from Expel Harm gets utilized towards the damage calculation. Valid between 0 and 1. Defaults to 0.25 for 25%.
 
 ```
 # Expel Harm Effectiveness is set to 85%
-expel_harm_effectiveness=0.85
 monk.expel_harm_effectiveness=0.85
 ```
 
@@ -135,7 +132,6 @@ monk.expel_harm_effectiveness=0.85
 
 ```
 # Chi Burst hits 20 targets
-chi_burst_healing_targets=20
 monk.chi_burst_healing_targets=20
 ```
 
@@ -143,7 +139,6 @@ monk.chi_burst_healing_targets=20
 
 ```
 # Faeline Stomp Uptime is set to 85%
-faeline_stomp_uptime=0.85
 monk.faeline_stomp_uptime=0.85
 ```
 
