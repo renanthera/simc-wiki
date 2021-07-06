@@ -33,6 +33,7 @@
 
 * **druid.predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
 
+* **druid.initial_pulsar_value** (default: 0.0) Set the initial value of the Primordial Arcanic Pulsar legendary.
 
 ## Buffs
 > Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
