@@ -56,6 +56,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.newfound_resolve_success_chance** (scope: global; default: 1.0, min: 0.0, max: 1.0) The percentage of times the player faces their Doubt to gain Newfound Resolve.
 * **shadowlands.newfound_resolve_default_delay** (scope: global; default: 4) The average number of seconds that the player will wait before facing their Doubt to gain Newfound Resolve.
 * **shadowlands.newfound_resolve_delay_relstddev** (scope: global; default: 0.2) The relative standard deviation used with the above option.
+* **shadowlands.soleahs_secret_technique_type** (scope: global; default: haste) The stat buff you gain from the Soleahs Secret Technique trinket. This is the self bonus only, not the ally bonus. Options are `haste`, `crit`, `mastery`, or `versatility`.
 
 ## Battle for Azeroth
 
