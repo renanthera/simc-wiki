@@ -48,6 +48,9 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.shattered_psyche_allies** (scope: global; default: 0) The number of other players using the Memory of Past Sins trinket.
 * **shadowlands.memory_of_past_sins_precast** (scope: global; default: 0.0, min: 0.0, max: 30.0) The number of seconds before the fight to use the Memory of Past Sins trinket.
 * **shadowlands.wild_hunt_tactics_duration_multiplier** (scope: global; default: 1.0) Change the duration that Wild Hunt Tactics is active to better match the given fight. For example, a value of 0.8 will reduce the duration of the effect by 20%.
+
+#### 9.1 - Chains of Domination options
+
 * **shadowlands.party_favor_type** (scope: global; default: none) The type of buff you've received from the Party Favors Soulbind by consuming The Mad Duke's Tea. Valid types are:
     - Buff type: "haste", "crit", "primary", "versatility"
 * **shadowlands_opts.better_together_ally** (scope: global; default: true) Enables the Pelegos Better Together trait from activating or not. Setting to false causes it to not be triggered.
