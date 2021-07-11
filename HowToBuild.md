@@ -74,7 +74,7 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
 
 ## Command Line Interface & Graphical User Interface using Cmake (preferred)
  * If not already installed, install `cmake`, `build-essential`, `libcurl-dev`, and `pkg-config` (e.g., a compilation toolchain, libcurl include headers, and library metainformation tool).
-  * Install qt5-qmake & qt5-webengine if you want to build the GUI. On Ubuntu, the package is called `qt5-default`.
+  * Install qt5-qmake & qt5-webengine if you want to build the GUI. On Ubuntu, the required packages are called `qt5-default` and `qtwebengine5-dev`.
   * `cd your_simc_source_dir`
   * `mkdir build && cd build`
   * `cmake ../`
@@ -98,7 +98,7 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
 
 ## Graphical User Interface (using qmake)
 
-  * Install qt5-qmake & qt5-webengine. On Ubuntu, the package is called `qt5-default`.
+  * Install qt5-qmake & qt5-webengine. On Ubuntu, the required packages are called `qt5-default` and `qtwebengine5-dev`.
   * `cd your_simc_source_dir`
   * `qmake simulationcraft.pro`
   * `make`
