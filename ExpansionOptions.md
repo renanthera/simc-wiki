@@ -60,6 +60,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.newfound_resolve_default_delay** (scope: global; default: 4) The average number of seconds that the player will wait before facing their Doubt to gain Newfound Resolve.
 * **shadowlands.newfound_resolve_delay_relstddev** (scope: global; default: 0.2) The relative standard deviation used with the above option.
 * **shadowlands.soleahs_secret_technique_type** (scope: global; default: haste) The stat buff you gain from the Soleahs Secret Technique trinket. This is the self bonus only, not the ally bonus. Options are `haste`, `crit`, `mastery`, or `versatility`.
+* **shadowlands.enable_rune_words** (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)
 
 ## Battle for Azeroth
 
