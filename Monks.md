@@ -128,7 +128,7 @@ monk.memory_of_lucid_dreams_proc_chance=0.15
 monk.expel_harm_effectiveness=0.85
 ```
 
-4. **Chi Burst Healing Targets** - How many targets you wish to evaluate Chi Burst healing. SimulationCraft does not handle area of effect healing all that well without having to add multiple dummy targets into the simulation. This can get very resource intensive. This will heal the player X number of times to simulate healing multiple people with the spell. This requires whole numbers. Defaults to 1.
+4. **Chi Burst Healing Targets** - How many targets you wish to evaluate Chi Burst healing. SimulationCraft does not handle area of effect healing all that well without having to add multiple dummy targets into the simulation. This can get very resource intensive. This will heal the player X number of times to simulate healing multiple people with the spell. This requires whole numbers. Defaults to 8.
 
 ```
 # Chi Burst hits 20 targets
