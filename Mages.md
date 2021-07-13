@@ -115,7 +115,7 @@ For example, `mage.firestarter_duration_multiplier=0.3` reduces the duration of 
 
 Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
 
-`frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
+`mage.frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
 
 ### Focus Magic
 
@@ -125,11 +125,11 @@ If the Mage has the Focus Magic talent selected, `mage.focus_magic_interval=<tim
 
 ### Arcane Missiles
 
-Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `arcane_missiles_chain_delay=<time in seconds>` and `arcane_missiles_chain_relstddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
+Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `mage.arcane_missiles_chain_delay=<time in seconds>` and `mage.arcane_missiles_chain_relstddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
 
 ### Mirrors of Torment
 
-`mirrors_of_torment_interval=<time in seconds>` can be used to control how often triggers of Mirrors of Torment will attempt to trigger relative to the time when the debuff is applied.
+`mage.mirrors_of_torment_interval=<time in seconds>` can be used to control how often triggers of Mirrors of Torment will attempt to trigger relative to the time when the debuff is applied.
 
 ### Overriding APL variables
 
