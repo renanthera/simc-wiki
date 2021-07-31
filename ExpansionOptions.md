@@ -61,6 +61,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.newfound_resolve_delay_relstddev** (scope: global; default: 0.2) The relative standard deviation used with the above option.
 * **shadowlands.soleahs_secret_technique_type** (scope: global; default: haste) The stat buff you gain from the Soleahs Secret Technique trinket. This is the self bonus only, not the ally bonus. Options are `haste`, `crit`, `mastery`, or `versatility`.
 * **shadowlands.enable_rune_words** (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)
+* **shadowlands.precombat_pustules** (scope: global; default: 9; min: 1; max: 9) Controls the number of pustules gained from precombat fleshcraft.
 
 ## Battle for Azeroth
 
