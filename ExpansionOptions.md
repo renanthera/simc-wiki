@@ -63,6 +63,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.soleahs_secret_technique_type** (scope: global; default: haste) The stat buff you gain from the Soleahs Secret Technique trinket. This is the self bonus only, not the ally bonus. Options are `haste`, `crit`, `mastery`, or `versatility`.
 * **shadowlands.enable_rune_words** (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)
 * **shadowlands.precombat_pustules** (scope: global; default: 9; min: 1; max: 9) Controls the number of pustules gained from precombat fleshcraft.
+* **shadowlands.cruciform_veinripper_proc_rate** (scope: global; default 0; min: 0; max 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.
 
 ## Battle for Azeroth
 
