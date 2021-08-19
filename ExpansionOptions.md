@@ -54,7 +54,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 
 * **shadowlands.party_favor_type** (scope: global; default: random) The type of buff you've received from the Party Favors Soulbind by consuming The Mad Duke's Tea. Valid types are:
     - Buff type: "none", "random", "haste", "crit", "primary", "versatility"
-* **shadowlands_opts.better_together_ally** (scope: global; default: true) Enables the Pelegos Better Together trait from activating or not. Setting to false causes it to not be triggered.
+* **shadowlands.better_together_ally** (scope: global; default: true) Enables the Pelegos Better Together trait from activating or not. Setting to false causes it to not be triggered.
 * **shadowlands.battlefield_presence_enemies** (scope: global; default: dynamic, min: 0, max: 3) Controls the amount of enemies/buff stacks of General Draven's Battlefield Presence trait. By default this will change throughout the sim based on the amount of enemies in the sim. So if you have 2 enemies in the sim you will have 2 buff stacks. During a sim like DungeonSlice this will fluctuate throughout adds spawning and despawning up to a maximum of 3 stacks.
 * **shadowlands.titanic_ocular_gland_worthy_chance** (scope: global; default: 1.0, min: 0.0, max: 1.0) The fraction of the time that the player is above the health threshold for Titanic Ocular Gland trinket.
 * **shadowlands.newfound_resolve_success_chance** (scope: global; default: 1.0, min: 0.0, max: 1.0) The percentage of times the player faces their Doubt to gain Newfound Resolve.
