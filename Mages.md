@@ -151,6 +151,9 @@ The default Mage APLs include several variables, which can be configured through
 
 `mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova, or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
 
+### Arcane Harmony
+`mage.prepull_harmony_stacks=<number>` can be used to start each combat with a given number of Arcane Harmony buff stacks.
+
 ## Crowd control
 
 Some abilities have a different effect depending on whether the target is susceptible to crowd control. For example, against targets that are immune to crowd control, Freeze will not apply the root effect.
