@@ -135,6 +135,21 @@ Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `mage.a
 
 The default Mage APLs include several variables, which can be configured through the `apl_variable` option.
 
+#### Arcane APL Variables
+
+* `apl_variable.always_sync_cooldowns=<0/1>` If set to 1, Kyrian simulations using the Arcane Prodigy conduit will sync Touch of the Magi, Rune of Power, and Radiant Spark between Arcane Power uses. This variable only affects the single target rotation.
+* `apl_variable.prepull_evo=<0/1>` If set to 1, Evocation will be used before combat begins.
+* `apl_variable.fishing_opener=<0/1>` Overrides the current behavior for beginning single target openers by fishing for Clearcasting procs. Does not affect Kyrian simulations.
+* `apl_variable.aoe_target_count=<number of targets>` The number of target at which the AoE rotation will be used instead of the Single Target rotation.
+* `apl_variable.mot_preceed_totm_by=<number_of_seconds>` The number of seconds early to use Mirrors of Torment before Touch of the Magi.
+* `apl_variable.mot_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Mirrors of Torment until Touch of the Magi is available.
+* `apl_variable.mot_max_delay_for_ap=<number_of_seconds>` The number of seconds to delay using Mirrors of Torment until Arcane Power is available.
+* `apl_variable.ap_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Arcane Power until Touch of the Magi is available. Does not affect Kyrian simulations.
+* `apl_variable.ap_max_delay_for_mot=<number_of_seconds>` The number of seconds to delay using Arcane Power until Mirrors of Torment is available.
+* `apl_variable.rop_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Rune of Power until Touch of the Magi is available. Does not affect Kyrian simulations.
+* `apl_variable.totm_max_delay_for_ap=<number_of_seconds>` The number of seconds to delay using Touch of the Magi until Arcane Power is available. Does not affect Kyrian simulations.
+* `apl_variable.totm_max_delay_for_rop=<number_of_seconds>` The number of seconds to delay using Touch of the Magi until Rune of Power is available. Does not affect Kyrian simulations.
+
 #### Fire APL Variables
 
 * `apl_variable.disable_combustion=<0/1>` If set to 1, Combustion will not be used in the simulation.
