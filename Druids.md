@@ -23,6 +23,8 @@
 
 * **druid.kindred_spirits_absorbed** (default: 0.2) Sets percent of pool used up as absorbs by taking damage.
 
+* **druid.kindred_affinity_covenant** (default: `night_fae`) Sets the covenant of your bonded partner when using the Kindred Affinity Kyrian legendary. You may also use the name of the corresponding stat granted. Valid values are: `kyrian` `necrolord` `night_fae` `venthyr` `mastery` `versatility` `haste` `crit`
+
 * **druid.convoke_the_spirits_ultimate** (default: 0.2) The chance for each channel of Convoke the Spirits to cast an 'ultimate' spell based on your form (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
 * **druid.adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
