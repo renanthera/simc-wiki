@@ -25,7 +25,9 @@
 
 * **druid.kindred_affinity_covenant** (default: `night_fae`) Sets the covenant of your bonded partner when using the Kindred Affinity Kyrian legendary. You may also use the name of the corresponding stat granted. Valid values are: `kyrian` `necrolord` `night_fae` `venthyr` `mastery` `versatility` `haste` `crit`
 
-* **druid.convoke_the_spirits_ultimate** (default: 0.2) The chance for each channel of Convoke the Spirits to cast an 'ultimate' spell based on your form (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
+* **druid.lone_empowerment** (default: 0) When set to 1, will treat Kindred Spirits as bonding with nobody and using the Lone Empowerment buff. Only supported for Balance & Feral.
+
+* **druid.convoke_the_spirits_deck** (default: 5) The number of cards in the deck used to determine if Convoke the Spirits has a chance to cast an exceptional spell when **not** using the Celestial Spirits Night Fae legendary. (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
 * **druid.adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
 
