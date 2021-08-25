@@ -102,23 +102,23 @@ You can use **enemy\_tank** option to assign a target for this enemy.
 
 ## Health-Related Options
 
-  * **enemy\_health** will allow you to set the starting health of the enemy, instead of having the sim calculate the enemy's health automatically.
+  * **enemy\_health** (scope: enemy) Allows you to set the starting health of the enemy, instead of having the sim calculate the enemy's health automatically.
 ```
   enemy=Fluffy_Pillow
   enemy_health=27000000
 ```
-  * **enemy\_fixed\_health\_percentage** sets the enemy's health to a fixed percentage that will not change over the course of the sim.
+  * **enemy\_fixed\_health\_percentage** (scope: enemy) Sets the enemy's health to a fixed percentage that will not change over the course of the sim.
 ```
   enemy=Bob_the_Dinosaur
   # Simulate a fight with a permanent execute range
   enemy_fixed_health_percentage=20
 ```
-  * **enemy\_initial\_health\_percentage** sets the enemy's health to start at a certain percentage. The percentage should be entered as a whole number.
+  * **enemy\_initial\_health\_percentage** (scope: enemy) Sets the enemy's health to start at a certain percentage. The percentage should be entered as a whole number.
 ```
    enemy=Fluffy_Pillow
    enemy_initial_health_percentage=20
 ```
-  * **enemy\_death\_pct** you can tell the sim to kill the enemy early, like in the case of Ragnaros where he dies at 10% like a pansy.
+  * **enemy\_death\_pct** (scope: global) You can tell the sim to kill the enemy early, like in the case of Ragnaros where he dies at 10% like a pansy. This option affects all enemies in the sim.
 ```
   enemy=Ragnaros
   enemy_death_pct=10
