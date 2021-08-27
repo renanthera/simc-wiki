@@ -135,6 +135,7 @@ Acceptable slots are:
 ```
 
 ### Procs
+By default, custom on-use effects on items will have a 20 second shared cooldown. This default shared cooldown can be adjusted for all items with the _default_item_group_cooldown_ player option.
   * _use_ allows you to specify on-use effects. The syntax is: `<value1><param1>[_<value2><param2>...]`. The parameters can be:
     * Any school abbreviation, for  damages effects. For example: "451physical".
     * Any stat abbreviation, for stats gains. For example: "1500str".
