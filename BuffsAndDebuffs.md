@@ -72,6 +72,10 @@ external_buffs.focus_magic=1
     * **external\_buffs.conquerors\_banner**
     * **external\_buffs.rallying\_cry**
     * **external\_buffs.pact\_of\_the\_soulstalkers**
+    * **external\_buffs.kindred\_affinity**
+        * The stat given will be determined by the covenant of the player.
+        * The player will have a constant buff at base value.
+        * At each timestamp, the buff will be doubled for 10s.
 ```
 # Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
 external_buffs.power_infusion=0/120/240
