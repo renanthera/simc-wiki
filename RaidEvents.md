@@ -217,6 +217,23 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_events+=/adds,count=5,first=5,duration=15,cooldown=60,min_distance=15,max_distance=35,stacked=1
     ```
 
+# Pull
+  The _pull_ raid event is used to spawn waves of adds sequentially with durations based on their specified health pools being depleted by the simmed character rather than a time period. These events are used together with the _DungeonRoute_ fight style to simulate a full dungeon run.
+
+  Specific options are:
+  * _pull_ specifies the order of the pull within the sim.
+  * _bloodlust_ forces bloodlust to be cast for the pull.
+  * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
+  * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health`.
+
+  ```
+    # This example spawns 3 pulls of adds followed by one boss, starting at 20 seconds with 10 seconds between each, with Bloodlust being used on the boss pull.
+    raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small add 1":100000|"small add 2":100000|"small add 3":100000|"small add 4":100000|"small add 5":100000
+    raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium add 1":200000|"medium add 2":200000|"medium add 3":200000
+    raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big add":300000|"medium add":200000|"small add":100000
+    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000
+  ```
+
 # Casting
   The _casting_ keyword allows you to make a raid event that will make the target to cast a spell your players must interrupt. There is no action condition relative to the target's casting but off-gcd interrupts do not need to be present in the actions list: they will be automatically used by the Simulationcraft.
 
