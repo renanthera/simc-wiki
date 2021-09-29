@@ -214,7 +214,7 @@ If you want to specify talents individually (as in a custom .simc file), you can
  origin="http://us.battle.net/wow/en/character/illidan/john/advanced"
 ```
   * **thumbnail** (scope: current character; default: none) is the URL for an image to display for this character in reports.
-  * **distance** (scope: current character; default: 0) is the character's distance, in yard, from the boss. When left to zero, Simulationcraft will dynamically assign it depending on your class: 3 (demon hunter), 5 (arcane mage, most melee), 8 (shadow priest), 30 (druid, elem shaman, non-arcane mage), 40 (warlock, non-survival hunter). Pets will be at the same distance with a few exceptions (shaman's fire elemental will move to melee). This setting will be used for computing spells flight time and for distance conditions on raid events (see **raid\_event**).
+  * **distance** (scope: current character; default: 0) is the character's distance, in yard, from the boss. When left to zero, Simulationcraft will dynamically assign it depending on your class: 3 (demon hunter), 5 (most melee), 8 (shadow priest), 10 (arcane mage), 30 (druid, elem shaman, non-arcane mage), and 40 (warlock, non-survival hunter). Pets will be at the same distance with a few exceptions (shaman's fire elemental will move to melee). This setting will be used for computing spells flight time and for distance conditions on raid events (see **raid\_event**).
 ```
  # Let's put the players 20 yards away from the target.
  distance=20
