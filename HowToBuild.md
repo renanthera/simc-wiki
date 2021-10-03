@@ -43,10 +43,10 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
   * build
 
 ### Building the GUI
-  * Download and install [Qt 5.12.9 for Windows](https://www.qt.io/download) or newer. 
+  * Download and install [Qt 6.2.0 for Windows](https://www.qt.io/download) or newer. 
     * Look for open source downloads and then either use the online installer or look for offline installers. You can [skip account creation for the offline installer](https://superuser.com/a/1524989).
-    * Select the latest Qt version during "Select Components", i.e. `Qt 5.12.9` for MSVC 2017 64-bit as well as 'Qt WebEngine'
-    * Add C:\Qt\Qt5.12.9\5.12.9\msvc2017\_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
+    * Select the latest Qt version during "Select Components", i.e. `Qt 6.2.0` for MSVC 2019 64-bit as well as the Additional Libraries 'Qt WebEngine'
+    * Add C:\Qt\6.2.0\msvc2019_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
   * Open a command prompt and run `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_file_locations))
 
