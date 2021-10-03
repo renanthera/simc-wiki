@@ -16,17 +16,12 @@
       * Git client integrated with Windows Explorer: [TortoiseGit](https://tortoisegit.org/)
         * See [UsingTortoiseGitWithSimcraft](UsingTortoiseGitWithSimcraft) for help on installing/using TortoiseGit.
 
-  * Downloading release code
-    * For each releases you can find a source code archive used to build that release on the download page
-    * Helpful if you want to simply insert a quick modification (or fix a bug!)
-    * Not really helpful if you want to live on the bleeding edge of ongoing development
-
 # Building SimulationCraft
 
   * **Starting from Simulationcraft 8.1.0 release 2, libcurl (https://curl.haxx.se) is required for armory imports on non-windows platforms**
   * Building the command line interface (CLI) is very easy on all platforms
   * Building the graphical user interface (GUI) is considerably harder
-    * The GUI is built using [Qt](http://qt-project.org/)
+    * The GUI is built using [Qt](https://www.qt.io/)
     * Building the GUI requires that the Qt libraries be downloaded and installed, **including the Webengine component**
     * Qt DLLs are used at runtime, so they need to be in your PATH; to create a release package, a subset must be shipped with it.
     * Refer to platform-specific directions below
@@ -61,7 +56,7 @@ Download and install  [Microsoft Visual Studio Community 2019](https://visualstu
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
 
 ### Advanced Settings
-  * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute win64\_release\_mcvc(11/12).bat (after adjusting the path inside if necessary). This will copy over the necessary DLL's which you need to send along with the executable.
+  * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute windeployqt.exe from your QT installation on SimulationCraft.exe. This will copy over the necessary DLL's which you need to send along with the executable.
 
 ### Alternate way using QtCreator with simulationcraft.pro
   * Install Visual Studio and Qt as above
