@@ -26,42 +26,37 @@
     * Qt DLLs are used at runtime, so they need to be in your PATH; to create a release package, a subset must be shipped with it.
     * Refer to platform-specific directions below
 
-# Building SimulationCraft on Windows
+# Building SimulationCraft on Windows using Microsoft Visual Studio
 
-## Building using Microsoft Visual Studio
+* Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Under the `Workloads` tab select `Desktop development with C++` and additionally select `C++ Clang tools for Windows` if you'd like that as well.
 
-Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Under the `Workloads` tab select `Desktop development with C++` and additionally select `C++ Clang tools for Windows` if you'd like that as well.
-
-### Building the CLI
-  * Open the solution simc_vs2019.sln
-  * Select 'Debug-NoNetworking' Configuration
-  * build
-
-### Building the GUI
-  * Download and install [Qt 6.2.0 for Windows](https://www.qt.io/download) or newer. 
+* Download and install [Qt 6.2.0 for Windows](https://www.qt.io/download) or newer. 
     * Look for open source downloads and then either use the online installer or look for offline installers. You can [skip account creation for the offline installer](https://superuser.com/a/1524989).
     * Select the latest Qt version during "Select Components", i.e. `Qt 6.2.0` for MSVC 2019 64-bit as well as the Additional Libraries 'Qt WebEngine'
     * Add C:\Qt\6.2.0\msvc2019_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
+## Using CMake Visual Studio integration
+  * Start Visual Studio and select 'Open a local folder', where you choose the root simc directory.
+    This will automatically pick up the CMake configuration and build both the gui and cli.
+  * To only build the cli (eg. if you do not want to install Qt) go to `Project -> Cmake Settings for simc` and under CMake variables deselect `BUILD_GUI`
+
+## Alternative using Qmake
   * Open a command prompt and run `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_file_locations))
-
   * In the command prompt, navigate to `your_simc_source_dir`.
-
   * In `your_simc_source_dir`, issue the command `qmake -r -tp vc -spec win32-msvc simulationcraft.pro`
     * Note that for older Qt versions the spec parameter may require your visual studio version (e.g., `win32-msvc2017`)
     * Output should look something like `Reading <your_simc_source_dir>/lib/lib.pro` (similarly for `gui` and `cli`).
     * If you have upgraded your Qt version, you should delete `.qmake.stash` file before issuing the qmake command
-
   * Open the generated `simulationcraft.sln` in `your_simc_source_dir` with Visual Studio.
     * Three solutions are available, `Simulationcraft Engine`, which is the core library, `Simulationcraft CLI`, which is the command line client (i.e., simc.exe), and `Simulationcraft GUI`, which is the graphical user interface (i.e., Simulationcraft.exe).
 
-### Advanced Settings
-  * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute windeployqt.exe from your QT installation on SimulationCraft.exe. This will copy over the necessary DLL's which you need to send along with the executable.
-
-### Alternate way using QtCreator with simulationcraft.pro
-  * Install Visual Studio and Qt as above
+## Alternate using QtCreator
   * Once your Qt version is installed, open `your_simc_source_dir`/simulationcraft.pro file with QtCreator.
   * Build Simulationcraft CLI/GUI
+
+## Advanced Settings
+  * If you want to deploy SimulationCraft.exe without having QT installed and added to PATH, execute windeployqt.exe from your QT installation on SimulationCraft.exe. This will copy over the necessary DLL's which you need to send along with the executable.
+
 
 # Building SimulationCraft on Linux
 
