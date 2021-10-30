@@ -31,7 +31,7 @@ You can also directly change the url. For example, replace the "en" by "fr" if y
 ![http://www.simulationcraft.org/images/wiki/url_structure.jpg](http://www.simulationcraft.org/images/wiki/url_structure.jpg)
 
 ## VCRUNTIME140_1.DLL not found
-Install [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from vc_redist.x64.exe (for 64bit) or vc_redist.x86.exe (for 32bit) included in the SimulationCraft release.
+Install [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019 and 2022](https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-160) for the architecture matching your downloaded SimulationCraft.
 
 # Results and reports
 ## My results change across runs!
