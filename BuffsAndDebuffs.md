@@ -77,14 +77,21 @@ external_buffs.focus_magic=1
         * The player will have a constant buff at base value.
         * At each timestamp, the buff will be doubled for 10s.
 ```
-# Power Infusion will be cast on the player at 0 seconds, 120 seconds, and 240 seconds.
-external_buffs.power_infusion=0/120/240
-
 # Fae Guardians will be cast on the player at 0 seconds, 90 seconds, 180 seconds, and 270 seconds.
 external_buffs.benevolent_faerie=0/90/180/270
 
 # Disable Power Infusion if the option was already enabled.
 external_buffs.power_infusion=
+```
+  * **Additional options** (scope:player), some external buffs have additional options that will modify their behavior.
+    * **external\_buffs.seasons\_of\_plenty=<0/1>** (default: 0), determines whether the casting Paladin is using the Seasons of Plenty legendary.
+    * **external\_buffs.the\_long\_summer\_rank=<0-15>** (default: 0), determines the rank of The Long Summer that the casting Paladin is using.
+```
+# Blessing of Summer will be cast on the player at 0 and 180 seconds.
+# Additionally, the casting Paladin has Seasons of Plenty and The Long Summer rank 9.
+external_buffs.blessing_of_summer=0/180
+external_buffs.seasons_of_plenty=1
+external_buffs.the_long_summer_rank=9
 ```
 # Targeted buffs
 
