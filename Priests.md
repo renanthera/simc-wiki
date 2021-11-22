@@ -10,6 +10,12 @@ The module is broken up into the following parts:
 - [APL File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/apl/apl_priest.cpp) - Stores the Action Priority List for each spec.
 - [Pet File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_pets.cpp) - Handles all pets for Priest's (Shadowfiend, Mindbender, and Eternal Call to the Void Tentacles).
 
+# Insanity
+By default the Shadow Priest sim starts with 0 Insanity. If you would like to change this you can use this option:
+```
+initial_resource=insanity=X
+```
+
 # Spell implementation notes
 The following spells are mentioned due to oddities with the implementation that are not straightforward or require more clarification. If a spell is not mentioned here you can find it in the correct base or spec file with a typical implementation. Feel free to reach out in discord if you have questions.
 
