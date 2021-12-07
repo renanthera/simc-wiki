@@ -381,8 +381,8 @@ enable_2_set=18
 The available keywords are:
  1. Resources: gear\_health, gear\_mana, gear\_rage, gear\_energy, gear\_focus, gear\_runic
  1. Primary: gear\_strength, gear\_agility, gear\_intellect, gear\_stamina, gear\_spirit
- 1. Secondary: gear\_mastery\_rating, gear\_haste\_rating, gear\_multistrike\_rating, gear\_versatility\_rating, gear\_crit\_rating, gear\_spell\_power, gear\_attack\_power, gear\_mp5
- 1. Defensive: gear\_armor
+ 1. Secondary: gear\_mastery\_rating, gear\_haste\_rating, gear\_versatility\_rating, gear\_crit\_rating, gear\_spell\_power, gear\_attack\_power, gear\_hit\_rating, gear\_expertise\_rating
+ 1. Defensive: gear\_armor, gear\_parry\_rating, gear\_dodge\_rating, gear\_bonus\_armor
  1. Battle for Azeroth specific: gear\_corruption, gear\_corruption\_resistance
 
 ## Bonuses and maluses
@@ -400,6 +400,13 @@ The available keywords are:
  # Let's now add 500 strength to John and Bill. John now has a total bonus of 350 strength.
  default_enchant_strength=350
 ```
+
+The available keywords are:
+ 1. Resources: enchant\_health, enchant\_mana, enchant\_rage, enchant\_energy, enchant\_focus, enchant\_runic
+ 1. Primary: enchant\_strength, enchant\_agility, enchant\_intellect, enchant\_stamina, enchant\_spirit
+ 1. Secondary: enchant\_mastery\_rating, enchant\_haste\_rating, enchant\_versatility\_rating, enchant\_crit\_rating, enchant\_spell\_power, enchant\_attack\_power, enchant\_hit\_rating, enchant\_expertise\_rating
+ 1. Other: enchant\_armor, enchant\_bonus\_armor, enchant\_leech\_rating, enchant\_run\_speed\_rating
+ 1. Battle for Azeroth specific: enchant\_corruption, enchant\_corruption\_resistance
 
 ## Parties
   * **party** (scope: global) can be used to group players in parties. Parties will be used for any effect that is restricted to party members rather than raid-wide. Each occurrence of the party option will create a new party containing the named players and their pets. Characters that do not appear in any party option are all grouped together in a default party that is not limited in size.
