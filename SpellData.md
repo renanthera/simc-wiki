@@ -48,7 +48,7 @@ The spell data can be overridden with the following fields. The list contains th
   * `cast_max` (_integer_, _milliseconds_), The maximum (normal) cast time of the spell
   * `rppm` (_float_), RPPM value of the proc. **Since Simulationcraft 5.4.8 release 5**
   * `class_flags_family` (_integer_), The spell family, generally used to divide spells by class with further groupings via class flags
-  * `class_flag` (_integer_), Flag(s) which indicates the grouping(s) the spell belongs to, used in affected-by lists in spell effects. This is a bit array; a spell can have multiple flags which allow it to belong to multiple groups. A positive value will add the spell to the numbered group. A negative value will remove the spell from the numbered group. A spell **MUST** have a `class_flags_family` for these groupings to apply.
+  * `class_flags` (_integer_), Flag(s) which indicates the grouping(s) the spell belongs to, used in affected-by lists in spell effects. This is a bit array; a spell can have multiple flags which allow it to belong to multiple groups. A positive value will add the spell to the numbered group. A negative value will remove the spell from the numbered group. A spell **MUST** have a class_flags_family for these groupings to apply.
   * `attributes` (_integer_), Attribute flags bit array. A positive value will set the attribute, a negative value will unset the attribute.
 
 ### Effects
@@ -67,7 +67,7 @@ The effect data can be overridden with the following fields.
   * `points_per_combo_points` (_float_), "Old style" version of the `bonus` field. Unused
   * `points_per_level` (_float_), "Old style" version of the `average` field. Unused
   * `die_sides` (_integer_), "Old style" version of the `delta` field. Unused
-  * `class_flags` (_integer_), Flag(s) which indicate the grouping(s) of spells that this effect applies to. This is a bit array; an effect can apply to multiple groups. A positive value will add the numbered group to the list of spells to be affected. A negative value will remove the numbered group from the list of spells to be affected.
+  * `class_flags` (_integer_), Group(s) of spells that this effect applies to. This is a bit array; an effect can apply to multiple groups. A positive value will add the numbered group to the list of spells to be affected. A negative value will remove the numbered group from the list of spells to be affected.
 
 The `base_value` field defines the "base value" of the effect in most cases, where there is no (player level, or item level) based scaling applied to it. For example with many buffs that affect the actor with a percentage modifier (This is arguably the most typical use of the value), this field specifies the percent modifier as an integer. Unfortunately, the meaning of the field is always dependant on the effect type, and ultimately, what Blizzard intended it to be. For example, it can also indicate the number of units to summon for a certain type of spell.
 
