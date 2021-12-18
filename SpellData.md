@@ -49,6 +49,7 @@ The spell data can be overridden with the following fields. The list contains th
   * `rppm` (_float_), RPPM value of the proc. **Since Simulationcraft 5.4.8 release 5**
   * `class_flags_family` (_integer_), The spell family, generally used to divide spells by class with further groupings via class flags
   * `class_flag` (_integer_), Flag(s) which indicates the grouping(s) the spell belongs to, used in affected-by lists in spell effects. This is a bit array; a spell can have multiple flags which allow it to belong to multiple groups. A positive value will add the spell to the numbered group. A negative value will remove the spell from the numbered group. A spell **MUST** have a `class_flags_family` for these groupings to apply.
+  * `attributes` (_integer_), Attribute flags bit array. A positive value will set the attribute, a negative value will unset the attribute.
 
 ### Effects
 
