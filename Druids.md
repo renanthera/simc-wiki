@@ -29,7 +29,11 @@
 
 * **druid.convoke_the_spirits_deck** (default: 5) The number of cards in the deck used to determine if Convoke the Spirits has a chance to cast an exceptional spell when **not** using the Celestial Spirits Night Fae legendary. (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
-* **druid.adaptive_swarm_jump_distance** (default: 5.0) The distance Adaptive Swarm travels after jumping away from the initial target.
+* **druid.adaptive_swarm_jump_distance_min** (default: 5.0) The minimum distance Adaptive Swarm can travel after jumping away from the initial target.
+
+* **druid.adaptive_swarm_jump_distance_max** (default: 40.0) The maximum distance Adaptive Swarm can travel after jumping away from the initial target.
+
+* **druid.adaptive_swarm_friendly_targets** (default: 20) The number of friendly targets a healing Adaptive Swarm can jump to.
 
 * **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
 
