@@ -17,7 +17,7 @@
 
 * **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to.
+* **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to. Only bonding to DPS characters is implemented.
 
   _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
 
