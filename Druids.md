@@ -20,6 +20,11 @@
 * **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to.
 
   _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
+
+  `single_actor_batch` cannot be true.
+
+  **For Advanced Sim in raidbots.com, you must explicitly add `single_actor_batch=0` to your input.**
+
   - The bond damage 'kindred empowerment' done by both characters will be attributed to the druid.
   - If the druid has the Kindred Affinity legendary equipped, the buff effect will be based on the bonded character's covenant, and both characters will have their buff effect doubled when the druid casts 'empower bond'.
 
