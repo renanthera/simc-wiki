@@ -17,7 +17,9 @@
 
 * **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to. _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
+* **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to.
+
+  _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
   - The bond damage 'kindred empowerment' done by both characters will be attributed to the druid.
   - If the druid has the Kindred Affinity legendary equipped, the buff effect will be based on the bonded character's covenant, and both characters will have their buff effect doubled when the druid casts 'empower bond'.
 
