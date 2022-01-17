@@ -17,11 +17,29 @@
 
 * **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **druid.kindred_spirits_partner_dps** (default: 1.0) Applies the multiplier to your own damage when determining how much damage your bonded partner does when you bond to a DPS partner with Kindred Spirits. For example, setting the value to 2.0 will mean that you are bonding to someone who does twice as much damage as you.
+* **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to. _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
+  - The bond damage 'kindred empowerment' done by both characters will be attributed to the druid.
+  - If the druid has the Kindred Affinity legendary equipped, the buff effect will be based on the bonded character's covenant, and both characters will have their buff effect doubled when the druid casts 'empower bond'.
 
-* **druid.kindred_spirits_hide_partner** (default: 0) When set to 1, will not count the damage gained by the bonded partner.
+  For example, to have a balance druid bond to a fire mage:
+```
+    mage=fire_mage
+    spec=fire
+    level=60
+    covenant=night_fae
 
-* **druid.kindred_spirits_absorbed** (default: 0.2) Sets percent of pool used up as absorbs by taking damage.
+    druid=kyrian_druid
+    spec=balance
+    level=60
+    covenant=kyrian
+    druid.kindred_spirits_target=fire_mage
+```
+
+* **druid.kindred_spirits_absorbed** (default: 0.15) Sets percent of pool used up as absorbs or heals.
+
+* **druid.kindred_spirits_dps_pool_multiplier** (default: 0.85) Only in effect when there is no explicit bond and you are simming a DPS druid by itself. Catch-all multiplier to estimate how much of the pool is lost due to mismatches in dps/CD/timings/etc.
+
+* **druid.kindred_spirits_non_dps_pool_multiplier** (default: 1.5) Only in effect when there is no explicit bond and you are simming a non-DPS druid by itself. Catch-all multiplier to estimate how much of the pool you might gain due to non-DPS specs generally gaining a larger pool than their would generate based on their own dps.
 
 * **druid.kindred_affinity_covenant** (default: `night_fae`) Sets the covenant of your bonded partner when using the Kindred Affinity Kyrian legendary. You may also use the name of the corresponding stat granted. Valid values are: `kyrian` `necrolord` `night_fae` `venthyr` `mastery` `versatility` `haste` `crit`
 
