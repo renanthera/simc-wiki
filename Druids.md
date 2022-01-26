@@ -30,7 +30,7 @@
 
   For example, to have a balance druid bond to a fire mage:
 ```
-    mage=fire_mage
+    mage=fire_freddy
     spec=fire
     level=60
     covenant=night_fae
@@ -39,7 +39,7 @@
     spec=balance
     level=60
     covenant=kyrian
-    druid.kindred_spirits_target=fire_mage
+    druid.kindred_spirits_target=fire_freddy
 ```
 
 * **druid.kindred_spirits_absorbed** (default: 0.15) Sets percent of pool used up as absorbs or heals.
