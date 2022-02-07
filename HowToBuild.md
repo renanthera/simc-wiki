@@ -66,9 +66,8 @@
  * If not already installed, install `cmake`, `build-essential`, `libcurl-dev`, and `pkg-config` (e.g., a compilation toolchain, libcurl include headers, and library metainformation tool).
   * Install qt5-qmake & qt5-webengine if you want to build the GUI. On Ubuntu, the required packages are called `qt5-default` and `qtwebengine5-dev`.
   * `cd your_simc_source_dir`
-  * `mkdir build && cd build`
-  * `cmake ../`
-  * `make`
+  * `cmake -B build .`
+  * `cmake --build build`
   * This builds target `simc` (CLI) and `qt/SimulationCraft` (GUI)
   * Additional cmake options:
     * `cmake ../ -DCMAKE_BUILD_TYPE=Release` for Release build
