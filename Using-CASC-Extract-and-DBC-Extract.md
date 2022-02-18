@@ -57,17 +57,17 @@ Interface\ICONS\Ability_CheapShot.blp
 Full example to convert ItemSparse DBC into a JSON file
 
 ```bash
-./casc_extract.py --cdn -m batch -o /tmp/casc-data
+./casc_extract.py --cdn -m batch -o ./tmp/casc-data
 
 # This would create /tmp/casc-data/8.0.1.26715
 
-./dbc_extract.py -b 8.0.1.26715 -t json -p /tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > /tmp/ItemSparse.json
+./dbc_extract.py -b 8.0.1.26715 -t json -p ./tmp/casc-data/8.0.1.26715/DBFilesClient ItemSparse > ./tmp/ItemSparse.json
 ```
 
 To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
 
 ```
-./dbc_extract.py -b 8.0.1.26715 -t csv -p /tmp/casc-data/8.0.1.26715/DBFilesClient --hotfix /path/to/wow/Cache/ADB/enUS/DBCache.bin ItemSparse > /tmp/ItemSparse.csv
+./dbc_extract.py -b 8.0.1.26715 -t csv -p ./tmp/casc-data/8.0.1.26715/DBFilesClient --hotfix /path/to/wow/Cache/ADB/enUS/DBCache.bin ItemSparse > /tmp/ItemSparse.csv
 ```
 
 # Full Walkthrough for pulling Spell Data
