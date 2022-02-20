@@ -66,6 +66,7 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.enable_rune_words** (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)
 * **shadowlands.precombat_pustules** (scope: global; default: 9; min: 1; max: 9) Controls the number of pustules gained from precombat fleshcraft.
 * **shadowlands.cruciform_veinripper_proc_rate** (scope: global; default 0; min: 0; max 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.
+* **shadowlands.reactive_defense_matrix_interval** (scope: global; default 0) Determines how often a trigger attempt of the 30-second cooldown aspect of Reactive Defense Matrix occurs. This does not actually affect the player's health, it will simply trigger the absorb shield if the cooldown is ready.
 
 ## Battle for Azeroth
 
