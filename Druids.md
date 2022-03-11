@@ -60,6 +60,18 @@
 
 * **druid.adaptive_swarm_friendly_targets** (default: 20) The number of friendly targets a healing Adaptive Swarm can jump to.
 
+* **druid.adaptive_swarm_prepull_setup** (default: none) String to define healing swarms that are active on allies at combat start. Each swarm entry is delimited by `/`. Swarm entry format is `<min stacks>:<max stacks>:<min duration>:<max duration>:<chance>`
+  * Each swarm will have `<chance>` to be active at the start of each iteration.
+  * Each swarm will be created with random stacks between `<min stacks>` & `<max stacks>`
+  * Each swarm will have random remaining duration between `<min duration>` & `<max duration>`
+
+  For example, to set up swarms with:
+  * Swarm 1: 2-4 stacks, 5-10 seconds remaining, 35% chance to be active
+  * Swarm 2: 1 stack, 2 seconds remaining, 100% chance to be active
+```
+druid.adaptive_swarm_prepull_setup=2:4:5:10:0.35/1:1:2:2:1
+```
+
 * **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
 
 * **druid.initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
