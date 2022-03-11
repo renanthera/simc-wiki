@@ -17,6 +17,15 @@
 
 * **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
+* **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+
+* **druid.initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
+
+* **druid.predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
+
+* **druid.initial_pulsar_value** (default: 0.0) Set the initial value of the Primordial Arcanic Pulsar legendary.
+
+### Kyrian
 * **druid.kindred_spirits_target** (default: none) Set the character for the druid to bond to. Only bonding to DPS characters is implemented.
 
   _**THE CHARACTER TO BOND TO MUST BE DEFINED BEFORE THE DRUID.**_
@@ -52,14 +61,10 @@
 
 * **druid.lone_empowerment** (default: 0) When set to 1, will treat Kindred Spirits as bonding with nobody and using the Lone Empowerment buff. Only supported for Balance & Feral.
 
+### Night Fae
 * **druid.convoke_the_spirits_deck** (default: 5) The number of cards in the deck used to determine if Convoke the Spirits has a chance to cast an exceptional spell when **not** using the Celestial Spirits Night Fae legendary. (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
-* **druid.adaptive_swarm_jump_distance_min** (default: 5.0) The minimum distance Adaptive Swarm can travel after jumping away from the initial target.
-
-* **druid.adaptive_swarm_jump_distance_max** (default: 40.0) The maximum distance Adaptive Swarm can travel after jumping away from the initial target.
-
-* **druid.adaptive_swarm_friendly_targets** (default: 20) The number of friendly targets a healing Adaptive Swarm can jump to.
-
+### Necrolord
 * **druid.adaptive_swarm_prepull_setup** (default: none) String to define healing swarms that are active on allies at combat start. Each swarm entry is delimited by `/`. Swarm entry format is `<min stacks>:<max stacks>:<min duration>:<max duration>:<chance>`
   * Each swarm will have `<chance>` to be active at the start of each iteration.
   * Each swarm will be created with random stacks between `<min stacks>` & `<max stacks>`
@@ -72,13 +77,11 @@
 druid.adaptive_swarm_prepull_setup=2:4:5:10:0.35/1:1:2:2:1
 ```
 
-* **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+* **druid.adaptive_swarm_jump_distance_min** (default: 5.0) The minimum distance Adaptive Swarm can travel after jumping away from the initial target.
 
-* **druid.initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
+* **druid.adaptive_swarm_jump_distance_max** (default: 40.0) The maximum distance Adaptive Swarm can travel after jumping away from the initial target.
 
-* **druid.predator_rppm_rate** (default: 0.0) Set the RPPM rate for triggering the Predator talent. This is used as an approximation to simulate how Predator works in-game.
-
-* **druid.initial_pulsar_value** (default: 0.0) Set the initial value of the Primordial Arcanic Pulsar legendary.
+* **druid.adaptive_swarm_friendly_targets** (default: 20) The number of friendly targets a healing Adaptive Swarm can jump to.
 
 ## Buffs
 > Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
