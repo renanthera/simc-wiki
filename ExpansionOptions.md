@@ -68,6 +68,11 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.cruciform_veinripper_proc_rate** (scope: global; default 0; min: 0; max 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.
 * **shadowlands.reactive_defense_matrix_interval** (scope: global; default 0) Determines how often a trigger attempt of the 30-second cooldown aspect of Reactive Defense Matrix occurs. This does not actually affect the player's health, it will simply trigger the absorb shield if the cooldown is ready.
 
+#### 9.2 - Eternity's End options
+
+* **shadowlands.grim_eclipse_dot_duration_multiplier** (scope: global; default: `1.0`) Let's you adjust how long the DoT component is active on the target via a percent modifier. The will remove duration at the end of the DoT, but still not change when you get the haste buff afterwards.
+* **shadowlands.grim_eclipse_buff_duration_multiplier** (scope: global; default: `0.9`) Let's you adjust how much uptime you have of the haste buff component of the trinket. This removes duration at the start of the buff to mimic taking a bit to get into it.
+
 ## Battle for Azeroth
 
 ### Azerite
