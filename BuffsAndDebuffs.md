@@ -65,6 +65,7 @@ external_buffs.focus_magic=1
   * **Timed buffs** (scope: player; default: disabled), specifies the times when the specified buff will be cast on your character by another player. Individual times are separated with `/` characters.
     * **external\_buffs.power\_infusion**
     * **external\_buffs.benevolent\_faerie**
+    * **external\_buffs.bwonsamdis\_pact\_benevolent**
     * **external\_buffs.blessing\_of\_summer**
     * **external\_buffs.blessing\_of\_autumn**
     * **external\_buffs.blessing\_of\_winter**
