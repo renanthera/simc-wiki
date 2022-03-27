@@ -56,8 +56,9 @@ The default settings will lead Simulationcraft to cast the bloodlust at the star
 
 Certain buffs that can be used on a player by other players can be enabled through options.
 
-  * **Permanent buffs** (scope: player; default: 0), when set to 1, will make your character benefit from the specified permanent buff given by another player.
-    * **external\_buffs.focus\_magic** 
+  * **Permanent buffs** (scope: player; default: 0), will make your character benefit from the specified permanent buff given by another player.
+    * **external\_buffs.focus\_magic** Set to 1 to apply focus magic to your character.
+    * **external\_buffs.soleahs_secret_technique_ilevel** Specify the item level of the Soleah's Secret Technique trinket being used by another player on your character.
 ```
 # The player will benefit from Focus Magic for the entire simulation.
 external_buffs.focus_magic=1
