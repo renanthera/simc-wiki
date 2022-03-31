@@ -49,6 +49,8 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.memory_of_past_sins_precast** (scope: global; default: 0.0, min: 0.0, max: 30.0) The number of seconds before the fight to use the Memory of Past Sins trinket.
 * **shadowlands.wild_hunt_tactics_duration_multiplier** (scope: global; default: 1.0) Change the duration that Wild Hunt Tactics is active to better match the given fight. For example, a value of 0.8 will reduce the duration of the effect by 20%.
 * **shadowlands.field_of_blossoms_duration_multiplier** (scope: global; default: 1.0, min: 0.0, max: 1.0) Modifies the duration of the Field of Blossoms by multiplying the base duration of each class.
+* **shadowlands.first_strike_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.first_strike_period` seconds on top of any add spawns.
+* **shadowlands.first_strike_period** (scope: global; default: 5s) Sets the period between checking the `shadowlands.first_strike_chance` to proc First Strike on top of any add spawns.
 
 #### 9.1 - Chains of Domination options
 
@@ -65,13 +67,18 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.enable_domination_gems** (scope: global; default: 1) Enables the domination shards. Setting to 0 will disable gems and also the associated set bonuses.
 * **shadowlands.enable_rune_words** (scope: global; default: 1) Enables the set bonuses for domination shards. Setting to 0 will disable the set bonuses but the individual gems will still be effective (e.g. how they operate in M+)
 * **shadowlands.precombat_pustules** (scope: global; default: 9; min: 1; max: 9) Controls the number of pustules gained from precombat fleshcraft.
-* **shadowlands.cruciform_veinripper_proc_rate** (scope: global; default 0; min: 0; max 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.
+* **shadowlands.cruciform_veinripper_proc_rate** (scope: global; default 0; min: 0; max: 1) Controls the proc rate of Veinripper weapon proc. Used mostly for tanks who have a hard time to proc the weapon normally since Bosses cannot be slowed; nor are tanks behind the boss normally.
 * **shadowlands.reactive_defense_matrix_interval** (scope: global; default 0) Determines how often a trigger attempt of the 30-second cooldown aspect of Reactive Defense Matrix occurs. This does not actually affect the player's health, it will simply trigger the absorb shield if the cooldown is ready.
+* **shadowlands.adaptive_armor_fragment_uptime** (scope: global; default 0.4; min: 0; max: 0.5) Sets the uptime of the Adaptive Armor Fragment buff.
 
 #### 9.2 - Eternity's End options
 
 * **shadowlands.grim_eclipse_dot_duration_multiplier** (scope: global; default: `1.0`) Let's you adjust how long the DoT component is active on the target via a percent modifier. The will remove duration at the end of the DoT, but still not change when you get the haste buff afterwards.
 * **shadowlands.grim_eclipse_buff_duration_multiplier** (scope: global; default: `0.9`) Let's you adjust how much uptime you have of the haste buff component of the trinket. This removes duration at the start of the buff to mimic taking a bit to get into it.
+* **shadowlands.the_first_sigil_fleshcraft_cancel_time** (scope: global; default: `50ms`) Sets the delay after which Fleshcraft is cancelled when using the The First Sigil trinket.
+* **shadowlands.earthbreakers_impact_weak_points** (scope: global; default: `3`) Sets how many weak points will  be triggered when using the Earthbreaker's Impact trinket.
+* **shadowlands.chains_of_domination_auto_break** (scope: global; default: `true`) Sets whether to automatically break the chains at max value when using the Chains of Domination trinket.
+
 
 ## Battle for Azeroth
 
