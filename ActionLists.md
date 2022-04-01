@@ -469,8 +469,8 @@ The following expressions are available for raid events:
 * _duration_ how long in seconds the raid event will last
 * _cooldown_ how long in seconds is left on the raid event cooldown
 * _distance_ how far away the raid event is
-* _max_disntance_ max distance the raid event will go while active
-* _min_disntance_ min distance the raid event will go while active
+* _max_distance_ max distance the raid event will go while active
+* _min_distance_ min distance the raid event will go while active
 * _amount_ amount of damage the raid event will deal to the player (only works for damage raid events)
 * _to_pct_ healing event expression
 * _count_ how many adds are active in the current raid event (only works for add raid events)
