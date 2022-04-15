@@ -11,7 +11,7 @@
 
 * **druid.owlweave_bear** (default: 0) Set to utilize the owlweaving APL for Guardian Druids.
 
-* **druid.owlweave_cat** (default: 0) Set to utilize the owlweaving APL for Feral Druids.
+* **druid.owlweave_cat** (default: 1) Set to utilize the owlweaving APL for Feral Druids.
 
 * **druid.no_cds** (default: 0) Set to prevent the APL from casting major offensive cooldowns. *Currently only supported for Balance Druid.*
 
