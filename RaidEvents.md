@@ -222,7 +222,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
   Specific options are:
   * _pull_ specifies the order of the pull within the sim.
-  * _relic_ specifies the Encrypted affix relic that will be killed on this pull.
+  * _relic_ specifies the Encrypted affix relic that will be killed on this pull. Options are `urh` / `vy` / `wo`.
   * _bloodlust_ forces bloodlust to be cast for the pull.
   * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
   * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health`.
