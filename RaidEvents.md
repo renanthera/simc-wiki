@@ -222,6 +222,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
   Specific options are:
   * _pull_ specifies the order of the pull within the sim.
+  * _relic_ specifies the Encrypted affix relic that will be killed on this pull.
   * _bloodlust_ forces bloodlust to be cast for the pull.
   * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
   * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health`.
@@ -233,6 +234,8 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big add":300000|"medium add":200000|"small add":100000
     raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000
   ```
+
+  This event supports the Season 3 M+ Encrypted affix by allowing mobs with the `RELIC_` name prefix to spawn an extra automation mob when it is the first relic of the pull to die, which also despawns all other relic mobs in the pull. Upon its death the new automation mob will trigger the appropriate effect defined by the _relic_ option to the sim players. The automation mob's hp scales with the keystone level, and uses the sim-wide _keystone_level_ option to scale the hp pool, as well as the _keystone_pct_hp_ value to limit the resulting hp pool to approximate a specific player's contribution to killing the mob together with the group.
 
 # Casting
   The _casting_ keyword allows you to make a raid event that will make the target to cast a spell your players must interrupt. There is no action condition relative to the target's casting but off-gcd interrupts do not need to be present in the actions list: they will be automatically used by the Simulationcraft.
