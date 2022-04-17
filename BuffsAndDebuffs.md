@@ -59,7 +59,7 @@ Certain buffs that can be used on a player by other players can be enabled throu
   * **Permanent buffs** (scope: player; default: 0), will make your character benefit from the specified permanent buff given by another player.
     * **external\_buffs.focus\_magic** Set to 1 to apply focus magic to your character.
     * **external\_buffs.soleahs_secret_technique_ilevel** Specify the item level of the Soleah's Secret Technique trinket being used by another player on your character.
-    * **external\_buffs.elegy_of_the_eternals=`<ilevel>:<stat>/<ilevel2>:<stat2>/...`** Specify the item level and the stat given by Elegy of the Eternals trinket(s) being used by your party members. Multiple entries can be used delimited by `/`.
+    * **external\_buffs.elegy_of_the_eternals=`ilevel:stat/ilevel2:stat2/...`** Specify the item level and the stat given by Elegy of the Eternals trinket(s) being used by your party members. Multiple entries can be used delimited by `/`.
 ```
 # The player will benefit from Focus Magic for the entire simulation.
 external_buffs.focus_magic=1
