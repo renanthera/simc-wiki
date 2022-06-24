@@ -162,12 +162,6 @@ The default Mage APLs include several variables, which can be configured through
 * `apl_variable.combustion_shifting_power=<number of targets>` The number of targets at which Shifting Power will be used during Combustion.
 * `apl_variable.combustion_cast_remains=<number of seconds>` The number of seconds remaining on the cast before Combustion when Combustion will be used.
 * `apl_variable.overpool_fire_blasts=<number_of_seconds>` The number of seconds early (or late if negative) to start pooling Fire Blasts for Combustion.
-### Disciplinary Command
-
-`mage.prepull_dc=<0/1>` can be used to automatically trigger the Disciplinary Command buff when combat begins. This roughly corresponds to obtaining two of the three buffs before combat starts (by using Arcane Explosion, Frost Nova, or Flame Patch and then changing specialization) and triggering the crit damage buff with the precast.
-
-### Arcane Harmony
-`mage.prepull_harmony_stacks=<number>` can be used to start each combat with a given number of Arcane Harmony buff stacks.
 
 ## Crowd control
 
