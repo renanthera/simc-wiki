@@ -78,7 +78,13 @@ To add these use the syntax `shadowlands.option_name=value`. For example `shadow
 * **shadowlands.the_first_sigil_fleshcraft_cancel_time** (scope: global; default: `50ms`) Sets the delay after which Fleshcraft is cancelled when using the The First Sigil trinket.
 * **shadowlands.earthbreakers_impact_weak_points** (scope: global; default: `3`) Sets how many weak points will  be triggered when using the Earthbreaker's Impact trinket.
 * **shadowlands.chains_of_domination_auto_break** (scope: global; default: `true`) Sets whether to automatically break the chains at max value when using the Chains of Domination trinket.
-
+* **shadowlands.antumbra.swap** (scope: player; default: `false`) Setting this to `true` will allow the usage of antumbra_swap actions in APL.
+* **shadowlands.antumbra.int_diff** (scope: player; default: `0`) Controls how much Intellect the sim will give you (or take, if negative) when you swap off Antumbra.
+* **shadowlands.antumbra.haste_diff** (scope: player; default: `0`) Controls how much Haste rating the sim will give you (or take, if negative) when you swap off Antumbra.
+* **shadowlands.antumbra.mastery_diff** (scope: player; default: `0`) Controls how much Mastery rating the sim will give you (or take, if negative) when you swap off Antumbra.
+* **shadowlands.antumbra.crit_diff** (scope: player; default: `0`) Controls how much Crit rating the sim will give you (or take, if negative) when you swap off Antumbra.
+* **shadowlands.antumbra.vers_diff** (scope: player; default: `0`) Controls how much Versatility rating the sim will give you (or take, if negative) when you swap off Antumbra.
+* **shadowlands.antumbra.stam_diff** (scope: player; default: `0`) Controls how much Stamina the sim will give you (or take, if negative) when you swap off Antumbra.
 
 ## Battle for Azeroth
 
