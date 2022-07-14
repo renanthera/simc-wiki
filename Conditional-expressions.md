@@ -371,8 +371,15 @@ The character's cooldowns can be used through the following syntax: `cooldown.<s
 
 * _duration_ is the initial duration, in seconds (not the remaining duration).
 * _remains_ is the remaining duration, in seconds, before the cooldown is done.
-* _up_ indicated if the cooldown is  done (i.e., the associated ability is ready)
+* _up_ or _ready_ indicates if the cooldown is  done (i.e., the associated ability is ready).
+* _charges_ returns the amount of charges the cooldown has. If the spell has no charges it returns 1 if ready and 0 if not.
+* _charges_fractional_ returns the amount of charges including fractional charges the cooldown has left.
+* _full_recharge_time_ returns the amount of time left until all charges of the cooldown are ready again.
 * _duration_expected_ and _remains_expected_ are the initial/remaining duration, adjusted for cooldown affecting mechanics. The expected duration is evaluated from the difference between the elapsed time since the cooldown started and how much the cooldown duration has actually gone down.
+* _max_charges_ returns the maximum amount of charges the cooldown has left.
+* _remains_guess_ or _remains_expected_ estimates the remaining cooldown for cooldowns that can be reduced by comparing the last start and current cooldown.
+* _duration_guess_ or _duration_expected_ estimates the remaining duration of a cooldown that can be extended by comparing the current duration and expected duration.
+
 
 ```
 # Use "aimed shot" if at least 5 seconds remain on "chimera shot".
