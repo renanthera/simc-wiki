@@ -188,7 +188,16 @@ If you want to specify talents individually (as in a custom .simc file), you can
  # We can define talents manually like this
  talents=3201231
 ```
-
+  * **class_talents** (scope: current character; default: "") is the new class talent construct starting with Dragonflight. This takes in a `/` delimited list of pairs of talent:rank combinations for the Class tree of that player. When providing talent you can either use the TalentID or the Name, i.e. `19979:1/shadowfiend:1` would give the Shadow Word: Death talent at rank 1 and the Shadowfiend talent at rank 1. You must use TalentID for any talents that share a name with another class talent.
+```
+# Manually defined class talents example
+class_talents=19979:1/20024:1/shadowfiend:1/improved_shadowfiend:1/mindbender:1/rabid_shadows:2/shadowflame_prism:1/improved_mind_blast:2/power_infusion:1/twist_of_fate:2/mindgames:1/throes_of_pain:2/puppet_master:2/translucent_image:2/19944:2
+```
+  * **spec_talents** (scope: current character; default: "") is the new spec talent construct starting with Dragonflight. This takes in a `/` delimited list of pairs of talent:rank combinations for the Spec tree of that player's Class. When providing talent you can either use the TalentID or the Name, i.e. `19979:1/shadowfiend:1` would give the Shadow Word: Death talent at rank 1 and the Shadowfiend talent at rank 1. You must use TalentID for any talents that share a name with another spec talent.
+```
+# Manually defined spec talents example
+spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:1/fortress_of_the_mind:2/vampiric_insight:1/shadowy_apparitions:1/void_eruption:1/monomania:1/auspicious_spirits:1/hungering_void:1/ancient_madness:1/damnation:1/void_touched:2/void_torrent:1/shadow_crash:1/malediction:1/mental_fortitude:2/insidious_ire:2/sanguine_teachings:3/mind_devourer:2
+```
   * **professions** (scope: current character; default: "") is the case-insensitive sequence of primary professions your character have. The professions are separated by a "/" and you can add as many of them as you want. Valid keywords are: alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring.
 ```
  professions=Blacksmithing=525/Jewelcrafting=525
