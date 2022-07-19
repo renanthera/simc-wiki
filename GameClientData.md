@@ -22,3 +22,14 @@ The options used are as follows:
 Additionally, we also distribute a copy of the game client (item) cache in `dbc_extract/cache/live`. This directory is used during the extraction process to supplement it, when Blizzard hotfixes items, or leaves them out of the game client data. Any file in the directory containing a name of a DBC or DB2 file will be used to overwrite values in the game client DBC files. Multiple cache files for a single DBC file will also work, and are automatically organized based on the last updated timestamp found in the cache file.
 
 **Please make sure to use Python 2.7 when running the generator**
+
+## Gathering Scale Data for Dragonflight-era Talents
+For the new talent re-design brought in Dragonflight there are various talents that scale with ranks or how many points given for that talent. You can use the generated SpellDataDump files to find these ranks when SimC can parse them.
+
+```
+Name             : Sanguine Teachings (id=376202) [Spell Family (6), Passive] 
+Talent Entry     : Shadow [tree=spec, entry_id=19961, max_rank=3]
+                 : Effect#1 [op=set, values=(5, 10, 15)]
+```
+
+The example above is from the Sanguine Teachings Shadow Priest talent. From this output you can clearly see that it has 3 rank scaling for Effect#1 with values 5, 10, and 15. If you ever want to cross check this with the raw data you can take the entry_id to lookup the scaling in `TraitNodeEntry` table and use the `TraitDefinitionID` in the `TraitDefinitionEffectPoints` table.
