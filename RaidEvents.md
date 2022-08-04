@@ -4,7 +4,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
 
 
-# Shortcut syntax
+# Predefined events
 **fight\_style** (scope: global; default: "") is a string to declare a predefined set of raid events. It acts as a shortcut for **raid\_events** and will change this setting. It means it will effectively clear all events declared so far (without affecting events declared after).
 ```
   fight_style=HelterSkelter
@@ -70,7 +70,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_event+=/damage,first=300.0,period=1.0,amount=44855,type=shadow
     ```
 
-# Classic syntax
+# Individual event syntax
 **raid\_events** (scope: global; default: "") is a string sequence specifying the events affecting the whole raid. See [TextualConfigurationInterface](TextualConfigurationInterface).
 ```
   raid_events+=/damage,amount=20000,cooldown=10
@@ -236,6 +236,13 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   ```
 
   This event supports the Season 3 M+ Encrypted affix by allowing mobs with the `RELIC_` name prefix to spawn an extra automation mob when it is the first relic of the pull to die, which also despawns all other relic mobs in the pull. Upon its death the new automation mob will trigger the appropriate effect defined by the _relic_ option to the sim players. The automation mob's hp scales with the keystone level, and uses the sim-wide _keystone_level_ option to scale the hp pool, as well as the _keystone_pct_hp_ value to limit the resulting hp pool to approximate a specific player's contribution to killing the mob together with the group.
+
+# Buff
+  The _buff_ raid event allows you to trigger one or more stacks of a buff. If a _duration_ option is set, the buff will be active for the set druation. Otherwise, the buff will last for the default duration based on the buff's implementation.
+
+  Specific options are:
+  * _buff\_name_ specifies the tokenized name of the buff and is required.
+  * _stacks_ (default: 1) specifies the number of stacks to be applied each time the event occurs.
 
 # Casting
   The _casting_ keyword allows you to make a raid event that will make the target to cast a spell your players must interrupt. There is no action condition relative to the target's casting but off-gcd interrupts do not need to be present in the actions list: they will be automatically used by the Simulationcraft.
