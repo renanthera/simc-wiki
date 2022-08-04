@@ -243,7 +243,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   Specific options are:
   * _buff\_name_ specifies the tokenized name of the buff and is required.
   * _stacks_ (default: 1) specifies the number of stacks to be applied each time the event occurs.
-
+  ```
+    #This example will give all actors a stack of the S4 M+ affix buff "Bounty: Haste" every minute, starting 30s in.
+    raid_events+=/buff,buff_name=bounty_haste,first=30,cooldown=60
+  ```
 # Casting
   The _casting_ keyword allows you to make a raid event that will make the target to cast a spell your players must interrupt. There is no action condition relative to the target's casting but off-gcd interrupts do not need to be present in the actions list: they will be automatically used by the Simulationcraft.
 
