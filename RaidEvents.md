@@ -222,7 +222,6 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
   Specific options are:
   * _pull_ specifies the order of the pull within the sim.
-  * _relic_ specifies the Encrypted affix relic that will be killed on this pull. Options are `urh` / `vy` / `wo`.
   * _bloodlust_ forces bloodlust to be cast for the pull.
   * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
   * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health`.
@@ -235,7 +234,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000
   ```
 
-  This event supports the Season 3 M+ Encrypted affix by allowing mobs with the `RELIC_` name prefix to spawn an extra automation mob when it is the first relic of the pull to die, which also despawns all other relic mobs in the pull. Upon its death the new automation mob will trigger the appropriate effect defined by the _relic_ option to the sim players. The automation mob's hp scales with the keystone level, and uses the sim-wide _keystone_level_ option to scale the hp pool, as well as the _keystone_pct_hp_ value to limit the resulting hp pool to approximate a specific player's contribution to killing the mob together with the group.
+  This event supports the Season 4 M+ Shrouded affix by allowing mobs with the `BOUNTY1_` or `BOUNTY3_` name prefixs to apply 1 or 3 stacks of the bounty buff defined by the sim-wide _keystone_bounty_ option. Accepted values are `haste`/`crit`/`mastery`/`vers`.
 
 # Buff
   The _buff_ raid event allows you to trigger one or more stacks of a buff. If a _duration_ option is set, the buff will be active for the set druation. Otherwise, the buff will last for the default duration based on the buff's implementation.
