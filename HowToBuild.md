@@ -32,7 +32,7 @@
 
 * Download and install [the latest Qt binaries for Windows](https://www.qt.io/download) (6.3.1 or newer). 
     * Look for open source downloads and then either use the online installer or look for offline installers. You can [skip account creation for the offline installer](https://superuser.com/a/1524989).
-    * Select the latest Qt version during "Select Components", i.e. `Qt 6.3.1` for `MSVC 2019 64-bit` as well as the Additional Libraries 'Qt WebEngine'
+    * Select the latest Qt version during "Select Components", i.e. `Qt 6.3.1` for `MSVC 2019 64-bit` **as well as the Additional Libraries *Qt WebEngine***
     * Add C:\Qt\6.3.1\msvc2019_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
 ## Using CMake Visual Studio integration
