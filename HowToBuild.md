@@ -41,7 +41,7 @@
   * To only build the cli (eg. if you do not want to install Qt) go to `Project -> Cmake Settings for simc` and under CMake variables deselect `BUILD_GUI`
 
 ## Alternative using Qmake
-  * Open a command prompt and run `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_file_locations))
+  * Open a command prompt and run `"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"` to get MS C++ compiler and MSBuild added to your path. ([Source](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=msvc-170#developer_command_file_locations))
   * In the command prompt, navigate to `your_simc_source_dir`.
   * In `your_simc_source_dir`, issue the command `qmake -r -tp vc -spec win32-msvc simulationcraft.pro`
     * Note that for older Qt versions the spec parameter may require your visual studio version (e.g., `win32-msvc2017`)
