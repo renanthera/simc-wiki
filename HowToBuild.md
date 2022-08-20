@@ -28,12 +28,12 @@
 
 # Building SimulationCraft on Windows using Microsoft Visual Studio
 
-* Download and install  [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com). Under the `Workloads` tab select `Desktop development with C++` and additionally select `C++ Clang tools for Windows` if you'd like that as well.
+* Download and install  [Microsoft Visual Studio Community 2022](https://visualstudio.microsoft.com). Under the `Workloads` tab select `Desktop development with C++` and additionally select `C++ Clang tools for Windows` if you'd like that as well.
 
-* Download and install [the latest Qt binaries for Windows](https://www.qt.io/download) (6.3.0 or newer). 
+* Download and install [the latest Qt binaries for Windows](https://www.qt.io/download) (6.3.1 or newer). 
     * Look for open source downloads and then either use the online installer or look for offline installers. You can [skip account creation for the offline installer](https://superuser.com/a/1524989).
-    * Select the latest Qt version during "Select Components", i.e. `Qt 6.3.0` for MSVC 2019 64-bit as well as the Additional Libraries 'Qt WebEngine'
-    * Add C:\Qt\6.3.0\msvc2019_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
+    * Select the latest Qt version during "Select Components", i.e. `Qt 6.3.1` for `MSVC 2019 64-bit` as well as the Additional Libraries 'Qt WebEngine'
+    * Add C:\Qt\6.3.1\msvc2019_64\bin to your [PATH](#adding-directory-to-path) (or where-ever the Qt is installed).
 
 ## Using CMake Visual Studio integration
   * Start Visual Studio and select 'Open a local folder', where you choose the root simc directory.
