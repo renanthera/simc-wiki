@@ -77,9 +77,11 @@
 druid.adaptive_swarm_prepull_setup=2:4:5:10:0.35/1:1:2:2:1
 ```
 
-* **druid.adaptive_swarm_jump_distance_min** (default: 5.0) The minimum distance Adaptive Swarm can travel after jumping away from the initial target.
+* **druid.adaptive_swarm_jump_distance_melee** (default: 5.0) The average distance of the virtual melee players that are potential targets when a healing swarm jumps from an enemy.
 
-* **druid.adaptive_swarm_jump_distance_max** (default: 40.0) The maximum distance Adaptive Swarm can travel after jumping away from the initial target.
+* **druid.adaptive_swarm_jump_distance_ranged** (default: 25.0) The average distance of the virtual ranged players that are potential targets when a healing swarm jumps from an enemy.
+
+* **druid.adaptive_swarm_jump_distance_stddev** (default 1.0) The standard deviation for the previous two options.
 
 * **druid.adaptive_swarm_friendly_targets** (default: 20) The number of friendly targets a healing Adaptive Swarm can jump to.
 
