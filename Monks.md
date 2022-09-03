@@ -19,12 +19,10 @@ There are a total of three available pets to summon (storm, earth, and fire pets
 
 ## Resources
 
-The _initial\_chi_ (scope: player, default: 0 for WW) option sets the amount of chi the monk actor has at the beginning of the combat.
+The _initial\_chi_ (scope: player, default: 1 for WW, cap: 6 for Ascension) option sets the amount of chi the monk actor has at the beginning of the combat. Please note that it defaults to 1 chi given sims assume you Expel Harm pre-pull to have 1 chi. Normally in a raid fight, chi will reset to 1 chi if the player has more than 1 chi.
 ```
 # Set the initial chi of the monk actor to one
-initial_chi=1
-
-The _goto\_throttle_ (scope: player, default: 60) option sets the percent number of Gift of the Ox orbs that are picked up
+monk.initial_chi=1
 ```
 ## Spells implementation notes
 
@@ -51,6 +49,18 @@ The _spinning\_crane\_kick.count_ is used if you wish to see the total number of
 
 ```
  actions+=/spinning_crane_kick,if=spinning_crane_kick.count>3
+```
+
+The _spinning\_crane\_kick.modifier_ is used if you wish to see the current Mark of the Crane multiplier.
+
+```
+ actions+=/spinning_crane_kick,if=spinning_crane_kick.modifier>0.1
+```
+
+The _spinning\_crane\_kick.max_ is used to see if the Mark of the Crane stacks is at max stacks.
+
+```
+ actions+=/spinning_crane_kick,if=spinning_crane_kick.max
 ```
 
 ### _Stagger_
@@ -107,7 +117,7 @@ Stagger is part of the Brewmaster active mitigation. Given how unique it is, the
 
 ## Options
 
-1. **Initial Chi** - This sets the Chi at the start of each iteration. It is advised that this is set no higher than 1 chi due to in-game chi gets set to 1 chi if you have more than 1 chi going into a fight. This requires whole numbers. Defaults to 0.
+1. **Initial Chi** - This sets the Chi at the start of each iteration. It is advised that this is set no higher than 1 chi due to in-game chi gets set to 1 chi if you have more than 1 chi going into a fight. This requires whole numbers. Defaults to 1.
 
 ```
 # Initial Chi is set to 1 chi
