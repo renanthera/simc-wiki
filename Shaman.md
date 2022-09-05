@@ -14,9 +14,10 @@ The _sync\_weaapons_ (default: 0) option on the _auto\_attack_ action can be use
  actions+=/auto_attack,sync_weapons=1
 ```
 
-## Stormlash
+## Thorim's Invocation
 
-The Enhancement Shaman Stormlash ability is modeled on the shaman itself. It will not randomly select targets in multi-actor simulators. An additional player scope option `stormlash_targets` has been added to limit the maximum number of targets allowed to be affected by Stormlash. By default the option is set to 17, simulating a large raid.
+The last Thorim's Invocation triggered spell the actor has cast can be checked with the following player-scope expressions.
+* `ti_lightning_bolt` evaluates to 1 if the last actor-cast Thorim's Invocation triggered spell cast was Lightning Bolt, or if no Lightning Bolt or Chain Lightning has been cast during combat
+* `ti_chain_lightning` evaluates to 1 if the last actor-cast Thorim's Invocation triggered spell cast was Chain Lightning
 
-## Buffs
-Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
+New in **Simulationcraft 10.0.0**.
