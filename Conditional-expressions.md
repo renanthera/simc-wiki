@@ -512,7 +512,7 @@ actions+=/some_spell,if=set_bonus.tier17_4pc
 See also [equipment - set bonuses](Equipment#Set_Bonuses).
 
 ### Spell flights
-You can check whether a casted spell is still flying towards its target (a fireball for example) with the following syntax: `action.<spell_name>.in_flight`. It will return 1 if the spell if flying, 0 otherwise.
+You can check whether a casted spell is still flying towards its target (a fireball for example) with the following syntax: `action.<spell_name>.in_flight`. It will return 1 if the spell if flying, 0 otherwise. Additionally you can use `action.<spell_name>.in_flight_remains` to return the lowest time left until the action hits any target. `action.<spell_name>.in_flight_to_target` checks if this action is flying towards the current target and will return 1 if this is the case and 0 otherwise.
 
 ### Swings
 The remaining time, in seconds, on weapon swings can be checked through the following syntax: `swing.<weapon>.remains`. The weapon can be one of the following values: "mh", "oh", "mainhand", "offhand", "main\_hand", "off\_hand".
