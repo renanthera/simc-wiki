@@ -130,6 +130,9 @@ Acceptable slots are:
  # We can use keywords
  main_hand=shalugdoom_the_axe_of_unmaking,enchant=landslide
 
+ # Note that post-profession revamp from Dragonflight, keywords will need to be followed by the numerical tier of the enchant
+ main_hand=shalugdoom_the_axe_of_unmaking,enchant=burning_writ_3
+
  # Or specify a custom 500 strength enchant
  main_hand=shalugdoom_the_axe_of_unmaking,enchant=500str
 ```
