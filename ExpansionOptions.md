@@ -2,6 +2,11 @@
 
 Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here.
 
+## Dragonflight
+
+### Trinkets
+* **dragonflight.darkmoon_deck_watcher_deplete** (scope: global, default: 2s) Average time before the Watcher's Blessing shield from Darkmoon Deck: Watcher is depleted.
+
 ## Shadowlands
 
 ### Covenants
