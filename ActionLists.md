@@ -114,6 +114,11 @@ However most pets actions actually have shortcut keywords you will probably pref
 Note that pets come with their own default actions lists! You can modify them as you do with any regular character.
 
 ## Consumables
+  * Note that post-profession revamp from Dragonflight, the tokenized name used below will need to be followed by the numerical tier of the consumable.
+```
+ actions+=/potion,type=elemental_potion_of_power_3
+```
+
   * _food_ can trigger the use of a food.
     1. _type_ is the name of the food to use.
 ```
