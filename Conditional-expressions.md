@@ -352,6 +352,7 @@ actions+=/fire_nova,if=active_dot.flame_shock>=5
 
 * _spell_._`<`spell\_name`>`_._exists_ returns true if a spell with the given name exists for the player.
 * _talent_._`<`talent\_name`>`_._enabled_ returns true if the talent with the given name is active/selected for the player.
+* _talent_._`<`talent\_name`>`_._rank_ returns the current rank of the talent with the given name for the player. If not talented returns 0.
 * _artifact_._`<`artifact\_spell_name`>`_._enabled_ returns true if the artifact-spell with the given name is active for the player.
 * _artifact_._`<`artifact\_spell_name`>`_._rank_ returns the active rank of the artifact-spell with the given name for the player.
 
