@@ -15,7 +15,7 @@
       * [BattleArmoryAPI](BattleArmoryAPI)
       * [Equipment](Equipment)
       * [Action lists](ActionLists)
-      * [Action Conditional expressions](Conditional-expressions)
+      * [Action list expressions](Action-List-Conditional-Expressions)
     * [Enemies](Enemies)
     * [Profile Sets](ProfileSet)
     * [Spell queries](SpellQuery)
