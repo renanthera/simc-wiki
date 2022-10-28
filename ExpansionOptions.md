@@ -6,6 +6,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 ### Trinkets
 * **dragonflight.darkmoon_deck_watcher_deplete** (scope: global, default: 2s) Average time before the Watcher's Blessing shield from Darkmoon Deck: Watcher is depleted.
+* **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
 
 ## Shadowlands
 
