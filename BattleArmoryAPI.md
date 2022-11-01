@@ -35,15 +35,3 @@ Note, if you use the command line client, you can put your client credentials in
 
 **WinXP will likely NOT work with the new armory API, even if you use a key. The SSL library on XP doesn't seem to be compatible with the code we are using.**
 
-**As of January 6th 2019 the instructions below are deprecated, and will be removed from this page once 810-02 is released.**
-
-This key can be obtained by going to the <a href='https://dev.battle.net/'>Battle.Net Dev Website.</a>
-
-Registering a key is incredibly easy.
-  1. Click Register, fill that form out, confirm email address
-  1. Sign in, click "My Account" on the top right corner
-  1. Add a key/Applications tab
-  1. **The only required field on the key registration is the name of the application, "Simulationcraft User"**
-  1. Register, it will take you back to "My API Keys"
-  1. Copy/Paste the 32-character key into Simulationcraft under "Options" "Globals" "Advanced Settings"
-
