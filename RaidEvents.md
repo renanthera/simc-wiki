@@ -18,7 +18,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
   * _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
     ```
-      raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
+      raid_events+=/movement,players_only=1,cooldown=40,cooldown_stddev=10,distance=15,distance_min=10,distance_max=20,first=15
     ```
   * _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
     ```
