@@ -9,7 +9,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
 
 ## Shadowlands
-* **shadowlands.enabled** (scope: global, default: 1) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
+* **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
 
 ### Covenants
 
