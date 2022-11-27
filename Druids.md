@@ -27,9 +27,9 @@
 
 * **druid.convoke_the_spirits_deck** (default: 5) The number of cards in the deck used to determine if Convoke the Spirits has a chance to cast an exceptional spell when **not** using the Guidance talent. (Moonkin: Full Moon, Cat: Feral Frenzy, Bear: Pulverize, Caster: Flourish).
 
-* **druid.adaptive_swarm_melee_targets** (default: 9) The number of friendly melee players.
+* **druid.adaptive_swarm_melee_targets** (default: 7) The number of friendly melee players.
 
-* **druid.adaptive_swarm_ranged_targets** (default: 14) The number of friendly ranged players.
+* **druid.adaptive_swarm_ranged_targets** (default: 12) The number of friendly ranged players.
 
 * **druid.adaptive_swarm_jump_distance_melee** (default: 5.0) The average distance of melee players.
 
