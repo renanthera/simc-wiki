@@ -2,6 +2,21 @@
 
 All modern logos are created by graphics designer Julianne Albert (enchant@silkenfire.com). 
 
+## Dragonflight
+
+Small:
+
+![](https://github.com/simulationcraft/simc/blob/dragonflight/logos/dragonflight350.jpg)
+
+Medium:
+
+![](https://github.com/simulationcraft/simc/blob/dragonflight/logos/dragonflight800.jpg)
+
+Big:
+
+![](https://github.com/simulationcraft/simc/blob/dragonflight/logos/dragonflight1000.jpg)
+
+
 ## Shadowlands
 
 Full resolution:
