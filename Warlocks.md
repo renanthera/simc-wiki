@@ -5,7 +5,6 @@
   * **default\_pet** : Specify default main pet (_imp_, _voidwalker_, _succubus_, _felhunter_, Demo only: _felguard_)
 
 # Actions
-  * _dark\_soul_ : Shorthand for the specific Dark Soul spell for any Warlock spec
   * _interrupt_ : Will use an appropriate pet interrupt (Spell Lock/Axe Toss) if target is casting and a valid pet is currently active
 
 # Expressions
