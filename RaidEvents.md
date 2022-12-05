@@ -224,17 +224,18 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   * _pull_ specifies the order of the pull within the sim.
   * _bloodlust_ forces bloodlust to be cast for the pull.
   * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
-  * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health`.
+  * _mark_duration_ length in seconds to apply the Thundering Affix Mark of Lightning damage buff before clearing. A value from 0 to 15.
+  * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health[:CreatureType]` with CreatureType being optional, default Humanoid.
 
   ```
     # This example spawns 3 pulls of adds followed by one boss, starting at 20 seconds with 10 seconds between each, with Bloodlust being used on the boss pull.
-    raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small add 1":100000|"small add 2":100000|"small add 3":100000|"small add 4":100000|"small add 5":100000
-    raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium add 1":200000|"medium add 2":200000|"medium add 3":200000
-    raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big add":300000|"medium add":200000|"small add":100000
-    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000
+    raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small add 1":100000:Elemental|"small add 2":100000:Elemental|"small add 3":100000:Elemental|"small add 4":100000:Elemental|"small add 5":100000:Elemental
+    raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium add 1":200000:Beast|"medium add 2":200000:Beast|"medium add 3":200000:Demon
+    raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big add":300000:Beast|"medium add":200000:Dragonkin|"small add":100000:Abberation
+    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000:Giant
   ```
 
-  This event supports the Season 4 M+ Shrouded affix by allowing mobs with the `BOUNTY1_` or `BOUNTY3_` name prefixs to apply 1 or 3 stacks of the bounty buff defined by the sim-wide _keystone_bounty_ option. Accepted values are `haste`/`crit`/`mastery`/`vers`.
+  This event supports the Season 1 M+ Thundering affix by applying Mark of Lightning to players every 70 seconds in combat beginning at 20 seconds into combat. The pull option _mark_duration_ controls how long to trigger the debuff before simulating a debuff clear.
 
 # Buff
   The _buff_ raid event allows you to trigger one or more stacks of a buff. If a _duration_ option is set, the buff will be active for the set druation. Otherwise, the buff will last for the default duration based on the buff's implementation.
