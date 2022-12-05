@@ -7,6 +7,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 ### Trinkets
 * **dragonflight.darkmoon_deck_watcher_deplete** (scope: global, default: 2s) Average time before the Watcher's Blessing shield from Darkmoon Deck: Watcher is depleted.
 * **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
+* **dragonflight.primal_ritual_shell_blessing** (scope: global, default: wind) Which blessing the trinket is set. Valid blessings are `wind` `flame`
 
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
