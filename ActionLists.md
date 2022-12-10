@@ -113,6 +113,33 @@ However most pets actions actually have shortcut keywords you will probably pref
 ```
 Note that pets come with their own default actions lists! You can modify them as you do with any regular character.
 
+## External Buffs
+External buffs like Power Infusion (haste buff from Priest) can be called and set up for an APL/profile.
+Implemented buffs:
+- Power Infusion
+
+A character scoped option `external_buffs.pool` declares the availability of an external buff. Syntax:
+```
+external_buffs.pool=buff_name1:cooldown:quantity/buff_name2:cooldown:quantity
+```
+Minimum two arguments per buff, quantity is assumed to be 1 if not present.
+E.g. `external_buffs.pool=power_infusion:120` will add a single Power Infusion as an available external buff.
+
+To use available external buffs the APL needs to have actions called `invoke_external_buff`. Schema similar to normal actions:
+```
+  actions+=/invoke_external_buff,name=buff_name1,if=condition
+```
+Example
+```
+  actions+=/invoke_external_buff,name=power_infusion,if=buff.dancing_rune_weapon.up|!talent.dancing_rune_weapon
+```
+
+For debugging the option `use_pool` with default 1 (on!) exists. Turning
+this off stops it from using the cooldown pool and therefore must be
+controlled by a line cd or fancy apl logic. This is for testing
+purposes! **Do not include lines with `use_pool=0` in default APLs!**
+
+
 ## Consumables
   * Note that post-profession revamp from Dragonflight, the tokenized name used below will need to be followed by the numerical tier of the consumable.
 ```
