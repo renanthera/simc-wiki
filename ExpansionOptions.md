@@ -8,7 +8,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.darkmoon_deck_watcher_deplete** (scope: global, default: 2s) Average time before the Watcher's Blessing shield from Darkmoon Deck: Watcher is depleted.
 * **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
 * **dragonflight.primal_ritual_shell_blessing** (scope: global, default: wind) Which blessing the trinket is set. Valid blessings are `wind` `flame`
-
+* **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
 
