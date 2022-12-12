@@ -9,6 +9,12 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
 * **dragonflight.primal_ritual_shell_blessing** (scope: global, default: wind) Which blessing the trinket is set. Valid blessings are `wind` `flame`
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
+
+### Crafted Gear
+* **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.hood_of_surging_time_chance` seconds on top of any add spawns.
+* **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `shadowlands.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
+* **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 5s) Sets the stacks of Prepared Time to proc when period and chance are set.
+
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
 
