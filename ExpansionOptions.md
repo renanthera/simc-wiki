@@ -13,7 +13,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 ### Crafted Gear
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.hood_of_surging_time_chance` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `shadowlands.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
-* **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 5s) Sets the stacks of Prepared Time to proc when period and chance are set.
+* **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
 
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
