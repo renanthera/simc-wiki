@@ -25,6 +25,7 @@
     * [Death Knights](DeathKnights)
     * [Demon Hunters](Demon-Hunters)
     * [Druids](Druids)
+    * [Evokers](Evokers)
     * [Hunters](Hunters)
     * [Mages](Mages)
     * [Monks](Monks)
