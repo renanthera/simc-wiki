@@ -58,61 +58,35 @@ The default settings will lead Simulationcraft to cast the bloodlust at the star
 Certain buffs that can be used on a player by other players can be enabled through options.
 
   * **Permanent buffs** (scope: player; default: 0), will make your character benefit from the specified permanent buff given by another player.
-    * **external\_buffs.focus\_magic** Set to 1 to apply focus magic to your character.
-    * **external\_buffs.soleahs_secret_technique_ilevel** Specify the item level of the Soleah's Secret Technique trinket being used by another player on your character.
-    * **external\_buffs.elegy_of_the_eternals=`ilevel:stat/ilevel2:stat2/...`** Specify the item level and the stat given by Elegy of the Eternals trinket(s) being used by your party members. Multiple entries can be used delimited by `/`.
-```
-# The player will benefit from Focus Magic for the entire simulation.
-external_buffs.focus_magic=1
-```
+    * **None currently**
+
   * **Timed buffs** (scope: player; default: disabled), specifies the times when the specified buff will be cast on your character by another player. Individual times are separated with `/` characters.
     * **external\_buffs.power\_infusion**
-    * **external\_buffs.benevolent\_faerie**
-    * **external\_buffs.bwonsamdis\_pact\_benevolent**
     * **external\_buffs.blessing\_of\_summer**
     * **external\_buffs.blessing\_of\_autumn**
     * **external\_buffs.blessing\_of\_winter**
     * **external\_buffs.blessing\_of\_spring**
-    * **external\_buffs.conquerors\_banner**
     * **external\_buffs.rallying\_cry**
-    * **external\_buffs.pact\_of\_the\_soulstalkers**
-    * **external\_buffs.kindred\_affinity**
-        * The stat given will be determined by the covenant of the player.
-        * The player will have a constant buff at base value.
-        * At each timestamp, the buff will be doubled for 10s.
+    * **external\_buffs.tome\_of\_unstable\_power** (requires external\_buffs.tome\_of\_unstable\_power\_ilevel set)
 ```
-# Fae Guardians will be cast on the player at 0 seconds, 90 seconds, 180 seconds, and 270 seconds.
-external_buffs.benevolent_faerie=0/90/180/270
-
 # Disable Power Infusion if the option was already enabled.
 external_buffs.power_infusion=
 ```
-  * **Additional options** (scope:player), some external buffs have additional options that will modify their behavior.
-    * **external\_buffs.seasons\_of\_plenty=<0/1>** (default: 0), determines whether the casting Paladin is using the Seasons of Plenty legendary.
-    * **external\_buffs.the\_long\_summer\_rank=<0-15>** (default: 0), determines the rank of The Long Summer that the casting Paladin is using.
-```
-# Blessing of Summer will be cast on the player at 0 and 180 seconds.
-# Additionally, the casting Paladin has Seasons of Plenty and The Long Summer rank 9.
-external_buffs.blessing_of_summer=0/180
-external_buffs.seasons_of_plenty=1
-external_buffs.the_long_summer_rank=9
-```
-# Targeted buffs
 
-When both **optimal\_raid** and the relevant **override.xxx** are disabled and you're performing a simulation with many characters, targeted buffs such as "tricks of the trade" have features to let you specify their targets.
+  * **Additional options** (scope:player), some external buffs have additional options that will modify their behavior. 
+    * **external\_buffs.tome\_of\_unstable\_power\_ilevel** (no default), determines the ilevel used by the **external\_buffs.tome\_of\_unstable\_power** external buff option. 
+# Depreciated buffs
 
-There are two ways to do so:
-```
- # Let's make John the rogue use tricks of the trade on Bill
- armory=us,illidan,John
- tricks_of_the_trade_target=Bill
-
- # Or we can specify it in John's actions list:
- armory=us,illidan,John
- actions+=/tricks_of_the_trade,target=Bill
-```
-
-The following buffs support those two mechanics (**xxx\_target** and a _target_ for the corresponding action):
-  1. tricks of the trade
-
-  * The relevant key words (**tricks\_of\_the\_trade\_target**) have the "current character" scope and are empty by default (no target). The corresponding actions are not included in the default actions lists (unless they can be casted on self).
+  * **external\_buffs.soleahs_secret_technique_ilevel** Specify the item level of the Soleah's Secret Technique trinket being used by another player on your character.
+  * **external\_buffs.elegy_of_the_eternals=`ilevel:stat/ilevel2:stat2/...`** Specify the item level and the stat given by Elegy of the Eternals trinket(s) being used by your party members. Multiple entries can be used delimited by `/`.
+  * **external\_buffs.seasons\_of\_plenty=<0/1>** (default: 0), determines whether the casting Paladin is using the Seasons of Plenty legendary.
+  * **external\_buffs.the\_long\_summer\_rank=<0-15>** (default: 0), determines the rank of The Long Summer that the casting Paladin is using.
+  * **external\_buffs.benevolent\_faerie**
+  * **external\_buffs.bwonsamdis\_pact\_benevolent**
+  * **external\_buffs.conquerors\_banner**
+  * **external\_buffs.pact\_of\_the\_soulstalkers**
+  * **external\_buffs.kindred\_affinity**
+      * The stat given will be determined by the covenant of the player.
+      * The player will have a constant buff at base value.
+      * At each timestamp, the buff will be doubled for 10s.
+  * **external\_buffs.focus\_magic** Set to 1 to apply focus magic to your character.
