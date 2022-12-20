@@ -16,7 +16,7 @@ By default, Simulationcraft adds every buff you can have in an optimal 20-man ra
 # Overrides
 You can override the helpful buffs and target debuffs you benefit from the **optimal\_raid** setting and explicitly disable or enable them, one by one. All those settings have a global scope and their default value is the last specified **optimal\_raid** setting, or 1 if not specified.
 
-Beware! You need to declare the overrides **`***`after`***`** you declared **optimal\_raid**!
+Beware! You need to declare the overrides ***after*** you declared **optimal\_raid**!
 
   * Unique buffs and debuffs
     * **override.bloodlust** (see the relevant section below)
