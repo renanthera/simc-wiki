@@ -229,10 +229,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
 
   ```
     # This example spawns 3 pulls of adds followed by one boss, starting at 20 seconds with 10 seconds between each, with Bloodlust being used on the boss pull.
-    raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small add 1":100000:Elemental|"small add 2":100000:Elemental|"small add 3":100000:Elemental|"small add 4":100000:Elemental|"small add 5":100000:Elemental
-    raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium add 1":200000:Beast|"medium add 2":200000:Beast|"medium add 3":200000:Demon
-    raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big add":300000:Beast|"medium add":200000:Dragonkin|"small add":100000:Abberation
-    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big boss":1000000:Giant
+    raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small_add_1":100000:Elemental|"small_add_2":100000:Elemental|"small_add_3":100000:Elemental|"small_add_4":100000:Elemental|"small_add_5":100000:Elemental
+    raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium_add_1":200000:Beast|"medium_add_2":200000:Beast|"medium_add_3":200000:Demon
+    raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big_add":300000:Beast|"medium_add":200000:Dragonkin|"small_add":100000:Abberation
+    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big_boss":1000000:Giant
   ```
 
   This event supports the Season 1 M+ Thundering affix by applying Mark of Lightning to players every 70 seconds in combat beginning at 20 seconds into combat. The pull option _mark_duration_ controls how long to trigger the debuff before simulating a debuff clear.
