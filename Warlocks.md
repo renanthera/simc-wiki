@@ -18,4 +18,3 @@
   * _incoming\_imps_ : Number of Wild Imps which will be spawning from Hand of Gul'dan but have not yet spawned
   * _can\_seed_ : Returns true if there is a valid target for Seed of Corruption which does not have a Seed DoT or Seed in-flight already
   * _time\_to\_imps.N.remains_ : Returns the time to having N total Wild Imps, including those scheduled to be spawned. If N is greater than the total expected, returns time to last imp. "all" can be used in place of a value as well.
-  * _active\_immolates_ : Returns a count of all Immolate dots currently ticking on targets
