@@ -10,6 +10,7 @@
 # Expressions
   * _last\_cast\_imps_ : Number of Wild Imps with one cast remaining
   * _two\_cast\_imps_ : Number of Wild Imps with two casts remaining
+  * _igb\_ratio_ : Calculates number of Imp Gang Bosses divided by total Wild Imps (incl. IGBs)
   * _time\_to\_shard_ : Estimated time until Agony next generates a Soul Shard
   * _pet\_count_ : Total number of (Warlock) pets currently active
   * _havoc\_active_ : Boolean checking if Havoc is currently applied to _any_ target whatsoever
