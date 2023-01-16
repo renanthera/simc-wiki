@@ -13,6 +13,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.alltotem_of_the_master_period** (scope: global, default: 3s) Minimum time after Alltotem of the Master comes off cooldown that it will trigger again.
 * **dragonflight.dragon_games_kicks** (scope: global, default: 0) Number of balls spawned by Dragon Games Equipment the player will kick at the target.
 * **dragonflight.dragon_games_rng** (scope: global, default: 0.75, min: 0.0, max: 1.0) Minimum RNG multiplier for Dragon Games Equipment's number of kicks.
+* **dragonflight.whelp_training_weights** (scope: global, default: "fire_shot:1/lobbing_fire_nova:1/curing_whiff:1/mending_breath:1/sleepy_ruby_warmth:1/under_red_wings:1") Temporary implementation to allow for early whelp sims. List of weights for each outcome of the whelp. Whelp action is chosen from this list of weights randomly. Our current recommendation for estimating a fully trained whelp is to set the trained weight to 20 and leave the rest on 1, as this will give you 80% chance for what you want and the rest equally split.
 
 ### Crafted Gear
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.hood_of_surging_time_chance` seconds on top of any add spawns.
