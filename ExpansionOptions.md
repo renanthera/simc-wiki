@@ -13,17 +13,24 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.alltotem_of_the_master_period** (scope: global, default: 3s) Minimum time after Alltotem of the Master comes off cooldown that it will trigger again.
 * **dragonflight.dragon_games_kicks** (scope: global, default: 0) Number of balls spawned by Dragon Games Equipment the player will kick at the target.
 * **dragonflight.dragon_games_rng** (scope: global, default: 0.75, min: 0.0, max: 1.0) Minimum RNG multiplier for Dragon Games Equipment's number of kicks.
-* **dragonflight.ruby_whelp_shell_training** (scope: global, default: none) `/`-delimited string indicating the training level for each possible Ruby Whelp Shell proc. For example: `dragonflight.ruby_whelp_shell_training=sleepy_ruby_warmth:4/under_red_wings:2`
+* **dragonflight.ruby_whelp_shell_training** (scope: global, default: none) `/`-delimited string indicating the training level for each possible Ruby Whelp Shell proc. For example: `dragonflight.ruby_whelp_shell_training=sleepy_ruby_warmth:4/under_red_wings:2`. Procs are:
+  * `fire_shot` - single target damage
+  * `lobbing_fire_nova` - aoe damage
+  * `curing_whiff` - single target healing
+  * `mending_breath` - aoe heal
+  * `sleepy_ruby_warmth`- crit buff
+  * `under_red_wings` - haste buff
 * **dragonflight.ruby_whelp_shell_context** (scope: global, default: none) `/`-delimited string indicating the context-aware procs for Ruby Whelp Shell that can occur during the simulation. By default, any of the procs will be able to occur. For example: `dragonflight.ruby_whelp_shell_context=fire_shot/curing_whiff/sleepy_ruby_warmth/under_red_wings`
 * **dragonflight.player.ruby_whelp_shell_training** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_training`, except that it can be set for each player individually. If both options are present, this option will override the global option.
 * **dragonflight.player.ruby_whelp_shell_context** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_context`, except that it can be set for each player individually. If both options are present, this option will override the global option.
+
+
 ### Crafted Gear
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.hood_of_surging_time_chance` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `shadowlands.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
 * **dragonflight.allied_wristguards_allies** (scope: global, default: 4, min: 0, max: 4) Number of nearby allies for the effect of Allied Wristguards of Companionship.
 * **dragonflight.allied_wristguards_ally_leave_chance** (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for nearby allies to move out of range for Allied Wristguards of Companionship.
-
 
 ### Other
 * **dragonflight.gyroscopic_kaleidoscope_stat** (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either "mastery", "haste", "crit" or "versatility".
