@@ -25,7 +25,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_events+=/movement,players_only=1,cooldown=20,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
       raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=45,distance_min=40,distance_max=50,first=30
     ```
-  * _DungeonSlice_ approximates a "slice" of a BfA M+ (roughly equivalent to an M10). A single boss mob followed by alternating large/weak trash packs (4-6 mobs for 15 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Fight length locked to 6 minutes, int/fort/shout/bloodlust always enabled. Events are equivalent to:
+  * _DungeonSlice_ approximates a "slice" of a BfA M+ (roughly equivalent to an M10). A single boss mob followed by alternating large/weak trash packs (4-6 mobs for 15 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Fight length locked to 6 minutes. Events are equivalent to:
     ```
       raid_events+=/invulnerable,cooldown=500,duration=500,retarget=1
       raid_events+=/adds,name=Boss,count=1,cooldown=500,duration=135,type=add_boss,duration_stddev=1
