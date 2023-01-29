@@ -13,75 +13,78 @@ Player Expressions are also used for raid event player\_if filter.
 
 ## Operators
 
-### Introduction
+### Simple example
+Consider the following APL line:
 
-Most known operators are the arithmetic ones, so we're going to use them to introduce you to some operators properties. Here are the arithmetic operators accepted by Simulationcraft:
+```
+actions+=/faerie_fire,if=debuff.faerie_fire.stack<3&!(debuff.sunder_armor.up|debuff.expose_armor.up)
+```
 
-* **`*`** is the multiplication operator: it returns the product of the left and right member.
-* **`%`** is the division operator: it returns the division of the left by the right member.
-* **`-`** is the either the binary subtraction operator (returns the difference between the left and right members) or the unary negation operator ("-7" returns the opposite of the right member, 7).
-* **`+`** is either the binary addition operator (returns the sum of the left and right members) or the unary "plus", which has no effect (+7 transforms 7 into 7).
-* **`%%`** is the modulo operator: it returns the floating-point remainder of the division operator (**New in Simulationcraft 9.0.1 release 1**)
+Given that `&` means "AND", `!` means "NOT", and `|` means "OR", we can replace the symbols with their English equivalents:
 
-In addition to the above, Simulationcraft has additional functions defined to perform basic operations on expressions:
+```
+debuff.faerie_fire.stack LESS THAN 3 AND NOT(debuff.sunder_armor.up OR debuff.expose_armor.up)
+```
 
-* **floor()** will return the previous integer value of the expression given inside the parenthesis
-* **ceil()** will return the next integer value of the expression given inside the parenthesis
+Therefore, this APL line says to cast Faerie Fire if there are less than three stacks of Faerie Fire and neither Sunder Armor nor Expose Armor are up.
 
-About the vocabulary we used: **binary** operators are applied to a left and a right member while **unary** operators are applied to their right member only.
+### Operator precedence
+To be able to read APL expressions, it is important to know the precedence rules (i.e. the order of operations). An operator with higher precedence binds more tightly to its operands: for example, `2+3*5` is evaluated as `2+(3*5)` because `*` has higher precedence than `+`. Similarly, `a&b|c&d` is evaluated as `(a&b)|(c&d)` because `&` has higher precedence than `|`.
 
-Now, let's imagine that you read the "7 + 4 `*` 5" calculus. You know it has to be read as "7 + (4 `*` 5)". Why ? Because the multiplication and division have a higher **priority** and take precedence over the addition and subtraction operator. In the same way, you know that "5 `*` -7" has to be read as "5 `*` (-7)" because unary operators have a higher priority than binary operators.
+Within the same precedence class, Simulationcraft always uses left-to-right associativity: for example, `4-5+6` is evaluated as `(4-5)+6` because `+`, `-` have the same precedence but the `4-5` appears first when reading left to right.
 
-Finally, what about "500 % 5 `*` 10" ? Multiplication and division operators both have the same priority so there are two ways to read it: "500 % (5 `*` 10)" or "(500 % 5) `*` 10". We need to set up a conventional **reading order** : for Simulationcraft, it will be from **left to right**: when two operators have the same priority, the leftmost one is given a higher priority. We have to understand our calculus as "(500 % 5) `*` 10".
+Here is the full list of operators in Simulationcraft, in order from highest to lowest precedence (i.e. entries listed first bind more tightly):
+
+* Function calls: `floor()` `ceil()`
+* Unary operators: `+` `-` `@` `!`
+* Multiplication, division, and modulus: `*` `%` `%%`
+* Addition and subtraction: `+` `-`
+* Max and min: `<?` `>?`
+* Comparison operators: `=` `!=` `<` `<=` `>` `>=` `~` `!~`
+* Logical AND: `&`
+* Logical XOR: `^`
+* Logical OR: `|`
+
+Note that this is very similar to the operator precedence in other programming languages such as C++ or Javascript.
+
+### Arithmetic operators
+All Simulationcraft expressions evaluate to double-precision floating-point numbers. The following operators perform floating-point arithmetic.
+
+* `+` is the addition operator: `x+y` evaluates to the sum of `x` and `y`. As a unary operator, it is a no-op: `+x` evaluates to the same as `x`.
+* `-` is the subtraction operator: `x-y` evaluates to `x` minus `y`. As a unary operator, it negates the operand: `-x` evaluates to the negation of `x`.
+* `*` is the multiplication operator: `x*y` evaluates to the product of `x` and `y`.
+* `%` is the division operator: `x%y` evaluates to the floating-point quotient of `x` by `y` (for example, `3%2` equals `1.5`). Note that `/` could not be used for division since it is already being used as the separator token.
+* `%%` is the modulus operator: `x%%y` evaluates to the floating-point remainder when `x` is divided by `y` (for example, `9%%2.5` equals `1.5`). The result has the same sign as `x`.
+* **`@`** is the absolute value operator: `@x` evaluates to the absolute value of `x`.
+* **`<?`** is the max operator: `x<?y` evaluates to the greater of `x` and `y`.
+* **`>?`** is the min operator: `x>?y` evaluates to the lesser of `x` and `y`.
+* `floor()` is the floor function: `floor(x)` evaluates to the greatest integer value that is less than or equal to `x`. Note that this is different from truncation for negative operands: for example, `floor(-2.5)` equals `-3`.
+* `ceil()` is the ceiling function: `ceil(x)` evaluates to the least integer value that is greater than or equal to `x`.
+
+### Comparison operators
+* `=` is the equality operator: `x=y` evaluates to `1` if `x` is equal to `y`, and `0` otherwise.
+* `!=` is the inequality operator: `x!=y` evaluates to `y` if `x` is not equal to `y`, and `0` otherwise.
+* `<` `<=` `>` `>=` are the relational operators: these should be self-explanatory given the above.
 
 ### Logical operators
-The first example displayed the use of _logical operators_. Logical operators are:
+Logical operators work with truth values. Zero is the same as false; any nonzero value is considered truthy.
 
-* **`&`** is the binary AND operator: returns true when both left and right members are true.
-* **`|`** is the binary OR operator: returns true when at least one of the left and right members are true.
-* **`^`** is the binary XOR operator: returns true when either the left or right member is true, but not both.
-* **`!`** is the unary NOT operator: returns true when the right member is false.
+* `&` is the logical AND operator: `x&y` evaluates to `1` if both `x` and `y` are nonzero, and `0` otherwise.
+* `|` is the logical OR operator: `x|y` evaluates to `1` if either `x` or `y` or both are nonzero, and `0` otherwise.
+* `^` is the logical XOR operator: `x^y` evaluates to `1` if either `x` or `y`, but not both, are nonzero, and `0` otherwise.
+* `!` is the logical NOT operator: `!x` evaluates to `1` if `x` is zero, and `0` otherwise.
 
-```
-# The following condition:
-actions+=/faerie_fire,if=debuff.faerie_fire.stack<3&!(debuff.sunder_armor.up|debuff.expose_armor.up)
+### Important note on booleans
+There is no distinct boolean type, as Simulationcraft expressions are all evaluated as floating-point numbers. It is common for APLs to coerce values between boolean and arithmetic contexts freely.
+- In a boolean context, `0` is considered false, while anything nonzero is considered true. For example, `3&4` evaluates to `1` since `3` and `4` are being used in a boolean context (operands to `&`) and are both considered true. Logical operators and comparisons will always output either `0` or `1` regardless of their operands.
+- Example: `guillotine,if=cooldown.demonic_strength.remains`. The condition is equivalent to `cooldown.demonic_strength.remains!=0` and it is synonymous with Demonic Strength being on cooldown: `!cooldown.demonic_strength.ready` means basically the same thing.
+- On the flip side, logical `0` or `1` values can be used in an arithmetic context. For example, `(a==b)*c` will evaluate to `c` if `a` is equal to `b`, or `0` otherwise.
+- Example: `variable,name=next_tyrant,op=set,value=14+talent.grimoire_felguard+talent.summon_vilefiend`. Since talent checks evaluate to `0` or `1` depending on whether the talent is learned, this logic starts with an initial timer of 14 and adds 1 for each of these talents learned.
 
-# That means (remember that unary operators take precedence over binary ones):
-debuff.faerie_fire.stack <3 AND (NOT(debuff.sunder_armor.up OR debuff.expose_armor.up))
-
-# (debuff.sunder_armor.up OR debuff.expose_armor.up) is true when sunder_armor or expose_armor are up on the target.
-# (NOT(debuff.sunder_armor.up OR debuff.expose_armor.up)) is true if none of the two debuffs are up, false if at least one is up.
-# As a result, the condition is true when there are less than three stacks of faerie fire and neither sunder_armor nor expose_armor are up.
-```
-
-One important note: false is zero. True is anything different from zero. Which means that you can test regular numbers as if they were boolean.
-```
-# Both syntaxes are valid and do the same thing:
-actions=/stance,choose=berserker,if=!in_combat
-actions=/stance,choose=berserker,if=in_combat=0
-```
-
-### Complete list of operators
-Besides the logical operators, let's mention some specific operators we didn't mention so far:
-
-* **`=  `** is the equality comparison operator.
-* **`!=`** is the inequality comparison operator.
-* **`~  `** is the inclusion operator: it returns true if the left string member is contained in the right string member (**only used for SpellQuery**).
-* **`!~`** is the exclusion operator: it returns true if the left string member is not contained in the right string member (**only used for SpellQuery**).
-* **`@  `** is the absolute unary operator: it returns the absolute value of its right member.
-
-We also didn't mention the comparison operators: "=" is the equality comparison operator, "<=" is "lesser than or equal", etc... Unequality is achieved through the concatenation of the NOT operator with the equality operator: "!=".
-
-Finally, here is the full operators priorities list, from the highest ones to the lowest ones:
-
-* Function calls (**`floor , ceil`**)
-* Unary operators (**`+ , - , @ , !`**)
-* Multiplication and division (**`* , %`**)
-* Addition and subtraction (**`+ , -`**)
-* Comparison operators (**`= , != , < , <= , >= , > , ~, !~`**)
-* Binary logical and (**`&`**)
-* Binary logical xor (**`^`**)
-* Binary logical or (**`|`**)
+### SpellQuery operators
+These operators may only be used in SpellQuery.
+* `~` is the string `in` operator: `s~t` evaluates to true if `s` is a substring of `t` (case-insensitive).
+* `!~` is the string `not in` operator: `s!~t` evaluates to true if `s` is not a substring of `t` (case-insensitive).
 
 ## Operands
 
