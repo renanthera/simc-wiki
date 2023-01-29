@@ -17,7 +17,9 @@
 
 * **druid.affinity_resources** (default: false) When set true, enables resources used specifically by your affinity talent, such as Energy with Feral Affinity.
 
-* **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. APLs are limited to a single pre-cast spell, thus the normal precasting of 2x solar wrath is simulated by the default setting of 8 + single pre-cast solar wrath. When having talented Nature's Balance this is set to 58 to account for the increased starting astral power.
+* **druid.initial_astral_power** (default: 0) Set the amount of astral power at start of combat. Will be limited to the raid combat defaults of 20 and 50 with and without Nature's Balance when not setting *druid.raid_combat=0*.
+
+* **druid.raid_combat** (default: 0) Sets whether the simulation adheres to raid combat rules. Currently only relevant for *druid.initial_astral_power*.
 
 * **druid.initial_moon_stage** (default: 0) Set the starting state of the New Moon talent. 0: New Moon, 1: Half Moon, 2: Full Moon
 
