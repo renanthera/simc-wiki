@@ -328,6 +328,13 @@ actions+=/moonfire,cycle_targets=1,if=!ticking
 # Cycles through only 3 targets.
 actions+=/moonfire,cycle_targets=1,max_cycle_targets=3,if=!ticking
 ```
+* _target\_if_ selects a target for the action based on the expression value. In `first` mode (default if unspecified), the action selects the first target for which the expression value evaluates to nonzero, or skips the action if no such target is found. In `min` or `max` mode, the action evaluates the expression value for all possible targets and selects the target for which the expression value is minimal/maximal respectively. Note that the _if_ expression is performed after the _target\_if_ expression has selected a target. So if the _target\_if_ is used in `min` mode and the _if_ expression fails on that target, it won't try the next minimum target but will instead just skip the action.
+```
+# Cast Agony on any target in pandemic range
+actions+=/agony,target_if=refreshable
+# Cast Agony on the target with the lowest remaining Agony duration, if it is in pandemic range
+actions+=/agony,target_if=min:remains,if=refreshable
+```
 
 **Note**: if you are looking for how to check specific buffs/debuffs on a target check the [Conditional Expressions page](https://github.com/simulationcraft/simc/wiki/Conditional-expressions#buffs-and-debuffs).
 
