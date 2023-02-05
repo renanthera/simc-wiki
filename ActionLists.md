@@ -306,6 +306,14 @@ The following operations also require the _value_ to be set:
 apl_variable.aoe_threshold=5
 ```
 
+For multi-target sims, _cycling\_variable_ can be used to perform a variable operation on every target. For example:
+
+```
+# Count the number of targets that have Agony at more than 5 seconds remaining
+actions+=/variable,name=agony_over_5_count,op=reset
+actions+=/cycling_variable,name=agony_over_5_count,op=add,value=dot.agony.remains>=5
+```
+
 # Actions modifiers
 All actions have additional options, we're listing them here.
 
