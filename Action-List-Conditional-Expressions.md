@@ -400,6 +400,7 @@ The available properties are:
 * _duration_ is the initial duration, in seconds (not the remaining duration) of the current dot. Note that this returns 0 if the dot is not currently ticking.
 * _modifier_ is the damages or healing modifier. If your character has a 20% general modifier and a 30% modifier for this dot, it will have a total of 1.2\*1.3=1.56.
 * _remains_ is the remaining duration, in seconds, before the dot/hot expires.
+* _refreshable_ is 1 if refreshing the dot would not waste any duration compared to applying a fresh dot. This is always true if the dot is not active on the target. For dots with pandemic behavior, i.e. most dots in modern WoW, this is true if the dot has <= 30% duration remaining (to be more specific, 30% of the duration of the refreshing spell).
 * _ticking_ is 1 if the dot is still active on the target, 0 if it faded out.
 * _ticks\_added_ is the number of additional ticks that have been added to the dot while it is active. This does not include ticks added from haste at the dot's application.
 * _tick\_dmg_ is the non-critical damage of the last tick.
