@@ -2,13 +2,13 @@
 
 # Sim Module notes
 The module is broken up into the following parts:
-- Main Priest file - Holds base spells or other things available to more than one spec. ([sc_priest.cpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.cpp) and [sc_priest.hpp](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest.hpp))
+- Main Priest file - Holds base spells or other things available to more than one spec. ([sc_priest.cpp](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest.cpp) and [sc_priest.hpp](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest.hpp))
 - Spec Files - Specialization specific implementations
-  - [Discipline](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_discipline.cpp)
-  - [Holy](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_holy.cpp)
-  - [Shadow](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_shadow.cpp)
-- [APL File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/apl/apl_priest.cpp) - Stores the Action Priority List for each spec.
-- [Pet File](https://github.com/simulationcraft/simc/blob/shadowlands/engine/class_modules/priest/sc_priest_pets.cpp) - Handles all pets for Priest's (Shadowfiend, Mindbender, and Eternal Call to the Void Tentacles).
+  - [Discipline](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest_discipline.cpp)
+  - [Holy](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest_holy.cpp)
+  - [Shadow](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest_shadow.cpp)
+- [APL File](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/apl/apl_priest.cpp) - Stores the Action Priority List for each spec.
+- [Pet File](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest_pets.cpp) - Handles all pets for Priest's (Shadowfiend, Mindbender, etc).
 
 # Insanity
 By default the Shadow Priest sim starts with 0 Insanity. If you would like to change this you can use this option:
@@ -25,12 +25,6 @@ The Shadow Priest Mastery is not currently applied automatically by SimC due to 
 ## Power Infusion
 Power Infusion assumes that the actor is using the spell for its self-use only. To change this behavior, you need to set the option `priest.self_power_infusion=0`. Doing so will change the uptime of PI of the actor to 0%.
 
-### Power Unto Others (Conduit)
-This Conduit only works if you have `priest.self_power_infusion=0` or if you have the legendary Twins of the Sun Priestess equipped, as otherwise the actor is using PI on itself.
-
-## Mind Blast
-For the APL, Mind Blast by default will not work with typical `cast_while_casting=1`. This is because you can only cast this spell while casting Mind Flay or Mind Sear AND you have Dark Thoughts active. To make the APL easier to understand rather than having all these conditional checks there is a `only_cwc` option for Mind Blast only. This option defaults to `false` and with this you can have a separate APL line for the CWC Mind Blast.
-
 ## Power Word: Shield
 By default Power Word: Shield will debuff the target with the Weakened Soul debuff and prevent PWS from being cast on that target until it expires. To simulate PWS spam over an entire raid, without having to simulate an entire raid, you can use the 'ignore\_debuff' option.
 ```ini
@@ -40,24 +34,21 @@ By default Power Word: Shield will debuff the target with the Weakened Soul debu
 
 # Bugs
 By activating `bugs=1` inside your character's sim you will get access to the following bugs:
-- [Dark Thought Mind Sear Proc Rate](https://github.com/WarcraftPriests/sl-shadow-priest/issues/101)
-- [Ghost Void Bolt Hit](https://github.com/SimCMinMax/WoW-BugTracker/issues/678)
-- [Wrathful Faerie Insanity Gen](https://github.com/SimCMinMax/WoW-BugTracker/issues/777)
-- [Bwonsamdi's Pact Math Error](https://github.com/SimCMinMax/WoW-BugTracker/issues/852)
-- [Pallid Command not affected by Mastery](https://github.com/SimCMinMax/WoW-BugTracker/issues/854)
+- [Shadow Word: Death CD is not hasted](https://github.com/SimCMinMax/WoW-BugTracker/issues/943)
+- [Gathering Shadows T29 2p does not apply to the last tick of Mind Sear](https://github.com/SimCMinMax/WoW-BugTracker/issues/966)
+- [Shadowy Apparitions generate Insanity when generated instead of on-hit](https://github.com/SimCMinMax/WoW-BugTracker/issues/1081)
+- [Void Eruption damage event is triggering 2 extra times](https://github.com/SimCMinMax/WoW-BugTracker/issues/963)
+- [Screams of the Void is not applied to SW:P while channeling Mind Flay when using Mental Decay](https://github.com/SimCMinMax/WoW-BugTracker/issues/1038)
+- [Idol of C'Thun tendrils damage scaling is as if it was an NPC](https://github.com/SimCMinMax/WoW-BugTracker/issues/1029)
+- [Idol of Yogg-Saron cleave damage is calculated incorrectly](https://github.com/SimCMinMax/WoW-BugTracker/issues/1000)
+- [Idol of Yogg-Saron damage is not scaling with Mastery](https://github.com/SimCMinMax/WoW-BugTracker/issues/931)
 
 # Custom Options
 ## Self Power Infusion
 To simulate giving away Power Infusion to someone else you can use `priest.self_power_infusion` (`default=1`). This option controls if the actor casts and gives themselves Power Infusion. See the section above on [Power Infusion](Priests#power-infusion) implementation details for more info.
 
-## Boon of the Ascended (Kyrian Covenant Ability)
-When running a sim for a player that is apart of the Kyrian covenant (`covenant=kyrian`) you will get access to a new ability: Boon of the Ascended. This ability gives you access to Ascended Blast (replaces Mind Flay / Smite) and Ascended Nova (8yd range) and will explode with Ascended Eruption (15yd range) based on the amount of stacks. By default the sim will cast all of these abilities and assume you are in range of ALL targets (unless you have added targets outside of the range). To disable this you can easily use these options:
-
-- `priest.use_ascended_nova=0` (default: `1`)
-- `priest.use_ascended_eruption=0` (default: `1`)
-
-## Mindgames (Venthyr Covenant Ability)
-This ability gives a total of 20insanity, however in order to get the full amount the target you cast it on must heal and do damage to break the shield. A player is given 10 insanity for each component that is broken up to a total of 20. By default SimC only assumes that the damage amount is broken, so the actor is only given 10 insanity. You can easily overwrite this with the following options:
+## Mindgames (Class Talent)
+This ability has two parts, one to reverse damage and one to reverse healing. By default the healing reversal is disabled. You can easily overwrite this with the following options:
 
 - `priest.mindgames_damage_reversal=1` (default: `1`)
 - `priest.mindgames_healing_reversal=0` (default: `0`)
@@ -65,28 +56,6 @@ This ability gives a total of 20insanity, however in order to get the full amoun
 These options also control the extra healing or damage that actors get when these are flipped on. So with `priest.mindgames_damage_reversal=1` the actor will generate a healing event in SimC by default (unless `priest.ignore_healing` is turned on). Additionally if `priest.mindgames_healing_reversal=1` the sim will create the damage reversal event as a child action to Mindgames. Both of these reversals assume the ENTIRE shield is broken, rather than a partial shield.
 
 **Note:** to see the report output for healing actions you'll want to enable `enable_dps_healing=1`.
-
-## Fae Guardians (Night Fae Covenant Ability)
-Part of this ability increases the rate of which major cooldowns recharge, Shadowfiend/Mindbender and Power Infusion for Priests. You can simulate this effect being given to other players by changing the option `priest.self_benevolent_faerie=0` to false (default: `priest.self_benevolent_faerie=1`). When you disable this the sim will also turn off the automatic application of Wrathful Faerie when casting Fae Guardians. This is because it is impossible to give someone the full 20s value of Fae Guardians CDR from the Benevolent Faerie (you must target them) and still get the Wrathful Faerie. The sim then casts a Shadow Word: Pain right after Fae Guardians to apply this faerie on your current target.
-
-## Cauterizing Shadows
-When using the Cauterizing Shadows legendary you will see corresponding healing output whenever Shadow Word: Pain debuffs **expire**. This does **NOT** trigger if the sim refreshes the dot, or the target dies to match in-game behavior. When this does trigger, we assume that a default of 3 allies get the healing (by replicating the healing to the actor for each ally). To configure this you can adjust `priest.cauterizing_shadows_allies=x`, where X should be `0`, `1`, `2`, or `3` (default).
-
-## Bwonsamdi's Pact Mask Type
-The Bwonsamdi's pact legendary lets you augment a Faerie. In an optimal setting moving this around likely is not worth it, so the sim sets the mask it augments via this option. By using `priest.bwonsamdis_pact_mask_type='benevolent'` you can set the Faerie that is augmented. Options are `benevolent` or `wrathful`, default is `benevolent`.
-
-## Shadow Word: Manipulation Seconds Remaining
-While using Shadow Word: Manipulation the sim makes an assumption to mimic the debuffs that would be applied that get consumed when the enemy damages or heals. Because this buff does not and cannot be added into simc with special raid events, we just mock this behavior with the option. This option determines the amount of stacks you get on the buff as a factor of the time remaining on Mindgames when it expires. It uses the inverse of that to schedule this event the correct amount of seconds delayed in the future after the Mindgames impact action.
-
-Max is set to 8 seconds as the default duration of Mindgames is 5s + 3s from using Shadow Word: Manipulation. While using the Shattered Perceptions conduit the extra duration is applied outside of the option.
-
-```
-// Min: 0, Max: 8, Default: 7
-priest.shadow_word_manipulation_seconds_remaining=7
-```
-
-## Pallid Command Allies
-Since you get more stacks the more allies that damage into your Unholy Nova, we use this option to determine the magnitude of stacks to add per direct damage hit from the priest as a rough approximation. The default is currently set to 5 stacks per direct hit. You can set this with `priest.pallid_command_allies=5`. Setting this to 0 will cause no buff to be triggered, but still spawn the add.
 
 ***
 
