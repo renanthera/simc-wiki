@@ -459,6 +459,19 @@ augmentation=defiled
 temporary_enchant=main_hand:shadowcore_oil/off_hand:shadowcore_oil
 ```
 
+**Since Simulationcraft 10.0.5.48317**: You can also add an `if=` option to the temporary enchant.
+The option will be parsed in the player scope. Any action-based expressions will not work, and more 
+generally any expressions that rely on state that changes during iteration is likely going to fail,
+since the expression is evaluated relatively early in the actor initialization process.
+
+If multiple temporary enchants match for a given slot, the first available one is selected. An enchant
+is considered available if it has no expression to evaluate, or if the evaluation of a given expression
+results in a non-zero value.
+
+```
+temporary_enchant=main_hand:howling_rune_3,if=!talent.improved_flametongue_weapon
+```
+
 To disable, use the `disabled` text:
 
 ```
