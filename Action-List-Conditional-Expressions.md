@@ -62,8 +62,8 @@ All Simulationcraft expressions evaluate to double-precision floating-point numb
 * `ceil()` is the ceiling function: `ceil(x)` evaluates to the least integer value that is greater than or equal to `x`.
 
 ### Comparison operators
-* `=` is the equality operator: `x=y` evaluates to `1` if `x` is equal to `y`, and `0` otherwise.
-* `!=` is the inequality operator: `x!=y` evaluates to `y` if `x` is not equal to `y`, and `0` otherwise.
+* `=` is the equality operator: `x=y` evaluates to `1` if `x` is equal to `y`, and `0` if they are not equal.
+* `!=` is the inequality operator: `x!=y` evaluates to `1` if `x` is not equal to `y`, and `0` if they are equal.
 * `<` `<=` `>` `>=` are the relational operators: these should be self-explanatory given the above.
 
 ### Logical operators
