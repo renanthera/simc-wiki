@@ -21,3 +21,11 @@ The last Thorim's Invocation triggered spell the actor has cast can be checked w
 * `ti_chain_lightning` evaluates to 1 if the last actor-cast Thorim's Invocation triggered spell cast was Chain Lightning
 
 New in **Simulationcraft 10.0.0**.
+
+
+## Deeply Rooted Elements
+
+The talent proc behaviour was changed going into 10.1. Beforehand it was a fixed proc percent chance per cast. Afterwards it became an incrementing proc chance with two initial 0% chances. E.g.: 0%, 0%, 1%, 2%, 3%,...
+To compare both models a switch was added to SimulationCraft.
+- `shaman.dre_flat_chance=1` enables the old fixed proc chance per cast
+- `shaman.dre_flat_chance=0` disables the fixed proc chance and enables the incrementing chance. This is the Default. 
