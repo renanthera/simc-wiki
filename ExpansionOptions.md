@@ -23,10 +23,17 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.ruby_whelp_shell_context** (scope: global, default: none) `/`-delimited string indicating the context-aware procs for Ruby Whelp Shell that can occur during the simulation. By default, any of the procs will be able to occur. For example: `dragonflight.ruby_whelp_shell_context=fire_shot/curing_whiff/sleepy_ruby_warmth/under_red_wings`
 * **dragonflight.player.ruby_whelp_shell_training** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_training`, except that it can be set for each player individually. If both options are present, this option will override the global option.
 * **dragonflight.player.ruby_whelp_shell_context** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_context`, except that it can be set for each player individually. If both options are present, this option will override the global option.
+* **dragonflight.screaming_black_dragonscale_damage** (scope: global, default: false)
+* **dragonflight.ominous_chromatic_essence_dragonflight** (scope: global, default: obsidian)
+* **dragonflight.ominous_chromatic_essence_allies** (scope: global, default: none)
+* **dragonflight.ashkandur_humanoid** (scope: global, default: false)
+* **dragonflight.flowstone_starting_state** (scope: global, default: high) options: ebb/flood/high/low
+* **dragonflight.adaptive_stonescales_period** (scope: global, default: 30 seconds) Period in which to try to trigger adapative Stonescales. Based on spell data, does not trigger on periodic damage.
 
 
 ### Crafted Gear
 * **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.7; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
+* **dragonflight.blue_silken_lining_uptime** ?
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `shadowlands.hood_of_surging_time_chance` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `shadowlands.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
