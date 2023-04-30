@@ -24,15 +24,15 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.player.ruby_whelp_shell_training** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_training`, except that it can be set for each player individually. If both options are present, this option will override the global option.
 * **dragonflight.player.ruby_whelp_shell_context** (scope: player, default: none) Equivalent to `dragonflight.ruby_whelp_shell_context`, except that it can be set for each player individually. If both options are present, this option will override the global option.
 * **dragonflight.screaming_black_dragonscale_damage** (scope: global, default: false)
-* **dragonflight.ominous_chromatic_essence_dragonflight** (scope: global, default: obsidian)
+* **dragonflight.ominous_chromatic_essence_dragonflight** (scope: player, default: obsidian)
   * `obsidian` grants an equal amount of all stats (their sum is equal to the single stat flights)
   * `ruby` grants Versatility
   * `bronze` grants Haste
   * `azure` grants Mastery
   * `emerald` grants Critical Strike
-* **dragonflight.ominous_chromatic_essence_allies** (scope: global, default: none) `/`-delimited string containing a list of multiple flights
-* **dragonflight.ashkandur_humanoid** (scope: global, default: false)
-* **dragonflight.flowstone_starting_state** (scope: global, default: high) options: ebb/flood/high/low
+* **dragonflight.ominous_chromatic_essence_allies** (scope: player, default: none) `/`-delimited string containing a list of multiple flights
+* **dragonflight.ashkandur_humanoid** (scope: player, default: false)
+* **dragonflight.flowstone_starting_state** (scope: player, default: high) options: ebb/flood/high/low
 * **dragonflight.adaptive_stonescales_period** (scope: global, default: 30 seconds) Period in which to try to trigger adapative Stonescales. Based on spell data, does not trigger on periodic damage.
 
 
