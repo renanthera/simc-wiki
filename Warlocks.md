@@ -3,6 +3,7 @@
 # Options
   * **soul\_shards** : Specify initial Soul Shard amount
   * **default\_pet** : Specify default main pet (_imp_, _voidwalker_, _incubus_, _succubus_, _sayaad_, _felhunter_, Demo only: _felguard_)
+  * **disable_felstorm** : Disables automatic usage of Felstorm for Demonology's main Felguard
 
 # Actions
   * _interrupt_ : Will use an appropriate pet interrupt (Spell Lock/Axe Toss) if target is casting and a valid pet is currently active
