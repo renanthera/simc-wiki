@@ -8,7 +8,6 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.darkmoon_deck_watcher_deplete** (scope: global, default: 2s) Average time before the Watcher's Blessing shield from Darkmoon Deck: Watcher is depleted.
 * **dragonflight.whispering_incarnate_icon_roles** (scope: global, default: tank/heal/dps) `/`-delimited string indicating which roles in your group also has a Whispering Incarnate Icon trinket.
 * **dragonflight.primal_ritual_shell_blessing** (scope: global, default: wind) Which blessing the trinket is set. Valid blessings are `wind` `flame`
-* **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
 * **dragonflight.decoration_of_flame_miss_chance** (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for Decoration of Flame's AoE damage to miss a target.
 * **dragonflight.alltotem_of_the_master_period** (scope: global, default: 3s) Minimum time after Alltotem of the Master comes off cooldown that it will trigger again.
 * **dragonflight.dragon_games_kicks** (scope: global, default: 0) Number of balls spawned by Dragon Games Equipment the player will kick at the target.
@@ -34,7 +33,11 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.ashkandur_humanoid** (scope: player, default: false)
 * **dragonflight.flowstone_starting_state** (scope: player, default: high) options: ebb/flood/high/low
 * **dragonflight.adaptive_stonescales_period** (scope: global, default: 30 seconds) Period in which to try to trigger adapative Stonescales. Based on spell data, does not trigger on periodic damage.
+* **dragonflight.spoils_of_neltharus_initial_type** (scope: player, default: none) Specify "crit", "haste", "mastery", or "vers" to begin the combat with.
 
+### Consumables / Enchants
+* **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
+* **dragonflight.gyroscopic_kaleidoscope_stat** (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either "mastery", "haste", "crit" or "versatility".
 
 ### Crafted Gear
 * **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.7; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
@@ -44,9 +47,6 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
 * **dragonflight.allied_wristguards_allies** (scope: global, default: 4, min: 0, max: 4) Number of nearby allies for the effect of Allied Wristguards of Companionship.
 * **dragonflight.allied_wristguards_ally_leave_chance** (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for nearby allies to move out of range for Allied Wristguards of Companionship.
-
-### Other
-* **dragonflight.gyroscopic_kaleidoscope_stat** (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either "mastery", "haste", "crit" or "versatility".
 
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
