@@ -22,6 +22,9 @@ The last Thorim's Invocation triggered spell the actor has cast can be checked w
 
 New in **Simulationcraft 10.0.0**.
 
+## Alpha Wolf
+
+The state of the Alpha Wolf buff on all wolves can be evaluated in the action lists with a custom expression. The player-scope expression `alpha_wolf_min_remains` evaluates to the minimum remaining time on all the Alpha Wolf buffs on wolves. Evaluates to 0 if there is no buff up, no Feral Spirits spawned, or the actor has no Alpha Wolf talent.
 
 ## Deeply Rooted Elements
 
