@@ -26,6 +26,8 @@ New in **Simulationcraft 10.0.0**.
 
 The state of the Alpha Wolf buff on all wolves can be evaluated in the action lists with a custom expression. The player-scope expression `alpha_wolf_min_remains` evaluates to the minimum remaining time on all the Alpha Wolf buffs on wolves. Evaluates to 0 if there is no buff up, no Feral Spirits spawned, or the actor has no Alpha Wolf talent.
 
+New in **Simulationcraft 10.1.0**.
+
 ## Deeply Rooted Elements
 
 The talent proc behaviour was changed going into 10.1. Beforehand it was a fixed proc percent chance per cast. Afterwards it became an incrementing proc chance with two initial 0% chances. E.g.: 0%, 0%, 1%, 2%, 3%,...
