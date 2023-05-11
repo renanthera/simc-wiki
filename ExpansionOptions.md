@@ -34,6 +34,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.flowstone_starting_state** (scope: player, default: high) options: ebb/flood/high/low
 * **dragonflight.adaptive_stonescales_period** (scope: global, default: 30 seconds) Period in which to try to trigger adapative Stonescales. Based on spell data, does not trigger on periodic damage.
 * **dragonflight.spoils_of_neltharus_initial_type** (scope: player, default: none) Specify "crit", "haste", "mastery", or "vers" to begin the combat with.
+* **dragonflight.igneous_flowstone_double_lava_wave_chance** (scope: player, default: 0) Chance for Lava Wave to hit the target twice.
 
 ### Consumables / Enchants
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
