@@ -37,7 +37,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.igneous_flowstone_double_lava_wave_chance** (scope: player, default: 0) Chance for Lava Wave to hit the target twice.
 
 ### Consumables / Enchants
-* **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.7, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
+* **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
 * **dragonflight.gyroscopic_kaleidoscope_stat** (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either "mastery", "haste", "crit" or "versatility".
 
 ### Crafted Gear
