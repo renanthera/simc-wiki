@@ -32,7 +32,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.ominous_chromatic_essence_allies** (scope: player, default: none) `/`-delimited string containing a list of multiple flights
 * **dragonflight.ashkandur_humanoid** (scope: player, default: false)
 * **dragonflight.flowstone_starting_state** (scope: player, default: high) options: ebb/flood/high/low
-* **dragonflight.adaptive_stonescales_period** (scope: global, default: 30 seconds) Period in which to try to trigger adapative Stonescales. Based on spell data, does not trigger on periodic damage.
+* **dragonflight.adaptive_stonescales_period** (scope: global, default: 3 seconds) Period in which to try to trigger adapative Stonescales.
 * **dragonflight.spoils_of_neltharus_initial_type** (scope: player, default: none) Specify "crit", "haste", "mastery", or "vers" to begin the combat with.
 * **dragonflight.igneous_flowstone_double_lava_wave_chance** (scope: player, default: 0) Chance for Lava Wave to hit the target twice.
 
