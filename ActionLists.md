@@ -549,4 +549,4 @@ actions+=/void_torrent,if=raid_event.movement.in>3
 ```
 
 # Conditional expressions
-* See the article on [Conditional expressions](Conditional-expressions) for a in-depth guide on how to conditionally filter actions in a action priority list.
+* See the article on [Conditional expressions](Action-List-Conditional-Expressions) for a in-depth guide on how to conditionally filter actions in a action priority list.
