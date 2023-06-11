@@ -34,3 +34,7 @@ The talent proc behaviour was changed going into 10.1. Beforehand it was a fixed
 To compare both models a switch was added to SimulationCraft.
 - `shaman.dre_flat_chance=1` enables the old fixed proc chance per cast
 - `shaman.dre_flat_chance=0` disables the fixed proc chance and enables the incrementing chance. This is the Default. 
+
+The `shaman.dre_forced_failures` (default: 2) can be used to control the number of forced proc attempts that fail, before the incremental proc chance based on attempts starts to accumulate.
+
+The current DRE proc chance can be evaluated the `dre_chance_pct` expression. Evaluates to 0..100, and is aware of the `shaman.dre_forced_failures` option.
