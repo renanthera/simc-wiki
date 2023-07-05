@@ -11,7 +11,21 @@ The module is broken up into the following parts:
 - [Pet File](https://github.com/simulationcraft/simc/blob/dragonflight/engine/class_modules/priest/sc_priest_pets.cpp) - Handles all pets for Priest's (Shadowfiend, Mindbender, etc).
 
 # Insanity
-By default the Shadow Priest sim starts with 0 Insanity. If you would like to change this you can use this option:
+By default the Shadow Priest sim starts with Insanity based on current talents. 
+
+Ordered in terms of priority:
+1. Shadow Crash x2 + Divine Star x2 = 24 Insanity
+2. Shadow Crash x2 + Halo x1 = 22 Insanity
+3. Shadow Crash x2 = 12 Insanity
+4. Divine Star x3 = 18 Insanity
+5. Halo x1 = 10 Insanity
+
+If you would like to turn off the initial insanity completely you can use this option to start with 0 Insanity:
+```
+priest.init_insanity=0
+```
+
+If you would like to change this to a non-zero value you can use this option:
 ```
 initial_resource=insanity=X
 ```
