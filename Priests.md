@@ -20,7 +20,7 @@ Ordered in terms of priority:
 4. Divine Star x3 = 18 Insanity
 5. Halo x1 = 10 Insanity
 
-If you would like to turn off the initial insanity completely you can use this option to start with 0 Insanity:
+If you would like to turn off the initial insanity completely you can use this Boolean option to start with 0 Insanity (True by default):
 ```
 priest.init_insanity=0
 ```
@@ -48,14 +48,8 @@ By default Power Word: Shield will debuff the target with the Weakened Soul debu
 
 # Bugs
 By activating `bugs=1` inside your character's sim you will get access to the following bugs:
-- [Shadow Word: Death CD is not hasted](https://github.com/SimCMinMax/WoW-BugTracker/issues/943)
-- [Gathering Shadows T29 2p does not apply to the last tick of Mind Sear](https://github.com/SimCMinMax/WoW-BugTracker/issues/966)
-- [Shadowy Apparitions generate Insanity when generated instead of on-hit](https://github.com/SimCMinMax/WoW-BugTracker/issues/1081)
-- [Void Eruption damage event is triggering 2 extra times](https://github.com/SimCMinMax/WoW-BugTracker/issues/963)
-- [Screams of the Void is not applied to SW:P while channeling Mind Flay when using Mental Decay](https://github.com/SimCMinMax/WoW-BugTracker/issues/1038)
-- [Idol of C'Thun tendrils damage scaling is as if it was an NPC](https://github.com/SimCMinMax/WoW-BugTracker/issues/1029)
-- [Idol of Yogg-Saron cleave damage is calculated incorrectly](https://github.com/SimCMinMax/WoW-BugTracker/issues/1000)
-- [Idol of Yogg-Saron damage is not scaling with Mastery](https://github.com/SimCMinMax/WoW-BugTracker/issues/931)
+- [Tormented Spirits get the crit value on Shadowy Apparitions based on previous action](https://github.com/SimCMinMax/WoW-BugTracker/issues/1097)
+- Void Lasher Mind Sear does not scale with most shadow priest auras
 
 # Custom Options
 ## Self Power Infusion
