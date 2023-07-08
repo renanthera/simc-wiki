@@ -124,7 +124,7 @@ You can use **enemy\_tank** option to assign a target for this enemy.
   enemy_death_pct=10
 ```
   * **health\_recalculation\_dampening\_exponent**
-  * **enemy\_custom\_health\_timeline** (scope: enemy) Can be used to adjust the time spent in various health intervals. The user specifies health percentages at various points in the iteration and the sim will interpolate the rest. The value is a list of pairs `pct:time` separated by `/` or `,`. `pct` is a value between 0 and 100, `time` is a value between 0 and 1 (0 is the beginning of an iteration, 1 is the end). Note that this option **must** be used with `fixed_time` and cannot be used with other health related options.
+  * **enemy\_custom\_health\_timeline** (scope: enemy) Can be used to adjust the time spent in various health intervals. The user specifies health percentages at various points in the iteration and the sim interpolates the rest. The value is a list of pairs `pct:time` separated by `/` or `,`. `pct` is a value between 0 and 100, `time` is a value between 0 and 1 (0 is the beginning of an iteration, 1 is the end). Note that this option **must** be used with `fixed_time` and cannot be used with other health related options.
 ```
   enemy=Fluffy_Pillow
   # Spend only the last 20% of the fight under 35% hp
