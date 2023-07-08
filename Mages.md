@@ -9,20 +9,9 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 
 ## Actions
 
-### Burn phase
-
-Burn phase can be started by `start_burn_phase` and stopped by `stop_burn_phase`. These actions set and reset the `burn_phase` flag, which can then be used in conditions of other actions.
-
-```
-actions=start_burn_phase,if=!burn_phase&cooldown.evocation.remains<20
-actions+=/stop_burn_phase,if=prev_gcd.1.evocation
-actions+=/arcane_blast,if=burn_phase
-...
-```
-
 ### Water Elemental
 
-Water Elemental's Freeze can be controlled manually via the `freeze` action.
+Water Elemental's Freeze and Water Jet can be controlled manually via the `freeze` and `water_jet` actions.
 
 ```
 ...
@@ -31,10 +20,6 @@ actions+=/freeze,if=ground_aoe.comet_storm.remains>0.6
 ```
 
 ## Expressions
-
-### Burn phase
-
-`burn_phase` expression evaluates to 1 if the burn phase is currently active. `burn_phase_duration` gives the duration (in seconds) of the current burn phase. Outside of the burn phase, it returns 0.
 
 ### Mana Gem
 
@@ -103,33 +88,15 @@ The expression `expected_kindling_reduction` returns the expected amount of time
 
 ## Mage options
 
-### Firestarter and Searing Touch
-
-By default, the health of enemies decreases uniformly from 100% to 0%. However, in a raid setting, the raid DPS is not constant and the health doesn't decrease uniformly. This has an effect on the duration of the Firestarter and Searing Touch phases.
-
-`mage.firestarter_duration_multiplier` and `mage.searing_touch_duration_multiplier` (1.0 default) can be used to change the duration of those phases to better match the given fight.
-
-For example, `mage.firestarter_duration_multiplier=0.3` reduces the duration of the Firestarter phase by 70%.
-
 ### Freeze effects
 
 Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
 
 `mage.frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
 
-### Focus Magic
-
-If the Mage has the Focus Magic talent selected, `mage.focus_magic_interval=<time in seconds>` and `mage.focus_magic_relstddev=<fraction of interval>` can be used to control the average time between hits that would trigger Focus Magic from the player you buff. The `mage.focus_magic_crit_chance` option controls the chance that these hits are crits and will actually trigger Focus Magic. Setting `mage.focus_magic_interval=0` will prevent the effect from ever triggering. The standard deviation of the distribution used for the interval is equal to `mage.focus_magic_interval * mage.focus_magic_relstddev`.
-
-`mage.focus_magic_trade=<0/1>` automatically enables the 30 min 5% crit buff whenever the mage is using the Focus Magic talent. 
-
 ### Arcane Missiles
 
 Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `mage.arcane_missiles_chain_delay=<time in seconds>` and `mage.arcane_missiles_chain_relstddev=<fraction of interval>` control the average time after a tick when Arcane Missiles will be chained.
-
-### Mirrors of Torment
-
-`mage.mirrors_of_torment_interval=<time in seconds>` can be used to control how often triggers of Mirrors of Torment will attempt to trigger relative to the time when the debuff is applied.
 
 ### Overriding APL variables
 
