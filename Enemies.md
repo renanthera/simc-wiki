@@ -124,7 +124,12 @@ You can use **enemy\_tank** option to assign a target for this enemy.
   enemy_death_pct=10
 ```
   * **health\_recalculation\_dampening\_exponent**
-
+  * **enemy\_custom\_health\_timeline** (scope: enemy) Can be used to adjust the time spent in various health intervals. The user specifies health percentages at various points in the iteration and the sim will interpolate the rest. The value is a list of pairs `pct:time` separated by `/` or `,`. `pct` is a value between 0 and 100, `time` is a value between `0` and `1` (`0` is the beginning of an iteration, `1` is the end). Note that this option *must* be used with `fixed_time` and cannot be used with other health related options.
+```
+  enemy=Fluffy_Pillow
+  # Spend only the last 20% of the fight under 35% hp
+  enemy_custom_health_timeline=35:0.8
+```
 ## Other Enemy Options
 
   * **apply\_debuff** (**Simulationcraft 6.0.1 release 1 and later**) (default: 0) allows you to specify the integer number of stacks of the `damage_taken` debuff the boss applies with every successful attack. Each stack causes the target to take 1% increased damage from all sources. This is extremely useful for setting up tank swaps (see [Simulationcraft for Tanks](SimcForTanks.md)). Note that you can also specify this option for each attack individually on the enemy's [action list](Enemies#Action_Lists), and the action list option takes precedence.
