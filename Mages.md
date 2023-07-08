@@ -66,7 +66,7 @@ actions+=/flurry,if=buff.brain_freeze.react&prev_gcd.1.frostbolt&ground_aoe.froz
 
 ### Firestarter and Searing Touch
 
-The expression `firestarter.active` can be used to check if Firestarter is active. Time until Firestarter becomes inactive is represented by `firestarter.remains`. See below.
+The expression `firestarter.active` can be used to check if Firestarter is active. Time until Firestarter becomes inactive is represented by `firestarter.remains`.
 
 ```
 actions=fireball,target_if=firestarter.active
@@ -101,34 +101,6 @@ Sometimes, there can be a benefit from chaining Arcane Missiles quickly. `mage.a
 ### Overriding APL variables
 
 The default Mage APLs include several variables, which can be configured through the `apl_variable` option.
-
-#### Arcane APL Variables
-
-* `apl_variable.always_sync_cooldowns=<0/1>` If set to 1, Kyrian simulations using the Arcane Prodigy conduit will sync Touch of the Magi, Rune of Power, and Radiant Spark between Arcane Power uses. This variable only affects the single target rotation.
-* `apl_variable.prepull_evo=<0/1>` If set to 1, Evocation will be used before combat begins.
-* `apl_variable.fishing_opener=<0/1>` Overrides the current behavior for beginning single target openers by fishing for Clearcasting procs. Does not affect Kyrian simulations.
-* `apl_variable.aoe_target_count=<number of targets>` The number of target at which the AoE rotation will be used instead of the Single Target rotation.
-* `apl_variable.mot_preceed_totm_by=<number_of_seconds>` The number of seconds early to use Mirrors of Torment before Touch of the Magi.
-* `apl_variable.mot_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Mirrors of Torment until Touch of the Magi is available.
-* `apl_variable.mot_max_delay_for_ap=<number_of_seconds>` The number of seconds to delay using Mirrors of Torment until Arcane Power is available.
-* `apl_variable.ap_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Arcane Power until Touch of the Magi is available. Does not affect Kyrian simulations.
-* `apl_variable.ap_max_delay_for_mot=<number_of_seconds>` The number of seconds to delay using Arcane Power until Mirrors of Torment is available.
-* `apl_variable.rop_max_delay_for_totm=<number_of_seconds>` The number of seconds to delay using Rune of Power until Touch of the Magi is available. Does not affect Kyrian simulations.
-* `apl_variable.totm_max_delay_for_ap=<number_of_seconds>` The number of seconds to delay using Touch of the Magi until Arcane Power is available. Does not affect Kyrian simulations.
-* `apl_variable.totm_max_delay_for_rop=<number_of_seconds>` The number of seconds to delay using Touch of the Magi until Rune of Power is available. Does not affect Kyrian simulations.
-
-#### Fire APL Variables
-
-* `apl_variable.disable_combustion=<0/1>` If set to 1, Combustion will not be used in the simulation.
-* `apl_variable.firestarter_combustion=<0/1>` If set to 1, Combustion will be used while Firestarter is active.
-* `apl_variable.hot_streak_flamestrike=<number of targets>` The number of target at which Hot Streaks should be spent on Flamestrike outside of Combustion.
-* `apl_variable.hard_cast_flamestrike=<number of targets>` The number of target at which Flamestrike will replace Fireball as filler outside of Combustion.
-* `apl_variable.combustion_flamestrike=<number of targets>` The number of targets at which a Flamestrike Combustion will be used instead of a Pyroblast Combustion.
-* `apl_variable.arcane_explosion=<number of targets>` The number of targets at which Arcane Explosion will be used as filler (higher priority than Flamestrike filler).
-* `apl_variable.arcane_explosion_mana=<percentage of mana>` The percentage of mana to conserve when using Arcane Explosion.
-* `apl_variable.combustion_shifting_power=<number of targets>` The number of targets at which Shifting Power will be used during Combustion.
-* `apl_variable.combustion_cast_remains=<number of seconds>` The number of seconds remaining on the cast before Combustion when Combustion will be used.
-* `apl_variable.overpool_fire_blasts=<number_of_seconds>` The number of seconds early (or late if negative) to start pooling Fire Blasts for Combustion.
 
 ## Crowd control
 
