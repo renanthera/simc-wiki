@@ -117,6 +117,7 @@ Note that pets come with their own default actions lists! You can modify them as
 External buffs like Power Infusion (haste buff from Priest) can be called and set up for an APL/profile.
 Implemented buffs:
 - Power Infusion
+- Symbol of Hope
 
 A character scoped option `external_buffs.pool` declares the availability of an external buff. Syntax:
 ```
