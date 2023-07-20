@@ -92,7 +92,7 @@ The expression `expected_kindling_reduction` returns the expected amount of time
 
 Since all freeze effects available in simc break on damage and thus almost never last their full duration, we opted to use one shared duration for all of them. In Battle for Azeroth, all freeze effects are guaranteed to last at least 1 s, which is why simc uses 1 s as the default freeze duration.
 
-`mage.frozen_duration=<time in seconds>` overrides this default duration with a user-specified value. When `frozen_duration` is set to 0 or lower, freeze effects are assumed to be permanent.
+`mage.frozen_duration=<time in seconds>` overrides this default duration with a user-specified value.
 
 ### Arcane Missiles
 
