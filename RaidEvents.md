@@ -25,11 +25,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_events+=/movement,players_only=1,cooldown=20,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
       raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=45,distance_min=40,distance_max=50,first=30
     ```
-  * _DungeonSlice_ approximates a "slice" of a BfA M+ (roughly equivalent to an M10). A single boss mob followed by alternating large/weak trash packs (4-6 mobs for 15 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Fight length locked to 6 minutes. Events are equivalent to:
+  * _DungeonSlice_ approximates a "slice" of a M+ dungeon. A single boss mob followed by alternating then interleaving large/weak trash packs (4-6 mobs for 18 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Durations are randomized on a per-enemy basis within 2 standard deviations of the mean. Due to the offset cooldowns, all add waves beyond the first of each type can potentially overlap, leading to a semi-random pattern between 1-9 enemies at any given time, with an average target count across the entire duration (including as enemies "die") of 4. Fight length locked to 6 minutes. Events are equivalent to:
     ```
-      raid_events+=/invulnerable,cooldown=500,duration=500,retarget=1
       raid_events+=/adds,name=Boss,count=1,cooldown=500,duration=135,type=add_boss,duration_stddev=1
-      raid_events+=/adds,name=SmallAdd,count=5,count_range=1,first=140,cooldown=45,duration=15,duration_stddev=2
+      raid_events+=/adds,name=SmallAdd,count=5,count_range=1,first=140,cooldown=45,duration=18,duration_stddev=2
       raid_events+=/adds,name=BigAdd,count=2,count_range=1,first=160,cooldown=50,duration=30,duration_stddev=2
     ```
   * _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). The events scale with `max_time`, with 450 it is the same as:
