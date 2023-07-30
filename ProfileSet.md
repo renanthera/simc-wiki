@@ -4,11 +4,11 @@
 
 Profile sets are a new mechanism of batch-simulating actors. Simulationcraft currently has two ways to do large (multi-actor) simulations. First, inputting multiple actors without any additional options will simulate all actors in the same environment (i.e., a raid). Adding `single_actor_batch=1` option will segregate the actors to simulating separately in individual phases.
 
-Profile sets add a third simulation mode. Instead of simulating multiple profiles under the same environment, profile sets first simulate a baseline profile, and then each profile set individually in a separate simulation environment.
+Profile sets add a third simulation mode. Instead of simulating multiple profiles under the same environment, profile sets first simulate a baseline set of profiles, and then each profile set individually in a separate simulation environment.
 
 This has several benefits, the largest being that profile sets only require memory during run time for two simultaneous actors (i.e., the baseline which is kept in memory during the whole simulation run, and the individual profile set environment that is destroyed after it finishes). This should essentially remove the memory-related issues of conventional simulation modes (i.e., multi-actor or `single_actor_batch=1`), where the simulator allocates memory for all actors at the initialization phase of the simulator.
 
-Note that profile sets only output summary information about the simulated actor. This includes at most the minimum, first quartile, median, mean, third quartile, and maximum metric values, as well as the standard deviation and the number of iterations used. The full information content is only available in JSON reports, the textual report only outputs the median value, and the HTML report includes all but standard deviation and number of iterations.
+Note that profile sets only output summary information about the baseline set of profiles. This includes at most the minimum, first quartile, median, mean, third quartile, and maximum metric values, as well as the standard deviation and the number of iterations used. The full information content is only available in JSON reports, the textual report only outputs the median value, and the HTML report includes all but standard deviation and number of iterations.
 
 **Note, profileset functionality is only available on the command-line Simulationcraft program.**
 
@@ -46,4 +46,12 @@ Profile sets support the vast majority of simulation and player scope options. Y
 
 Options that do not work in profile sets include (but are not limited to): various output-only options such as ```spell_query```, scale factor calculation, any kind of plotting, or adding additional players (e.g., ```armory```, ```copy```, or ```class_name``` options).
 
-Note that currently spell data overrides are registered globally in the simulator, and will "leak out of profilesets". Due to the processing behavior of profilesets, what override options are enabled when a profileset is actually being simulated is undefined.
+### Profile sets with multiple actors in the baseline
+
+**_(Added during Simulationcraft 1015-01)_**
+
+When the baseline simulation includes multiple actors, there are several additional options that can be used to configure which actor will be modified in the profile sets.
+
+* **profileset_main_actor_index** (scope: global, default: 0) The actor-creation index in the input text after which options will be overridden and new options will be appended. This is not limited to player actors and can be used to override other actors (pets, enemies, etc.).
+* **profileset_report_player_index** (scope: global, default: 0) The actor index in the simulation for which player metrics will be reported. Note that this index is not the same as `profileset_main_actor_index` because this option only includes players.
+* **profileset_multiactor_base_name** (scope: global, default: "Baseline") The name for the baseline simulation that will be displayed in the HTML report if a multi-actor `profileset_metric` such as `raid_dps` or `time` is selected.
