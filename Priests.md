@@ -41,7 +41,7 @@ This section is specifically covering interactions with Shadow Word: Death and t
 
 The chained Shadow Word: Deaths have several interactions with the kit. These are listed below:
 - Extra Chain from 2pc
-  - 🚧 Deathspeaker? ❌ 
+  - 🚧 [Deathspeaker?](https://github.com/SimCMinMax/WoW-BugTracker/issues/1124) ❌ 
   - Execute? ✔️ 
   - Does not snapshot multipliers (except for Deathspeaker)
 - Death and Madness
@@ -50,12 +50,13 @@ The chained Shadow Word: Deaths have several interactions with the kit. These ar
 - Deathspeaker
   - Only consumed by original SW:D cast, not Chains.
   - If the original consumed Deathspeaker all chains get the Deathspeaker bonus damage.
+  - 🚧 [Temporary charge gain is not working properly, instead it consumes the cooldown of Shadow Word: Death](https://github.com/SimCMinMax/WoW-BugTracker/issues/1125)
 - Insanity Generation
   - All casts generate full Insanity.
 - Inescapable Torment
   - All casts trigger Inescapable Torment.
 - Psychic Link
-  - 🚧 Only the original cast triggers Psychic Link (BUG?).
+  - 🚧 [Only the original cast triggers Psychic Link (BUG).](https://github.com/SimCMinMax/WoW-BugTracker/issues/1123)
 - Self-Damage
   - All casts trigger the Self-Damage.
   - Chained casts only hit for 10% of what the original does.
