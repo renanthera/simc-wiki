@@ -44,7 +44,7 @@ The chained Shadow Word: Deaths have several interactions with the kit. These ar
   - Deathspeaker? ❌ 
   - Execute? ✔️ 
 - Death and Madness
-  - Reset: ?
+  - Reset: Chain casts do not count as the free reset.
   - Debuff: Refreshed for All casts.
 - Deathspeaker
   - Only consumed by original SW:D cast, not Chains.
