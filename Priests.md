@@ -33,6 +33,30 @@ initial_resource=insanity=X
 # Spell implementation notes
 The following spells are mentioned due to oddities with the implementation that are not straightforward or require more clarification. If a spell is not mentioned here you can find it in the correct base or spec file with a typical implementation. Feel free to reach out in discord if you have questions.
 
+## Shadow Word: Death
+This section is specifically covering interactions with Shadow Word: Death and the T31 Set Bonus from 10.2.
+
+- (2) Set Bonus: Shadow Word: Death triggers 2 additional times at 50% effectiveness. Triggers again 1 additional time at 50% effectiveness if Deathspeaker is active or your target is below 20% health.
+- (4) Set Bonus: Each time you take damage from Shadow Word: Death, gain a stack of Death’s Torment, increasing the initial damage of your next cast of Shadow Word: Pain by 250% or the damage of your next Shadow Crash by 50%, stacking up to 12 times.
+
+The chained Shadow Word: Deaths have several interactions with the kit. These are listed below:
+- Extra Chain from 2pc
+  - Deathspeaker? ❌ 
+  - Execute? ✔️ 
+- Death and Madness
+  - Reset: ?
+  - Debuff: Refreshed for All casts.
+- Deathspeaker
+- Insanity Generation
+  - All casts generate full Insanity.
+- Inescapable Torment
+  - All casts trigger Inescapable Torment.
+- Psychic Link
+  - 🚧 Only the original cast triggers Psychic Link (BUG?).
+- Self-Damage
+  - All casts trigger the Self-Damage.
+  - Chained casts only hit for 10% of what the original does.
+
 ## Shadow Weaving (Shadow Priest Mastery)
 The Shadow Priest Mastery is not currently applied automatically by SimC due to improper spelldata. To get around this we apply this benefit manually to each priest spell with the `affected_by_shadow_weaving` option. This is turned off by default, so any spells that _are_ affected by mastery should have `affected_by_shadow_weaving = true;` added into the constructor. This should be done for priest or pet spells.
 
