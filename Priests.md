@@ -43,6 +43,7 @@ The chained Shadow Word: Deaths have several interactions with the kit. These ar
 - Extra Chain from 2pc
   - 🚧 Deathspeaker? ❌ 
   - Execute? ✔️ 
+  - Does not snapshot multipliers (except for Deathspeaker)
 - Death and Madness
   - Reset: Chain casts do not count as the free reset.
   - Debuff: Refreshed for All casts.
