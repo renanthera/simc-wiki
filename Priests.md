@@ -41,7 +41,7 @@ This section is specifically covering interactions with Shadow Word: Death and t
 
 The chained Shadow Word: Deaths have several interactions with the kit. These are listed below:
 - Extra Chain from 2pc
-  - Deathspeaker? ❌ 
+  - 🚧 Deathspeaker? ❌ 
   - Execute? ✔️ 
 - Death and Madness
   - Reset: Chain casts do not count as the free reset.
