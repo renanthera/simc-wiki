@@ -47,6 +47,8 @@ The chained Shadow Word: Deaths have several interactions with the kit. These ar
   - Reset: ?
   - Debuff: Refreshed for All casts.
 - Deathspeaker
+  - Only consumed by original SW:D cast, not Chains.
+  - If the original consumed Deathspeaker all chains get the Deathspeaker bonus damage.
 - Insanity Generation
   - All casts generate full Insanity.
 - Inescapable Torment
