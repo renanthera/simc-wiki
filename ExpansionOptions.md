@@ -35,6 +35,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.adaptive_stonescales_period** (scope: global, default: 3 seconds) Period in which to try to trigger adapative Stonescales.
 * **dragonflight.spoils_of_neltharus_initial_type** (scope: player, default: none) Specify "crit", "haste", "mastery", or "vers" to begin the combat with.
 * **dragonflight.igneous_flowstone_double_lava_wave_chance** (scope: player, default: 0) Chance for Lava Wave to hit the target twice.
+* **dragonflight.nymue_forced_immobilized** (scope: player, default: false) Whether or not to force the extra damage from Nymue's Unraveling Spindle against Immobilized targets. Also works if the target has the `stun` buff.
 
 ### Consumables / Enchants
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
