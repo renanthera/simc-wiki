@@ -47,7 +47,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `dragonflight.hood_of_surging_time_period` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `dragonflight.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
-* **dragonflight.allied_wristguards_allies** (scope: global, default: 4, min: 0, max: 4) Number of nearby allies for the effect of Allied Wristguards of Companionship.
+* **dragonflight.allied_wristguards_allies** (scope: global, default: 3, min: 0, max: 3) Number of nearby allies for the effect of Allied Wristguards of Companionship.
 * **dragonflight.allied_wristguards_ally_leave_chance** (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for nearby allies to move out of range for Allied Wristguards of Companionship.
 
 ## Shadowlands
