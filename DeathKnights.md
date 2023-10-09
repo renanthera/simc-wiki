@@ -73,7 +73,7 @@ Army of the Dead can be entirely disabled from a death knight profile with disab
 This is made to make the process of running shorter fights that may not use army of the dead without fiddling with the Action Priority List.
 ```
 # Run a simulation that will not use Army of the Dead
-disable_aotd=1
+deathknight.disable_aotd=1
 ```
 
 The state of the option can also be checked from the APL with death_knight.disable_aotd.
@@ -87,4 +87,11 @@ It can be called with death_knight.fwounded_targets
 ```
 # Use Scourge Strike during Death and Decay if at least 4 enemies are affected by Festering Wounds
 actions+=/scourge_strike,if=death_and_decay.ticking&death_knight.fwounded_targets>=4
+```
+
+An option is available to specify use timings for Anti-Magic Zone, as if you were assigned specific timings for a boss fight
+It can be utilized with deathknight.amz_use_time=x/y/z as a player scope option.
+```
+# Use AMZ at 15s, 135s and 255s
+deathknight.amz_use_time=15/135/255
 ```
