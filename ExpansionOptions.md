@@ -45,12 +45,17 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 ### Crafted Gear
 * **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.7; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
-* **dragonflight.blue_silken_lining_uptime** ?
+* **dragonflight.blue_silken_lining_update_interval** (scope: global; default: 5s) Controls how often the sim rolls for Blue Silken Lining uptime.
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `dragonflight.hood_of_surging_time_period` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `dragonflight.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
 * **dragonflight.allied_wristguards_allies** (scope: global, default: 3, min: 0, max: 3) Number of nearby allies for the effect of Allied Wristguards of Companionship.
 * **dragonflight.allied_wristguards_ally_leave_chance** (scope: global, default: 0.05, min: 0.0, max: 1.0) Chance for nearby allies to move out of range for Allied Wristguards of Companionship.
+* **dragonflight.undulating_sporecloak_uptime** (scope: global; default: 0.9) Sets the uptime of the Versatility buff to mimic being above 70% HP for a percentage of the encounter for Undulating Sporecloak.
+* **dragonflight.undulating_sporecloak_update_interval** (scope: global; default: 5s) Controls how often the sim rolls for Undulating Sporecloak uptime.
+* **dragonflight.dreamtenders_charm_uptime** (scope: global; default: 0.9) Sets the uptime of the Mastery buff to mimic being above 70% HP for a percentage of the encounter for Dreamtender's Charm. Note that this percentage is not strictly full uptime because the embellishment has a lockout period that SimC respects. Setting to 100% uptime does not trigger the lockout.
+* **dragonflight.dreamtenders_charm_update_interval** (scope: global; default: 5s) Controls how often the sim rolls for Dreamtender's Charm uptime. Stays within the ICD to only proc when available.
+* **dragonflight.verdant_embrace_allies** (scope: gloabl; default: 0; max: 2) Controls how many allies are also running with Verdant Embrace to increase the amount of stats and scale the RPPM.
 
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
