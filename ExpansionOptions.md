@@ -38,6 +38,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.nymue_forced_immobilized** (scope: player, default: false) Whether or not to force the extra damage from Nymue's Unraveling Spindle against Immobilized targets. Also works if the target has the `stun` buff.
 * **dragonflight.embersoul_dire_chance** (scope: global; default: 0.0) Sets the chance of proccing Blazing Soul every `dragonflight.embersoul_dire_interval` seconds.
 * **dragonflight.embersoul_dire_interval** (scope: global; default: 5s) Sets the period between checking the `dragonflight.embersoul_dire_chance` to proc Blazing Soul.
+* **dragonflight.gift_of_ursine_vengeance_period** (scope: global; default: 750ms) Sets the base interval to attempt to proc Gift of Ursine Vengeance. 
 
 ### Consumables / Enchants
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
