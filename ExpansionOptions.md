@@ -57,6 +57,8 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.dreamtenders_charm_uptime** (scope: global; default: 0.9) Sets the uptime of the Mastery buff to mimic being above 70% HP for a percentage of the encounter for Dreamtender's Charm. Note that this percentage is not strictly full uptime because the embellishment has a lockout period that SimC respects. Setting to 100% uptime does not trigger the lockout.
 * **dragonflight.dreamtenders_charm_update_interval** (scope: global; default: 5s) Controls how often the sim rolls for Dreamtender's Charm uptime. Stays within the ICD to only proc when available.
 * **dragonflight.verdant_embrace_allies** (scope: gloabl; default: 0; max: 2) Controls how many allies are also running with Verdant Embrace to increase the amount of stats and scale the RPPM.
+* **dragonflight.rallied_to_victory_ally_estimate** (scope: gloabl; default: 0; max: 1) Boolean on whether or not to give you more Versatiltiy when proccing Allied Wristguards of Time Dilation to simulate the benefit of giving it to allies. Amount of allies controlled with `dragonflight.rallied_to_victory_min_allies` by default will roll between 0-4 allies.
+* **dragonflight.rallied_to_victory_min_allies** (scope: gloabl; default: 0; max: 4) Controls the min number of allies with the `dragonflight.rallied_to_victory_ally_estimate` setting. 
 
 ## Shadowlands
 * **shadowlands.enabled** (scope: global, default: 0) Enable/disable Shadowlands systems (covenant, soulbinds, conduits, runeforge legendaries)
