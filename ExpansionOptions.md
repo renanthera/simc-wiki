@@ -46,7 +46,8 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 ### Crafted Gear
 * **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.7; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
-* **dragonflight.blue_silken_lining_update_interval** (scope: global; default: 5s) Controls how often the sim rolls for Blue Silken Lining uptime.
+* **dragonflight.blue_silken_lining_update_interval** (scope: global; default: 10s) Controls how often the sim rolls for Blue Silken Lining uptime. This interval is subject to a gaussian distribution.
+* **dragonflight.blue_silken_lining_update_interval_stddev** (scope: global; default: 2.5s) Standard deviation of blue_silken_lining_update_interval.
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `dragonflight.hood_of_surging_time_period` seconds on top of any add spawns.
 * **dragonflight.hood_of_surging_time_period** (scope: global; default: 5s) Sets the period between checking the `dragonflight.hood_of_surging_time_chance` to proc First Strike on top of any add spawns.
 * **dragonflight.hood_of_surging_time_stacks** (scope: global; default: 1) Sets the stacks of Prepared Time to proc when period and chance are set.
