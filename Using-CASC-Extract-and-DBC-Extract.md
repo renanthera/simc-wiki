@@ -72,7 +72,7 @@ To include hotfix data, use the `--hotfix` flag pointed at your WoW install:
 
 # Full Walkthrough for pulling Spell Data
 
-1. `python casc_extract.py -m batch --cdn -o <path>` (`--product`, --beta`, or `--ptr` if needed)
+1. `python casc_extract.py -m batch --cdn -o <path>` (`--product`, `--beta`, or `--ptr` if needed)
 2. Place `DBCache.bin` from the wow folder into the proper `dbc_extract3\cache\live\` or `dbc_extract3\cache\ptr\`
 3. Run the `dbc_extract3` generate command, i.e.: `./generate.bat [ptr] <full build number> ../casc_extract/<casc_extract temp path> [--hotfix] [path to hotfix DBCache.bin]`
 4. If running for PTR, make sure to change `#define SC_USE_PTR 0` to `#define SC_USE_PTR 1` in `config.hpp`. Do not upload this change.
