@@ -35,6 +35,8 @@ Acceptable slots are:
   * **waist**
   * **wrist**, **wrists**
   * **hand**, **hands**
+  * **legs**
+  * **feet**
   * **finger1**, **ring1**, **finger2**, **ring2**
   * **trinket1**, **trinket2**
   * **main\_hand**, **off\_hand**
