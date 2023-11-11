@@ -37,7 +37,8 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.igneous_flowstone_double_lava_wave_chance** (scope: player, default: 0) Chance for Lava Wave to hit the target twice.
 * **dragonflight.nymue_forced_immobilized** (scope: player, default: false) Whether or not to force the extra damage from Nymue's Unraveling Spindle against Immobilized targets. Also works if the target has the `stun` buff.
 * **dragonflight.embersoul_dire_chance** (scope: global; default: 0.0) Sets the chance of proccing Blazing Soul every `dragonflight.embersoul_dire_interval` seconds.
-* **dragonflight.embersoul_dire_interval** (scope: global; default: 5s) Sets the period between checking the `dragonflight.embersoul_dire_chance` to proc Blazing Soul.
+* **dragonflight.embersoul_dire_interval** (scope: global; default: 10s) Sets the period between checking the `dragonflight.embersoul_dire_chance` to proc Blazing Soul. This interval is subject to a gaussian distribution.
+* **dragonflight.embersoul_dire_interval_stddev** (scope: global; default: 2.5s) Standard deviation of embersoul_dire_interval.
 * **dragonflight.gift_of_ursine_vengeance_period** (scope: global; default: 750ms) Sets the base interval to attempt to proc Gift of Ursine Vengeance. 
 
 ### Consumables / Enchants
