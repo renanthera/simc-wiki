@@ -139,6 +139,13 @@ Acceptable slots are:
  main_hand=shalugdoom_the_axe_of_unmaking,enchant=500str
 ```
 
+### Embellishments
+  * _embellishment_ will accept a tokenized name of the embellishment you want to add to the item. Note that there are no restrictions; you can add any embellishment to any item, including items that already have an embellishment via bonus id.
+```
+ # add the 'Blue Silken Lining' embellishment to the Dragonflight tailoring crafted cloak
+ back=vibrant_wildercloth_shawl,id=193511,embellishment=blue_silken_lining
+```
+
 ### Procs
 By default, custom on-use effects on items will have a 20 second shared cooldown. This default shared cooldown can be adjusted for all items with the _default_item_group_cooldown_ player option.
   * _use_ allows you to specify on-use effects. The syntax is: `<value1><param1>[_<value2><param2>...]`. The parameters can be:
