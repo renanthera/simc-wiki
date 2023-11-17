@@ -39,7 +39,12 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.embersoul_dire_chance** (scope: global; default: 0.0) Sets the chance of proccing Blazing Soul every `dragonflight.embersoul_dire_interval` seconds.
 * **dragonflight.embersoul_dire_interval** (scope: global; default: 10s) Sets the period between checking the `dragonflight.embersoul_dire_chance` to proc Blazing Soul. This interval is subject to a gaussian distribution.
 * **dragonflight.embersoul_dire_interval_stddev** (scope: global; default: 2.5s) Standard deviation of embersoul_dire_interval.
-* **dragonflight.gift_of_ursine_vengeance_period** (scope: global; default: 750ms) Sets the base interval to attempt to proc Gift of Ursine Vengeance. 
+* **dragonflight.gift_of_ursine_vengeance_period** (scope: global; default: 750ms) Sets the base interval to attempt to proc Gift of Ursine Vengeance.
+* **dragonflight.balefire_branch_loss_rng_type** (scope: player; default: constant, rppm for Dungeons) Sets the method to simulate loss of stacks due to taking damage.
+  - _constant_ will cause a loss to happen on a set constant tick. **dragonflight.balefire_branch_loss_tick** (default: 2) sets the tick period. This is the default type except as noted below.
+  - _rppm_ will perform a rppm check every second to determine if loss happens. **dragonflight.balefire_branch_loss_rppm** (default: 2) sets the rppm. This is the defaule type for DungeonSlice & DungeonRoute sims.
+  - _percent_ will perform a percent check every second to determine if loss happens. **dragonflight.balefire_branch_loss_percent** (default: 0.2) sets the percent.
+* **dragonflight.balefire_branch_loss_stacks** (scope: player; default: 2) Sets the number of stacks lost per settings above.
 
 ### Consumables / Enchants
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
