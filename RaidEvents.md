@@ -356,5 +356,5 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     override.bloodlust=0
 
     #This line, when added to a shaman's action list, will make bloodlust cast on the first vulnerable moment.
-    actions+=/bloodlust,vulnerable=1,time_to_die<=100
+    actions+=/bloodlust,if=target.debuff.vulnerable.react,time_to_die<=100
   ```
