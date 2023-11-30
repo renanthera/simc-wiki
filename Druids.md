@@ -1,11 +1,5 @@
 **Is there an error? Something missing? Funky grammar? Do not hesitate to leave a comment.**
 
-## APL expressions
-
-* **`ap_check.<allowed overcap = 0>`** Returns false if the action Astral Power + (if enabled) Nature's Balance passive Astral Power over execute time + (if enabled) Shooting Stars 1 proc Astral Power is higher than the maximum Astral Power + allowed overcap (optional). True otherwise.
-
-* **`<action>.ap_check.<allowed overcap = 0>`** Same as above with the distinction that the action is specified.
-
 ## Options
 * **druid.catweave_bear** (default: 0) Set to utilize the catweaving APL for Guardian Druids.
 
