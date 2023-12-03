@@ -81,7 +81,7 @@ By activating `bugs=1` inside your character's sim you will get access to the fo
 # Custom Options
 ## Idol of Y'Shaarj
 To test various cases with Idol of Y'Shaarj there is an option created which will tell SimC to force this to always be a certain buff. In practice this would require some sort of setup but the idea is to simulate if an add or something had this condition and you could easily swap to it.
-- `priest.forced_yshaarj_type="default" (default: `default`, options: `pride`, `anger`, `despair`, `violence`)
+- `priest.forced_yshaarj_type="default"` (default: `default`, options: `pride`, `anger`, `despair`, `violence`)
 
 ## Self Power Infusion
 To simulate giving away Power Infusion to someone else you can use `priest.self_power_infusion` (`default=1`). This option controls if the actor casts and gives themselves Power Infusion. See the section above on [Power Infusion](Priests#power-infusion) implementation details for more info.
