@@ -15,9 +15,9 @@ By default the Shadow Priest sim starts with Insanity based on current talents.
 
 Ordered in terms of priority:
 1. Shadow Crash x2 + Divine Star x2 = 24 Insanity
-2. Shadow Crash x2 + Halo x1 = 22 Insanity
-3. Shadow Crash x2 = 12 Insanity
-4. Divine Star x3 = 18 Insanity
+2. Divine Star x4 = 24 Insanity
+3. Shadow Crash x2 + Halo x1 = 22 Insanity
+4. Shadow Crash x2 = 12 Insanity
 5. Halo x1 = 10 Insanity
 
 If you would like to turn off the initial insanity completely you can use this Boolean option to start with 0 Insanity (True by default):
@@ -36,12 +36,12 @@ The following spells are mentioned due to oddities with the implementation that 
 ## Shadow Word: Death
 This section is specifically covering interactions with Shadow Word: Death and the T31 Set Bonus from 10.2.
 
-- (2) Set Bonus: Shadow Word: Death triggers 2 additional times at 50% effectiveness. Triggers again 1 additional time at 50% effectiveness if Deathspeaker is active or your target is below 20% health.
+- (2) Set Bonus: Shadow Word: Death triggers 2 additional times at 15% effectiveness. Triggers again 1 additional time at 15% effectiveness if Deathspeaker is active or your target is below 20% health.
 - (4) Set Bonus: Each time you take damage from Shadow Word: Death, gain a stack of Death’s Torment, increasing the initial damage of your next cast of Shadow Word: Pain by 250% or the damage of your next Shadow Crash by 50%, stacking up to 12 times.
 
 The chained Shadow Word: Deaths have several interactions with the kit. These are listed below:
 - Extra Chain from 2pc
-  - 🚧 [Deathspeaker?](https://github.com/SimCMinMax/WoW-BugTracker/issues/1124) ❌ 
+  - Deathspeaker? ✔️  
   - Execute? ✔️ 
   - Does not snapshot multipliers (except for Deathspeaker)
 - Death and Madness
@@ -50,13 +50,12 @@ The chained Shadow Word: Deaths have several interactions with the kit. These ar
 - Deathspeaker
   - Only consumed by original SW:D cast, not Chains.
   - If the original consumed Deathspeaker all chains get the Deathspeaker bonus damage.
-  - 🚧 [Temporary charge gain is not working properly, instead it consumes the cooldown of Shadow Word: Death](https://github.com/SimCMinMax/WoW-BugTracker/issues/1125)
 - Insanity Generation
   - All casts generate full Insanity.
 - Inescapable Torment
   - All casts trigger Inescapable Torment.
 - Psychic Link
-  - 🚧 [Only the original cast triggers Psychic Link (BUG).](https://github.com/SimCMinMax/WoW-BugTracker/issues/1123)
+  - All casts trigger Psychic Link
 - Self-Damage
   - All casts trigger the Self-Damage.
   - Chained casts only hit for 10% of what the original does.
@@ -80,6 +79,10 @@ By activating `bugs=1` inside your character's sim you will get access to the fo
 - Void Lasher Mind Sear does not scale with most shadow priest auras
 
 # Custom Options
+## Idol of Y'Shaarj
+To test various cases with Idol of Y'Shaarj there is an option created which will tell SimC to force this to always be a certain buff. In practice this would require some sort of setup but the idea is to simulate if an add or something had this condition and you could easily swap to it.
+- `priest.forced_yshaarj_type="default" (default: `default`, options: `pride`, `anger`, `despair`, `violence`)
+
 ## Self Power Infusion
 To simulate giving away Power Infusion to someone else you can use `priest.self_power_infusion` (`default=1`). This option controls if the actor casts and gives themselves Power Infusion. See the section above on [Power Infusion](Priests#power-infusion) implementation details for more info.
 
