@@ -31,6 +31,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
       raid_events+=/adds,name=SmallAdd,count=5,count_range=1,first=140,cooldown=45,duration=18,duration_stddev=2
       raid_events+=/adds,name=BigAdd,count=2,count_range=1,first=160,cooldown=50,duration=30,duration_stddev=2
     ```
+  * _DungeonRoute_ has no events of its own but allows for pull events to be defined to simulate a series of enemies spawned with lifetimes determined by their health pools.
   * _HecticAddCleave_ will set up a fight with regular add spawns and frequent movement. Similar to the Tier15 encounter Horridon (but without the vulnerability on the boss). The events scale with `max_time`, with 450 it is the same as:
     ```
       raid_events+=/adds,count=5,first=22,cooldown=33,duration=22,last=337
@@ -108,12 +109,17 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     * _first\_pct_  specifies the boss health pct when the event will first occur and be scheduled.
     * _last\_pct_  specifies the boss health pct when the event will last occur and no longer be scheduled.
     * _force\_stop_ (default: false) specifies if a raid event which is up when _last_ or _last\_pct_ occurs will be instantly canceled or not
+    * _pull_ specifies which pull event this event is a child of, used with the `DungeonRoute` fight style. `first/last` based scheduling is based on the spawn time of the pull.
+    * _pull_target_ specifies the enemy that `first_pct/last_pct` should be based on. The enemy name given here must match an enemy defined in a pull event matching the `pull` parameter of this event.
     ```
     #This example will make the raid spend 15s moving every 30s. It will only happen after two minutes.
     raid_events+=/movement,cooldown=30,duration=15,first=120
 
     #This example will make the raid spend 15s moving every 30s. It will only happen during the first three minutes.
     raid_events+=/movement,cooldown=30,duration=15,last=180
+
+    #This example will spawn 5 adds for 10s every 30s, starting when the enemy defined with the name "Boss_angry_giant" in pull 2 of a DungeonRoute sim reaches 50% health. It will only happen during the first two minutes of the pull or until the pull ends, whichever comes first.
+    raid_events+=/adds,count=5,first_pct=50,cooldown=30,duration=10,last=120,pull=2,pull_target=BOSS_angry_giant
     ```
 
 # Filtering affected players
@@ -217,25 +223,21 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
 
 # Pull
-  The _pull_ raid event is used to spawn waves of adds sequentially with durations based on their specified health pools being depleted by the simmed character rather than a time period. These events are used together with the _DungeonRoute_ fight style to simulate a full dungeon run.
+  The _pull_ raid event is used to spawn waves of adds sequentially with durations based on their specified health pools being depleted by the simmed character rather than a time period. These events are used together with the `DungeonRoute` fight style to simulate a full dungeon run.
 
   Specific options are:
   * _pull_ specifies the order of the pull within the sim.
   * _bloodlust_ forces bloodlust to be cast for the pull.
   * _delay_ time period in seconds to approximate travel time to the start of the pull from the end of the previous pull or beginning of the sim for the first pull
-  * _mark_duration_ length in seconds to apply the Thundering Affix Mark of Lightning damage buff before clearing. A value from 0 to 15.
-  * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health[:CreatureType]` with CreatureType being optional, default Humanoid.
+  * _enemies_ a string that describes the enemies that make up the pull. It should consist of a sequence of enemy specifiers delimited by `|`, each specifier having the format `"name":health[:CreatureType]` with CreatureType being optional, default Humanoid. Prepending `BOSS_` to the name will spawn that mob as a boss type actor, with possible implications dependent on class module support.
 
   ```
     # This example spawns 3 pulls of adds followed by one boss, starting at 20 seconds with 10 seconds between each, with Bloodlust being used on the boss pull.
     raid_events+=/pull,pull=01,bloodlust=0,delay=020,enemies="small_add_1":100000:Elemental|"small_add_2":100000:Elemental|"small_add_3":100000:Elemental|"small_add_4":100000:Elemental|"small_add_5":100000:Elemental
     raid_events+=/pull,pull=02,bloodlust=0,delay=010,enemies="medium_add_1":200000:Beast|"medium_add_2":200000:Beast|"medium_add_3":200000:Demon
     raid_events+=/pull,pull=03,bloodlust=0,delay=010,enemies="big_add":300000:Beast|"medium_add":200000:Dragonkin|"small_add":100000:Abberation
-    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="big_boss":1000000:Giant
+    raid_events+=/pull,pull=04,bloodlust=1,delay=010,enemies="BOSS_angry_giant":1000000:Giant
   ```
-
-  This event supports the Season 1 M+ Thundering affix by applying Mark of Lightning to players every 70 seconds in combat beginning at 20 seconds into combat. The pull option _mark_duration_ controls how long to trigger the debuff before simulating a debuff clear.
-
 # Buff
   The _buff_ raid event allows you to trigger one or more stacks of a buff. If a _duration_ option is set, the buff will be active for the set druation. Otherwise, the buff will last for the default duration based on the buff's implementation.
 
