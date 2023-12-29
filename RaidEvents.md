@@ -348,9 +348,10 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   ```
 
 # Vulnerability
-  The _vulnerable_ keyword can be used to make the target periodically vulnerable, causing you to do twice more damages to the target. It is possible to change your actions list to keep your best cooldowns for those moments, see [ActionLists](ActionLists).
+  The _vulnerable_ keyword can be used to make the target periodically vulnerable, causing you to do more damage to the target. It is possible to change your actions list to keep your best cooldowns for those moments, see [ActionLists](ActionLists).
 
-  There is no specific option for this keyword.
+  * _multiplier_ (default: 2.0) sets the damage multiplier that is applied.
+  * _target_ the name of the enemy to apply the vulnerability to. For `DungeonRoute` this must match an enemy defined by a pull event with a matching `pull` parameter, checked at the pull's spawn time. Otherwise must match a defined enemy at the start of a sim.
   ```
     #This example will make your target vulnerable, taking twice as much damage for 20s every 80s.
     raid_events+=/vulnerable,cooldown=80,duration=20
