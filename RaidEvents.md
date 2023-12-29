@@ -109,8 +109,8 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     * _first\_pct_  specifies the boss health pct when the event will first occur and be scheduled.
     * _last\_pct_  specifies the boss health pct when the event will last occur and no longer be scheduled.
     * _force\_stop_ (default: false) specifies if a raid event which is up when _last_ or _last\_pct_ occurs will be instantly canceled or not
-    * _pull_ specifies which pull event this event is a child of, used with the `DungeonRoute` fight style. `first/last` based scheduling is based on the spawn time of the pull.
-    * _pull_target_ specifies the enemy that `first_pct/last_pct` should be based on. The enemy name given here must match an enemy defined in a pull event matching the `pull` parameter of this event.
+    * _pull_ specifies which pull event this event is a child of, required for all events in a `DungeonRoute` fight style sim. `first/last` based scheduling is based on the spawn time of the pull.
+    * _pull\_target_ specifies the enemy that `first_pct/last_pct` should be based on. The enemy name given here must match an enemy defined in a pull event matching the `pull` parameter of this event. Required if an event defines `first_pct/last_pct`.
     ```
     #This example will make the raid spend 15s moving every 30s. It will only happen after two minutes.
     raid_events+=/movement,cooldown=30,duration=15,first=120
@@ -271,13 +271,17 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   The _invul_ and _invulnerable_ keywords can be used to make the target periodically invulnerable, clearing all dots and debuffs on it. There is currently no way to use actions list to switch on another target but you can still use actions conditions to detect whether your target is currently invulnerable or not, see [ActionLists](ActionLists).
 
   Specific options are:
-  1. _retarget_ (default: 0) wether the players should acquire a new target or not.
+  * _retarget_ (default: 0) wether the players should acquire a new target or not.
+  * _target_ the name of the enemy to apply the invulnerability to. For `DungeonRoute` this must match an enemy defined by a pull event with a matching `pull` parameter, checked at the pull's spawn time. Otherwise must match a defined enemy at the start of a sim.
   ```
     #This example will make your target invulnerable for 10s every 1min.
     raid_events+=/invulnerable,cooldown=60,duration=10
 
     #This example will make your target invulnerable for 10s every 1min and search a new target during this time
     raid_events+=/invulnerable,cooldown=60,duration=10,retarget=1
+
+    #This example will make the "BOSS_angry_giant" target in pull 2 invulnerable for 10s every 1min and search a new target during this time
+    raid_events+=/invulnerable,cooldown=60,duration=10,target="BOSS_angry_giant",pull=2,retarget=1
   ```
 
 # Incoming damage
