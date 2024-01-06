@@ -95,3 +95,11 @@ It can be utilized with deathknight.amz_use_time=x/y/z as a player scope option.
 # Use AMZ at 15s, 135s and 255s
 deathknight.amz_use_time=15/135/255
 ```
+
+AMS has multiple custom options that can be used to examine the effects of Runic Power gains.
+```
+# A 0-1 value that sets how much of AMS is used per cast, default is 0
+deathknight.ams_absorb_percent=.8
+# How many seconds the sim should wait before using AMS for the first time, default is 20
+deathknight.first_ams_cast=20
+```
