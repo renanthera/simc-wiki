@@ -145,11 +145,11 @@ monk.expel_harm_effectiveness=0.85
 monk.chi_burst_healing_targets=20
 ```
 
-5. **Faeline Stomp Uptime** - How much time is spent while fighting in the Faeline Stomp ground effect. Valid between 0 and 1. Defaults to 1 for 100%.
+5. **Jadefire Stomp Uptime** - How much time is spent while fighting in the Jadefire Stomp ground effect. Valid between 0 and 1. Defaults to 1 for 100%.
 
 ```
-# Faeline Stomp Uptime is set to 85%
-monk.faeline_stomp_uptime=0.85
+# Jadefire Stomp Uptime is set to 85%
+monk.jadefire_stomp_uptime=0.85
 ```
 
 # Reports
