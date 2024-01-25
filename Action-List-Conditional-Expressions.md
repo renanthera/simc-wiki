@@ -371,7 +371,7 @@ actions+=/some_spell,if=set_bonus.tier21_4pc
 See the relevant page for each class.
 
 ### Cooldowns
-The character's cooldowns can be used through the following syntax: `cooldown.<spell_name>.<cooldown_property>`. As usual, for the spell name, use underscores instead of white spaces and ignore non-alphanumeric characters. The available properties are:
+The character's cooldowns can be used through the following syntax: `cooldown.<spell_name>.<cooldown_property>`. As usual, for the spell name, use underscores instead of white spaces and ignore non-alphanumeric characters. If accessing a spell with a naming conflict, `spell_name` can be `spell_name_spellid`. This is handy for getting item cooldowns. The available properties are:
 
 * _duration_ is the initial duration, in seconds (not the remaining duration).
 * _remains_ is the remaining duration, in seconds, before the cooldown is done.
