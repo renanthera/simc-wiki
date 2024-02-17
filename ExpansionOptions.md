@@ -45,6 +45,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
   - _rppm_ will perform a rppm check every second to determine if loss happens. **dragonflight.balefire_branch_loss_rppm** (default: 2) sets the rppm. This is the defaule type for DungeonSlice & DungeonRoute sims.
   - _percent_ will perform a percent check every second to determine if loss happens. **dragonflight.balefire_branch_loss_percent** (default: 0.2) sets the percent.
 * **dragonflight.balefire_branch_loss_stacks** (scope: player; default: 2) Sets the number of stacks lost per settings above.
+* **dragonflight.witherbarks_branch_timing** (scope: player; default: 1/1/7) Sets the timing for Witherbarks Branch buffs in seconds. E.g. `dragonflight.witherbarks_branch_timing=1/1/7`
 
 ### Consumables / Enchants
 * **dragonflight.corrupting_rage_uptime** (scope: global, default: 0.5, min: 0.1, max: 1.0) How much uptime the crit buff from the Phial of Corrupting Rage should have. This variable is an estimate of the uptime and may be slightly off what the sim gets, especially at lower uptime values.
