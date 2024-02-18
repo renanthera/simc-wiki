@@ -15,7 +15,7 @@ someone will revert/modify as needed.
 SimulationCraft includes a set of sample profiles for the current raiding tier, which are located in /profiles.
 If you want to improve those profiles, please note to the following:
  * Change character profile settings like talents & gear in the files you can find at /profiles/generators.
-   The files in /profiles are auto-generated and will be overriden.
+   The files in /profiles are auto-generated and will be overridden. You can generate this profiles using the platform appropriate `generate_profiles` script at the root of the project. 
 
 ## Action Priority List (APL)
 SimulationCraft includes a set of default action priority list for each specialization, to offer users a ready-to-use 
