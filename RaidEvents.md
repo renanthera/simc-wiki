@@ -18,12 +18,12 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     ```
   * _LightMovement_ will set up a fight with infrequent movement. It is equivalent to:
     ```
-      raid_events+=/movement,players_only=1,cooldown=40,cooldown_stddev=10,distance=15,distance_min=10,distance_max=20,first=15
+      raid_events+=/movement,players_only=1,cooldown=40,cooldown_stddev=10,distance=15,move_distance_min=10,move_distance_max=20,first=15
     ```
   * _HeavyMovement_ will set up a fight with frequent movement. It is equivalent to:
     ```
-      raid_events+=/movement,players_only=1,cooldown=20,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first=15
-      raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=45,distance_min=40,distance_max=50,first=30
+      raid_events+=/movement,players_only=1,cooldown=20,cooldown_stddev=15,distance=25,move_distance_min=20,move_distance_max=30,first=15
+      raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=45,move_distance_min=40,move_distance_max=50,first=30
     ```
   * _DungeonSlice_ approximates a "slice" of a M+ dungeon. A single boss mob followed by alternating then interleaving large/weak trash packs (4-6 mobs for 18 seconds) and small/strong trash packs (1-3 mobs for 30 seconds). Durations are randomized on a per-enemy basis within 2 standard deviations of the mean. Due to the offset cooldowns, all add waves beyond the first of each type can potentially overlap, leading to a semi-random pattern between 1-9 enemies at any given time, with an average target count across the entire duration (including as enemies "die") of 4. Fight length locked to 6 minutes. Events are equivalent to:
     ```
@@ -192,7 +192,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   * The following options require **distance\_targeting\_enabled=1** in order to function. The location of an add defaults to 0,0 (stacked on top of the main target). This can be changed in a few ways:
     * _spawn\_x_ and _spawn\_y_ (default: 0) set the x,y coordinates that a wave of adds will spawn at.
     * _distance_ (default: 0) sets the distance from 0,0 that the adds will spawn. The exact location is randomly generated, but will be _distance_ yards away.
-    * _min\_distance_ and _max\_distance_ (default: 0) sets a band of space away from 0,0 that the adds will be able to spawn in. The exact location is randomly generated, but will be between _min\_distance_ and _max\_distance_ yards away. If either is omitted, the for that will be considered the minimum and be set to 0.
+    * _spawn\_distance\_min_ and _spawn\_distance\_max_ (default: 0) sets a band of space away from 0,0 that the adds will be able to spawn in. The exact location is randomly generated, but will be between _spawn\_distance\_min_ and _spawn\_distance\_max_ yards away. If either is omitted, the for that will be considered the minimum and be set to 0.
     ```
       #This example spawns 2 adds at the location 5,10
       raid_events+=/adds,count=2,first=5,duration=15,cooldown=60,spawn_x=5,spawn_y=10
@@ -219,7 +219,7 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     * _stacked_ (default: 0) sets whether all adds from a wave are at the same or different coordinates.
     ```
       #This example spawns 5 adds at a distance of 15 - 35 yards stacked up
-      raid_events+=/adds,count=5,first=5,duration=15,cooldown=60,min_distance=15,max_distance=35,stacked=1
+      raid_events+=/adds,count=5,first=5,duration=15,cooldown=60,spawn_distance_min=15,spawn_distance_max=35,stacked=1
     ```
 
 # Pull
@@ -320,9 +320,9 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
   * _move\_distance_ (default: 0) is the distance, in yards, the players have to run on (staring from their current location: all players, whether they are 5 yards or 30 yards away from the boss, will run on the same distance) . When different from zero, it will prevail on _duration_ since the movement speed (taking into account possible speed bonuses) and distance will be used to evaluate the run duration. When equal to zero, this setting will be ignored.
   * _to_ (default: -2) is the player's distance to the boss after moving. Only a 0 or positive value is processed. -1 means a default distance based on the player's role. -2 or lower means the current distance (i.e. the player moves and then returns to her current position). Currently the distance change happens instantaneously at the end of the movement event; if you need to check distance while moving, divide the event into several.
   * _direction_ (default: omni) is the directionality flag for the movement event. Valid values are _omni_, _away_, and _towards_. Currently only affects what kind of actions can be used during the movement event.
-  * _min\_distance_ (default: 0) sets a minimum distance for the movement event. When combined with max\_distance allows for a single movement event to have differing distances.
-  * _max\_distance_ (default: 0) sets a maximum distance for a movement event.
-  * _distance\_range_ (default: 0) Works similarly, gives a range to move\_distance. Distance\_min/max will set a upper/lower limit, and can shift the distribution.
+  * move\_distance\_min (default: 0) sets a minimum distance for the movement event. When combined with max\_distance allows for a single movement event to have differing distances.
+  * move\_distance\_min (default: 0) sets a maximum distance for a movement event.
+  * _distance\_range_ (default: 0) Works similarly, gives a range to move\_distance. The move\_distance\_min/max options will set the upper/lower limit, and can shift the distribution.
   ```
     #This line, added to a warlock's actions list, will make him/her use life tap when moving.
     actions+=/life_tap,moving=1
@@ -331,11 +331,11 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     raid_events+=/movement,cooldown=30,duration=5
 
     #This example will make melee players run on 20 yards.
-    raid_events+=/movement,cooldown=30,distance_max=10,move_distance=20
+    raid_events+=/movement,cooldown=30,move_distance_max=10,move_distance=20
 
     #That will create a 60 second cooldown movement event with a stddev of 10 seconds, and only affects the player
     #25% of the time. The distance will be 60 yards 50% of the time, and the other 50%  will be between 40-60 yards.
-    # raid_events+=/movement,cooldown=60,cooldown_stddev=10,distance=60,distance_min=40,distance_max=60,distance_range=20,player_chance=0.25
+    # raid_events+=/movement,cooldown=60,cooldown_stddev=10,distance=60,move_distance_min=40,move_distance_max=60,distance_range=20,player_chance=0.25
   ```
 
 # Stuns
