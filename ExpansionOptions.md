@@ -52,7 +52,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 * **dragonflight.gyroscopic_kaleidoscope_stat** (scope: global; default: haste) Sets what stats Gyroscopic Kaleidoscope will proc. Either "mastery", "haste", "crit" or "versatility".
 
 ### Crafted Gear
-* **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.7; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
+* **dragonflight.blue_silken_lining_uptime** (scope: global; default: 0.4; min: 0.0; max: 1.0) Sets the percent of time that Zone of Focus will be active in the sim.
 * **dragonflight.blue_silken_lining_update_interval** (scope: global; default: 10s) Controls how often the sim rolls for Blue Silken Lining uptime. This interval is subject to a gaussian distribution.
 * **dragonflight.blue_silken_lining_update_interval_stddev** (scope: global; default: 2.5s) Standard deviation of blue_silken_lining_update_interval.
 * **dragonflight.hood_of_surging_time_chance** (scope: global; default: 0.0) Sets the chance of proccing First Strike every `dragonflight.hood_of_surging_time_period` seconds on top of any add spawns.
