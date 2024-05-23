@@ -174,30 +174,6 @@ Here is the list of supported types:
  level=85
  race=orc
 ```
-  * **glyphs** (scope: current character; default: "") is a sequence of glyphs, separated by "/". The values are the glyph's name, minus "glyph of", where white spaces are replaced by underscores. In doubt, you can search for the "init\_glyphs" function in your class source code (sc\_warlock.cpp, etc). You can write glyphs in any order, regardless of their slots, and add as many glyphs as you want.
-```
- glyphs=bloodthirst/raging_blow/cleaving
-```
-  * **talents** (scope: current character; default: "") is the talents descriptor. It accepts two possible inputs: an armory talent calculator URLs or a numeric sequence. When importing your character from the armory, simc will automatically use the armory url format.
-```
- # A character imported from the armory may have a talent string like this:
- talents=http://us.battle.net/wow/en/tool/talent-calculator#bZ!0021011
-```
-If you want to specify talents individually (as in a custom .simc file), you can do so using a numeric sequence like `talents=xxxxxxx`. Each `x` represents the talent column selection for a given tier (the first digit is the level 15 talent, the second is level 30, and so on). A `1` would indicate the talent in the first column is selected, `2` would indicate the second column, and `3` would indicate the third column. If you want to leave that talent row empty (as in, no talent has been selected), use a `0`.
-```
- # We can define talents manually like this
- talents=3201231
-```
-  * **class_talents** (scope: current character; default: "") is the new class talent construct starting with Dragonflight. This takes in a `/` delimited list of pairs of talent:rank combinations for the Class tree of that player. When providing talent you can either use the TalentID or the Name, i.e. `19979:1/shadowfiend:1` would give the Shadow Word: Death talent at rank 1 and the Shadowfiend talent at rank 1. You must use TalentID for any talents that share a name with another class talent.
-```
-# Manually defined class talents example
-class_talents=19979:1/20024:1/shadowfiend:1/improved_shadowfiend:1/mindbender:1/rabid_shadows:2/shadowflame_prism:1/improved_mind_blast:2/power_infusion:1/twist_of_fate:2/mindgames:1/throes_of_pain:2/puppet_master:2/translucent_image:2/19944:2
-```
-  * **spec_talents** (scope: current character; default: "") is the new spec talent construct starting with Dragonflight. This takes in a `/` delimited list of pairs of talent:rank combinations for the Spec tree of that player's Class. When providing talent you can either use the TalentID or the Name, i.e. `19979:1/shadowfiend:1` would give the Shadow Word: Death talent at rank 1 and the Shadowfiend talent at rank 1. You must use TalentID for any talents that share a name with another spec talent.
-```
-# Manually defined spec talents example
-spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:1/fortress_of_the_mind:2/vampiric_insight:1/shadowy_apparitions:1/void_eruption:1/monomania:1/auspicious_spirits:1/hungering_void:1/ancient_madness:1/damnation:1/void_touched:2/void_torrent:1/shadow_crash:1/malediction:1/mental_fortitude:2/insidious_ire:2/sanguine_teachings:3/mind_devourer:2
-```
   * **professions** (scope: current character; default: "") is the case-insensitive sequence of primary professions your character have. The professions are separated by a "/" and you can add as many of them as you want. Valid keywords are: alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring.
 ```
  professions=Blacksmithing=525/Jewelcrafting=525
@@ -212,6 +188,25 @@ spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:
  bob.simc 
  target=alice
 ```
+
+## Talents
+  * **talents** (scope: current character; default: "") accepts Blizzard's in-game generated talent export hash, from either the talent UI export or the Simulationcraft addon.
+
+If you want to specify talents individually (as in a custom .simc file) and/or append to an existing hash defined as above, you can use tree-specific inputs for the class, spec, and hero trees.
+1. These all take a `/` delimited list of pairs of talent:rank combinations.
+2. When providing talent you can either use the Tokenized Name or the TalentID, i.e. `19979:1/shadowfiend:1` would give the Shadow Word: Death talent at rank 1 and the Shadowfiend talent at rank 1.
+3. You must use TalentID for any talents that share a name with another talent in the same tree (class, spec, or hero).
+  * **class_talents** (scope: current character; default: "") is the new class talent construct starting with Dragonflight.
+```
+# Manually defined class talents example
+class_talents=19979:1/20024:1/shadowfiend:1/improved_shadowfiend:1/mindbender:1/rabid_shadows:2/shadowflame_prism:1/improved_mind_blast:2/power_infusion:1/twist_of_fate:2/mindgames:1/throes_of_pain:2/puppet_master:2/translucent_image:2/19944:2
+```
+  * **spec_talents** (scope: current character; default: "") is the new spec talent construct starting with Dragonflight.
+```
+# Manually defined spec talents example
+spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:1/fortress_of_the_mind:2/vampiric_insight:1/shadowy_apparitions:1/void_eruption:1/monomania:1/auspicious_spirits:1/hungering_void:1/ancient_madness:1/damnation:1/void_touched:2/void_torrent:1/shadow_crash:1/malediction:1/mental_fortitude:2/insidious_ire:2/sanguine_teachings:3/mind_devourer:2
+```
+  * **hero_talents** (scope: current character; default: "") is the new hero talent construct starting with The War Within.
 
 ## Optional
   * **name** (scope: current character; default: "") is the character name to be displayed in reports and logs.
@@ -253,18 +248,6 @@ spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:
  # Give another GUID to John
  armory=us,illidan,john
  id=0x00000000012729FD
-```
-  * **tmi\_window** (scope: current character; default: 6.0) specifies the time window of the moving average used when calculating TMI. Shorter values will tend to exaggerate scores and make the metric more sensitive to shorter spikes. Can be any nonzero floating point, though it will be rounded based on bin size (currently fixed at 1 second). Only relevant to tanks.
-```
- # Change John-the-tank's TMI window to 4 seconds
- armory=us,illidan,john
- tmi_window=4
-```
-  * **tmi\_output** (scope: current character; default: "") can be used to specify a filename for the TMI calculation debugging output.  This shows the damage, healing, and health change timelines from the last iteration as well as the other arrays used to calculate TMI. Only relevant to tanks.
-```
- # Dump TMI debug output to tmi_debug_file.csv
- armory=us,illidan,john
- tmi_output=tmi_debug_file.csv
 ```
   * **timeofday** (scope: current character; default: "nighttime") can be used to specify the InGame Time of Day, relevant for the WoD Night Elf racial. Available options are:
     1. night / nighttime
