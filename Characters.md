@@ -167,11 +167,11 @@ Here is the list of supported types:
   * **race** (scope: current character; default: "") is the player's race. It may be one of the following:
     - Player Races: blood\_elf, draenai, dwarf, gnome, human, night\_elf, orc, tauren, troll, undead, goblin, worgen, pandaren, pandaren\_alliance, pandaren\_horde, void\_elf, highmountain\_tauren, lightforged\_draenei, nightborne, dark\_iron\_dwarf, maghar\_orc, zandalari\_troll, kul\_tiran, vulpera, mechagnome
     - NPC Races: none, aberration, beast, demon, dragonkin, elemental, giant, humanoid
-  * **level** (scope: global; default: 85) is the player's level.
+  * **level** (scope: global; default: 70 Dragonflight, 80 The War Within) is the player's level.
 ```
  # Import a character and change his race
  armory=us,illidan,john
- level=85
+ level=80
  race=orc
 ```
   * **professions** (scope: current character; default: "") is the case-insensitive sequence of primary professions your character have. The professions are separated by a "/" and you can add as many of them as you want. Valid keywords are: alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring.
