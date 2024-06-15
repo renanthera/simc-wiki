@@ -27,6 +27,7 @@ Beware! You need to declare the overrides ***after*** you declared **optimal\_ra
     * **override.chaos_brand**
     * **override.mystic_touch**
     * **override.windfury_totem**
+    * **override.hunters_mark**
 
   * Specials
     * **override.bleeding** will flag your target as permanently bleeding
