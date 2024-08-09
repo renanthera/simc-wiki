@@ -39,3 +39,4 @@ These are advanced player-scoped options that can be used to override a number o
   * _rng_seeds_of_their_demise_ : Chance to proc Tormented Crescendo (Affliction) or Flashpoint (Destruction)
   * _rng_mark_of_perotharn_ : Chance to gain a stack of Wither on critical strikes
   * _rng_succulent_soul_ : Chance to proc Succulent Soul (rolls once per soul shard gained)
+  * _rng_feast_of_souls_
