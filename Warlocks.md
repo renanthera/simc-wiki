@@ -40,3 +40,5 @@ These are advanced player-scoped options that can be used to override a number o
   * _rng_mark_of_perotharn_ : Chance to gain a stack of Wither on critical strikes
   * _rng_succulent_soul_ : Chance to proc Succulent Soul (rolls once per soul shard gained)
   * _rng_feast_of_souls_
+  * _rng_umbral_lattice_ : Affliction Nerub-ar Palace tier set proc
+  * _rng_empowered_legion_strike_ : Demonology Nerub-ar Palace tier set proc
