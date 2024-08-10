@@ -43,6 +43,26 @@ Use `hpg_to_2dawn` to get the currently needed amount of Holy Power Generators t
 actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
 ```
 
+## Lightsmith's Divine Guidance
+```
+For each Holy Power ability cast, your next Consecration deals x damage or healing immediately, split across all enemies and allies.
+```
+Since this ability shares its value between damage and healing, the default implementation for SimCraft is to always heal the Paladin to have a more realistic scenario. The actual implementation tries to mirror what is happening ingame. It will always prefer to heal injured targets before it tries to deal damage. If it heals a total amount of 5 targets, it will deal 0 damage. By default, it will always heal the Paladin, even when the paladin has maximum life.
+
+With 0 targets to heal and 1 enemy, the ability will deal 100% damage.
+
+With 1 target to heal and 1 enemy, the ability will heal 50% (1 target, 2 targets total) and deal 50% damage.
+
+With 4 targets to heal and 1 enemy, the ability will heal 80% and deal 20% damage.
+
+With 1 target to heal and 3 enemies, the ability will heal 25% and deal 75% damage, split between 3 targets (25% each).
+
+With 1 target to heal and 20 enemies, the ability will heal 20% and deal 80% damage, split between 20 targets (4% each).
+
+With 5 targets to heal and 1 enemy, the ability will heal 100% and deal no damage.
+
+To simulate different scenarios, player-scoped options have been introduced to alter this behaviour (see [#player-scoped-options](https://github.com/simulationcraft/simc/wiki/Paladins#player-scoped-options) )
+
 ## Player-scoped Options
 `min_dg_heal_targets` (0-5, default 1) - Minimum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `max_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 5 to always have it heal instead of dealing damage.
 
