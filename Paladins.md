@@ -45,6 +45,7 @@ actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
 
 ## Player-scoped Options
 `min_dg_heal_targets` (0-5, default 1) - Minimum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `max_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 5 to always have it heal instead of dealing damage.
+
 `max_dg_heal_targets` (0-5, default 5) - Maximum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `min_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 1 to simulate a solo-scenario within a multi actor environment.
 
 
