@@ -36,6 +36,18 @@ When Consecration is included in the precombat APL, the spell will be used with 
 actions.precombat=consecration,precombat_time=3
 ```
 
+## Holy Power Generators until two Dawn Stacks
+Use `hpg_to_2dawn` to get the currently needed amount of Holy Power Generators to reach two Stacks of Dawn. This is a variable that can be between 6 (6 Holy Power Generators needed until 2 Dawn Stacks are reached) and -2 (Two Dawn Stacks are already reached and you would need one more Holy Power Generator to refresh the Dawn-Buff)
+```
+# Use Shield of the Righteous when we're about to reach the next Dawn Stack to use it with Hammer of Light
+actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
+```
+
+## Player-scoped Options
+`min_dg_heal_targets` (0-5, default 1) - Minimum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `max_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 5 to always have it heal instead of dealing damage.
+`max_dg_heal_targets` (0-5, default 5) - Maximum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `min_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 1 to simulate a solo-scenario within a multi actor environment.
+
+
 # Reports
 We only document here non-obvious entries.
 
