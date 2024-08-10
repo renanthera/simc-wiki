@@ -43,7 +43,9 @@ Use `hpg_to_2dawn` to get the currently needed amount of Holy Power Generators t
 actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
 ```
 
-## Lightsmith's Divine Guidance
+## Lightsmith specifics
+
+### Lightsmith's Divine Guidance
 ```
 For each Holy Power ability cast, your next Consecration deals x damage or healing immediately, split across all enemies and allies.
 ```
@@ -62,6 +64,20 @@ With 1 target to heal and 20 enemies, the ability will heal 20% and deal 80% dam
 With 5 targets to heal and 1 enemy, the ability will heal 100% and deal no damage.
 
 To simulate different scenarios, player-scoped options have been introduced to alter this behaviour (see [#player-scoped-options](https://github.com/simulationcraft/simc/wiki/Paladins#player-scoped-options) )
+
+### Holy Armament management
+Three new variables have been introduced to handle Holy Armament handling. Holy Armaments can only be cast by using the action `holy_armaments`, which will always alternate between Holy Bulwark and Sacred Weapon, starting with Holy Bulwark)
+
+`next_armament` returns either 0 or 1, depending on which Holy Armament comes next
+
+`holy_bulwark` returns 0
+
+`sacred_weapon` returns 1
+
+```
+# Use Holy Armaments when the next Armament is Sacred Weapon, if the buff is not up or can pandemic, AW is not up or the remaining cooldown is less than 30s
+actions.standard+=/holy_armaments,if=next_armament=sacred_weapon&(!buff.sacred_weapon.up|(buff.sacred_weapon.remains<6&!buff.avenging_wrath.up&cooldown.avenging_wrath.remains<=30))
+```
 
 ## Player-scoped Options
 `min_dg_heal_targets` (0-5, default 1) - Minimum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `max_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 5 to always have it heal instead of dealing damage.
