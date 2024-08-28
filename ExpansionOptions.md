@@ -4,8 +4,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 ## The War Within
 
-### Trinkets
-
+### Season 1 Trinkets
 
 | Option                                                          | Scope  | Default | Range | Notes |
 | --------------------------------------------------------------- | ------ | ------- | ----- | ----- |
@@ -33,9 +32,9 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 
 | Option                                                          | Scope  | Default | Range | Notes |
 | --------------------------------------------------------------- | ------ | ------- | ----- | ----- |
-| **thewarwithin.dawn_dusk_thread_lining_uptime**                 | global | 0.6     | 0 - 1   | Percent
-| **thewarwithin.dawn_dusk_thread_lining_update_interval**        | global | 10s     | 1s - 9999s | 
-| **thewarwithin.dawn_dusk_thread_lining_update_interval_stddev** | global | 2.5s    | 1s - 9999s |
+| **thewarwithin.dawn_dusk_thread_lining_uptime**                 | global | 0.6     | 0 - 1   | Percent uptime for Dawn/Duskthread Lining
+| **thewarwithin.dawn_dusk_thread_lining_update_interval**        | global | 10s     | 1s - 9999s | How often the sim will reroll if the buff is up or down
+| **thewarwithin.dawn_dusk_thread_lining_update_interval_stddev** | global | 2.5s    | 1s - 9999s | Stddev of the update interval reroll
 | **thewarwithin.embrace_of_the_cinderbee_timing**                | global | 0s      | 100ms - 10s |
 | **thewarwithin.embrace_of_the_cinderbee_miss_chance**           | global | 0       | 0 - 1 | Percent
 
