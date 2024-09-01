@@ -79,6 +79,9 @@ Three new variables have been introduced to handle Holy Armament handling. Holy 
 actions.standard+=/holy_armaments,if=next_armament=sacred_weapon&(!buff.sacred_weapon.up|(buff.sacred_weapon.remains<6&!buff.avenging_wrath.up&cooldown.avenging_wrath.remains<=30))
 ```
 
+### Solidarity and you
+If you do not specify a target for the `holy_armaments` cast, it will always cast on the Paladin. Solidarity will then choose a "random" target (Which will be the closest DPS in game for Sacred Weapon, first and foremost), which will only be correctly reflected in Sims if you choose to do a multi actor sim with at least two actors. For fair comparisons, this actor should be a DPS role, so Solidarity will always choose the DPS, instead of maybe other Tanks. Solidarity will choose a "random" target once (picks the first DPS > Healer > Tank they find introduced into the Sim) and continue to "randomly" use their Sacred Weapon onto them.
+
 ## Player-scoped Options
 `min_dg_heal_targets` (0-5, default 1) - Minimum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `max_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 5 to always have it heal instead of dealing damage.
 
