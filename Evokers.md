@@ -17,6 +17,7 @@
 * **evoker.naszuro_bounce_chance** (default: 0.85) Chance that Naszuro will randomly bounce from a DPS.
 * **evoker.force_clutchmates** (default: "", valid: "yes"|"no") Allows the user to force clutchmates into a specific state. Clutchmates by default will automatically adapt to party size. Valid inputs: "yes" => Will force clutchmates on no matter what, even if you were you have >5 players in the sim. "no" => will always disable clutchmates even if you have <= 5 players in the sim.
 * **evoker.make_simplified_if_alone** (default: 1) This will automatically spawn in some simplified DPS actors if the Augmentation Evoker is alone. If you wish to see personal DPS for augmentation sim with `evoker.make_simplified_if_alone=0`. This feature is currently very much in alpha.
+* **evoker.simplified_actor_ilevel** (default: -1) This sets the Item Level of the Simplified Actors the Augmentation Evoker spawns in. -1 will use their default item level (This varies depending on time of season to match what is the roughly expected gear of the playerbase. This tends towards BiS).
 * **evoker.simulate_bombardments** (default: 1) This will simulate bombardment triggers using RPPM instead of using allied damage events to attempt to trigger it.
 * **evoker.simulate_bombardments_time_between_procs_mean** (default: 2s) Mean time between attempting to proc bombardments. Works as Gaussian with a 2 second minimum no matter the mean or standard deviation.
 * **evoker.simulate_bombardments_time_between_procs_stddev** (default: 0.15s) Standard deviation on bombardment procs
