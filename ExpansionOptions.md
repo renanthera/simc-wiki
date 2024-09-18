@@ -3,40 +3,40 @@
 Note that expansion-specific options may disappear from Simulationcraft versions intended for newer expansions than what is defined here.
 
 ## The War Within
-
+All options are player scoped unless otherwise noted.
 ### Crafted Gear / Embellishments
 
-| Option                                                      | Scope  | Default | Range | Notes |
-| ----------------------------------------------------------- | ------ | ------- | ----- | ----- |
-| thewarwithin.dawn_dusk_thread_lining_uptime                 | global | 0.6     | 0 - 1   | Percent uptime for Dawn/Duskthread Lining
-| thewarwithin.dawn_dusk_thread_lining_update_interval        | global | 10s     | 1s - 9999s | How often the sim will reroll if the buff is up or down
-| thewarwithin.dawn_dusk_thread_lining_update_interval_stddev | global | 2.5s    | 1s - 9999s | Stddev of the update interval reroll
-| thewarwithin.embrace_of_the_cinderbee_timing                | global | 0s      | 100ms - 10s |
-| thewarwithin.embrace_of_the_cinderbee_miss_chance           | global | 0       | 0 - 1 | Percent
+| Option                                                      | Default | Range | Notes |
+| ----------------------------------------------------------- | ------- | ----- | ----- |
+| thewarwithin.dawn_dusk_thread_lining_uptime                 | 0.6     | 0 - 1   | Percent uptime for Dawn/Duskthread Lining
+| thewarwithin.dawn_dusk_thread_lining_update_interval        | 10s     | 1s - 9999s | How often the sim will reroll if the buff is up or down
+| thewarwithin.dawn_dusk_thread_lining_update_interval_stddev | 2.5s    | 1s - 9999s | Stddev of the update interval reroll
+| thewarwithin.embrace_of_the_cinderbee_timing                | 0s      | 100ms - 10s |
+| thewarwithin.embrace_of_the_cinderbee_miss_chance           | 0       | 0 - 1 | Percent
 
 ### Consumables / Enchants
 
-| Option                                                          | Scope  | Default | Range | Notes |
-| --------------------------------------------------------------- | ------ | ------- | ----- | ----- |
+| Option                                                          | Default | Range | Notes |
+| --------------------------------------------------------------- | ------- | ----- | ----- |
 
 ### Season 1 Trinkets
 
-| Option                                                      | Scope  | Default | Range | Notes |
-| ----------------------------------------------------------- | ------ | ------- | ----- | ----- |
-| thewarwithin.sikrans_endless_arsenal_stance                 | global |         |       |
-| thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks   | global | 30      | 0 - 30  |
-| thewarwithin.ovinaxs_mercurial_egg_desired_primary_stacks   | global | 20      | 0 - 30  | Player is assumed to move while not casting to reach this value
-| thewarwithin.entropic_skardyn_core_pickup_delay             | global | 4s      | 0s - 30s |
-| thewarwithin.entropic_skardyn_core_pickup_stddev            | global | 1s      | 0s - 30s |
-| thewarwithin.carved_blazikon_wax_enter_light_delay          | global | 4s      | 0s - 15s |
-| thewarwithin.carved_blazikon_wax_enter_light_stddev         | global | 1s      | 0s - 15s |
-| thewarwithin.carved_blazikon_wax_stay_in_light_duration     | global | 0s      | 0s - 15s | 
-| thewarwithin.carved_blazikon_wax_stay_in_light_stddev       | global | 0s      | 0s - 15s |
-| thewarwithin.signet_of_the_priory_party_stats               | global | 
-| thewarwithin.signet_of_the_priory_party_use_cooldown        | global | 120s    | 120s - 240s |
-| thewarwithin.signet_of_the_priory_party_use_stddev          | global | 6s      | 0s - 120s |
-| thewarwithin.harvesters_edict_intercept_chance              | global | 0.2     | 0 - 1 | Percent
-| thewarwithin.nerubian_pheromone_secreter_pheromones         | global | 1       | 0 - 3 | 
+| Option                                                      | Default | Range | Notes |
+| ----------------------------------------------------------- | ------- | ----- | ----- |
+| thewarwithin.sikrans_endless_arsenal_stance                 |         |       |
+| thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks   | 30      | 0 - 30  |
+| thewarwithin.ovinaxs_mercurial_egg_desired_primary_stacks   | 20      | 0 - 30  | Player is assumed to move while not casting to reach this value
+| thewarwithin.entropic_skardyn_core_pickup_delay             | 4s      | 0s - 30s |
+| thewarwithin.entropic_skardyn_core_pickup_stddev            | 1s      | 0s - 30s |
+| thewarwithin.carved_blazikon_wax_enter_light_delay          | 4s      | 0s - 15s |
+| thewarwithin.carved_blazikon_wax_enter_light_stddev         | 1s      | 0s - 15s |
+| thewarwithin.carved_blazikon_wax_stay_in_light_duration     | 0s      | 0s - 15s | 
+| thewarwithin.carved_blazikon_wax_stay_in_light_stddev       | 0s      | 0s - 15s |
+| thewarwithin.signet_of_the_priory_party_stats               | 
+| thewarwithin.signet_of_the_priory_party_use_cooldown        | 120s    | 120s - 240s |
+| thewarwithin.signet_of_the_priory_party_use_stddev          | 6s      | 0s - 120s |
+| thewarwithin.harvesters_edict_intercept_chance              | 0.2     | 0 - 1 | Percent
+| thewarwithin.nerubian_pheromone_secreter_pheromones         | 1       | 0 - 3 | 
 
 
 ## Dragonflight
