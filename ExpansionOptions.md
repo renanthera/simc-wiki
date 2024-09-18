@@ -25,7 +25,7 @@ Note that expansion-specific options may disappear from Simulationcraft versions
 | ----------------------------------------------------------- | ------ | ------- | ----- | ----- |
 | thewarwithin.sikrans_endless_arsenal_stance                 | global |         |       |
 | thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks   | global | 30      | 0 - 30  |
-| thewarwithin.ovinaxs_mercurial_egg_initial_secondary_stacks | global | 0       | 0 - 30  |
+| thewarwithin.ovinaxs_mercurial_egg_desired_primary_stacks   | global | 20      | 0 - 30  | Player is assumed to move while not casting to reach this value
 | thewarwithin.entropic_skardyn_core_pickup_delay             | global | 4s      | 0s - 30s |
 | thewarwithin.entropic_skardyn_core_pickup_stddev            | global | 1s      | 0s - 30s |
 | thewarwithin.carved_blazikon_wax_enter_light_delay          | global | 4s      | 0s - 15s |
