@@ -69,6 +69,7 @@ Certain buffs that can be used on a player by other players can be enabled throu
     * **external\_buffs.blessing\_of\_spring**
     * **external\_buffs.rallying\_cry**
     * **external\_buffs.tome\_of\_unstable\_power** (requires external\_buffs.tome\_of\_unstable\_power\_ilevel set)
+    * **external\_buffs.potion\_bomb\_of\_power**
 ```
 # Disable Power Infusion if the option was already enabled.
 external_buffs.power_infusion=
