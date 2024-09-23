@@ -21,7 +21,7 @@ All options are player scoped unless otherwise noted.
 | Option                                                          | Default | Range | Notes |
 | --------------------------------------------------------------- | ------- | ----- | ----- |
 
-### Season 1 Trinkets
+### Season 1 Items
 
 | Option                                                      | Default | Range | Notes |
 | ----------------------------------------------------------- | ------- | ----- | ----- |
