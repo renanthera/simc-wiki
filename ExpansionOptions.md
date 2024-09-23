@@ -13,6 +13,8 @@ All options are player scoped unless otherwise noted.
 | thewarwithin.dawn_dusk_thread_lining_update_interval_stddev | 2.5s    | 1s - 9999s | Stddev of the update interval reroll
 | thewarwithin.embrace_of_the_cinderbee_timing                | 0s      | 100ms - 10s |
 | thewarwithin.embrace_of_the_cinderbee_miss_chance           | 0       | 0 - 1 | Percent
+| thewarwithin.binding_of_binding_on_you | 0 | 0 - 1 | Set to 1 if another player has bound to you
+| thewarwithin.binding_of_binding_ally_trigger_chance | 0.8 | 0 - 1 | Chance you will trigger the buff on an ally
 
 ### Consumables / Enchants
 
