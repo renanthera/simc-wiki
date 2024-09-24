@@ -121,6 +121,12 @@ _This documentation is a part of the [TCI](TextualConfigurationInterface) refere
     #This example will spawn 5 adds for 10s every 30s, starting when the enemy defined with the name "Boss_angry_giant" in pull 2 of a DungeonRoute sim reaches 50% health. It will only happen during the first two minutes of the pull or until the pull ends, whichever comes first.
     raid_events+=/adds,count=5,first_pct=50,cooldown=30,duration=10,last=120,pull=2,pull_target=BOSS_angry_giant
     ```
+  * If you want the event to occur at specific times, you can use the `timestamp` setting.
+    * _timestamp_ specify a `:`-delimited list of timestamps, in seconds, at which the event should occur. This will cause all cooldown related options to be ignored.
+    ```
+      #This example will apply vulnerable to enemies for 10s at 20s, 50s, and 120s into the fight
+      raid_events+=/vulnerable,duration=10,timestamps=20:50:120
+    ```
 
 # Filtering affected players
   * You may also make raid events distinguish between players and pets:
