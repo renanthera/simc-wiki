@@ -21,6 +21,7 @@
     * [Spell queries](SpellQuery)
     * [Overriding spell data](SpellData)
     * [Expansion-specific Options](ExpansionOptions)
+    * [Unique Gear Actions](Unique-Gear-Actions)
   * Classes
     * [Death Knights](DeathKnights)
     * [Demon Hunters](Demon-Hunters)
