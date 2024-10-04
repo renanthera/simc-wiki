@@ -26,7 +26,7 @@ All options are player scoped unless otherwise noted.
 | Option                                                      | Default | Range | Notes |
 | ----------------------------------------------------------- | ------- | ----- | ----- |
 | thewarwithin.sikrans_endless_arsenal_stance                 |         |       |
-| thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks   | 30      | 0 - 30  |
+| thewarwithin.ovinaxs_mercurial_egg_initial_primary_stacks   | 20      | 0 - 30  |
 | thewarwithin.ovinaxs_mercurial_egg_desired_primary_stacks   | 20      | 0 - 30  | Player is assumed to move while not casting to reach this value
 | thewarwithin.entropic_skardyn_core_pickup_delay             | 4s      | 0s - 30s |
 | thewarwithin.entropic_skardyn_core_pickup_stddev            | 1s      | 0s - 30s |
