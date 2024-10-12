@@ -10,7 +10,8 @@ Regular spells are not mentioned here, you just have to follow the standard [nam
 ## Buffs
 Regular buffs for this class are not mentioned here, you just have to follow the standard [names formatting rules](TextualConfigurationInterface#Names_formatting.md). Also, don't forget that set bonuses are added as buffs to a character. Buffs can be used in conditional expressions for actions, see [ActionLists#Buffs\_and\_debuffs](ActionLists#Buffs_and_debuffs).
 
-## Time Until Next HPG
+## Custom Paladin expressions
+### Time Until Next HPG (Retribution only)
 `time_to_hpg` will return the time until the next holy power generator is available, in seconds. It will also enforce a minimum time equal to the current GCD (i.e. if there's a holy power generator that is off cooldown, but the GCD isn't up for another 350 ms, this will evaluate to 0.350).
 ```
   #cast TV if we're at 5 holy power and a holy power generator is available next GCD
@@ -19,6 +20,27 @@ Regular buffs for this class are not mentioned here, you just have to follow the
 Note that this does not do any fancy calculus to figure out if the next GCD actually _will_ be a HPG. It _only_ returns the time until the next HPG is available. If your action list prioritizes other spells over HPGs, then the time until the next HPG is actually cast could be longer than `time_to_hpg`. It should never be shorter, however.
 
 Note#2: This is only supported for Retribution Paladin at the moment.
+
+### Time to next CSAA HoPo (Retribution only)
+Only works with the Talent `Crusading Strikes`. `time_to_next_csaa_hopo` returns the time in seconds until you get your next Holy Power from your auto attacks.
+
+### Holy Power Generators until two Dawn Stacks
+Use `hpg_to_2dawn` to get the currently needed amount of Holy Power Generators to reach two Stacks of Dawn. This is a variable that can be between 6 (6 Holy Power Generators needed until 2 Dawn Stacks are reached) and -2 (Two Dawn Stacks are already reached and you would need one more Holy Power Generator to refresh the Dawn-Buff)
+```
+# Use Shield of the Righteous when we're about to reach the next Dawn Stack to use it with Hammer of Light
+actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
+```
+
+`next_armament` returns either 0 or 1, depending on which Holy Armament comes next
+
+`holy_bulwark` returns 0
+
+`sacred_weapon` returns 1
+
+`avenging_wrath` returns `sentinel`, if talented into Sentinel, otherwise `avenging_wrath`
+
+`judgment_holy_power` (Protection only) returns the current amount of Holy Power Judgment would give, depending on available Buffs (Avenging Wrath with Sanctified Wrath, Bastion of Light)
+
 
 ## Blessed Hammer strikes
 Blessed Hammer can hit multiple times depending on the size of the target in-game. To reproduce that behavior, the blessed_hammer action has a `strikes` option (float, default: 2, min: 1, max: 10) that can be used to specified the number of time each cast will hit each target.
@@ -34,13 +56,6 @@ When Consecration is included in the precombat APL, the spell will be used with 
 ```
 # Use consecration 3s before combat starts
 actions.precombat=consecration,precombat_time=3
-```
-
-## Holy Power Generators until two Dawn Stacks
-Use `hpg_to_2dawn` to get the currently needed amount of Holy Power Generators to reach two Stacks of Dawn. This is a variable that can be between 6 (6 Holy Power Generators needed until 2 Dawn Stacks are reached) and -2 (Two Dawn Stacks are already reached and you would need one more Holy Power Generator to refresh the Dawn-Buff)
-```
-# Use Shield of the Righteous when we're about to reach the next Dawn Stack to use it with Hammer of Light
-actions.hammer_of_light+=/shield_of_the_righteous,if=hpg_to_2dawn=4
 ```
 
 ## Lightsmith specifics
@@ -67,12 +82,7 @@ To simulate different scenarios, player-scoped options have been introduced to a
 
 ### Holy Armament management
 Three new variables have been introduced to handle Holy Armament handling. Holy Armaments can only be cast by using the action `holy_armaments`, which will always alternate between Holy Bulwark and Sacred Weapon, starting with Holy Bulwark)
-
-`next_armament` returns either 0 or 1, depending on which Holy Armament comes next
-
-`holy_bulwark` returns 0
-
-`sacred_weapon` returns 1
+See [#custom-paladin-expressions](https://github.com/simulationcraft/simc/wiki/Paladins#custom-paladin-expressions)
 
 ```
 # Use Holy Armaments when the next Armament is Sacred Weapon, if the buff is not up or can pandemic, AW is not up or the remaining cooldown is less than 30s
