@@ -11,7 +11,7 @@ Overriding spell, effect, and power data is done through the **override.spell\_d
   * `id` is the numerical identifier of the data. The spell identifiers can be found through SpellQuery or third party websites, effect and power identifiers can be found through SpellQuery.
   * `field` is the name of the field in the data that is to be overridden with a new value. A list of valid field names for spells, effects, and powers are given below.
 
-If instead you wish to override the spell data of a specific player, one may use **override.player.spell\_data** in player scope.
+If instead you wish to override the spell data of a specific player, one may use `override.player.spell\_data` in player scope.
 
 Some things need to be noted about the override system.
   1. It is an "low level" feature, and as such is not meant to be used by typical SimulationCraft users
