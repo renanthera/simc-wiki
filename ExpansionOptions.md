@@ -39,7 +39,12 @@ All options are player scoped unless otherwise noted.
 | thewarwithin.signet_of_the_priory_party_use_stddev          | 6s      | 0s - 120s |
 | thewarwithin.harvesters_edict_intercept_chance              | 0.2     | 0 - 1 | Percent
 | thewarwithin.nerubian_pheromone_secreter_pheromones         | 1       | 0 - 3 | 
-
+| thewarwithin.concoction_kiss_of_death_buff_remaining_min    | 1       | 0 - 30 | Seconds
+| thewarwithin.concoction_kiss_of_death_buff_remaining_max    | 2       | 0 - 30 | Seconds
+| thewarwithin.fury_of_the_stormrook_pickup_delay             | 3       | 0 - 10 | Seconds
+| thewarwithin.fury_of_the_stormrook_pickup_stddev            | 0.75    | 0 - 1  | Percent
+| thewarwithin.mereldars_toll_ally_trigger_chance             | 0.7     | 0 - 1  | Percent
+| thewarwithin.sureki_zealots_insignia_rppm_multiplier        | 0.9     | 0 - 1  | Percent
 
 ## Dragonflight
 
