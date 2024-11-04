@@ -97,7 +97,7 @@ If you do not specify a target for the `holy_armaments` cast, it will always cas
 
 `max_dg_heal_targets` (0-5, default 5) - Maximum amount of targets to heal with Lightsmith's Divine Guidance. Will affect the amount of damage Divine Guidance does. Set to 0 (in tandem with `min_dg_heal_targets`) to simulate a Training Dummy scenario. Set to 1 to simulate a solo-scenario within a multi actor environment.
 
-`fake_solidarity` (0-1, default 0) - When set to 0, Solidarity will behave like usual (Try to give a DPS a Weapon and a Tank a Bulwark - If it's a single actor Sim, Solidarity will do nothing). When set to 1, Solidarity will no longer give another player an Armament, but will only give the Paladin (or the target, if specified) an Armament and double it's damage/healing, to approximate it's gain without a multi actor Sim. This does not affect Holy Bulwark Absorb.
+`fake_solidarity` (0-1, default 1) - When set to 0, Solidarity will behave like usual (Try to give a DPS a Weapon and a Tank a Bulwark - If it's a single actor Sim, Solidarity will do nothing). When set to 1, Solidarity will no longer give another player an Armament, but will only give the Paladin (or the target, if specified) an Armament and give the Paladin a new buff, `fake_solidarity`, which stacks asynchronously and increases Sacred Weapon damage by 100% per stack, to approximate it's gain without a multi actor Sim. This does not affect Holy Bulwark Absorb.
 
 
 # Reports
