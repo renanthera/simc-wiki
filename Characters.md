@@ -275,6 +275,10 @@ spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:
     1. onyx (mastery)
     1. sapphire (vers)
     1. ruby (critical strike)
+```
+ # set earthen to onyx
+ earthen_mineral=onyx
+```
 
 ## Status
   * **sleeping** (scope: current character; default: 0), when different from zero, will make the character inactive: he won't do anything. The purpose of this setting if to allow you to quickly remove a character from the simulation without removing everything about him in your .simc files.
