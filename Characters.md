@@ -269,6 +269,13 @@ spec_talents=mind_flay:1/vampiric_touch:1/devouring_plague:1/mind_sear:1/misery:
  zandalari_loa=kimbul
 ```
 
+  * **earthen_mineral** (scope: current character; default: "ruby") can be used to specify the Earthen racial. Available options are:
+    1. amber (stamina)
+    1. emerald (haste)
+    1. onyx (mastery)
+    1. sapphire (vers)
+    1. ruby (critical strike)
+
 ## Status
   * **sleeping** (scope: current character; default: 0), when different from zero, will make the character inactive: he won't do anything. The purpose of this setting if to allow you to quickly remove a character from the simulation without removing everything about him in your .simc files.
 ```
