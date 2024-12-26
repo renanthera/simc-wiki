@@ -35,6 +35,8 @@ jobs:
           cp -rf source/* target/
 
       - name: Commit Target
+        permissions:
+          contents: write
         continue-on-error: true
         uses: EndBug/add-and-commit@v9
         with:
