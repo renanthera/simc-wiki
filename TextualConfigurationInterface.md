@@ -64,7 +64,6 @@ output
 # neither of which are valid options by themselves
 
 enemy="foo bar"
-
 # would create an enemy actor of name 'foo bar'
 ```
 
