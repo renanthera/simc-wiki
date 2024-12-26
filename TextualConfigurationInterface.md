@@ -32,18 +32,40 @@ Comments can be made through the # symbol, as shown below:
  # This is a comment
 ```
 
-## Long strings
-Some options, such as **path** or **raid\_events**, are very long strings which can be written on a single line or on many lines. Here is the rule to follow:
+## Multiline Options
+Some options, such as **actions** and **raid\_events** may yield incredibly long lines.
 
-> The "=" operator replaces the string with the new content you provided. The "+=" operator appends the new content at the end of the existing string. You can use the "+=" operator at the very beginning but it will append your content to the default string, make sure it is empty by default. For example:
+They can be split across multiple lines in input by using the **+=** operator.
+
+The **/** token is often used to split many types of multiline options.
 
 ```
- # Of course, you can write it on a single line or on many lines.
- path="c:|profiles"
+actions=foo,bar,baz
 
- # This is equivalent to:
- path="c:|"
- path+="profiles"
+# is equivalent to
+actions=foo
+actions+=,bar
+actions+=,baz
+
+actions=fireball
+actions+=/fire_blast
+```
+
+## Whitespace
+By default, all forms of white space (the standard space character, tab, newline, carriage return) are all treated identically as a terminator for the current parsed line.
+
+Some options such as the class creators (**copy**, **monk**, **enemy**, etc) may benefit from whitespace in an option token. A double quote **"** causes all previously mentioned types of whitespace to be ignored until the next **"** is found.
+
+```
+output =/dev/null
+# is equivalent to
+output
+=/dev/null
+# neither of which are valid options by themselves
+
+enemy="foo bar"
+
+# would create an enemy actor of name 'foo bar'
 ```
 
 ## Sequences
@@ -71,25 +93,11 @@ Some options, such as **actions** or **raid\_events**, are very long strings con
  raid_events=/event1,option1,option2/event2,option1,option2
 ```
 
-## White spaces and tabs
+## Standard String Tokenization
 
-White spaces and tabs act as line breaks in any circumstances. You can add as much blank lines or spaces as you want but all of them are treated as blank lines. As a result, do not insert white spaces on the middle of options declaration, only at the very beginning or the very end.
-```
- #This works:
- iterations=10
-  iterations=10
-
- #This does not work:
- iterations = 10
- iterations= 10
- iterations =10
-```
-
-## Names formatting
-
-Sometimes, you need to translate a string into an identifier. For example, "nature's majesty" will become natures\_majesty. The rules are simple:
+Sometimes, you need to translate a string into an identifier. For example, "nature's majesty" will become **natures\_majesty**. The rules are simple:
   1. White spaces are replaced with underscores (`_`).
-  1. Other non-alphanumeric characters are just ignored.
+  1. Other non-alphanumeric characters are removed.
 
 # Text templating
 Simulationcraft provides a templating mechanism to declare and reuse pieces of text.
