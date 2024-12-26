@@ -13,8 +13,10 @@ on:
     branches: [ master ]
 
 jobs:
-  include:
+  update-docs:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
@@ -35,8 +37,6 @@ jobs:
           cp -rf source/* target/
 
       - name: Commit Target
-        permissions:
-          contents: write
         continue-on-error: true
         uses: EndBug/add-and-commit@v9
         with:
