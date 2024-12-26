@@ -1,0 +1,42 @@
+# adapted from https://github.com/devonfw/devon4j/blob/develop/.github/workflows/github_actions.yml
+
+name: update simc wiki pages
+env:
+  ORG: "renanthera"
+  REPO_SOURCE: "simc-wiki"
+  REPO_TARGET: "simc.wiki"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  include:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+        with:
+          repository: "${ORG}/${REPO_SOURCE}"
+          path: source
+
+      - name: Checkout Target
+        uses: actions/checkout@v4
+        with:
+          repository: "${ORG}/${REPO_TARGET}"
+          path: target
+
+      - name: Copy Source to Target
+        run: |
+          cp -rf source/* target/
+
+      - name: Commit Target
+        continue-on-error: true
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Update Documentation'
+          default_author: github_actions
+          fetch: --no-tags --force --prune --no-recurse-submodules --depth=1 origin ${{ github.ref_name }}
+          add: '*'
