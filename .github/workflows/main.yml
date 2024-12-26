@@ -3,8 +3,8 @@
 name: update simc wiki pages
 env:
   ORG: "renanthera"
-  REPO_SOURCE: "simc-wiki"
-  REPO_TARGET: "simc.wiki"
+  SOURCE: "simc-wiki"
+  TARGET: "simc.wiki"
 
 on:
   push:
@@ -19,14 +19,14 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v4
         with:
-          repository: ${{env.ORG}}/${{env.REPO_SOURCE}}
+          repository: ${{env.ORG}}/${{env.SOURCE}}
           ref: 'master'
           path: source
 
       - name: Checkout Target
         uses: actions/checkout@v4
         with:
-          repository: "${ORG}/${REPO_TARGET}"
+          repository: ${{env.ORG}}/${{env.TARGET}}
           ref: 'master'
           path: target
 
