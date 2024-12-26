@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v4
         with:
-          repository: "${{env.ORG}}/${{env.REPO_SOURCE}}"
+          repository: ${{env.ORG}}/${{env.REPO_SOURCE}}
           ref: 'master'
           path: source
 
